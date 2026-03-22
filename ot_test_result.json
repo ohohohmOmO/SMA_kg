@@ -1,0 +1,162 @@
+{
+  "data": {
+    "disease": {
+      "id": "MONDO_0009669",
+      "name": "spinal muscular atrophy, type 1",
+      "associatedTargets": {
+        "rows": [
+          {
+            "target": {
+              "approvedSymbol": "SMN1"
+            },
+            "score": 0.7917913029935061
+          },
+          {
+            "target": {
+              "approvedSymbol": "SMN2"
+            },
+            "score": 0.6820579289720411
+          },
+          {
+            "target": {
+              "approvedSymbol": "NAIP"
+            },
+            "score": 0.3739456607245555
+          },
+          {
+            "target": {
+              "approvedSymbol": "ZFPM2"
+            },
+            "score": 0.05212369480545691
+          },
+          {
+            "target": {
+              "approvedSymbol": "FENDRR"
+            },
+            "score": 0.044549155683693956
+          },
+          {
+            "target": {
+              "approvedSymbol": "HEY2"
+            },
+            "score": 0.04409642036170519
+          },
+          {
+            "target": {
+              "approvedSymbol": "ADAM19"
+            },
+            "score": 0.04165719332078617
+          },
+          {
+            "target": {
+              "approvedSymbol": "ZSWIM8"
+            },
+            "score": 0.04154077566656049
+          },
+          {
+            "target": {
+              "approvedSymbol": "FLNC"
+            },
+            "score": 0.0412746781711875
+          },
+          {
+            "target": {
+              "approvedSymbol": "SCN4A"
+            },
+            "score": 0.040533670562544664
+          },
+          {
+            "target": {
+              "approvedSymbol": "MET"
+            },
+            "score": 0.03907198223726667
+          },
+          {
+            "target": {
+              "approvedSymbol": "JARID2"
+            },
+            "score": 0.03852500405233331
+          },
+          {
+            "target": {
+              "approvedSymbol": "EP300"
+            },
+            "score": 0.03834021412499096
+          },
+          {
+            "target": {
+              "approvedSymbol": "FOXM1"
+            },
+            "score": 0.03624839214747555
+          },
+          {
+            "target": {
+              "approvedSymbol": "NKX2-1"
+            },
+            "score": 0.03517661056888992
+          },
+          {
+            "target": {
+              "approvedSymbol": "DNAJB4"
+            },
+            "score": 0.034673981966518726
+          },
+          {
+            "target": {
+              "approvedSymbol": "ADRA2B"
+            },
+            "score": 0.03449658363627007
+          },
+          {
+            "target": {
+              "approvedSymbol": "MYOG"
+            },
+            "score": 0.03446701724789529
+          },
+          {
+            "target": {
+              "approvedSymbol": "MYL11"
+            },
+            "score": 0.034171353364147526
+          },
+          {
+            "target": {
+              "approvedSymbol": "NKX2-5"
+            },
+            "score": 0.0340826541990232
+          },
+          {
+            "target": {
+              "approvedSymbol": "ROBO1"
+            },
+            "score": 0.034008738228086255
+          },
+          {
+            "target": {
+              "approvedSymbol": "NODAL"
+            },
+            "score": 0.034008738228086255
+          },
+          {
+            "target": {
+              "approvedSymbol": "TBCE"
+            },
+            "score": 0.0337056827472448
+          },
+          {
+            "target": {
+              "approvedSymbol": "MEG3"
+            },
+            "score": 0.03348393483443398
+          },
+          {
+            "target": {
+              "approvedSymbol": "KIF7"
+            },
+            "score": 0.03343219365477812
+          }
+        ]
+      }
+    }
+  }
+}
