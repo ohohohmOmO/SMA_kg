@@ -1,0 +1,19 @@
+﻿==================================================
+   AUTOMATED BASELINE EVALUATION REPORT
+==================================================
+Threshold (Fuzzy Match using token_sort_ratio): 85
+Total Baseline Genes (Ground Truth): 161
+
+--- Engine: LLM_Qwen2.5_7B ---
+Total Extracted Genes: 32
+Precision: 0.1250 (TP_p: 4, FP: 28)
+Recall:    0.0311 (TP_r: 5, FN: 156)
+F1-Score:  0.0498
+
+--- Engine: Regex_Fallback ---
+Total Extracted Genes: 4
+Precision: 0.7500 (TP_p: 3, FP: 1)
+Recall:    0.0186 (TP_r: 3, FN: 158)
+F1-Score:  0.0364
+
+==================================================
