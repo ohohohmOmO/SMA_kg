@@ -1,0 +1,50 @@
+[[BASE]]
+﻿==================================================
+   ADVANCED BASELINE EVALUATION REPORT
+==================================================
+Match Criteria: Exact Match (Normalized)
+Total Baseline Genes (Ground Truth): 161
+
+--- Engine: LLM_Qwen2.5_7B ---
+Total Extracted Genes: 32
+Precision: 0.1250 (TP: 4, FP: 28)
+Recall:    0.0248 (TP: 4, FN: 157)
+F1-Score:  0.0415
+
+--- Engine: Regex_Fallback ---
+Total Extracted Genes: 4
+Precision: 0.5000 (TP: 2, FP: 2)
+Recall:    0.0124 (TP: 2, FN: 159)
+F1-Score:  0.0242
+
+==================================================
+
+
+[[METRICS]]
+﻿==================================================
+   EVALUATION METRICS & LLM-AS-A-JUDGE REPORT
+==================================================
+Human Evaluation Metrics (n=100):
+ - Strict Accuracy (Score == 2): 37.00%
+ - Lenient Accuracy (Score >= 1): 77.00%
+ - Average Quality Score: 1.14
+
+Running LLM Evaluator via Qwen2.5-7B (SiliconFlow)...
+LLM Evaluator Metrics:
+ - Strict Accuracy: 0.00%
+ - Lenient Accuracy: 100.00%
+ - Average Quality Score: 1.00
+
+Agreement Analysis:
+ - Cohen's Kappa (Human vs LLM): 0.0000
+==================================================
+
+
+[[TOPO]]
+﻿==================================================
+   GRAPH TOPOLOGY EVALUATION REPORT
+==================================================
+Error querying Neo4j: Couldn't connect to localhost:7687 (resolved to ('[::1]:7687', '127.0.0.1:7687')):
+Failed to establish connection to ResolvedIPv6Address(('::1', 7687, 0, 0)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+Failed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7687)) (reason [WinError 10061] 由于目标计算机积极拒绝，无法连接。)
+==================================================
