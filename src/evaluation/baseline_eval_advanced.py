@@ -1,9 +1,14 @@
 import json
 import os
-import pandas as pd
 
 def normalize_text(text):
     return str(text).strip().lower()
+
+SMA_SYNONYMS = {
+    "sma", "spinal muscular atrophy", "sma type i", "sma type ii", "sma type iii", "sma type iv", 
+    "sma type 1", "sma type 2", "sma type 3", "sma type 4", "sma type 0", "5q-sma", 
+    "5q-spinal muscular atrophy", "type 1 sma", "type 2 sma", "type 3 sma", "type 4 sma", "type 0 sma", "type i sma"
+}
 
 def main():
     print("==================================================")
@@ -15,13 +20,14 @@ def main():
     extracted_file = os.path.join(BASE_DIR, 'data', 'processed', 'extracted_triples.jsonl')
     
     # Load baseline
-    baseline_genes = set()
+    baseline_tuples = set()
     try:
         with open(baseline_file, 'r', encoding='utf-8') as f:
             for line in f:
                 if not line.strip(): continue
                 row = json.loads(line)
-                baseline_genes.add(normalize_text(row['gene_symbol']))
+                gene = normalize_text(row['gene_symbol'])
+                baseline_tuples.add((gene, 'sma'))
     except Exception as e:
         print(f"Error loading baseline: {e}")
         return
@@ -37,49 +43,41 @@ def main():
                 if engine not in extracted_data:
                     extracted_data[engine] = set()
                 
-                # Check entity 1
-                if row.get('entity_1', {}).get('type') == 'Gene':
-                    extracted_data[engine].add(normalize_text(row['entity_1'].get('name', '')))
-                # Check entity 2
-                if row.get('entity_2', {}).get('type') == 'Gene':
-                    extracted_data[engine].add(normalize_text(row['entity_2'].get('name', '')))
+                e1 = row.get('entity_1', {})
+                e2 = row.get('entity_2', {})
+                
+                e1_type = e1.get('type', '')
+                e2_type = e2.get('type', '')
+                e1_name = normalize_text(e1.get('name', ''))
+                e2_name = normalize_text(e2.get('name', ''))
+                
+                # Check (Gene, SMA)
+                if e1_type in ['Gene', 'Protein'] and e2_name in SMA_SYNONYMS:
+                    extracted_data[engine].add((e1_name, 'sma'))
+                # Check (SMA, Gene)
+                if e2_type in ['Gene', 'Protein'] and e1_name in SMA_SYNONYMS:
+                    extracted_data[engine].add((e2_name, 'sma'))
                     
     except Exception as e:
         print(f"Error loading extracted triples: {e}")
         return
 
-    print(f"Match Criteria: Exact Match (Normalized)")
-    print(f"Total Baseline Genes (Ground Truth): {len(baseline_genes)}\n")
+    print(f"Match Criteria: Exact Relational Match (Normalized Tuples)")
+    print(f"Total Baseline Tuples (Ground Truth): {len(baseline_tuples)}\n")
 
-    for engine, ex_genes in extracted_data.items():
-        ex_genes = {g for g in ex_genes if g} # remove empty
+    for engine, ex_tuples in extracted_data.items():
+        tp = len(ex_tuples.intersection(baseline_tuples))
+        fp = len(ex_tuples - baseline_tuples)
+        fn = len(baseline_tuples - ex_tuples)
         
-        tp_precision = 0
-        fp = 0
-        matched_baseline_genes = set()
-        
-        for ex_gene in ex_genes:
-            matched = False
-            if ex_gene in baseline_genes:
-                matched = True
-                matched_baseline_genes.add(ex_gene)
-                    
-            if matched:
-                tp_precision += 1
-            else:
-                fp += 1
-                
-        tp_recall = len(matched_baseline_genes)
-        fn = len(baseline_genes) - tp_recall
-        
-        precision = tp_precision / (tp_precision + fp) if (tp_precision + fp) > 0 else 0.0
-        recall = tp_recall / (tp_recall + fn) if (tp_recall + fn) > 0 else 0.0
+        precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+        recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
         f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
         
         print(f"--- Engine: {engine} ---")
-        print(f"Total Extracted Genes: {len(ex_genes)}")
-        print(f"Precision: {precision:.4f} (TP: {tp_precision}, FP: {fp})")
-        print(f"Recall:    {recall:.4f} (TP: {tp_recall}, FN: {fn})")
+        print(f"Total Extracted Gene-SMA Tuples: {len(ex_tuples)}")
+        print(f"Precision: {precision:.4f} (TP: {tp}, FP: {fp})")
+        print(f"Recall:    {recall:.4f} (TP: {tp}, FN: {fn})")
         print(f"F1-Score:  {f1:.4f}\n")
 
     print("==================================================")

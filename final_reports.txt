@@ -1,0 +1,40 @@
+==================================================
+   ADVANCED BASELINE EVALUATION REPORT
+==================================================
+Match Criteria: Exact Relational Match (Normalized Tuples)
+Total Baseline Tuples (Ground Truth): 161
+
+--- Engine: LLM_Qwen2.5_7B ---
+Total Extracted Gene-SMA Tuples: 10
+Precision: 0.1000 (TP: 1, FP: 9)
+Recall:    0.0062 (TP: 1, FN: 160)
+F1-Score:  0.0117
+
+--- Engine: Regex_Fallback ---
+Total Extracted Gene-SMA Tuples: 4
+Precision: 0.5000 (TP: 2, FP: 2)
+Recall:    0.0124 (TP: 2, FN: 159)
+F1-Score:  0.0242
+
+==================================================
+
+
+==================================================
+   ABLATION STUDY: GRAPH TOPOLOGY METRICS
+==================================================
+Metric                    | Pre-Fusion (State A)   | Post-Fusion (State B) 
+---------------------------------------------------------------------------
+Total Nodes               | 720                    | 685                   
+Total Edges               | 629                    | 618                   
+Average Node Degree       | 1.7472                 | 1.8044                
+Isolated Nodes Ratio      | 59.31%                 | 52.41%                
+==================================================
+
+
+==================================================
+   NOVELTY DISCOVERY GENERATOR
+==================================================
+Parsed 2664 total triples.
+Identified 10 distinct novel False Positive relationships.
+Exported to -> D:\kg_sma_0323\data\processed\llm_novel_discoveries.csv
+==================================================
