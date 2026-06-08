@@ -1,0 +1,4 @@
+path,lines,records,bad_json_lines,duplicate_stage_signature_count,missing_source_pmid,missing_entity_1_name,missing_relation,missing_entity_2_name,bytes,sha256
+data/processed/llm_extracted_triples.jsonl,674,674,0,0,0,0,0,1,164990,7b51496237aa674c4c206400678553e8d3efd9fc91916891e1ccb9a5f36d2e2a
+data/processed/spacy_extracted_triples.jsonl,5101,5101,0,0,0,0,0,0,1141675,cf4e817ae155a536e0bb86321af9fac2b0e8f025aa02d68870a060e2c8422ac7
+data/processed/extracted_triples.jsonl,5775,5775,0,0,0,0,0,1,1306665,4bd82edd85775614bd5758ceb9526f9649244e613eaa8cdc35910f749325a957

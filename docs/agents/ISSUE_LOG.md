@@ -17,6 +17,24 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-08 - Stage 2 LLM extraction could not be faithfully rerun
+
+- Symptom: The second-stage LLM extractor could not be safely rerun because
+  `SILICONFLOW_API_KEY` was missing. The local regex extractor and merge step
+  could run, but the merged output would combine historical LLM triples with
+  newly reproduced regex triples.
+- Cause: `llm_extractor.py` requires a live SiliconFlow key, hard-codes the
+  first 200 abstracts and output path, and has no dry-run, fixture, small-sample,
+  or alternate-output mode. Running it without a key would trigger repeated
+  failures and risk overwriting the historical LLM output.
+- Fix: Preserved pre-run stage-2 outputs under
+  `artifacts/runs/stage2_extraction_2026-06-08/pre_run_outputs/`, reran only
+  the reproducible local regex and merge steps, wrote logs and a manifest under
+  `artifacts/runs/stage2_extraction_2026-06-08/`, and documented the partial
+  reproduction boundary.
+- Verification: `manifest.csv` reports 674 historical LLM triples, 5101 rerun
+  regex triples, and 5775 merged triples, each with 0 invalid JSON lines.
+
 ### 2026-06-08 - Stage 1 rerun outputs were not auditable
 
 - Symptom: First-stage crawler reruns wrote directly to `data/external/` and
