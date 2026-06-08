@@ -17,6 +17,21 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-08 - Stage 1 rerun outputs were not auditable
+
+- Symptom: First-stage crawler reruns wrote directly to `data/external/` and
+  `data/raw/`, overwriting canonical data without a dated run directory,
+  manifest, log capture, or output snapshot.
+- Cause: The crawler scripts use hard-coded output paths and do not generate run
+  metadata. Historical loose outputs made it hard to tell which artifacts came
+  from which run.
+- Fix: Reran the stage with logs captured under
+  `artifacts/runs/stage1_data_acquisition_2026-06-08/`, copied the reproduced
+  outputs into that dated run directory, generated `manifest.csv`, and documented
+  the convention in `artifacts/README.md`.
+- Verification: `manifest.csv` reports 164 valid Open Targets JSONL rows and
+  4555 valid PubMed JSONL rows with 0 invalid JSON lines.
+
 ### 2026-06-06 - Consolidated conda environment
 
 - Symptom: The repository had multiple candidate conda environments (`kg_sma`,
