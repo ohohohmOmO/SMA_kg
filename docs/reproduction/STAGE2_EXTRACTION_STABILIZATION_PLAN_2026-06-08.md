@@ -43,6 +43,7 @@ Stage 3 只读取：
 - `Qwen/Qwen2.5-7B-Instruct` 和 `Pro/Qwen/Qwen2.5-7B-Instruct` 在本任务中大量输出坏 JSON 或重复 token，不适合作为稳定复现模型。
 - `Qwen/Qwen2.5-72B-Instruct` 小样本表现明显更好：前 5 篇输出 19 条 triples，0 个 malformed JSON。
 - `Qwen/Qwen2.5-72B-Instruct` 串行完整跑 200 篇耗时较长，中断前 `.tmp` 已写出 621 条、107 个唯一 PMID，但没有完整 checkpoint/resume，因此不能直接作为正式完成产物。
+- 用户确认后，正式目标模型调整为 `deepseek-ai/DeepSeek-V4-Flash`。该模型使用同一个 SiliconFlow API key，小样本 probe 前 5 篇输出 21 条 triples，0 个 malformed JSON，0 个 failed records。
 
 ## Why Stage 2 Is Blocked
 
@@ -122,7 +123,7 @@ Stage 3 只读取：
 2. Stage 2 内部增加稳定运行层。
 3. Canonical outputs 只在验证通过后 promotion。
 4. LLM 复现以 chunk 为最小可恢复单位。
-5. 模型从 `Qwen/Qwen2.5-7B-Instruct` 切换到 `Qwen/Qwen2.5-72B-Instruct`，因为 7B 在当前复现实验中不能稳定产出可解析 JSON。
+5. 模型从 `Qwen/Qwen2.5-7B-Instruct` 切换到 `deepseek-ai/DeepSeek-V4-Flash`，因为 7B 在当前复现实验中不能稳定产出可解析 JSON，DeepSeek V4 Flash 小样本 probe 能稳定产出可解析 JSON。
 
 ## Target Run Layout
 
@@ -169,7 +170,7 @@ data/processed/extracted_triples.jsonl
   "input_sha256": "...",
   "llm_pmids": ["... first 200 pmids ..."],
   "regex_pmids": ["... remaining pmids ..."],
-  "llm_model": "Qwen/Qwen2.5-72B-Instruct",
+  "llm_model": "deepseek-ai/DeepSeek-V4-Flash",
   "chunk_size": 20
 }
 ```
@@ -194,7 +195,7 @@ Promotion 前必须通过：
 
 推荐本轮使用：
 
-- `Qwen/Qwen2.5-72B-Instruct`
+- `deepseek-ai/DeepSeek-V4-Flash`
 - `response_format={"type": "json_object"}`
 - `temperature=0.0`
 - chunk size: 20 PMIDs
@@ -207,7 +208,8 @@ Promotion 前必须通过：
 原因：
 
 - 7B 系列在当前实验中有大量 malformed JSON。
-- 72B 小样本和部分长跑结果更稳定。
+- DeepSeek V4 Flash 小样本 probe 前 5 篇输出 21 条 triples，0 个 malformed JSON，0 个 failed records。
+- `Qwen/Qwen2.5-72B-Instruct` 可作为备选模型，但不作为本轮默认模型，因为用户已确认希望使用 DeepSeek V4 Flash。
 
 注意：模型切换会改变实验口径。文档和 `extracted_by` 必须记录真实 model id，不能再硬编码 `LLM_Qwen2.5_7B`。
 
@@ -280,17 +282,15 @@ python src/fusion/dictionary_mapper.py
 - Stage 3 `dictionary_mapper.py` 能无代码改动读取新的 `extracted_triples.jsonl`。
 - reproduction 文档记录模型、chunk size、counts、hashes、失败/拒绝数量。
 
-## Open Discussion Question 1
+## Confirmed Decision
 
-是否确认本轮采用推荐方案：
+用户已确认本轮采用推荐方案：
 
-> 保留 Stage 3 contract 不变，对 Stage 2 做 durable small upgrade，引入 chunk/resume/validate/promote；LLM 模型切换为 `Qwen/Qwen2.5-72B-Instruct`，并把模型切换作为正式实验口径记录。
-
-我的推荐答案：确认。
+> 保留 Stage 3 contract 不变，对 Stage 2 做 durable small upgrade，引入 chunk/resume/validate/promote；LLM 模型切换为 `deepseek-ai/DeepSeek-V4-Flash`，并把模型切换作为正式实验口径记录。
 
 理由：它直接解决当前阻塞，不把 7B 的坏 JSON 问题伪装成可复现结果，也不会把 full refactor 的风险带入 Stage 3。
 
-如果不同意，需要在两个替代方向中选择一个：
+已放弃的替代方向：
 
 - 继续坚持 7B：成本低但复现可行性差，预计要投入 prompt repair / retry repair / JSON extraction fallback，质量仍不稳定。
 - 做 full refactor：长期更干净，但本轮范围会明显扩大，并且更容易影响 Stage 3 和 evaluation。

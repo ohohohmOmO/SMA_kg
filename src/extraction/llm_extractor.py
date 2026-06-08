@@ -1,6 +1,8 @@
 import json
 import logging
 import pandas as pd
+import argparse
+import os
 from pathlib import Path
 from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
 
@@ -12,16 +14,6 @@ except ImportError:
     import openai
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-
-import os
-SILICONFLOW_API_KEY = os.environ.get("SILICONFLOW_API_KEY")
-if not SILICONFLOW_API_KEY:
-    logging.warning("SILICONFLOW_API_KEY is not set. API calls will fail.")
-
-client = openai.OpenAI(
-    api_key=SILICONFLOW_API_KEY,
-    base_url="https://api.siliconflow.cn/v1"
-)
 
 SYSTEM_PROMPT = """
 You are an expert biomedical NLP extraction engine.
@@ -47,45 +39,86 @@ CRITICAL RULES:
 4. If there are no relevant triples, output exactly: {"triples": []}
 """
 
+def load_local_env():
+    """Load local secrets without requiring python-dotenv."""
+    for env_file in (Path(".env"), Path(".env.local")):
+        if not env_file.exists():
+            continue
+        for line in env_file.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+def build_client(api_key):
+    return openai.OpenAI(
+        api_key=api_key,
+        base_url="https://api.siliconflow.cn/v1",
+        timeout=60.0,
+    )
+
 @retry(
     wait=wait_exponential(multiplier=1, min=2, max=10),
     stop=stop_after_attempt(5),
     retry=retry_if_exception_type(Exception)
 )
-def call_llm_extraction(abstract_text, pmid):
-    if not SILICONFLOW_API_KEY:
-        raise ValueError("SILICONFLOW_API_KEY is missing.")
-
+def call_llm_extraction(client, abstract_text, pmid, model, max_tokens):
     response = client.chat.completions.create(
-        model="Qwen/Qwen2.5-7B-Instruct",
+        model=model,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": f"PMID: {pmid}\nAbstract: {abstract_text}"}
         ],
-        temperature=0.0
+        temperature=0.0,
+        max_tokens=max_tokens,
+        response_format={"type": "json_object"},
     )
     return response.choices[0].message.content
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Extract biomedical triples with a SiliconFlow LLM.")
+    parser.add_argument("--input-file", default="data/raw/pubmed_sma_abstracts.jsonl")
+    parser.add_argument("--output-file", default="data/processed/llm_extracted_triples.jsonl")
+    parser.add_argument("--offset", type=int, default=0)
+    parser.add_argument("--limit", type=int, default=200)
+    parser.add_argument("--model", default="deepseek-ai/DeepSeek-V4-Flash")
+    parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument("--min-triples", type=int, default=1)
+    return parser.parse_args()
+
 def main():
-    input_file = Path("data/raw/pubmed_sma_abstracts.jsonl")
-    output_dir = Path("data/processed")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / "llm_extracted_triples.jsonl"
+    load_local_env()
+    args = parse_args()
+    api_key = os.environ.get("SILICONFLOW_API_KEY")
+    if not api_key:
+        logging.error("SILICONFLOW_API_KEY is not set. Refusing to run LLM extraction.")
+        return 1
+
+    input_file = Path(args.input_file)
+    output_file = Path(args.output_file)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    temp_output_file = output_file.with_name(f"{output_file.name}.tmp")
 
     if not input_file.exists():
         logging.error(f"Input file {input_file} not found.")
-        return
+        return 1
 
-    df = pd.read_json(input_file, lines=True).head(200)
+    client = build_client(api_key)
+    stop = None if args.limit < 0 else args.offset + args.limit
+    df = pd.read_json(input_file, lines=True).iloc[args.offset:stop]
     successful_triples = 0
-    with open(output_file, 'w', encoding='utf-8') as f:
+    malformed_outputs = 0
+    failed_records = 0
+
+    with open(temp_output_file, 'w', encoding='utf-8') as f:
         for idx, row in df.iterrows():
             pmid = str(row.get("pmid", ""))
             abstract = row.get("abstract", "")
             if not abstract: continue
                 
             try:
-                result_json_str = call_llm_extraction(abstract, pmid)
+                result_json_str = call_llm_extraction(client, abstract, pmid, args.model, args.max_tokens)
                 
                 # Cleanup potential markdown wrapper just in case the LLM disobeys
                 cleaned_str = result_json_str.strip()
@@ -100,7 +133,13 @@ def main():
                 try:
                     result_data = json.loads(cleaned_str)
                 except json.JSONDecodeError as e:
-                    logging.warning(f"Malformed JSON for PMID {pmid}. Skipping. Error: {e}\nRaw output: {cleaned_str}")
+                    malformed_outputs += 1
+                    logging.warning(
+                        "Malformed JSON for PMID %s. Skipping. Error: %s. Raw output preview: %s",
+                        pmid,
+                        e,
+                        cleaned_str[:500],
+                    )
                     continue
                 
                 for triple in result_data.get("triples", []):
@@ -110,14 +149,32 @@ def main():
                         "relation": triple.get("relation", ""),
                         "entity_2": triple.get("entity_2", {}),
                         "computed_confidence": 0.90,
-                        "extracted_by": "LLM_Qwen2.5_7B"
+                        "extracted_by": f"LLM_{args.model}"
                     }
                     f.write(json.dumps(unified_triple) + "\n")
                     successful_triples += 1
             except Exception as e:
+                failed_records += 1
                 logging.warning(f"Failed to process PMID {pmid} (API or logic error): {e}")
-                
-    logging.info(f"LLM Extraction complete. Extracted {successful_triples} triples to {output_file}.")
+
+    if successful_triples < args.min_triples:
+        logging.error(
+            "LLM extraction produced %s triples, below min_triples=%s. Keeping existing output file untouched.",
+            successful_triples,
+            args.min_triples,
+        )
+        temp_output_file.unlink(missing_ok=True)
+        return 1
+
+    temp_output_file.replace(output_file)
+    logging.info(
+        "LLM Extraction complete. Extracted %s triples to %s. malformed_outputs=%s failed_records=%s",
+        successful_triples,
+        output_file,
+        malformed_outputs,
+        failed_records,
+    )
+    return 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
