@@ -24,6 +24,20 @@ the final response unless the user explicitly asks not to commit.
 Use local markdown issue tracking for this repo. PRDs and implementation issues
 live under `.scratch/`; see `docs/agents/issue-tracker.md`.
 
+## Secrets and API keys
+
+Never hardcode API keys, database passwords, tokens, or other secrets in source
+code, notebooks, committed docs, tests, or generated examples.
+
+Store real local secrets in `.env` or `.env.local` at the repository root. These
+files are ignored by git and must stay uncommitted. Commit only sanitized
+templates such as `.env.example`.
+
+When code needs a secret, read it from environment variables, for example
+`SILICONFLOW_API_KEY`, `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD`, or
+`HF_ENDPOINT`. If a task requires a new secret, add a placeholder to
+`.env.example` and document the variable name, but do not write the real value.
+
 ## Conda environment
 
 Use the `KG_SMA_env` conda environment for all future work in this repository.

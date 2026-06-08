@@ -27,6 +27,9 @@ python --version
 python -m pip install -r requirements.txt
 ```
 
+Store local secrets in `.env` or `.env.local` by copying `.env.example`. Real
+secret files are ignored by git and must not be committed.
+
 External services and environment variables:
 
 - `SILICONFLOW_API_KEY` for LLM extraction and LLM-based evaluation.
