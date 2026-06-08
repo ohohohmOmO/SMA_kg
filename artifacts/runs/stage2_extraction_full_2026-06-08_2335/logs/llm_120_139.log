@@ -1,0 +1,25 @@
+2026-06-09 00:40:02,252 - INFO - Retrying request to /chat/completions in 0.478298 seconds
+2026-06-09 00:41:02,932 - INFO - Retrying request to /chat/completions in 0.983547 seconds
+2026-06-09 00:41:24,837 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:42:24,876 - INFO - Retrying request to /chat/completions in 0.497039 seconds
+2026-06-09 00:42:34,428 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:43:07,954 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:43:10,902 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:43:18,204 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:44:03,212 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:44:10,451 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:44:20,199 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:44:34,865 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:45:07,359 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:46:07,370 - INFO - Retrying request to /chat/completions in 0.498732 seconds
+2026-06-09 00:46:52,100 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:47:17,249 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:47:24,202 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:47:44,093 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:48:25,759 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:48:29,899 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:49:02,936 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:49:14,172 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:49:20,699 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:49:34,736 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 00:49:34,740 - INFO - LLM Extraction complete. Extracted 55 triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_full_2026-06-08_2335\chunks\llm_120_139.jsonl. malformed_outputs=0 failed_records=0

@@ -294,3 +294,57 @@ python src/fusion/dictionary_mapper.py
 
 - 继续坚持 7B：成本低但复现可行性差，预计要投入 prompt repair / retry repair / JSON extraction fallback，质量仍不稳定。
 - 做 full refactor：长期更干净，但本轮范围会明显扩大，并且更容易影响 Stage 3 和 evaluation。
+
+## Execution Result
+
+该方案已执行完成。
+
+运行目录：
+
+```text
+artifacts/runs/stage2_extraction_full_2026-06-08_2335/
+```
+
+执行命令：
+
+```powershell
+python src/extraction/run_stage2_extraction.py `
+  --run-dir artifacts/runs/stage2_extraction_full_2026-06-08_2335 `
+  --llm-limit 200 `
+  --chunk-size 20 `
+  --model deepseek-ai/DeepSeek-V4-Flash `
+  --max-tokens 2048 `
+  --promote
+```
+
+运行结果：
+
+- LLM chunks: 10/10 completed
+- LLM model: `deepseek-ai/DeepSeek-V4-Flash`
+- LLM PMID split: first 200 PubMed records
+- Regex PMID split: remaining 4355 PubMed records
+- LLM output: 638 records, 0 bad JSON lines, 0 invalid triples, 138 unique PMIDs
+- Regex output: 5101 records, 0 bad JSON lines, 0 invalid triples, 2239 unique PMIDs
+- Merged output: 5738 records, 0 bad JSON lines, 0 invalid triples, 0 duplicate merged signatures, 2377 unique PMIDs
+- Validation: passed
+- Promotion to canonical `data/processed/`: completed
+
+Promoted canonical outputs:
+
+- `data/processed/llm_extracted_triples.jsonl`
+- `data/processed/spacy_extracted_triples.jsonl`
+- `data/processed/extracted_triples.jsonl`
+
+Hashes:
+
+- LLM output SHA-256: `95897853f57d6bcd9342a53580a32164bc90a073fc36ff2db22daf1b6e771f40`
+- Regex output SHA-256: `cf4e817ae155a536e0bb86321af9fac2b0e8f025aa02d68870a060e2c8422ac7`
+- Merged output SHA-256: `02ba3fa780f52228870f2171611448db2910dbbe70f30e3937772bf4104a60b4`
+
+Stage 3 compatibility check:
+
+```text
+stage3_dictionary_mapper_dry_read=ok records=5738
+```
+
+No Stage 3 code changes were required.

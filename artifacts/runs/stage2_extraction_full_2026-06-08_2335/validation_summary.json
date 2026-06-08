@@ -1,0 +1,236 @@
+{
+  "valid": true,
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "chunk_size": 20,
+  "llm_limit": 200,
+  "chunk_results": [
+    {
+      "chunk": "llm_000_019",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_000_019.jsonl",
+      "records": 67,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 67
+      },
+      "unique_pmids": 17,
+      "bytes": 17559,
+      "sha256": "d369b89a9c0ce70d7f08be9ef9948d480ede43e9e968bfc17338e385a0eb1dd9"
+    },
+    {
+      "chunk": "llm_020_039",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_020_039.jsonl",
+      "records": 75,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 75
+      },
+      "unique_pmids": 15,
+      "bytes": 19353,
+      "sha256": "f3a4f27277f38d40e65f39947be57a896a3f2d81b609d7406e709b119a5d2006"
+    },
+    {
+      "chunk": "llm_040_059",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_040_059.jsonl",
+      "records": 68,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 68
+      },
+      "unique_pmids": 12,
+      "bytes": 17555,
+      "sha256": "5835293bcaec7d9700ddc34456b5b72e60df6f2b710a4bdc1093a720abc61a28"
+    },
+    {
+      "chunk": "llm_060_079",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_060_079.jsonl",
+      "records": 56,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 56
+      },
+      "unique_pmids": 9,
+      "bytes": 14205,
+      "sha256": "3bec900ccfd82d926e7b1c7184a6a059ee91d419d7d45f0967a856b388a1df70"
+    },
+    {
+      "chunk": "llm_080_099",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_080_099.jsonl",
+      "records": 62,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 1,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 62
+      },
+      "unique_pmids": 15,
+      "bytes": 15890,
+      "sha256": "84cbc3d0c99c785f5ba1fedab3b856516a02dfa9961dcffc44d3cb70121eb88c"
+    },
+    {
+      "chunk": "llm_100_119",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_100_119.jsonl",
+      "records": 87,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 87
+      },
+      "unique_pmids": 15,
+      "bytes": 22612,
+      "sha256": "3416b844ce1d08f517816c4f36b062fe27f0f48f23be3120bb9c9083bf05b5b4"
+    },
+    {
+      "chunk": "llm_120_139",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_120_139.jsonl",
+      "records": 55,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 55
+      },
+      "unique_pmids": 14,
+      "bytes": 13963,
+      "sha256": "1d1c0546dbe0256f3fd6093dd6c30b27c802f19730ae8de0d500b86ef7d1cc25"
+    },
+    {
+      "chunk": "llm_140_159",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_140_159.jsonl",
+      "records": 69,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 69
+      },
+      "unique_pmids": 15,
+      "bytes": 18021,
+      "sha256": "6a8bfbf56691b24e649ee11bda0f76392829a10579fb81ce997fbbe140b37f25"
+    },
+    {
+      "chunk": "llm_160_179",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_160_179.jsonl",
+      "records": 35,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 35
+      },
+      "unique_pmids": 12,
+      "bytes": 9027,
+      "sha256": "310dfe2ff84e136f3a0d138f2a507993f967ded917e5839a3a2ce68d30dfbe4a"
+    },
+    {
+      "chunk": "llm_180_199",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\chunks\\llm_180_199.jsonl",
+      "records": 64,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 64
+      },
+      "unique_pmids": 14,
+      "bytes": 16340,
+      "sha256": "0c2cad0bc572d386ee4dd78e34ed1b621535d4f959e6270b47b5890fd6d5e69a"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\outputs\\data\\processed\\llm_extracted_triples.jsonl",
+      "records": 638,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 1,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 638
+      },
+      "unique_pmids": 138,
+      "bytes": 164525,
+      "sha256": "95897853f57d6bcd9342a53580a32164bc90a073fc36ff2db22daf1b6e771f40"
+    },
+    {
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\outputs\\data\\processed\\spacy_extracted_triples.jsonl",
+      "records": 5101,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "valid": true,
+      "source_counts": {
+        "Regex_Fallback": 5101
+      },
+      "unique_pmids": 2239,
+      "bytes": 1141675,
+      "sha256": "cf4e817ae155a536e0bb86321af9fac2b0e8f025aa02d68870a060e2c8422ac7"
+    },
+    {
+      "path": "artifacts\\runs\\stage2_extraction_full_2026-06-08_2335\\outputs\\data\\processed\\extracted_triples.jsonl",
+      "records": 5738,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": false,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 637,
+        "Regex_Fallback": 5101
+      },
+      "unique_pmids": 2377,
+      "bytes": 1305952,
+      "sha256": "02ba3fa780f52228870f2171611448db2910dbbe70f30e3937772bf4104a60b4"
+    }
+  ]
+}

@@ -17,6 +17,20 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-09 - Stage 2 full extraction needed recoverable execution
+
+- Symptom: Stage 2 LLM extraction was too slow and fragile as one monolithic
+  200-record run. Earlier attempts could be interrupted and either leave partial
+  `.tmp` data or risk stale/historical LLM outputs being mixed with fresh Regex
+  output.
+- Cause: The original Stage 2 flow had no chunk manifest, no resumable runner,
+  no validation gate, and no promote-only-after-validation step.
+- Fix: Added `src/extraction/run_stage2_extraction.py` to generate a fixed
+  Stage 2 split, run DeepSeek V4 Flash in 20-PMID chunks, resume valid chunks,
+  validate LLM/Regex/merged JSONL outputs, write run artifacts, and promote only
+  after validation passes.
+- Verification: `python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_full_2026-06-08_2335 --llm-limit 200 --chunk-size 20 --model deepseek-ai/DeepSeek-V4-Flash --max-tokens 2048 --promote` completed successfully. Validation reports 638 LLM triples, 5101 Regex triples, and 5738 merged triples with 0 bad JSON lines and 0 invalid triples; a Stage 3 dictionary-mapper dry-read loaded all 5738 merged triples without code changes.
+
 ### 2026-06-08 - Stage 2 LLM extraction could not be faithfully rerun
 
 - Symptom: The second-stage LLM extractor could not be safely rerun because
