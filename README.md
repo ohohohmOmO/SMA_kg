@@ -1,68 +1,104 @@
-# SMA Knowledge Graph & Digital Twin
+# SMA Knowledge Graph
 
-## 📖 Introduction
-This project aims to construct a high-density, high-quality Knowledge Graph (KG) for **Spinal Muscular Atrophy (SMA)**. It systematically integrates data regarding SMA-associated genes (e.g., SMN1, SMN2), pathogenic mechanisms, clinical phenotypes, and drug treatments. This KG serves as the core logic engine and data foundation for an SMA Digital Twin system.
+This repository builds a biomedical knowledge graph for Spinal Muscular Atrophy
+(SMA). The current implementation collects SMA data from Open Targets and
+PubMed, extracts relation triples from literature, fuses synonymous entities,
+computes graph metrics, generates an HTML graph viewer, and evaluates extraction
+quality.
 
-The project emphasizes a fully automated, zero-human-annotation pipeline, utilizing Large Language Models (LLMs) for relation extraction, small Sentence-Transformer models for semantic fusion, and Neo4j for persistent graph storage.
+## Start Here
 
-## 🛠️ Technology Stack
-* **Language:** Python 3.x
-* **Data Sources:** Open Targets API (GraphQL), PubMed Literature
-* **NLP & AI:**
-  * **LLM Engine:** Qwen2.5-7B-Instruct (via SiliconFlow API) for Named Entity Recognition (NER) and Relation Extraction (RE).
-  * **Semantic Alignment:** HuggingFace `sentence-transformers` (`all-MiniLM-L6-v2`), `scikit-learn` (Cosine Similarity).
-  * **Topic Clustering:** `BERTopic`
-* **Graph Database:** Neo4j (Cypher query language)
-* **Visualization:** PyVis, ECharts, HTML exports
-* **Data Processing:** `pandas`, `requests`, `tenacity` (for retry logic), JSONL formatted intermediate files.
+- Agent and contributor rules: `AGENTS.md`
+- Run checklist: `docs/agents/PLAN.md`
+- Issue log: `docs/agents/ISSUE_LOG.md`
+- Dated handoff snapshot: `docs/PROJECT_HANDOFF_2026-06-08.md`
+- Archived old overview: `docs/archive/SMA_KG_Project_Overview_OLD.md`
 
-## 📂 Repository Structure
+The dated handoff is a snapshot of the repository state on 2026-06-08. It is
+useful context, but it is not a mandatory preflight document for every task.
 
-```text
-kg_sma_0420/
-├── data/                  # Pipeline Data IO (raw, processed, interim, external)
-├── docs/                  # Project specifications and historical technical plans
-├── lib/                   # Project specific libraries and modules
-├── notebooks/             # Data exploration, clustering (BERTopic), and visualizations
-├── src/                   # Core pipeline source code
-│   ├── crawler/           # Phase 1: Data Acquisition (PubMed, Open Targets)
-│   ├── extraction/        # Phase 2: Knowledge Extraction (LLM / NLP)
-│   ├── fusion/            # Phase 3: Semantic Alignment & Deduplication
-│   ├── database/          # Phase 4: Neo4j Import & Graph Analytics
-│   └── evaluation/        # Phase 5: Relation-level Metrics, Ablation & Novelty Search
-├── requirements.txt       # Python dependencies
-├── final_reports.txt      # Evaluation reports (baseline, ablation, novelty discovery)
-└── test_ot.py             # Script for testing OpenTargets API integration
+## Environment
+
+Use the conda environment prepared for this repository:
+
+```powershell
+conda activate KG_SMA_env
+python --version
+python -m pip install -r requirements.txt
 ```
 
-## 🚀 Key Pipeline Phases
+External services and environment variables:
 
-1. **Phase 1: Data Acquisition (`src/crawler/`)**
-   - Interacts with Open Targets GraphQL API and crawls PubMed abstracts based on SMA-related keywords.
-2. **Phase 2: Knowledge Extraction (`src/extraction/`)**
-   - Uses Qwen2.5-7B via SiliconFlow API to extract biomedical triples (`Gene`, `Protein`, `Phenotype`, `Drug`).
-3. **Phase 3: Semantic Fusion & Alignment (`src/fusion/`)**
-   - Loads `all-MiniLM-L6-v2` transformer model to generate entity embeddings and clusters them to remove redundant synonyms.
-4. **Phase 4: Database & Graph Computation (`src/database/`)**
-   - Ingests triples into Neo4j using Cypher MERGE queries. Calculates graph topology metrics like PageRank and Community Detection.
-5. **Phase 5: Evaluation & Novelty Discovery (`src/evaluation/`)**
-   - Evaluates extraction and performs ablation studies on semantic fusion (metrics can be found in `final_reports.txt`).
+- `SILICONFLOW_API_KEY` for LLM extraction and LLM-based evaluation.
+- `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD` for Neo4j import and topology
+  checks.
+- `HF_ENDPOINT`, commonly `https://hf-mirror.com`, for HuggingFace model access.
 
-## ⚙️ Environment Configuration
+## Repository Layout
 
-Set the following environment variables to run the pipeline:
-* `SILICONFLOW_API_KEY`: Required for LLM extraction and evaluation (Phase 2 & 5).
-* `NEO4J_URI`: e.g., `bolt://localhost:7687`
-* `NEO4J_USER`: e.g., `neo4j`
-* `NEO4J_PASSWORD`: Neo4j password
-* `HF_ENDPOINT`: Typically set to `https://hf-mirror.com` (to bypass region blocks when downloading HuggingFace models).
+```text
+data/
+  raw/            PubMed abstracts
+  external/       Open Targets baseline data
+  interim/        mapped and aligned intermediate triples
+  processed/      extracted, fused, evaluated, and analyzed outputs
+src/
+  crawler/        Open Targets and PubMed acquisition
+  extraction/     LLM extraction, regex fallback extraction, merge step
+  fusion/         dictionary mapping, semantic alignment, triple aggregation
+  database/       Neo4j import, NetworkX analytics, PyVis graph export
+  evaluation/     baseline evaluation, human/LLM scoring, novelty analysis
+notebooks/        BERTopic exploration and topic visualization
+docs/             handoff snapshots, generated graph viewer, agent docs
+artifacts/        archived run reports and ad hoc test results
+tests/smoke/      lightweight external API smoke tests
+lib/              vendored browser libraries used by generated HTML
+```
 
-## 🏃 Getting Started
-1. Install requirements:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Execute the data pipeline sequentially via the scripts in the `src/` directory. Check `data/` directory for input/output files.
+## Pipeline
 
-## 📊 Project Results
-The latest ablation studies and novelty discovery outcomes are documented in `final_reports.txt`. The pipeline effectively enhances graph density and isolates potential new discoveries through automated analysis.
+Run from the repository root.
+
+```powershell
+python src/crawler/api_fetcher.py
+python src/crawler/pubmed_crawler.py
+
+python src/extraction/llm_extractor.py
+python src/extraction/local_pipeline.py
+python src/extraction/merge_triples.py
+
+python src/fusion/dictionary_mapper.py
+python src/fusion/semantic_aligner.py
+python src/fusion/triples_aggregator.py
+
+python src/database/graph_analytics.py
+python src/database/generate_pyvis.py
+
+python src/evaluation/baseline_eval_advanced.py
+python src/evaluation/ablation_study.py
+python src/evaluation/novelty_analysis.py
+```
+
+Optional steps that require external services:
+
+```powershell
+python src/database/neo4j_importer.py
+python src/evaluation/topology_eval.py
+python src/evaluation/metrics_calculator.py
+```
+
+## Current Outputs
+
+- `data/raw/pubmed_sma_abstracts.jsonl`: PubMed SMA abstracts.
+- `data/external/sma_gda_baseline.jsonl`: Open Targets gene-disease baseline.
+- `data/processed/extracted_triples.jsonl`: merged raw extraction output.
+- `data/interim/mapped_triples.jsonl`: dictionary-normalized triples.
+- `data/interim/aligned_triples.jsonl`: semantically aligned triples.
+- `data/processed/fused_triples.jsonl`: fused unique graph edges.
+- `data/processed/analytics_metrics.csv`: PageRank and community metrics.
+- `docs/graph_viewer.html`: generated interactive graph viewer.
+- `artifacts/reports/`: archived historical command outputs and evaluation
+  reports.
+
+See `docs/PROJECT_HANDOFF_2026-06-08.md` for the detailed state and result
+summary captured on 2026-06-08.
