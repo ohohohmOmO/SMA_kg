@@ -484,10 +484,12 @@ files inspected for this reproduction were:
   for basic topology metrics; this was treated as downstream evaluation rather
   than the core file-output reproduction.
 
-The local file-producing parts were reproduced. The Neo4j import was not run
-because `.env` contains Neo4j keys but `NEO4J_PASSWORD` is empty, and the Stage
-4 importer only reads process environment variables. The blocked database
-boundary is recorded in
+The local file-producing parts were reproduced. The initial Neo4j import was
+not run because `.env` contained Neo4j keys but `NEO4J_PASSWORD` was empty. In a
+continuation run on 2026-06-09, the Neo4j credentials were stored in the ignored
+local `.env` file, but connectivity still failed because no local Neo4j service
+was listening on `bolt://localhost:7687`. The blocked database boundary is
+recorded in
 `artifacts/runs/stage4_graph_database_2026-06-09/neo4j_import_status.log`.
 
 ## Stage 4 Output Convention
@@ -574,8 +576,10 @@ normalization limits, and confidence heuristics. The graph can support
 exploration and sanity checks, but it should not yet be used as a validated
 scientific ranking without Stage 5 evaluation and manual/LLM review.
 
-The Neo4j portion remains incomplete for this reproduction. Since the password
-is missing, no database write, topology query, or end-to-end Neo4j verification
+The Neo4j portion remains incomplete for this reproduction. The required
+credentials are now available from the ignored local `.env`, but connectivity to
+`bolt://localhost:7687` failed with `ServiceUnavailable` because the port is not
+listening. No database write, topology query, or end-to-end Neo4j verification
 was performed.
 
 ## Stage 4 Diagnosed Code Issues
@@ -592,13 +596,14 @@ was performed.
      identical SHA-256 hashes across two consecutive runs.
 
 2. Neo4j import cannot currently be reproduced from repository state alone.
-   - Cause: required `NEO4J_PASSWORD` is present as a key in `.env` but has no
-     value, and `neo4j_importer.py` does not load `.env` by itself.
+   - Cause: credentials are now present in the ignored local `.env`, but no
+     Neo4j Windows service, Java/Neo4j process, Docker container, or TCP listener
+     is available on `localhost:7687`.
    - Impact: the file-output part of Stage 4 is reproducible, but the database
      state and `topology_eval.py` cannot be validated in this run.
    - Recommendation: add a Stage 4 runner that loads ignored local env files,
-     validates required variables, writes an import summary, and refuses to run
-     with default placeholder passwords.
+     validates required variables, checks service reachability, writes an import
+     summary, and refuses to run with default placeholder passwords.
 
 3. `neo4j_importer.py` builds dynamic Cypher labels and relationship types from
    data values.
@@ -661,5 +666,35 @@ As of 2026-06-09, Stage 4 is partially reproduced and locally successful:
 `analytics_metrics.csv` and `graph_viewer.html` were regenerated, archived under
 a dated run directory, and made deterministic. The output can support downstream
 file-based inspection. The Neo4j database import and Neo4j topology evaluation
-remain blocked until a non-empty `NEO4J_PASSWORD` and reachable database are
-provided.
+remain blocked until a reachable Neo4j database is running on the configured
+Bolt URI.
+
+## Stage 4 Neo4j Continuation 2026-06-09
+
+The user provided Neo4j credentials on 2026-06-09. The real values were stored
+only in the ignored local `.env` file, together with the existing
+`SILICONFLOW_API_KEY`, and `AGENTS.md` was updated to require this pattern for
+future work.
+
+Continuation checks:
+
+- `.env` contains entries for `NEO4J_URI`, `NEO4J_USER`, and
+  `NEO4J_PASSWORD`.
+- `.gitignore` ignores `.env`, `.env.local`, and `.env.*.local`.
+- `AGENTS.md` now explicitly says to keep `SILICONFLOW_API_KEY` and Neo4j
+  credentials together in the same ignored local `.env`.
+- Neo4j connectivity failed with `ServiceUnavailable`.
+- `Get-Service` found no Neo4j service.
+- `Get-NetTCPConnection -LocalPort 7687` found no listener.
+- No Java/Neo4j process was running.
+- Docker was not available as a command on this machine.
+
+Updated status:
+
+```text
+NEO4J_IMPORT_STATUS=failed_service_unavailable
+```
+
+Required next action: start or install a Neo4j instance that listens on
+`bolt://localhost:7687`, then rerun `src/database/neo4j_importer.py` and
+`src/evaluation/topology_eval.py` with the repository `.env` loaded.

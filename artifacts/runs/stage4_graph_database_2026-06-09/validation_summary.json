@@ -2,7 +2,7 @@
   "stage": "stage4_graph_database_and_analytics",
   "run_dir": "artifacts\\runs\\stage4_graph_database_2026-06-09",
   "local_outputs_reproduced": true,
-  "neo4j_import_status": "skipped_missing_required_env",
+  "neo4j_import_status": "failed_service_unavailable",
   "fused_triples": 554,
   "open_targets_records": 164,
   "graph_nodes_estimated": 607,
@@ -78,5 +78,12 @@
       "PageRank": "0.005680704162236958",
       "Community_ID": "3"
     }
-  ]
+  ],
+  "neo4j_continuation_2026_06_09": {
+    "credentials_available_from_ignored_env": true,
+    "connectivity": "failed",
+    "error_type": "ServiceUnavailable",
+    "reason": "No local Neo4j service is listening on bolt://localhost:7687; Windows service, process, Docker container, and TCP listener checks were empty.",
+    "log": "neo4j_import_status.log"
+  }
 }

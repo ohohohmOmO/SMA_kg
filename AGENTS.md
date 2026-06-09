@@ -33,6 +33,11 @@ Store real local secrets in `.env` or `.env.local` at the repository root. These
 files are ignored by git and must stay uncommitted. Commit only sanitized
 templates such as `.env.example`.
 
+Keep the real `SILICONFLOW_API_KEY` and Neo4j credentials
+(`NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD`) together in the same ignored local
+`.env` file for this repository. Do not split real secret values into committed
+docs, scripts, notebooks, or generated artifacts.
+
 When code needs a secret, read it from environment variables, for example
 `SILICONFLOW_API_KEY`, `NEO4J_URI`, `NEO4J_USER`, `NEO4J_PASSWORD`, or
 `HF_ENDPOINT`. If a task requires a new secret, add a placeholder to
