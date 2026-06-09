@@ -61,3 +61,20 @@ and blank review labels.
 A case where the same meaningful entity pair has relations with incompatible
 polarity, such as a drug improving and worsening the same phenotype. Relation
 conflicts are marked for review instead of silently merged away.
+
+## Evidence Context
+
+A reviewable bundle of source abstracts, evidence triples, fused graph edges,
+PMIDs, and provenance assembled to support an answer or a graph-quality decision.
+
+## Graph RAG Answer
+
+An answer generated from retrieved evidence context and graph context. It must
+cite source PMIDs and avoid claims that are unsupported by the retrieved context.
+
+## Conflict Adjudication
+
+A decision about a relation conflict that classifies whether the conflict is
+supported, context-dependent, caused by extraction error, caused by relation
+normalization, or still unresolved. It does not rewrite canonical graph evidence
+unless a later promotion step explicitly does so.
