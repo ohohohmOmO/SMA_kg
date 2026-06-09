@@ -11,6 +11,7 @@ quality.
 - Agent and contributor rules: `AGENTS.md`
 - Run checklist: `docs/agents/PLAN.md`
 - Issue log: `docs/agents/ISSUE_LOG.md`
+- Latest handoff: `docs/PROJECT_HANDOFF_2026-06-09.md`
 - Current hardening notes: `docs/reproduction/ENGINEERING_HARDENING_2026-06-09.md`
 - Stage 3 preparation status: `docs/reproduction/STAGE3_PREP_2026-06-09.md`
 - Pre-improvement baseline: `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`

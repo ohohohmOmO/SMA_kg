@@ -70,6 +70,7 @@ Read these when starting, resuming after compaction, or resolving uncertainty:
 - `docs/agents/PLAN.md`
 - `docs/agents/ISSUE_LOG.md`
 - `CONTEXT.md`
+- `docs/PROJECT_HANDOFF_2026-06-09.md`
 - `docs/reproduction/ENGINEERING_HARDENING_2026-06-09.md`
 - `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
 - `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`
