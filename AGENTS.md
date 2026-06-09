@@ -4,9 +4,8 @@ This repository builds a knowledge graph for Spinal Muscular Atrophy (SMA). It
 combines PubMed/Open Targets data acquisition, LLM-based relation extraction,
 semantic fusion, Neo4j import, graph analytics, visualization, and evaluation.
 
-`docs/PROJECT_HANDOFF_2026-06-08.md` is a dated snapshot of the repository state
-as of 2026-06-08. Use it when historical context is useful; do not treat it as a
-mandatory preflight document because the project will continue to evolve.
+`docs/PROJECT_HANDOFF_2026-06-09.md` is the current project handoff. Use it for
+quick onboarding when the current development state is unclear.
 
 ## Operating workflow
 

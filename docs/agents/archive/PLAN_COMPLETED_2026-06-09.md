@@ -3,8 +3,8 @@
 This file is the first checkpoint before running commands, tests, scripts, or
 pipeline steps in this repository.
 
-For a dated snapshot of the implementation state on 2026-06-08, see
-`docs/PROJECT_HANDOFF_2026-06-08.md`. It is reference material, not a mandatory
+For the current dated snapshot of the implementation state, see
+`docs/PROJECT_HANDOFF_2026-06-09.md`. It is reference material, not a mandatory
 preflight document.
 
 ## Current Operating Rules

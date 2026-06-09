@@ -1,8 +1,8 @@
 # OLD: SMA Knowledge Graph & Digital Twin - Project Overview
 
 This is an archived overview. It is retained for historical context only.
-For the repository state captured on 2026-06-08, see
-`docs/PROJECT_HANDOFF_2026-06-08.md`. For current onboarding, start with
+For the current repository handoff, see
+`docs/PROJECT_HANDOFF_2026-06-09.md`. For current onboarding, start with
 `README.md`, `AGENTS.md`, and `docs/agents/PLAN.md`.
 
 ## 1. Project Goal & Scope

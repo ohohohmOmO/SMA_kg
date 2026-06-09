@@ -15,11 +15,10 @@ quality.
 - Current hardening notes: `docs/reproduction/ENGINEERING_HARDENING_2026-06-09.md`
 - Stage 3 preparation status: `docs/reproduction/STAGE3_PREP_2026-06-09.md`
 - Pre-improvement baseline: `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
-- Dated handoff snapshot: `docs/PROJECT_HANDOFF_2026-06-08.md`
 - Archived old overview: `docs/archive/SMA_KG_Project_Overview_OLD.md`
 
-The dated handoff is a snapshot of the repository state on 2026-06-08. It is
-useful context, but it is not a mandatory preflight document for every task.
+Use the latest handoff for project onboarding. Older handoff snapshots have
+been removed so `docs/PROJECT_HANDOFF_2026-06-09.md` is the source of truth.
 
 ## Environment
 
@@ -127,5 +126,4 @@ Open decisions before changing Stage 1 or Stage 2 inputs:
 - `.scratch/stage3-prep/issues/01-review-topic-balanced-expansion.md`
 - `.scratch/stage3-prep/issues/02-build-gold-set-before-medical-model-finetuning.md`
 
-See `docs/PROJECT_HANDOFF_2026-06-08.md` for the detailed state and result
-summary captured on 2026-06-08.
+See `docs/PROJECT_HANDOFF_2026-06-09.md` for the current project handoff.

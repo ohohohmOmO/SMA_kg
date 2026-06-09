@@ -78,7 +78,6 @@ Read these when starting, resuming after compaction, or resolving uncertainty:
 
 Historical or archived context:
 
-- `docs/PROJECT_HANDOFF_2026-06-08.md`
 - `docs/agents/archive/PLAN_COMPLETED_2026-06-09.md`
 
 ## Pipeline Shape

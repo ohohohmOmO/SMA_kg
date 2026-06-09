@@ -9,7 +9,7 @@ exploring the codebase.
 - `docs/adr/`, if it exists, for ADRs that touch the area about to be changed.
 - `README.md` when broader current project context is needed.
 - `docs/archive/SMA_KG_Project_Overview_OLD.md` only when historical context is
-  needed; prefer the dated handoff snapshot for the 2026-06-08 project state.
+  needed; prefer the latest handoff at `docs/PROJECT_HANDOFF_2026-06-09.md`.
 
 If any of these files do not exist, proceed silently. Do not flag their absence
 or create them upfront unless the current task needs them.

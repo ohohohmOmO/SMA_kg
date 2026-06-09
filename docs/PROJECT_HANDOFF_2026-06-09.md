@@ -38,7 +38,6 @@ Read these first:
 
 Historical reference only:
 
-- `docs/PROJECT_HANDOFF_2026-06-08.md`
 - `docs/agents/archive/PLAN_COMPLETED_2026-06-09.md`
 - `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
