@@ -17,6 +17,24 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-09 - Stage 2 rule candidates could enter canonical graph output
+
+- Symptom: Stage 2 discussions identified that local rule extraction is too
+  coarse to be merged with LLM triples as canonical graph evidence; the old
+  merge path could combine LLM output with raw rule/Regex output.
+- Cause: The historical Stage 2 design treated local rules as a fallback
+  extractor and merged their output into `data/processed/extracted_triples.jsonl`
+  by default.
+- Fix: Locked Stage 2 canonical extraction to LLM-only output, renamed local
+  rules to `Rule_Candidate`, moved rule outputs to `data/interim/`, added an
+  optional LLM verifier for rule candidates, and changed the default merge entry
+  point to include only LLM plus explicitly verified rule files.
+- Verification: `python -m py_compile` passed for the updated Stage 2 scripts;
+  `python -m unittest discover -s tests/unit -v` passed 7 tests; the
+  `artifacts/runs/stage2_rule_candidate_policy_probe_2026-06-09/` dry run
+  produced 5 rule candidates and verifier dry-run coverage with 0 missing
+  source abstracts.
+
 ### 2026-06-09 - Stage 1 crawlers used insecure TLS and runtime installs
 
 - Symptom: Stage 1 diagnosis found `verify=False`, runtime `pip install` calls,

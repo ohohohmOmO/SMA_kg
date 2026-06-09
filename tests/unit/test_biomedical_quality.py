@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import unittest
 
 from src.biomedical.confidence import normalize_and_score
@@ -6,7 +9,9 @@ from src.biomedical.schema import (
     normalize_relation,
     normalize_triple,
 )
-from src.extraction.local_pipeline import regex_fallback_extraction
+from src.extraction.local_pipeline import rule_candidate_extraction
+from src.extraction.merge_triples import merge_jsonl
+from src.extraction.run_stage2_extraction import build_split
 
 
 class BiomedicalQualityTests(unittest.TestCase):
@@ -44,18 +49,64 @@ class BiomedicalQualityTests(unittest.TestCase):
         self.assertIn("confidence_components", normalized)
 
     def test_local_rule_extraction_uses_sentence_evidence_and_negation_filter(self):
-        positive = regex_fallback_extraction(
+        positive = rule_candidate_extraction(
             "Nusinersen treatment improved motor function in SMA.", "1"
         )
-        negative = regex_fallback_extraction(
+        negative = rule_candidate_extraction(
             "Nusinersen did not improve motor function in SMA.", "2"
         )
         self.assertTrue(any(item["relation"] == "IMPROVES" for item in positive))
+        self.assertTrue(all(item["extracted_by"] == "Rule_Candidate" for item in positive))
         self.assertEqual(negative, [])
 
     def test_conflicting_relation_polarity_is_detected(self):
         self.assertTrue(has_conflicting_polarity({"IMPROVES", "WORSENS"}))
         self.assertFalse(has_conflicting_polarity({"IMPROVES", "TREATS"}))
+
+    def test_stage2_split_names_rule_candidates_not_regex_fallback(self):
+        with TemporaryDirectory() as tmp:
+            input_file = Path(tmp) / "abstracts.jsonl"
+            records = [
+                {"pmid": "1", "abstract": "A"},
+                {"pmid": "2", "abstract": "B"},
+                {"pmid": "3", "abstract": "C"},
+            ]
+            input_file.write_text(
+                "".join(json.dumps(item) + "\n" for item in records),
+                encoding="utf-8",
+            )
+            split, _ = build_split(input_file, llm_limit=1, model="test-model", chunk_size=20)
+            self.assertEqual(split["llm_pmids"], ["1"])
+            self.assertEqual(split["rule_candidate_pmids"], ["2", "3"])
+            self.assertNotIn("regex_pmids", split)
+
+    def test_stage2_canonical_merge_can_exclude_rule_candidates(self):
+        with TemporaryDirectory() as tmp:
+            tmp_dir = Path(tmp)
+            llm_file = tmp_dir / "llm.jsonl"
+            rule_file = tmp_dir / "rule_candidates.jsonl"
+            canonical_file = tmp_dir / "extracted.jsonl"
+            llm_record = {
+                "source_pmid": "1",
+                "entity_1": {"name": "Nusinersen", "type": "Drug"},
+                "relation": "IMPROVES",
+                "entity_2": {"name": "motor function", "type": "Phenotype"},
+                "extracted_by": "LLM_test",
+            }
+            rule_record = {
+                "source_pmid": "2",
+                "entity_1": {"name": "SMN1", "type": "Gene"},
+                "relation": "ASSOCIATED_WITH",
+                "entity_2": {"name": "SMA", "type": "Disease"},
+                "extracted_by": "Rule_Candidate",
+            }
+            llm_file.write_text(json.dumps(llm_record) + "\n", encoding="utf-8")
+            rule_file.write_text(json.dumps(rule_record) + "\n", encoding="utf-8")
+
+            merge_jsonl([str(llm_file)], str(canonical_file))
+
+            merged = [json.loads(line) for line in canonical_file.read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(merged, [llm_record])
 
 
 if __name__ == "__main__":

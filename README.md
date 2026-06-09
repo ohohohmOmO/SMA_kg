@@ -49,7 +49,7 @@ data/
   processed/      extracted, fused, evaluated, and analyzed outputs
 src/
   crawler/        Open Targets and PubMed acquisition
-  extraction/     LLM extraction, regex fallback extraction, merge step
+  extraction/     LLM extraction, rule candidates, verification, merge step
   fusion/         dictionary mapping, semantic alignment, triple aggregation
   database/       Neo4j import, NetworkX analytics, PyVis graph export
   evaluation/     baseline evaluation, human/LLM scoring, novelty analysis
@@ -72,6 +72,7 @@ python src/crawler/topic_clustering.py
 python src/crawler/topic_balanced_pubmed.py --topic-terms-file <topic_terms.json>
 
 python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --promote
+python src/extraction/verify_rule_candidates.py --input-file data/interim/rule_candidate_triples.jsonl --limit 50
 python src/extraction/build_gold_candidates.py --run-dir artifacts/runs/stage2_gold_candidates_<stamp> --limit 750
 
 python src/fusion/run_stage3_fusion.py --run-dir artifacts/runs/stage3_fusion_<stamp> --promote
@@ -95,7 +96,12 @@ python src/evaluation/metrics_calculator.py
 
 - `data/raw/pubmed_sma_abstracts.jsonl`: PubMed SMA abstracts.
 - `data/external/sma_gda_baseline.jsonl`: Open Targets gene-disease baseline.
-- `data/processed/extracted_triples.jsonl`: merged raw extraction output.
+- `data/processed/llm_extracted_triples.jsonl`: validated LLM extraction output.
+- `data/processed/extracted_triples.jsonl`: Stage 2 canonical LLM-only output.
+- `data/interim/rule_candidate_triples.jsonl`: local rule candidates for review,
+  recall analysis, gold-standard sampling, and ablation.
+- `data/interim/verified_rule_triples.jsonl`: optional LLM/human-verified rule
+  candidates; not promoted automatically.
 - `data/interim/mapped_triples.jsonl`: dictionary-normalized triples.
 - `data/interim/aligned_triples.jsonl`: semantically aligned triples.
 - `data/processed/fused_triples.jsonl`: fused unique graph edges.

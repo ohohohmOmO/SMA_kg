@@ -34,6 +34,9 @@ The current plan is in `docs/agents/PLAN.md`. The main decisions are:
 - Treat BioBERT/UIE-med fine-tuning as a later supervised-learning milestone.
   First build 500-1000 review-ready gold-standard candidates and evaluate the
   current LLM/rule baseline.
+- Treat Stage 2 canonical extraction as LLM-only. Local rules produce auxiliary
+  candidates for recall analysis, review, and ablation; they are not merged into
+  the main graph unless verified by an LLM or a human reviewer.
 - Keep topic-balanced PubMed retrieval separate from the original PubMed
   canonical output until its added records are reviewed.
 - Use a biomedical embedding model for Stage 3 semantic alignment and keep the
@@ -65,10 +68,15 @@ Stage 2:
 - Updated `src/extraction/llm_extractor.py` so the prompt requires
   `evidence_text` and model self `confidence`.
 - Updated `src/extraction/local_pipeline.py` from document-level co-mention to
-  sentence-level evidence windows, relation cues, negation checks, schema
-  validation, and component-based confidence.
+  sentence-level rule candidate extraction with evidence windows, relation cues,
+  negation checks, schema validation, and component-based confidence.
 - Updated `src/extraction/run_stage2_extraction.py` to validate schema and
-  evidence.
+  evidence, promote `extracted_triples.jsonl` as LLM-only canonical output, and
+  store rule candidates separately under `data/interim/`.
+- Updated `src/extraction/merge_triples.py` so the default canonical merge uses
+  LLM output only, with optional explicitly verified rule candidate files.
+- Added `src/extraction/verify_rule_candidates.py` for optional LLM verification
+  of local rule candidates into `verified_rule_triples.jsonl`.
 - Added `src/extraction/build_gold_candidates.py`.
 
 Stage 3:
@@ -150,13 +158,27 @@ Stage 4 runner probe:
 - Neo4j skipped for this probe.
 - Local graph analytics and graph viewer snapshot succeeded.
 
+## Stage 2 Policy Update - 2026-06-09
+
+After discussing the two candidate strategies, the selected design is:
+
+- Canonical Stage 2 graph input: validated LLM triples only.
+- Rule output: `Rule_Candidate` triples for recall analysis, missed-triple
+  discovery, gold-standard sampling, and ablation.
+- Verified rule output: `LLM_Verified_RuleCandidate_<model>` triples written to
+  `verified_rule_triples.jsonl`; these can be merged only through an explicit
+  verified-rule input, never by default.
+
+This avoids distilling noisy rules into the main graph while preserving their
+usefulness as a quality-control and coverage tool.
+
 ## Current State
 
-The hardening code and probes are in place, but canonical Stage 2 and Stage 3
-outputs have not been replaced by a full hardened rerun yet. This is intentional:
-the new LLM extraction contract has been validated on a small sample, while the
-full 200-record LLM rerun is slow and should run in a deliberate long-running
-window.
+The hardening code and probes are in place. Stage 2 has now been further
+stabilized so raw rule candidates are separated from canonical LLM output. Any
+new full Stage 2 rerun should promote only the validated LLM file to
+`data/processed/extracted_triples.jsonl`, then rerun Stage 3 on that canonical
+output.
 
 Next recommended execution:
 

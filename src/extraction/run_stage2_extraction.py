@@ -14,14 +14,25 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from local_pipeline import regex_fallback_extraction
-from merge_triples import merge_jsonl
+try:
+    from local_pipeline import rule_candidate_extraction
+    from merge_triples import merge_jsonl
+except ModuleNotFoundError:
+    from src.extraction.local_pipeline import rule_candidate_extraction
+    from src.extraction.merge_triples import merge_jsonl
 from src.biomedical.schema import normalize_triple
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 DEFAULT_MODEL = "deepseek-ai/DeepSeek-V4-Flash"
+
+
+def display_path(path):
+    try:
+        return str(Path(path).relative_to(REPO_ROOT))
+    except ValueError:
+        return str(path)
 
 
 def sha256_file(path):
@@ -89,7 +100,11 @@ def validate_triples(path, rejected_path=None, allow_duplicates=True, require_ev
         if not isinstance(record.get("computed_confidence"), (int, float)):
             missing.append("computed_confidence")
         extracted_by = record.get("extracted_by", "")
-        if "LLM" not in extracted_by and extracted_by != "Regex_Fallback":
+        if (
+            "LLM" not in extracted_by
+            and extracted_by not in {"Regex_Fallback", "Rule_Candidate"}
+            and not str(extracted_by).startswith("Rule_Candidate")
+        ):
             missing.append("extracted_by")
         _, schema_problems = normalize_triple(record, require_evidence=require_evidence)
         missing.extend(schema_problems)
@@ -182,17 +197,17 @@ def build_split(input_file, llm_limit, model, chunk_size):
         raise ValueError(f"Input file has {len(bad_lines)} invalid JSON lines: {input_file}")
     pmids = [str(record.get("pmid", "")) for record in records]
     return {
-        "input_file": str(input_file.relative_to(REPO_ROOT)),
+        "input_file": display_path(input_file),
         "input_sha256": sha256_file(input_file),
         "input_records": len(records),
         "llm_model": model,
         "chunk_size": chunk_size,
         "llm_pmids": pmids[:llm_limit],
-        "regex_pmids": pmids[llm_limit:],
+        "rule_candidate_pmids": pmids[llm_limit:],
     }, records
 
 
-def run_regex(records, llm_limit, output_file):
+def run_rule_candidates(records, llm_limit, output_file):
     triples = []
     for record in records[llm_limit:]:
         pmid = str(record.get("pmid", ""))
@@ -200,7 +215,7 @@ def run_regex(records, llm_limit, output_file):
         if not abstract:
             continue
         seen = set()
-        for triple in regex_fallback_extraction(abstract, pmid):
+        for triple in rule_candidate_extraction(abstract, pmid):
             sig = (
                 triple["entity_1"]["name"],
                 triple["relation"],
@@ -290,17 +305,18 @@ def main():
             if chunk_file.exists():
                 out.write(chunk_file.read_text(encoding="utf-8"))
 
-    regex_output = run_dir / "outputs" / "data" / "processed" / "spacy_extracted_triples.jsonl"
-    regex_triples = run_regex(records, args.llm_limit, regex_output)
-    logging.info("Regex fallback wrote %s triples", len(regex_triples))
+    rule_candidate_output = run_dir / "outputs" / "data" / "interim" / "rule_candidate_triples.jsonl"
+    rule_candidate_output.parent.mkdir(parents=True, exist_ok=True)
+    rule_candidate_triples = run_rule_candidates(records, args.llm_limit, rule_candidate_output)
+    logging.info("Rule candidate extraction wrote %s candidates", len(rule_candidate_triples))
 
-    merged_output = run_dir / "outputs" / "data" / "processed" / "extracted_triples.jsonl"
-    merge_jsonl([str(llm_output), str(regex_output)], str(merged_output))
+    canonical_output = run_dir / "outputs" / "data" / "processed" / "extracted_triples.jsonl"
+    merge_jsonl([str(llm_output)], str(canonical_output))
 
     validations = [
         validate_triples(llm_output, run_dir / "rejected" / "llm_invalid.jsonl", allow_duplicates=True, require_evidence=True),
-        validate_triples(regex_output, run_dir / "rejected" / "regex_invalid.jsonl", allow_duplicates=True, require_evidence=True),
-        validate_triples(merged_output, run_dir / "rejected" / "merged_invalid.jsonl", allow_duplicates=False, require_evidence=True),
+        validate_triples(rule_candidate_output, run_dir / "rejected" / "rule_candidate_invalid.jsonl", allow_duplicates=True, require_evidence=True),
+        validate_triples(canonical_output, run_dir / "rejected" / "canonical_llm_invalid.jsonl", allow_duplicates=False, require_evidence=True),
     ]
     all_valid = all(item["valid"] for item in validations)
     summary = {
@@ -308,6 +324,7 @@ def main():
         "model": args.model,
         "chunk_size": args.chunk_size,
         "llm_limit": args.llm_limit,
+        "canonical_policy": "LLM-only; rule candidates are auxiliary and not merged into extracted_triples.jsonl",
         "chunk_results": chunk_results,
         "outputs": validations,
     }
@@ -320,7 +337,8 @@ def main():
         f"- Model: `{args.model}`\n"
         f"- Input: `{args.input_file}`\n"
         f"- LLM PMIDs: {len(split['llm_pmids'])}\n"
-        f"- Regex PMIDs: {len(split['regex_pmids'])}\n"
+        f"- Rule candidate PMIDs: {len(split['rule_candidate_pmids'])}\n"
+        "- Canonical policy: `LLM-only extracted_triples.jsonl`; rule candidates are auxiliary\n"
         f"- Validation: {'passed' if all_valid else 'failed'}\n"
         f"- Promoted: {bool(args.promote and all_valid)}\n",
         encoding="utf-8",
@@ -335,8 +353,8 @@ def main():
             run_dir,
             [
                 (llm_output, REPO_ROOT / "data" / "processed" / "llm_extracted_triples.jsonl"),
-                (regex_output, REPO_ROOT / "data" / "processed" / "spacy_extracted_triples.jsonl"),
-                (merged_output, REPO_ROOT / "data" / "processed" / "extracted_triples.jsonl"),
+                (rule_candidate_output, REPO_ROOT / "data" / "interim" / "rule_candidate_triples.jsonl"),
+                (canonical_output, REPO_ROOT / "data" / "processed" / "extracted_triples.jsonl"),
             ],
         )
 

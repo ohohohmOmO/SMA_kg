@@ -114,6 +114,11 @@ requirements from 2026-06-09.
 
 ### Stage 2: Extraction
 
+- Confirmed decision on 2026-06-09: Stage 2 canonical extraction is LLM-only.
+  Rule-based extraction must not be merged into the main graph by default.
+  Rules are auxiliary candidate generators for recall analysis, missed-triple
+  detection, gold-standard sampling, and ablation. A rule-derived triple may
+  enter the canonical output only after LLM verification or human review.
 - Update LLM extraction prompt and parsing so the model returns `confidence` and
   `evidence_text` for each triple.
 - Replace fixed LLM and local-rule confidence literals with the shared
@@ -121,11 +126,17 @@ requirements from 2026-06-09.
 - Add an extraction post-validator and rejected-output file for invalid entity
   types, invalid relations, empty entities, empty evidence, malformed confidence,
   and unsupported schema.
-- Improve the local rule fallback so it is not plain document-level co-mention.
-  It should use sentence-level evidence windows, relation cues, simple negation
-  checks, and schema validation.
+- Rename the local rule output conceptually from fallback extraction to rule
+  candidate extraction. It should use sentence-level evidence windows, relation
+  cues, simple negation checks, and schema validation, but its output is not
+  canonical graph evidence until verified.
 - Keep the existing Stage 2 chunk/resume/promote runner, but route outputs
-  through the shared validator and confidence scorer.
+  through the shared validator and confidence scorer. Promotion must set
+  `data/processed/extracted_triples.jsonl` to the validated LLM output, not to a
+  merge of LLM plus rules.
+- Store rule candidates under `data/interim/rule_candidate_triples.jsonl` or the
+  current run directory. Store LLM/human-accepted rule candidates separately as
+  `verified_rule_triples.jsonl` if that workflow is used.
 - BioBERT/UIE-med fine-tuning is not an immediate production step. First build
   a 500-1000 item gold-standard candidate set with source text, proposed triple,
   evidence span, schema fields, model/rule provenance, and review status. Fine
@@ -168,7 +179,8 @@ requirements from 2026-06-09.
 3. Add shared schema, confidence scoring, and validation modules plus resource
    files.
 4. Implement Stage 1 topic clustering and topic-balanced retrieval runners.
-5. Update Stage 2 LLM extraction, local fallback, merge validation, and gold-set
+5. Update Stage 2 LLM extraction, rule candidate extraction, optional rule
+   candidate verification, LLM-only canonical merge validation, and gold-set
    candidate generation.
 6. Update Stage 3 dictionary loading, relation alignment, medical semantic
    alignment, deterministic connected components, aggregation confidence, and

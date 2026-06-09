@@ -7,6 +7,7 @@ ENGINE_RELIABILITY = {
     "LLM": 0.78,
     "Regex_Fallback": 0.45,
     "Rule_Fallback": 0.45,
+    "Rule_Candidate": 0.45,
 }
 
 

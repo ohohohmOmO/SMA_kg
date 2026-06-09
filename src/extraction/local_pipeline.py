@@ -74,7 +74,7 @@ def add_validated(triples, raw):
     return []
 
 
-def regex_fallback_extraction(text, pmid, include_rejections=False):
+def rule_candidate_extraction(text, pmid, include_rejections=False):
     triples = []
     rejected = []
 
@@ -98,7 +98,7 @@ def regex_fallback_extraction(text, pmid, include_rejections=False):
                     "relation": "TREATS",
                     "entity_2": {"name": present_diseases[0], "type": "Disease"},
                     "evidence_text": sentence,
-                    "extracted_by": "Regex_Fallback",
+                    "extracted_by": "Rule_Candidate",
                 }
                 problems = add_validated(triples, raw)
                 if problems:
@@ -113,7 +113,7 @@ def regex_fallback_extraction(text, pmid, include_rejections=False):
                         "relation": "IMPROVES",
                         "entity_2": {"name": phenotype, "type": "Phenotype"},
                         "evidence_text": sentence,
-                        "extracted_by": "Regex_Fallback",
+                        "extracted_by": "Rule_Candidate",
                     }
                     problems = add_validated(triples, raw)
                     if problems:
@@ -127,7 +127,7 @@ def regex_fallback_extraction(text, pmid, include_rejections=False):
                     "relation": "ASSOCIATED_WITH",
                     "entity_2": {"name": present_diseases[0], "type": "Disease"},
                     "evidence_text": sentence,
-                    "extracted_by": "Regex_Fallback",
+                    "extracted_by": "Rule_Candidate",
                 }
                 problems = add_validated(triples, raw)
                 if problems:
@@ -138,11 +138,14 @@ def regex_fallback_extraction(text, pmid, include_rejections=False):
     return triples
 
 
+regex_fallback_extraction = rule_candidate_extraction
+
+
 def parse_args():
-    parser = argparse.ArgumentParser(description="Run sentence-level local rule fallback extraction.")
+    parser = argparse.ArgumentParser(description="Run sentence-level local rule candidate extraction.")
     parser.add_argument("--input-file", default="data/raw/pubmed_sma_abstracts.jsonl")
-    parser.add_argument("--output-file", default="data/processed/spacy_extracted_triples.jsonl")
-    parser.add_argument("--rejected-file", default="data/processed/spacy_extracted_triples.rejected.jsonl")
+    parser.add_argument("--output-file", default="data/interim/rule_candidate_triples.jsonl")
+    parser.add_argument("--rejected-file", default="data/interim/rule_candidate_triples.rejected.jsonl")
     parser.add_argument("--offset", type=int, default=200)
     parser.add_argument("--limit", type=int, default=-1)
     return parser.parse_args()
@@ -172,7 +175,7 @@ def main():
             if not abstract:
                 continue
 
-            triples, rejected_items = regex_fallback_extraction(abstract, pmid, include_rejections=True)
+            triples, rejected_items = rule_candidate_extraction(abstract, pmid, include_rejections=True)
             seen = set()
             for triple in triples:
                 sig = (
@@ -190,7 +193,7 @@ def main():
                 rejected.write(json.dumps(item, ensure_ascii=False) + "\n")
                 rejected_triples += 1
 
-    logging.info("Local rule extraction complete. Extracted %s triples to %s.", successful_triples, output_file)
+    logging.info("Local rule candidate extraction complete. Extracted %s candidates to %s.", successful_triples, output_file)
     logging.info("Rejected %s local rule triples to %s.", rejected_triples, rejected_file)
     return 0
 

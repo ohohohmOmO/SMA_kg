@@ -14,7 +14,17 @@ PMID and extraction engine.
 ## Extraction Engine
 
 A component that proposes evidence triples from text. In this project, extraction
-engines include LLM extraction and local rule-based fallback extraction.
+engines include LLM extraction and local rule candidate extraction.
+
+## Rule Candidate Triple
+
+An evidence triple proposed by local rules for review, recall analysis, or
+ablation. It is not canonical graph evidence until it is verified.
+
+## Verified Rule Triple
+
+A rule candidate triple that has been accepted by an LLM verifier or a human
+reviewer as directly supported by the source text.
 
 ## Canonical Pipeline Output
 
