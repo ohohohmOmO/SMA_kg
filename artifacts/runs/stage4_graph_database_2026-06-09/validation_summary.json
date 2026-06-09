@@ -1,0 +1,82 @@
+{
+  "stage": "stage4_graph_database_and_analytics",
+  "run_dir": "artifacts\\runs\\stage4_graph_database_2026-06-09",
+  "local_outputs_reproduced": true,
+  "neo4j_import_status": "skipped_missing_required_env",
+  "fused_triples": 554,
+  "open_targets_records": 164,
+  "graph_nodes_estimated": 607,
+  "graph_edges_estimated": 686,
+  "analytics_rows": 607,
+  "communities": 56,
+  "relation_kinds": 112,
+  "core_missing_triples": 0,
+  "fixed_seed_determinism": {
+    "analytics_first_sha256": "3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116",
+    "analytics_second_sha256": "3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116",
+    "graph_viewer_first_sha256": "fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0",
+    "graph_viewer_second_sha256": "fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0"
+  },
+  "top10_pagerank": [
+    {
+      "Entity": "Spinal Muscular Atrophy",
+      "Type": "Disease",
+      "PageRank": "0.1444195108784059",
+      "Community_ID": "3"
+    },
+    {
+      "Entity": "motor function",
+      "Type": "Phenotype",
+      "PageRank": "0.00969771949312286",
+      "Community_ID": "0"
+    },
+    {
+      "Entity": "early-phase outcomes",
+      "Type": "Phenotype",
+      "PageRank": "0.00918147414936837",
+      "Community_ID": "0"
+    },
+    {
+      "Entity": "Nusinersen",
+      "Type": "Drug",
+      "PageRank": "0.008753843139237388",
+      "Community_ID": "5"
+    },
+    {
+      "Entity": "SMA",
+      "Type": "Phenotype",
+      "PageRank": "0.0071212867655969115",
+      "Community_ID": "10"
+    },
+    {
+      "Entity": "SMN1",
+      "Type": "Gene",
+      "PageRank": "0.006652869478346948",
+      "Community_ID": "1"
+    },
+    {
+      "Entity": "motor axonal neuropathy",
+      "Type": "Phenotype",
+      "PageRank": "0.006632944314556199",
+      "Community_ID": "1"
+    },
+    {
+      "Entity": "Onasemnogene Abeparvovec",
+      "Type": "Drug",
+      "PageRank": "0.006616653579428647",
+      "Community_ID": "5"
+    },
+    {
+      "Entity": "SMN protein",
+      "Type": "Protein",
+      "PageRank": "0.006364609202257088",
+      "Community_ID": "19"
+    },
+    {
+      "Entity": "muscle weakness",
+      "Type": "Phenotype",
+      "PageRank": "0.005680704162236958",
+      "Community_ID": "3"
+    }
+  ]
+}

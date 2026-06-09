@@ -468,3 +468,198 @@ Aggregation:
 ## Stage 3 Current Verdict
 
 第 3 阶段在 2026-06-09 的复现结果为成功：canonical 产物已更新，run artifacts 已归档，Stage 4 dry-read 通过。当前产物可继续进入下一阶段。但该阶段仍存在明确工程风险：semantic alignment 非确定性、输出直接覆盖、字典覆盖不足、confidence 未校准。若要把 Stage 3 作为严格可复现实验环节，下一步应优先做确定性修复和 Stage 3 runner。
+
+## Stage 4 Reproduction Scope
+
+Stage 4 is the graph database and topology analytics stage. The relevant source
+files inspected for this reproduction were:
+
+- `src/database/neo4j_importer.py`: imports Open Targets baseline edges and
+  fused literature triples into Neo4j.
+- `src/database/graph_analytics.py`: builds an in-memory NetworkX graph and
+  writes PageRank/community metrics.
+- `src/database/generate_pyvis.py`: builds the interactive HTML graph viewer
+  from fused triples and analytics metrics.
+- `src/evaluation/topology_eval.py`: queries an already-populated Neo4j graph
+  for basic topology metrics; this was treated as downstream evaluation rather
+  than the core file-output reproduction.
+
+The local file-producing parts were reproduced. The Neo4j import was not run
+because `.env` contains Neo4j keys but `NEO4J_PASSWORD` is empty, and the Stage
+4 importer only reads process environment variables. The blocked database
+boundary is recorded in
+`artifacts/runs/stage4_graph_database_2026-06-09/neo4j_import_status.log`.
+
+## Stage 4 Output Convention
+
+Canonical outputs remain in the paths expected by later code:
+
+- `data/processed/analytics_metrics.csv`
+- `docs/graph_viewer.html`
+
+This reproduction also stores dated, auditable snapshots and logs under:
+
+- `artifacts/runs/stage4_graph_database_2026-06-09/`
+- `artifacts/runs/stage4_graph_database_2026-06-09/pre_run_existing_outputs/`
+- `artifacts/runs/stage4_graph_database_2026-06-09/manifest.csv`
+- `artifacts/runs/stage4_graph_database_2026-06-09/validation_summary.json`
+- `artifacts/runs/stage4_graph_database_2026-06-09/graph_analytics_fixed_first.log`
+- `artifacts/runs/stage4_graph_database_2026-06-09/generate_pyvis_fixed_first.log`
+- `artifacts/runs/stage4_graph_database_2026-06-09/graph_analytics_fixed_second.log`
+- `artifacts/runs/stage4_graph_database_2026-06-09/generate_pyvis_fixed_second.log`
+- `artifacts/runs/stage4_graph_database_2026-06-09/analytics_metrics.csv`
+- `artifacts/runs/stage4_graph_database_2026-06-09/graph_viewer.html`
+
+The old pre-run `analytics_metrics.csv` and `graph_viewer.html` were copied to
+`pre_run_existing_outputs/` before canonical files were regenerated.
+
+## Stage 4 Commands Run
+
+```powershell
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' 'src\database\graph_analytics.py'
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' 'src\database\generate_pyvis.py'
+```
+
+The local scripts were run twice after the determinism fix. The second run was
+used only to verify that the same inputs produce identical output hashes.
+
+## Stage 4 Reproduction Results
+
+| Product | Reproduced count | SHA-256 | Notes |
+| --- | ---: | --- | --- |
+| `data/processed/fused_triples.jsonl` | 554 | `b2dcab4262139ea5e4cfa6d6bd770d3720604b588b7d74486e7a9e2b682ce4b9` | Stage 4 fused input; 0 bad JSON lines, 0 missing core triples |
+| `data/external/sma_gda_baseline.jsonl` | 164 | `f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb` | Open Targets baseline input; 0 bad JSON lines |
+| `data/processed/analytics_metrics.csv` | 607 | `3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116` | Canonical analytics output; 56 communities |
+| `docs/graph_viewer.html` | n/a | `fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0` | Canonical interactive PyVis output |
+
+Additional checks:
+
+- Estimated graph nodes after combining fused triples and Open Targets: 607
+- Estimated directed edges after combining fused triples and Open Targets: 686
+- Analytics rows: 607
+- Community count: 56
+- Relation kinds in fused triples: 112
+- Core fused triples missing entity or relation fields: 0
+- Top PageRank entity: `Spinal Muscular Atrophy`, PageRank
+  `0.1444195108784059`
+
+Determinism check after fixing `graph_analytics.py`:
+
+- `analytics_metrics_fixed_first.csv`:
+  `3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116`
+- `analytics_metrics_fixed_second.csv`:
+  `3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116`
+- `graph_viewer_fixed_first.html`:
+  `fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0`
+- `graph_viewer_fixed_second.html`:
+  `fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0`
+
+## Stage 4 Correctness Assessment
+
+The local Stage 4 file reproduction is successful. `graph_analytics.py` can read
+the current 554 fused triples plus 164 Open Targets baseline records, generate a
+607-row metrics table, and `generate_pyvis.py` can render the corresponding
+interactive graph HTML without code changes to Stage 3.
+
+The output is structurally reasonable for a topology stage: the node and edge
+counts match the deduplicated entity/edge set built from the Stage 3 fused graph
+plus Open Targets disease-gene associations. The top PageRank result being
+`Spinal Muscular Atrophy` is expected because Open Targets adds many
+gene-to-disease edges to one disease hub.
+
+Accuracy should be interpreted narrowly. PageRank and Louvain communities are
+graph-structure metrics, not biomedical truth metrics. They reflect the current
+Stage 2/3 extraction and fusion choices, including relation noise, entity
+normalization limits, and confidence heuristics. The graph can support
+exploration and sanity checks, but it should not yet be used as a validated
+scientific ranking without Stage 5 evaluation and manual/LLM review.
+
+The Neo4j portion remains incomplete for this reproduction. Since the password
+is missing, no database write, topology query, or end-to-end Neo4j verification
+was performed.
+
+## Stage 4 Diagnosed Code Issues
+
+1. `graph_analytics.py` was non-deterministic before this reproduction.
+   - Cause: `nx.community.louvain_communities()` was called without a fixed
+     seed, so `Community_ID` assignments changed between runs.
+   - Evidence: before the fix, PageRank values were unchanged but 516 of 607
+     nodes changed community IDs between two identical-input runs.
+   - Fix applied: added `COMMUNITY_SEED = 42`, passed it to Louvain, sorted
+     communities by node name, sorted nodes inside each community, and sorted
+     the output table by `PageRank` then `Entity`.
+   - Verification: both analytics CSV and graph viewer HTML now reproduce with
+     identical SHA-256 hashes across two consecutive runs.
+
+2. Neo4j import cannot currently be reproduced from repository state alone.
+   - Cause: required `NEO4J_PASSWORD` is present as a key in `.env` but has no
+     value, and `neo4j_importer.py` does not load `.env` by itself.
+   - Impact: the file-output part of Stage 4 is reproducible, but the database
+     state and `topology_eval.py` cannot be validated in this run.
+   - Recommendation: add a Stage 4 runner that loads ignored local env files,
+     validates required variables, writes an import summary, and refuses to run
+     with default placeholder passwords.
+
+3. `neo4j_importer.py` builds dynamic Cypher labels and relationship types from
+   data values.
+   - Cause: entity types and relation strings are interpolated into Cypher.
+     Relation strings are only partially normalized, and entity labels are not
+     sanitized.
+   - Impact: current Stage 3 values appear mostly safe, but this is fragile if
+     future extractors produce spaces, punctuation, or unexpected labels.
+   - Recommendation: restrict labels and relation types to an allow-list or a
+     strict `A-Z0-9_` sanitizer before query construction.
+
+4. Stage 4 scripts still write directly to canonical outputs.
+   - Cause: `graph_analytics.py` and `generate_pyvis.py` use hard-coded input
+     and output paths.
+   - Impact: failed runs can overwrite canonical outputs before validation.
+   - Recommendation: mirror the Stage 2 pattern with run-dir outputs and a
+     promote-only-after-validation step.
+
+5. The in-memory graph key is only the entity name.
+   - Cause: NetworkX nodes are keyed by `entity.name`, while `type` is just a
+     node attribute.
+   - Impact: if the same surface name appears with different types, the later
+     type assignment can overwrite the earlier one.
+   - Recommendation: key nodes by `(type, canonical_name)` or preserve a list of
+     observed types.
+
+6. The PyVis graph is complete but not yet ergonomic for inspection.
+   - Cause: it renders the full graph at once and labels every edge.
+   - Impact: the HTML is useful as a proof-of-graph artifact, but it can become
+     visually dense and hard to inspect.
+   - Recommendation: add filtering by relation, node type, confidence, and top-N
+     PageRank before treating it as a polished analysis interface.
+
+7. Stage 4 scripts auto-install missing packages at runtime.
+   - Cause: scripts call `pip install` inside `except ImportError`.
+   - Impact: runs can silently mutate the conda environment and become harder to
+     reproduce.
+   - Recommendation: fail fast with a dependency message and rely on
+     `requirements.txt` or an environment lock file.
+
+## Stage 4 Need For Refinement
+
+Stage 4 is usable for local graph analytics and visualization after the
+determinism fix, but it still needs refinement before it is a fully reproducible
+database stage:
+
+1. Add a `run_stage4_graph.py` runner with `--run-dir`, `--promote`, `.env`
+   loading, preflight checks, and manifest generation.
+2. Validate Neo4j credentials and connectivity before import, then write import
+   counts and topology evaluation output to the run directory.
+3. Sanitize or allow-list Neo4j labels and relationship types.
+4. Move graph output paths out of script constants and into CLI arguments.
+5. Add small fixture tests for deterministic analytics and PyVis generation.
+6. Improve the graph viewer with filtering controls once the upstream graph
+   quality is accepted.
+
+## Stage 4 Current Verdict
+
+As of 2026-06-09, Stage 4 is partially reproduced and locally successful:
+`analytics_metrics.csv` and `graph_viewer.html` were regenerated, archived under
+a dated run directory, and made deterministic. The output can support downstream
+file-based inspection. The Neo4j database import and Neo4j topology evaluation
+remain blocked until a non-empty `NEO4J_PASSWORD` and reachable database are
+provided.

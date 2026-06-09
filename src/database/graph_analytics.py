@@ -14,6 +14,8 @@ except ImportError:
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
+COMMUNITY_SEED = 42
+
 def build_networkx_from_jsonl(filepath):
     G = nx.DiGraph()
     if not Path(filepath).exists():
@@ -71,18 +73,19 @@ def main():
     logging.info("Computing modularity Louvain Community Detection components...")
     try:
         undirected_G = G.to_undirected()
-        communities = nx.community.louvain_communities(undirected_G, weight="weight")
+        communities = nx.community.louvain_communities(undirected_G, weight="weight", seed=COMMUNITY_SEED)
+        communities = sorted(communities, key=lambda comm: sorted(comm)[0])
         
         community_map = {}
         for c_id, comm in enumerate(communities):
-            for node in comm:
+            for node in sorted(comm):
                 community_map[node] = c_id
     except AttributeError:
         community_map = {n: 0 for n in G.nodes}
         logging.warning("Community detection scaling skipped due to old local networkx mathematical parameters.")
 
     records = []
-    for node in G.nodes:
+    for node in sorted(G.nodes):
         records.append({
             "Entity": node,
             "Type": G.nodes[node].get("type", "Unknown"),
@@ -90,7 +93,7 @@ def main():
             "Community_ID": community_map.get(node, -1)
         })
         
-    df = pd.DataFrame(records).sort_values(by="PageRank", ascending=False)
+    df = pd.DataFrame(records).sort_values(by=["PageRank", "Entity"], ascending=[False, True])
     df.to_csv(out_file, index=False)
     logging.info(f"Topology analytics logic entirely complete! Top nodes structurally aligned successfully out to {out_file}.")
 

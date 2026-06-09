@@ -17,6 +17,26 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-09 - Stage 4 analytics community IDs were non-deterministic
+
+- Symptom: Two Stage 4 local reruns with identical `fused_triples.jsonl` and
+  Open Targets inputs produced different `analytics_metrics.csv` and
+  `graph_viewer.html` hashes. PageRank values were stable, but 516 of 607 nodes
+  changed `Community_ID`.
+- Cause: `graph_analytics.py` called
+  `nx.community.louvain_communities()` without a fixed seed, then assigned
+  community IDs from unordered community/node iteration.
+- Fix: Added a fixed community seed, sorted communities and community members by
+  node name, and sorted analytics output by `PageRank` then `Entity`.
+- Verification: `artifacts/runs/stage4_graph_database_2026-06-09/` contains two
+  fixed-seed reruns with identical hashes:
+  `analytics_metrics_fixed_first.csv` and `analytics_metrics_fixed_second.csv`
+  both hash to
+  `3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116`;
+  `graph_viewer_fixed_first.html` and `graph_viewer_fixed_second.html` both
+  hash to
+  `fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0`.
+
 ### 2026-06-09 - Stage 3 outputs were stale after stabilized Stage 2
 
 - Symptom: Stage 3 fusion outputs still reflected the older 2664-triple Stage 2

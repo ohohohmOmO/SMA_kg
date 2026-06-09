@@ -1,0 +1,844 @@
+Entity,Type,PageRank,Community_ID
+Spinal Muscular Atrophy,Disease,0.10572909338693191,117
+motor function,Phenotype,0.007781340869684976,123
+reduced levels of the survival motor neuron (SMN) protein,Phenotype,0.00710081645095924,39
+SMA,Phenotype,0.006241746045406922,57
+Spinal muscular atrophy (SMA),Phenotype,0.006181204388041726,39
+Nusinersen,Drug,0.00600500253782787,72
+survival,Phenotype,0.005937222807576366,123
+360 neuroactive or CNS disease-related compounds,Drug,0.005624785960418378,117
+CMAP(neuro) platform,Platform,0.0050967432764749765,117
+OAV101 IT,Drug,0.005078272565052268,39
+drugs,Drug,0.0046826620854900245,117
+motor outcomes,Phenotype,0.0045998458472930335,4
+pathogenesis,Phenotype,0.004524539018755355,117
+communication differences,Phenotype,0.0044756214899975486,117
+social differences,Phenotype,0.0044756214899975486,117
+cognitive differences,Phenotype,0.0044756214899975486,117
+behavioural differences,Phenotype,0.0044756214899975486,117
+SMN1 deletion,Genetic,0.0044756214899975486,117
+systemic disorder,Phenotype,0.0044756214899975486,117
+ASD,Disease,0.0044756214899975486,117
+underlying patient genetics,Phenotype,0.0044756214899975486,117
+degeneration of spinal cord motor neurons and neuromuscular junctions,Phenotype,0.0044756214899975486,117
+severe motor and communicative limitations,Phenotype,0.0044756214899975486,117
+mitochondrial dysfunction,Phenotype,0.0044756214899975486,117
+induced pluripotent stem cells,Cell,0.0044756214899975486,117
+motor neuron disease,Phenotype,0.0044756214899975486,117
+controls,Control,0.0044756214899975486,117
+SMN-restoring disease-modifying therapies,Drug,0.0044756214899975486,123
+tailored assessments and continuous behavioral surveillance,Procedure,0.0044756214899975486,117
+lipid accumulation,Phenotype,0.0044756214899975486,117
+"1,203 couples",Population,0.0033556150206719613,39
+cohort of 104 patients,Patient,0.003214907205619984,107
+good sleepers,Phenotype,0.003214907205619984,86
+pathology,Phenotype,0.003214907205619984,22
+outcomes,Phenotype,0.002718009776438041,4
+Type IV SMA,Disease,0.002710679118379139,57
+vitality and morphology,Phenotype,0.002593785419142555,83
+SMA plasma samples,Phenotype,0.002593785419142555,8
+SMA hallmarks,Phenotype,0.002593785419142555,87
+newer therapeutic agents,Drug,0.0025007063166085273,60
+smaller CSA,Phenotype,0.002103258163613216,40
+Hammersmith Functional Motor Scale Expanded (HFMSE),Phenotype,0.0020527605120481142,123
+enrolled SMA patients,Patient,0.0020527605120481142,123
+Children's Hospital of Philadelphia Infant Test of Neuromuscular Disorders (CHOP INTEND),Phenotype,0.0020527605120481142,123
+central nervous system,Anatomy,0.0020338178894122112,39
+"communication, socialization, and daily living skills",Phenotype,0.0019951263793919647,117
+SMA population,Population,0.0019951263793919647,117
+cognitive and adaptive impairments,Phenotype,0.0019951263793919647,117
+SMN deficit,Condition,0.001972663632665127,21
+candidate approaches,Therapy,0.001972663632665127,23
+formation of complex concatemeric DNA structures,Phenotype,0.001972663632665127,64
+splicing alterations,Phenotype,0.001972663632665127,102
+SMN deficiency,Disease,0.001972663632665127,17
+HC,Phenotype,0.001972663632665127,85
+SMA diagnosis,Phenotype,0.0019674593206145006,26
+diagnostic and prognostic importance for SMA disease,Phenotype,0.0019348950536483501,109
+therapeutic target beyond SMN restoration,Phenotype,0.0018795845301310989,34
+non-invasive prenatal SMA detection,Phenotype,0.0018795845301310989,27
+SMN protein,Protein,0.0018098950892604364,39
+Hutterite individuals,Population,0.0017913390027031759,57
+SMA type 4,SubPhenotype,0.0017913390027031759,57
+SMA type 3b,SubPhenotype,0.0017913390027031759,57
+biomarkers,Entity,0.0017913390027031759,57
+therapies,Drug,0.0017913390027031759,57
+other pathways,Phenotype,0.0016789497994715414,123
+early therapeutic intervention,Procedure,0.0016241806735511647,5
+29,Score,0.0016155631881593986,113
+children with SMA,Patient,0.0016155631881593986,40
+type 1 spinal muscular atrophy patients,Patient,0.0015997231496307218,123
+39,Score,0.0015275560741688321,109
+SMA patients from controls,Phenotype,0.0015275560741688321,109
+improvement,Phenotype,0.0015220639059803159,0
+"GABA metabolism, release and reuptake",Process,0.0014954518389445625,11
+type 3 spinal muscular atrophy patients,Patient,0.0014483199324285027,72
+respiratory function,Phenotype,0.0013756055290721084,5
+gene therapy,Phenotype,0.00136556067850478,0
+,Unknown,0.0013515418461876984,122
+3 degrees per year,QuantitativeValue,0.0013515418461876984,121
+OA only,Drug,0.0013515418461876984,1
+transition to OA after > 3 months of 1st treatment,Drug,0.0013515418461876984,3
+transition to OA within 3 months of starting nusinersen or risdiplam,Drug,0.0013515418461876984,2
+long term,Time,0.0013515418461876984,44
+endothelial cell function,Phenotype,0.0013515418461876984,90
+peripheral factors,Factor,0.0013515418461876984,39
+cystatin C eGFR,Phenotype,0.0013515418461876984,67
+neuroinflammatory and neurotoxicity signaling,Pathway,0.0013515418461876984,38
+marked hyperCKaemia,Phenotype,0.0013515418461876984,97
+lower motor neuron disorders,Phenotype,0.0013515418461876984,95
+slowly progressive distal spinal muscular atrophy phenotype,Phenotype,0.0013515418461876984,96
+9% to 60%,Percentage,0.0013515418461876984,101
+children with SMA type 1,Patient,0.0013515418461876984,100
+technical feasibility and safety profile,Phenotype,0.0013515418461876984,98
+nerve growth in children with SMA,Phenotype,0.0013515418461876984,41
+SMA type II patient muscles,Tissue,0.0013515418461876984,42
+motor function improvements,Phenotype,0.0013515418461876984,57
+type I SMA,Phenotype,0.0013515418461876984,13
+SMA severity,Phenotype,0.0013515418461876984,14
+muscle growth,Phenotype,0.0013515418461876984,60
+distinguish patients with 2 copies of SMN2 from those with 3 or 4 copies,Phenotype,0.0013515418461876984,10
+expediting therapy initiation,Intervention,0.0013515418461876984,115
+patient CSF,Phenotype,0.0013515418461876984,9
+acquire previously unattainable motor skills,Phenotype,0.0013515418461876984,114
+p < 0.01,StatisticalSignificance,0.0013515418461876984,112
+43,Score,0.0013515418461876984,110
+44.5,Score,0.0013515418461876984,111
+36,Score,0.0013515418461876984,108
+natural history of spinal muscular atrophy,Disease,0.0013515418461876984,106
+ubiquitination degradation of YBX1,Phenotype,0.0013515418461876984,103
+SMA patients without gene replacement therapy,PatientGroup,0.0013515418461876984,104
+sensitive marker of change,Phenotype,0.0013515418461876984,47
+fasciculation,Phenotype,0.0013515418461876984,58
+SMN2 intron 7,GenomicFeature,0.0013515418461876984,62
+exon 7,GenomicFeature,0.0013515418461876984,61
+SMN,Gene,0.0013515418461876984,11
+clinical severity,Phenotype,0.0013515418461876984,15
+ddPCR,Drug,0.0013515418461876984,27
+SMN1 gene deletions,Phenotype,0.0013515418461876984,25
+more favorable clinical responses to treatment,Phenotype,0.0013515418461876984,73
+minimally invasive biomarkers,Phenotype,0.0013515418461876984,71
+home participation,Phenotype,0.0013515418461876984,28
+AAV9-IGHMBP2 with CBA promoter,Drug,0.0013515418461876984,69
+seven AAV 'drugs',Drug,0.0013515418461876984,117
+ferroptosis,Phenotype,0.0013515418461876984,32
+abnormalities in a tissue-dependent manner,Phenotype,0.0013515418461876984,33
+redox imbalance,Phenotype,0.0013515418461876984,34
+protein function,Phenotype,0.0013515418461876984,31
+3 copies,Phenotype,0.0013515418461876984,29
+"better feeding outcomes (OR: 0.740, p = 0.024)",Phenotype,0.0013515418461876984,20
+all deaths (n = 8),Event,0.0013515418461876984,18
+analysis of SMN1 gene deletions,Procedure,0.0013515418461876984,24
+carrier screening,Procedure,0.0013515418461876984,76
+two distinct diseases,Disease,0.0013515418461876984,77
+motor milestone status,Phenotype,0.0013515418461876984,75
+first DMT,Treatment,0.0013515418461876984,74
+respiratory muscle strength,Phenotype,0.0013515418461876984,81
+high reproductive risk,Risk,0.0013515418461876984,78
+Maximal voluntary contraction,Phenotype,0.0013515418461876984,50
+HINE-2 scores,Phenotype,0.0013515418461876984,53
+RULM scores,Phenotype,0.0013515418461876984,52
+HFMSE scores,Phenotype,0.0013515418461876984,52
+responders from non-responders to DMT,Phenotype,0.0013515418461876984,51
+"4,559 transcriptional profiles",Profile,0.0013515418461876984,118
+neuronal cells,Cell,0.0013515418461876984,117
+types 1 and 2,Disease,0.0013515418461876984,48
+Ighmbp2(R604X/R604X) mice,AnimalModel,0.0013515418461876984,120
+age at disease onset,Phenotype,0.0011962613995683414,72
+CMT2S,Phenotype,0.0011185707284122855,119
+Duchenne muscular dystrophy,Phenotype,0.001115533400413793,117
+sustained development without swallowing or respiratory difficulties up to 3.5 years of age,Phenotype,0.0011136208339977292,0
+independent walking at 2 years 11 months,Phenotype,0.0011136208339977292,0
+glucocorticoid-glucocorticoid receptor (GR) signalling pathway,Pathway,0.0010937852213433242,123
+metabolic homeostasis,Phenotype,0.0010937852213433242,123
+test-retest reliability (TRT),Phenotype,0.0010927411018221032,88
+downregulation of genes involved in lipid metabolism and liver function,Phenotype,0.0010807702205643246,39
+altered expression of lipid-related proteins,Phenotype,0.0010807702205643246,39
+serious liver injury,AdverseEffect,0.0010739608708150424,0
+acute neuronal vulnerability,Phenotype,0.0010549997852660655,0
+adults with spinal muscular atrophy (SMA),Population,0.0010512129585602459,5
+disease-modifying therapies,Drug,0.0010512129585602459,5
+CMAP amplitudes,Phenotype,0.0010509391142448955,109
+no significant difference in age at achieving unsupported sitting,Phenotype,0.0010409809529489842,19
+"no significant differences in motor function, CHOP-INTEND progression, respiratory and feeding status",Phenotype,0.0010409809529489842,19
+better clinical outcome,Phenotype,0.0010409809529489842,109
+SMARD1,Phenotype,0.0010409809529489842,119
+aberrant splicing in SMN1 targets,Phenotype,0.0010409809529489842,80
+homozygous duplication,Phenotype,0.0010409809529489842,30
+CSA,Measurement,0.0010409809529489842,40
+even without major motor impairment,Phenotype,0.0010409809529489842,46
+simultaneous knockdown of tardbp and tardbpl,Phenotype,0.0010409809529489842,37
+MN Ca(2+) responses,Phenotype,0.0010409809529489842,94
+microglial activation,Phenotype,0.0010409809529489842,92
+"oedema, vacuolisation and compromised endothelial integrity",Phenotype,0.0010409809529489842,91
+extravascular leakage of fibrinogen into the neural parenchyma,Phenotype,0.0010409809529489842,92
+effective knockdown of smn1,Phenotype,0.0010409809529489842,37
+in SMA,Phenotype,0.0010409809529489842,105
+glutamate release,Phenotype,0.0010409809529489842,94
+fascicular structure,Anatomy,0.0010409809529489842,40
+deletion of a single Smn allele,Event,0.0010409809529489842,43
+feasibility of Nusinersen administration,Phenotype,0.0010409809529489842,7
+DDI risk,Phenotype,0.0010409809529489842,49
+plasma levels,Phenotype,0.0010409809529489842,55
+CYP3A4,Protein,0.0010409809529489842,55
+PK to unstudied pediatric populations,Phenotype,0.0010409809529489842,49
+long-term durability and effectiveness,Phenotype,0.0010409809529489842,7
+baseline,Time,0.0010409809529489842,113
+neuromuscular junctions,Structure,0.0010409809529489842,43
+29% of individuals,Phenotype,0.0010409809529489842,46
+a biomarker for disease severity and treatment response,Phenotype,0.0010409809529489842,105
+previous time point,Time,0.0010409809529489842,113
+p-FOIS,Phenotype,0.0010409809529489842,72
+15 human diseases,Phenotype,0.0010409809529489842,0
+elevated aminotransferases,AdverseEffect,0.0010409809529489842,0
+reduced within individual vascular endothelial cells,Phenotype,0.0010409809529489842,91
+truncated proteins,Phenotype,0.0010409809529489842,35
+tandem duplication,Phenotype,0.0010409809529489842,30
+nonsense-mediated mRNA decay (NMD),Phenotype,0.0010409809529489842,35
+morphological and functional deficits in spinal cord organoids,Phenotype,0.0010409809529489842,80
+disease severity,Phenotype,0.0010395055262186642,57
+axonal pathology,Phenotype,0.0009995728338504889,63
+DNA damage accumulation,Phenotype,0.0009995728338504889,63
+CHOP-INTEND total score,Phenotype,0.0009991789653717765,72
+life expectancy,Phenotype,0.0009991789653717765,123
+kidneys,Phenotype,0.0009700210817623026,17
+impaired immune cell maturation,Phenotype,0.0009700210817623026,17
+intrinsic hematopoietic defects,Phenotype,0.0009700210817623026,17
+exosomal biogenesis and cargo,Phenotype,0.0009700210817623026,17
+dysfunction,Phenotype,0.0009700210817623026,17
+lymphoid organ development,Phenotype,0.0009700210817623026,17
+defective bone marrow output,Phenotype,0.0009700210817623026,17
+29.00 (14.50-50.50) at month 20,Measurement,0.0009697200172830142,72
+Hammersmith Functional Motor Scale-Expanded,Assessment,0.0009697200172830142,72
+34 (12.00-46.00) at baseline,Measurement,0.0009697200172830142,72
+lymphoid pathology,Phenotype,0.000963986833612973,123
+Charcot-Marie-Tooth disease type 2S (CMT2S),Phenotype,0.0009632902817929284,119
+quality of life,Phenotype,0.0009615243380871561,5
+aromatic L-amino acid decarboxylase deficiency,Phenotype,0.0009602529537944357,117
+Leber's congenital amaurosis,Phenotype,0.0009602529537944357,117
+hemophilia B,Phenotype,0.0009602529537944357,117
+concurrent validity (CV),Phenotype,0.000937460655202746,88
+tail domain,Phenotype,0.000937460655202746,79
+sensitivity to change,Phenotype,0.000937460655202746,88
+quality and extent of motor development,Phenotype,0.000937460655202746,5
+neuroprotection,Phenotype,0.000937460655202746,84
+upper limb function,Phenotype,0.000937460655202746,82
+need for early intervention,Phenotype,0.000937460655202746,117
+neurodevelopmental and neuromuscular disorders,Phenotype,0.000937460655202746,79
+SMA-LED,Phenotype,0.000937460655202746,79
+heterogeneity in patient genetics and clinical presentations,Phenotype,0.000937460655202746,117
+endogenous sox9b,Phenotype,0.000937460655202746,36
+children with fewer SMN2 copies,Phenotype,0.000937460655202746,45
+therapeutic payload,Phenotype,0.000937460655202746,117
+over 12 months,Time,0.000937460655202746,109
+"phonology, lexicon, and morphosyntax",Phenotype,0.000937460655202746,45
+children with more severe motor phenotypes,Phenotype,0.000937460655202746,45
+protective effects on neuronal survival and morphology,Phenotype,0.000937460655202746,84
+altered mechanisms,Phenotype,0.000937460655202746,84
+static sitting balance,Phenotype,0.000937460655202746,82
+selective movement control,Phenotype,0.000937460655202746,82
+nusinersen sodium,Drug,0.000937460655202746,72
+robust and spatiotemporal expression,Phenotype,0.000937460655202746,36
+physical functioning,Phenotype,0.000937460655202746,16
+QOL,Phenotype,0.000937460655202746,16
+energy/fatigue,Phenotype,0.000937460655202746,16
+altered vessel morphology,Phenotype,0.000937460655202746,89
+intrinsic endothelial cell dysfunction,Phenotype,0.000937460655202746,89
+comparable biological activity in enhancing the production of full-length SMN2 mRNA transcripts and functional SMN protein in fibroblasts derived from SMA patients,Phenotype,0.000937460655202746,72
+altered vascular distribution,Phenotype,0.000937460655202746,89
+functional outcomes,Phenotype,0.000937460655202746,5
+endogenous lin28a,Phenotype,0.000937460655202746,36
+MUNIX,Phenotype,0.000937460655202746,109
+blood-brain barrier,Phenotype,0.000937460655202746,117
+PAR levels,Phenotype,0.000937460655202746,63
+weight loss,Phenotype,0.0009322957857078677,120
+standing patients,Patient,0.0009230468404526582,6
+trunk muscle weakness,Phenotype,0.0009230468404526582,6
+patients with SMA type I,Patient,0.0009230468404526582,6
+chronic difficulty maintaining posture,Phenotype,0.0009230468404526582,6
+scoliosis,Phenotype,0.0009057789504890093,6
+spinal muscular atrophy type 0,Phenotype,0.0009009421195028875,0
+5q-spinal muscular atrophy,Disease,0.0009009421195028875,0
+pre-mRNA splicing,Process,0.0008999689160018676,11
+neuronal-astrocyte interactions,Interaction,0.0008999689160018676,11
+RNA splicing,Phenotype,0.0008999689160018676,11
+protein degradation,Phenotype,0.0008999689160018676,11
+hypertrophic chondrocytes differentiation,Phenotype,0.0008999689160018676,11
+homozygous deletion,Phenotype,0.0008948346502484127,57
+body mass index,Phenotype,0.0008857005063296271,72
+everyday life,Phenotype,0.0008857005063296271,116
+prolonged half-lives,Phenotype,0.0008857005063296271,54
+delayed T(max),Phenotype,0.0008857005063296271,54
+well,Phenotype,0.0008857005063296271,54
+prognosis,Phenotype,0.0008857005063296271,123
+age at first nusinersen injection,Phenotype,0.0008857005063296271,72
+lower total Pediatric Quality of Life neuromuscular module scores,Phenotype,0.0008857005063296271,116
+"hyperactivity, emotional regulation and conduct",Phenotype,0.0008857005063296271,116
+regeneration,Phenotype,0.0008857005063296271,70
+biological barriers,Phenotype,0.0008857005063296271,70
+synaptic stability,Phenotype,0.0008857005063296271,70
+CYP21A2 variations,Variant,0.0008857005063296271,117
+single-exon CNVs,Variant,0.0008857005063296271,117
+body weight,Phenotype,0.0008857005063296271,123
+pathological phenotype,Phenotype,0.0008857005063296271,123
+peak cough flow,Phenotype,0.0008857005063296271,88
+intra-rater reliability (IRR),Phenotype,0.0008857005063296271,88
+forced vital capacity (liters),Phenotype,0.0008857005063296271,88
+"synaptic organizers, trophic factors, and microRNAs",Phenotype,0.0008857005063296271,70
+Rett syndrome,Phenotype,0.0008857005063296271,117
+bulbar integrity,Phenotype,0.0008857005063296271,123
+human monogenic diseases,Phenotype,0.0008857005063296271,117
+F8 intron 22 inversions,Variant,0.0008857005063296271,117
+postoperative complications,Phenotype,0.0008857005063296271,65
+ICU length of stay,Phenotype,0.0008857005063296271,65
+SMN-deficient murine and human-derived astrocytes,Phenotype,0.0008857005063296271,93
+late-onset SMA mice,Phenotype,0.0008857005063296271,93
+MN toxicity,Phenotype,0.0008857005063296271,93
+elevated astrocytic glutamate release,Phenotype,0.0008857005063296271,93
+days intubated,Phenotype,0.0008857005063296271,65
+total hospital length of stay,Phenotype,0.0008857005063296271,65
+PARP1,Protein,0.0008857005063296271,119
+DNA repair,Phenotype,0.0008857005063296271,119
+emotional and behavioral problems,Phenotype,0.0008857005063296271,116
+through metabolism,Phenotype,0.0008857005063296271,54
+patient-specific motor neurons,Phenotype,0.0008846534189913826,39
+myogenic progenitor fate,Phenotype,0.0008846534189913826,39
+deficiency,Phenotype,0.0008846534189913826,39
+disease modifying treatments,Drug,0.0008846534189913826,39
+telomerase biogenesis,Phenotype,0.0008846534189913826,39
+SMN1 gene,Gene,0.0008846534189913826,39
+reduced levels,Phenotype,0.0008846534189913826,39
+maintenance of the quiescent MuSC reservoir,Phenotype,0.0008846534189913826,39
+survival motor neuron pathway,Phenotype,0.0008768784366184774,0
+linear growth compromise,Phenotype,0.0008679622016368293,5
+swallowing,Phenotype,0.0008679622016368293,5
+reduction of the number of patients with hypokalaemia,Phenotype,0.0008679622016368293,5
+ribose conjugation,Phenotype,0.0008546444170057557,56
+motor function remaining stable,Phenotype,0.0008546444170057557,4
+glucuronidation,Phenotype,0.0008546444170057557,56
+oxygenation,Phenotype,0.0008546444170057557,56
+increasing post-natal age,Phenotype,0.0008546444170057557,4
+oxidative products,Phenotype,0.0008546444170057557,56
+Kruppel-like factor 15 (Klf15),Protein,0.0008546444170057557,123
+neuromuscular pathology,Phenotype,0.0008546444170057557,123
+scAAV9-SMN1,Drug,0.0008546444170057557,123
+improved tissue- and sex-specific responses to treatment,Phenotype,0.0008546444170057557,123
+progressive motor dysfunction,Phenotype,0.0008546444170057557,66
+extended survival,Phenotype,0.0008546444170057557,66
+study of chronic neurodegenerative processes,Phenotype,0.0008546444170057557,66
+mechanistic and translational investigations of late-onset SMA,Phenotype,0.0008546444170057557,66
+disease activity,Phenotype,0.0008546444170057557,4
+glucosidation,Phenotype,0.0008546444170057557,56
+delayed onset,Phenotype,0.0008546444170057557,66
+interspinous lumbar puncture,Procedure,0.0008438985187524192,72
+breathing,Phenotype,0.0008438985187524192,72
+inpatient setting,Setting,0.0008438985187524192,72
+Hammersmith Functional Motor Scale Expanded score,Phenotype,0.0008438985187524192,72
+92.8%,Percentage,0.0008438985187524192,72
+1294 patients,Patient,0.0008438985187524192,72
+CSF levels of GDNF,Phenotype,0.0008438985187524192,72
+CSF levels of IL-6 and YKL-40,Phenotype,0.0008438985187524192,72
+SMA management,Phenotype,0.0008438985187524192,72
+patients with SMA types 2 and 3,Patient,0.0008438985187524192,72
+6-MWT,Phenotype,0.0008438985187524192,72
+RULM,Phenotype,0.0008438985187524192,72
+HFMSE,Phenotype,0.0008438985187524192,72
+alternative splicing of the survival motor neuron 2 (SMN2) gene,Gene,0.0008438985187524192,72
+clinical condition,Phenotype,0.0008438985187524192,72
+clinical meaningful improvements,Phenotype,0.0008438985187524192,72
+taurine deficit,Phenotype,0.0008438985187524192,72
+Risdiplam,Drug,0.0008438985187524192,5
+intrathecally,Route,0.0008438985187524192,72
+SMA type 1 children,Phenotype,0.0008438985187524192,72
+patients,Entity,0.0008438985187524192,72
+stress,Phenotype,0.0008438985187524192,72
+intrathecal,Procedure,0.0008438985187524192,72
+CT-guided lumbar puncture,Procedure,0.0008438985187524192,72
+hip dislocation,Phenotype,0.0008438985187524192,72
+joint contracture,Phenotype,0.0008438985187524192,72
+hospitalizations,Phenotype,0.0008438985187524192,72
+independence,Phenotype,0.0008438985187524192,72
+mood,Phenotype,0.0008438985187524192,72
+discordant siblings,Phenotype,0.0008382941158269247,57
+one SMN2 copy,Phenotype,0.0008382941158269247,57
+"2 copies in the mother, 3 copies in the father",Phenotype,0.0008382941158269247,57
+permanent ventilation,Phenotype,0.000833940357456508,12
+RANBP2,Protein,0.000833940357456508,99
+"spinal muscular atrophy, lower extremity predominant type 2",Phenotype,0.000833940357456508,124
+lordosis,Phenotype,0.000833940357456508,59
+kyphosis,Phenotype,0.000833940357456508,59
+pelvic obliquity,Phenotype,0.000833940357456508,59
+Cobb angle,Phenotype,0.000833940357456508,59
+arthrogryposis multiplex congenita,Phenotype,0.000833940357456508,124
+hydrops,Phenotype,0.000833940357456508,124
+fetal akinesia,Phenotype,0.000833940357456508,124
+increased nuchal translucency,Phenotype,0.000833940357456508,124
+cerebellar hypoplasia,Phenotype,0.000833940357456508,124
+thoracic width,Phenotype,0.000833940357456508,59
+HOPS complex,Protein,0.000833940357456508,99
+rotarod and grip performance,Phenotype,0.000833940357456508,12
+T1-S1 spinal length,Phenotype,0.000833940357456508,59
+neuropathology,Phenotype,0.000833940357456508,12
+median survival,Phenotype,0.000833940357456508,12
+GRAMD1A,Protein,0.000833940357456508,99
+SMALED2,Phenotype,0.000833940357456508,99
+dynein,Protein,0.000833940357456508,99
+KIF5B,Protein,0.000833940357456508,99
+head control,Phenotype,0.000833940357456508,12
+4-point increase in CHOP INTEND score,Phenotype,0.000833940357456508,12
+carrier,Phenotype,0.0008245685296455684,39
+delayed endochondral ossification,Phenotype,0.0008245685296455684,39
+neuronal differentiation programs,Phenotype,0.0008245685296455684,39
+nusinersen-like antisense oligonucleotide,Drug,0.0008245685296455684,123
+dwarfism,Phenotype,0.0008245685296455684,39
+cell signaling,Phenotype,0.0008191517434927597,39
+maintenance of the cytoskeleton,Phenotype,0.0008191517434927597,39
+chromosomes,Phenotype,0.0008191517434927597,39
+organelles,Phenotype,0.0008191517434927597,39
+cell cycle,Phenotype,0.0008191517434927597,39
+cell growth,Phenotype,0.0008191517434927597,39
+hindlimb electrophysiology alterations,Phenotype,0.0008188173266657184,120
+hindlimb neuromuscular junction pathology,Phenotype,0.0008188173266657184,120
+milk spot reduction,Phenotype,0.0008188173266657184,120
+muscle pathology,Phenotype,0.0008188173266657184,120
+failure to thrive,Phenotype,0.0008188173266657184,120
+milk aspiration,Phenotype,0.0008188173266657184,120
+sciatic nerve pathology,Phenotype,0.0008188173266657184,120
+lung pathology,Phenotype,0.0008188173266657184,120
+decreased lifespan,Phenotype,0.0008188173266657184,120
+respiratory changes,Phenotype,0.0008188173266657184,120
+phrenic nerve disease pathology,Phenotype,0.0008188173266657184,120
+diaphragm muscle fiber disease pathology,Phenotype,0.0008188173266657184,120
+elevated cerebrospinal fluid protein,Phenotype,0.0008080098351735713,119
+spinal muscular atrophy with respiratory distress type 1 (SMARD1),Phenotype,0.0008080098351735713,119
+immune-mediated neuropathy,Phenotype,0.0008080098351735713,119
+acute motor and sensory axonal neuropathy,Phenotype,0.0008080098351735713,119
+cauda equina enhancement on spinal neuroimaging,Phenotype,0.0008080098351735713,119
+Guillain-Barre syndrome-like phenotype,Phenotype,0.0008080098351735713,119
+VAPB-PTPIP51 interaction,Phenotype,0.0007925322383580128,68
+ER-mitochondria contacts,Phenotype,0.0007925322383580128,68
+cytosolic Ca(2+),Phenotype,0.0007925322383580128,68
+CRMP2 phosphorylation,Phenotype,0.0007925322383580128,68
+CaMKII,Phenotype,0.0007925322383580128,68
+DNA repair protein recruitment,Phenotype,0.0007925322383580128,63
+IP3R-VDAC interaction,Phenotype,0.0007925322383580128,68
+DNA repair protein expression,Phenotype,0.0007925322383580128,63
+tau hyperphosphorylation,Phenotype,0.0007925322383580128,68
+PARP1 expression,Phenotype,0.0007925322383580128,63
+degeneration of corticospinal motor neurons (CSMNs),Phenotype,0.0007925322383580128,68
+IRE1-XBP1/p38 mitogen-activated protein kinase (MAPK)/ c-Jun N-terminal kinase (JNK) pathway,Phenotype,0.0007925322383580128,68
+increased axonal swellings,Phenotype,0.0007925322383580128,63
+p53 expression and phosphorylation,Phenotype,0.0007925322383580128,68
+elevated axonal breakage,Phenotype,0.0007925322383580128,63
+shortened neurites,Phenotype,0.0007925322383580128,63
+apoptosis,Phenotype,0.0007925322383580128,63
+PARP1 activity,Phenotype,0.0007925322383580128,63
+progressive spastic-ataxic tetraparesis,Phenotype,0.0007923004914468599,6
+distal motor axonal neuropathy,Phenotype,0.0007923004914468599,6
+milder complex spastic paraparesis,Phenotype,0.0007923004914468599,6
+gastrointestinal dysfunctions,Phenotype,0.0007923004914468599,6
+respiratory dysfunctions,Phenotype,0.0007923004914468599,6
+optic atrophy,Phenotype,0.0007923004914468599,6
+human diseases involving endocrine and/or neurologic system,Phenotype,0.0007923004914468599,6
+Sanjad-Sakati syndrome,Phenotype,0.0007923004914468599,6
+PEAMO (progressive encephalopathy with amyotrophy and optic atrophy),Phenotype,0.0007923004914468599,6
+c.770_780dup; p.Gly261Leufs*,Variant,0.0007672168795638664,57
+over 1000 alternative splicing events,Phenotype,0.0007672168795638664,57
+chromosome 5q,Location,0.0007672168795638664,57
+loss-of-function variants,Phenotype,0.0007672168795638664,57
+LOF,Phenotype,0.0007672168795638664,57
+general shift from strong to weak splice site usage,Phenotype,0.0007672168795638664,57
+functional ties to larval development,Phenotype,0.0007672168795638664,57
+U6 snRNA m6A methylation,Phenotype,0.0007672168795638664,57
+1 copy,Phenotype,0.0007672168795638664,57
+monoallelic SMN1 deletion,Variant,0.0007672168795638664,57
+extensive transcriptomic changes,Phenotype,0.0007672168795638664,57
+earlier initiation of therapy with fewer symptoms and shorter disease duration,Phenotype,0.000763399977576328,0
+Tau levels,Phenotype,0.000763399977576328,0
+any of the three approved disease-modifying therapies,Drug,0.000763399977576328,0
+acute liver failure,AdverseEffect,0.000763399977576328,0
+natural progression of the disease,Phenotype,0.000763399977576328,0
+spinal muscular atrophy type I,Phenotype,0.000763399977576328,0
+general motor development,Phenotype,0.000763399977576328,0
+hepatitis,Phenotype,0.000763399977576328,0
+243 patients,Patient,0.000763399977576328,0
+combining two treatments over monotherapy,Phenotype,0.000763399977576328,0
+new World Health Organization motor milestones,Phenotype,0.0007544837425946799,5
+survival motor neuron 2 splicing,Phenotype,0.0007544837425946799,5
+NFL levels,Phenotype,0.0007544837425946799,5
+peak flow,Phenotype,0.0007544837425946799,5
+EK2 scores,Phenotype,0.0007544837425946799,5
+usage of respiratory support,Phenotype,0.0007544837425946799,5
+favourable respiratory trajectory,Phenotype,0.0007544837425946799,5
+overall motor stability,Phenotype,0.0007544837425946799,5
+upper-limb improvement,Phenotype,0.0007544837425946799,5
+steatosis,Phenotype,0.0007544837425946799,5
+survival motor neuron 2 protein,Protein,0.0007544837425946799,5
+clinical outcomes,Phenotype,0.0007544837425946799,5
+514 patients,Patient,0.0007544837425946799,5
+switching,Action,0.0007544837425946799,5
+speech,Phenotype,0.0007544837425946799,5
+fatigue,Phenotype,0.0007544837425946799,5
+muscle movement,Phenotype,0.0007544837425946799,5
+thousands of patients with spinal muscular atrophy,Patient,0.0007544837425946799,5
+age,Attribute,0.0007304200597102699,4
+baseline motor function,Attribute,0.0007304200597102699,4
+SMN2 copy number,Attribute,0.0007304200597102699,4
+GLE1,Gene,0.0007304200597102699,117
+UCHL1,Gene,0.0007304200597102699,117
+GRP,Gene,0.0007304200597102699,117
+ADRA1D,Gene,0.0007304200597102699,117
+PIK3C2A,Gene,0.0007304200597102699,117
+Cr,Phenotype,0.0007304200597102699,52
+Onasemnogene Abeparvovec,Drug,0.0007304200597102699,0
+CTSD,Gene,0.0007304200597102699,117
+DES,Gene,0.0007304200597102699,117
+COX8A,Gene,0.0007304200597102699,117
+CHI3L1,Gene,0.0007304200597102699,117
+BAX,Gene,0.0007304200597102699,117
+CHM,Gene,0.0007304200597102699,117
+CPOX,Gene,0.0007304200597102699,117
+ACHE,Gene,0.0007304200597102699,117
+VIM,Gene,0.0007304200597102699,117
+CSF2,Gene,0.0007304200597102699,117
+RTL3,Gene,0.0007304200597102699,117
+SLC25A46,Gene,0.0007304200597102699,117
+FUS,Gene,0.0007304200597102699,117
+STK36,Gene,0.0007304200597102699,117
+FST,Gene,0.0007304200597102699,117
+metabolites,Drug,0.0007304200597102699,56
+DMTs,Drug,0.0007304200597102699,123
+population PBPK modeling,Method,0.0007304200597102699,49
+serum insulin-like growth factor-1,Protein,0.0007304200597102699,48
+UFB112,Drug,0.0007304200597102699,55
+branaplam,Drug,0.0007304200597102699,54
+Cystatin C,Phenotype,0.0007304200597102699,53
+MIFS using the Bipolar system,Procedure,0.0007304200597102699,59
+CHOP-ATEND,Phenotype,0.0007304200597102699,47
+written language disorders,Phenotype,0.0007304200597102699,46
+oral language disorders,Phenotype,0.0007304200597102699,45
+MFM,Phenotype,0.0007304200597102699,109
+alpha motor neurons (MN),Cell,0.0007304200597102699,44
+MUMRI,Protein,0.0007304200597102699,58
+gastrocnemius muscle,Anatomy,0.0007304200597102699,57
+p.S87L,Mutation,0.0007304200597102699,63
+MORC2 mutations,Gene,0.0007304200597102699,119
+Intronic Splicing Silencer N1 (ISS-N1),GenomicFeature,0.0007304200597102699,62
+Survival Motor Neuron 2 (SMN2),Gene,0.0007304200597102699,61
+F18MOE,Drug,0.0007304200597102699,39
+pNfL,Protein,0.0007304200597102699,57
+treatments that inhibit myostatin signaling,Drug,0.0007304200597102699,123
+myostatin,Protein,0.0007304200597102699,60
+MuSC,Cell,0.0007304200597102699,43
+PAX7+ MuSC,Cell,0.0007304200597102699,42
+HRUS,Technique,0.0007304200597102699,41
+IgA nephropathy (IgAN),Phenotype,0.0007304200597102699,39
+SMN2-splicing modifying therapies,Drug,0.0007304200597102699,67
+4-copy SMN2 mouse,Model,0.0007304200597102699,66
+SMN1 and SMN2,Gene,0.0007304200597102699,39
+nusinersen/risdiplam/onosemnogene abeparvovec,Drug,0.0007304200597102699,65
+helper viruses,Genes,0.0007304200597102699,64
+manufacturing plasmid sequences,Genes,0.0007304200597102699,64
+PDD,Drug,0.0007304200597102699,63
+VAPB P56S mutation,Mutation,0.0007304200597102699,68
+median nerve,Anatomy,0.0007304200597102699,40
+circulatory system,Anatomy,0.0007304200597102699,39
+neuromuscular junction,Anatomy,0.0007304200597102699,117
+glial cells,CellType,0.0007304200597102699,38
+motor neurons,CellType,0.0007304200597102699,117
+PTCs,Phenotype,0.0007304200597102699,35
+nonsense mutations,Genes,0.0007304200597102699,117
+heart,Anatomy,0.0007304200597102699,34
+antisense oligonucleotides,Drug,0.0007304200597102699,33
+glutathione homeostasis defects,Phenotype,0.0007304200597102699,32
+PSSG,Protein,0.0007304200597102699,31
+CRISPR-Q(KD),Gene,0.0007304200597102699,37
+CRISPR-Qa,Gene,0.0007304200597102699,36
+Itvisma,Drug,0.0007304200597102699,0
+monotherapy,Treatment,0.0007304200597102699,1
+onasemnogene abeparvovec-xioi,Drug,0.0007304200597102699,117
+Great Ormond Respiratory Score,Phenotype,0.0007304200597102699,5
+P546-promoter construct,Drug,0.0007304200597102699,69
+MLDP-AS,Assay,0.0007304200597102699,117
+SMN2 exons 7 and 8,Gene,0.0007304200597102699,29
+exons 2-20 of the DMD gene,Gene,0.0007304200597102699,30
+AAV9-IGHMBP2,Drug,0.0007304200597102699,123
+IGHMBP2,Gene,0.0007304200597102699,119
+Food and Drug Administration,Drug,0.0007304200597102699,117
+AAV vectors,Gene,0.0007304200597102699,0
+NEUROEQUIP-SMA,Phenotype,0.0007304200597102699,5
+baseline CSF GFAP levels,Phenotype,0.0007304200597102699,73
+GFAP,Protein,0.0007304200597102699,109
+exosomal profiling,Protein,0.0007304200597102699,71
+exosomes,Protein,0.0007304200597102699,70
+one SMA family,Family,0.0007304200597102699,78
+pathogenic variants,Variant,0.0007304200597102699,77
+PacBio long-read sequencing,Technology,0.0007304200597102699,76
+patients who switched,Patient,0.0007304200597102699,75
+1366 patients,Patient,0.0007304200597102699,74
+CNS diseases,Disease,0.0007304200597102699,117
+genetic testing,Procedure,0.0007304200597102699,25
+real-time PCR,Procedure,0.0007304200597102699,24
+neonatal screening program,Procedure,0.0007304200597102699,39
+taurine,Phenotype,0.0007304200597102699,17
+VRK1,Gene,0.0007304200597102699,95
+signs and symptoms that may be suggestive of dorsal root ganglia toxicity,Phenotype,0.0007304200597102699,39
+neuromuscular modulators,Drug,0.0007304200597102699,57
+myostatin inhibitors,Drug,0.0007304200597102699,57
+SMN-targeted interventions,Gene,0.0007304200597102699,57
+neuromuscular transmission,Phenotype,0.0007304200597102699,60
+c.961C>T (p.Arg321Cys),Variant,0.0007304200597102699,96
+SMN1,Gene,0.0007304200597102699,57
+11 potential proteins,Protein,0.0007304200597102699,10
+TRAF6,Protein,0.0007304200597102699,103
+YBX1,Protein,0.0007304200597102699,11
+"VRK1 (c.961C>T, p.Arg321Cys)",Variant,0.0007304200597102699,97
+onasemnogene abeparvovec (OAV101 IT),Drug,0.0007304200597102699,57
+nasopharyngitis,Phenotype,0.0007304200597102699,39
+pyrexia,Phenotype,0.0007304200597102699,39
+intron retention,Phenotype,0.0007304200597102699,102
+exon skipping,Phenotype,0.0007304200597102699,102
+vomiting,Phenotype,0.0007304200597102699,39
+headache,Phenotype,0.0007304200597102699,39
+transient thrombocytopenia,Phenotype,0.0007304200597102699,39
+hepatotoxicity,Phenotype,0.0007304200597102699,39
+neurodevelopmental difficulties,Phenotype,0.0007304200597102699,101
+"cognitive, language, and behavioural delays",Phenotype,0.0007304200597102699,100
+home-based respiratory physiotherapy,Treatment,0.0007304200597102699,16
+gastrointestinal support,Device,0.0007304200597102699,107
+respiratory ventilation support devices,Device,0.0007304200597102699,107
+SMN2 gene copies,Gene,0.0007304200597102699,107
+new etiopathogenic pharmacological treatments,Drug,0.0007304200597102699,106
+new phenotypes,Phenotype,0.0007304200597102699,117
+telomere length,Phenotype,0.0007304200597102699,105
+telomeres,Phenotype,0.0007304200597102699,104
+Survival Motor Neuron (SMN) protein,Protein,0.0007304200597102699,39
+GABAergic Parvalbumin positive interneurons,Cell,0.0007304200597102699,17
+FECH,Protein,0.0007304200597102699,57
+Von Willebrand Factor (VWF),Protein,0.0007304200597102699,90
+endothelial cell,Cell,0.0007304200597102699,91
+blood-spinal cord barrier (BSCB),Barrier,0.0007304200597102699,92
+Cx43,Protein,0.0007304200597102699,93
+Gap27,Drug,0.0007304200597102699,94
+ion-channel blockers,Drug,0.0007304200597102699,57
+earlier intervention,Intervention,0.0007304200597102699,114
+follow-up score,Score,0.0007304200597102699,113
+changes,Change,0.0007304200597102699,112
+24 months,Time,0.0007304200597102699,111
+18 months,Time,0.0007304200597102699,110
+6 months,Time,0.0007304200597102699,108
+26 neurology-related proteins,Protein,0.0007304200597102699,9
+NEFH,Gene,0.0007304200597102699,26
+glycerophospholipids,Phenotype,0.0007304200597102699,8
+biogenic amines,Phenotype,0.0007304200597102699,8
+acylcarnitines,Phenotype,0.0007304200597102699,8
+SKG0201,Drug,0.0007304200597102699,12
+earlier treatment,Factor,0.0007304200597102699,20
+ThecaFlex DRx,Device,0.0007304200597102699,7
+tongue pressure,Phenotype,0.0007304200597102699,72
+physical therapy and rehabilitation interventions,Intervention,0.0007304200597102699,107
+GNR-100,Drug,0.0007304200597102699,72
+SMN2,Gene,0.0007304200597102699,57
+VUS2,Gene,0.0007304200597102699,87
+Hypomorphs,Gene,0.0007304200597102699,87
+DYNC1H1,Gene,0.0007304200597102699,79
+SMN2 (Exon 7),Gene,0.0007304200597102699,57
+NAIP exon 5,Gene,0.0007304200597102699,13
+SMN1-SMN2-NAIP genotypes,Genotype,0.0007304200597102699,14
+BICD2,Protein,0.0007304200597102699,99
+children/young people with symptomatic SMA,Patient,0.0007304200597102699,116
+survival motor neuron 1 gene,Gene,0.0007304200597102699,117
+MPT,Phenotype,0.0007304200597102699,88
+diagnostic precision,Intervention,0.0007304200597102699,115
+S/Z,Phenotype,0.0007304200597102699,88
+Vascular abnormalities,Phenotype,0.0007304200597102699,89
+CMAP,Phenotype,0.0007304200597102699,15
+trunk control training,Protein,0.0007304200597102699,82
+Valproic Acid,Drug,0.0007304200597102699,83
+IGHMBP2-R605X,Protein,0.0007304200597102699,119
+SMA neurons,Cell,0.0007304200597102699,118
+neural genes,Gene,0.0007304200597102699,117
+SMA patient-specific induced pluripotent stem cells,Cell,0.0007304200597102699,117
+labial pressure,Phenotype,0.0007304200597102699,72
+4-aminopyridine,Drug,0.0007304200597102699,83
+N-acetylcysteine,Drug,0.0007304200597102699,83
+10H-phenothiazine,Drug,0.0007304200597102699,84
+sleep efficiency domain of the PSQI,Phenotype,0.0007304200597102699,85
+global PSQI score,Phenotype,0.0007304200597102699,85
+BMI,Phenotype,0.0007304200597102699,86
+knee extension mobility,Phenotype,0.0007304200597102699,121
+ssAAV9-WT-IGHMBP2 vector,Drug,0.0007304200597102699,120
+BDI scores,Phenotype,0.0007304200597102699,86
+ESS scores,Phenotype,0.0007304200597102699,86
+total SF-36 score,Phenotype,0.0007304200597102699,86
+Wild-type SMN1,Gene,0.0007304200597102699,87
+nusinersen monotherapy,Treatment,0.0007304200597102699,18
+TBCE,Gene,0.0007304200597102699,6
+AAV9,Protein,0.0007304200597102699,117
+combination therapy,Treatment,0.0007304200597102699,19
+bridge therapy,Treatment,0.0007304200597102699,2
+myogenesis,Phenotype,0.0007304200597102699,21
+sNfL,Phenotype,0.0007304200597102699,4
+myogenic regulatory factors,Phenotype,0.0007304200597102699,21
+fiber atrophy,Phenotype,0.0007304200597102699,22
+metabolic disturbances,Phenotype,0.0007304200597102699,22
+dicarboxylic aciduria,Phenotype,0.0007304200597102699,117
+leptin proteohormone,Phenotype,0.0007304200597102699,117
+axial and intercostal musculature,Phenotype,0.0007304200597102699,22
+diaphragm,Phenotype,0.0007304200597102699,22
+myostatin inhibition,Therapy,0.0007304200597102699,23
+mitochondrial protection,Therapy,0.0007304200597102699,23
+switch therapy,Treatment,0.0007304200597102699,3
+antisense oligonucleotide (ASO),Drug,0.0007304200597102699,80
+BICD2 variant,Gene,0.0007304200597102699,124
+IMT,Protein,0.0007304200597102699,81
+MLPA,Drug,0.0007304200597102699,26
+SMN1/RPP30,Ratio,0.0007304200597102699,27
+mifepristone,Drug,0.0007304200597102699,123
+powered mobility training,Treatment,0.0007304200597102699,28
+CHOP-INTEND,Phenotype,0.0007304200597102699,0
+elbow and wrist range of motion,Phenotype,0.0007304200597102699,122
+FOXM1,Gene,0.0007304200597102699,117
+EP300,Gene,0.0007304200597102699,117
+JARID2,Gene,0.0007304200597102699,117
+MET,Gene,0.0007304200597102699,117
+SCN4A,Gene,0.0007304200597102699,117
+FLNC,Gene,0.0007304200597102699,117
+ZSWIM8,Gene,0.0007304200597102699,117
+ADAM19,Gene,0.0007304200597102699,117
+HEY2,Gene,0.0007304200597102699,117
+real-time ultrasound-guided intrathecal delivery,Procedure,0.0007304200597102699,98
+ZFPM2,Gene,0.0007304200597102699,117
+NAIP,Gene,0.0007304200597102699,117
+Trisomy 21,Phenotype,0.0007304200597102699,117
+glucose metabolic pathway,Phenotype,0.0007304200597102699,117
+lipid metabolic pathway,Phenotype,0.0007304200597102699,117
+leptin protein,Protein,0.0007304200597102699,117
+PLXND1,Gene,0.0007304200597102699,117
+ACKR3,Gene,0.0007304200597102699,117
+ADAM17,Gene,0.0007304200597102699,117
+BAZ1B,Gene,0.0007304200597102699,117
+IGF1R,Gene,0.0007304200597102699,117
+ABCA3,Gene,0.0007304200597102699,117
+KIF7,Gene,0.0007304200597102699,117
+MEG3,Gene,0.0007304200597102699,117
+NODAL,Gene,0.0007304200597102699,117
+ROBO1,Gene,0.0007304200597102699,117
+NKX2-5,Gene,0.0007304200597102699,117
+MYL11,Gene,0.0007304200597102699,117
+MYOG,Gene,0.0007304200597102699,117
+ADRA2B,Gene,0.0007304200597102699,117
+DNAJB4,Gene,0.0007304200597102699,117
+NKX2-1,Gene,0.0007304200597102699,117
+STMN1,Gene,0.0007304200597102699,117
+SNRPN,Gene,0.0007304200597102699,117
+IGF1,Gene,0.0007304200597102699,117
+NEFL,Gene,0.0007304200597102699,117
+MGRN1,Gene,0.0007304200597102699,117
+NR1D2,Gene,0.0007304200597102699,117
+SRSF10,Gene,0.0007304200597102699,117
+ATP2A1,Gene,0.0007304200597102699,117
+SELENON,Gene,0.0007304200597102699,117
+PAX3,Gene,0.0007304200597102699,117
+SHROOM3,Gene,0.0007304200597102699,117
+PDGFRA,Gene,0.0007304200597102699,117
+CHD4,Gene,0.0007304200597102699,117
+CCN1,Gene,0.0007304200597102699,117
+WNT7B,Gene,0.0007304200597102699,117
+KLF3,Gene,0.0007304200597102699,117
+ERCC2,Gene,0.0007304200597102699,117
+ERCC3,Gene,0.0007304200597102699,117
+GTF2H1,Gene,0.0007304200597102699,117
+GTF2H3,Gene,0.0007304200597102699,117
+IFI44,Gene,0.0007304200597102699,117
+PRKDC,Gene,0.0007304200597102699,117
+SCO2,Gene,0.0007304200597102699,117
+UBC,Gene,0.0007304200597102699,117
+RPS27A,Gene,0.0007304200597102699,117
+UBA52,Gene,0.0007304200597102699,117
+UBB,Gene,0.0007304200597102699,117
+SYP,Gene,0.0007304200597102699,117
+MAPT,Gene,0.0007304200597102699,117
+MYH14,Gene,0.0007304200597102699,117
+TNF,Gene,0.0007304200597102699,117
+GTF2H2,Gene,0.0007304200597102699,117
+SERF1B,Gene,0.0007304200597102699,117
+SERF1A,Gene,0.0007304200597102699,117
+TXNDC12,Gene,0.0007304200597102699,117
+NBPF10,Gene,0.0007304200597102699,117
+MSTN,Gene,0.0007304200597102699,117
+CASR,Gene,0.0007304200597102699,117
+MYH6,Gene,0.0007304200597102699,117
+GEMIN4,Gene,0.0007304200597102699,117
+TTR,Gene,0.0007304200597102699,117
+NFASC,Gene,0.0007304200597102699,117
+GTF2H5,Gene,0.0007304200597102699,117
+WDR77,Gene,0.0007304200597102699,117
+FENDRR,Gene,0.0007304200597102699,117
+UBA1,Gene,0.0007304200597102699,117
+GTF2H4,Gene,0.0007304200597102699,117
+LARGE1,Gene,0.0007304200597102699,117
+BACE1,Gene,0.0007304200597102699,117
+PTGS2,Gene,0.0007304200597102699,117
+SNCA,Gene,0.0007304200597102699,117
+CFTR,Gene,0.0007304200597102699,117
+APOA1,Gene,0.0007304200597102699,117
+GATA6,Gene,0.0007304200597102699,117
+B4GAT1,Gene,0.0007304200597102699,117
+APOE,Gene,0.0007304200597102699,117
+GARS1,Gene,0.0007304200597102699,117
+POMC,Gene,0.0007304200597102699,117
+EXOSC3,Gene,0.0007304200597102699,117
+TNNT2,Gene,0.0007304200597102699,117
+PPARA,Gene,0.0007304200597102699,117
+PSMA6,Gene,0.0007304200597102699,117
+ZPR1,Gene,0.0007304200597102699,117
+CNTN1,Gene,0.0007304200597102699,117
+NRXN3,Gene,0.0007304200597102699,117
+LAMA2,Gene,0.0007304200597102699,117
+GGTLC4P,Gene,0.0007304200597102699,117
+AOPEP,Gene,0.0007304200597102699,117
+GGTLC3,Gene,0.0007304200597102699,117
+GGTLC5P,Gene,0.0007304200597102699,117
+FOXO3,Gene,0.0007304200597102699,117
+S100B,Gene,0.0007304200597102699,117
+C16orf89,Gene,0.0007304200597102699,117
+GGT1,Gene,0.0007304200597102699,117
+WRAP53,Gene,0.0007304200597102699,117
+SRSF3,Gene,0.0007304200597102699,117
+SETX,Gene,0.0007304200597102699,117
+SERPINE1,Gene,0.0007304200597102699,117
+C3,Gene,0.0007304200597102699,117
+NCOR2,Gene,0.0007304200597102699,117
+NGF,Gene,0.0007304200597102699,117
+CCR,Phenotype,0.0007304200597102699,52
+(31)P MRS,Drug,0.0007304200597102699,51
+MVC,Phenotype,0.0007304200597102699,50
+KCNB1,Gene,0.0007304200597102699,117
+DDIT3,Gene,0.0007304200597102699,117
+GSR,Gene,0.0007304200597102699,117
+STRAP,Gene,0.0007304200597102699,117
+TTN,Gene,0.0007304200597102699,117
+COX5A,Gene,0.0007304200597102699,117
+NRGN,Gene,0.0007304200597102699,117
+FGFR3,Gene,0.0007304200597102699,117
+LAMC2,Gene,0.0007304200597102699,117
+RPE65,Gene,0.0007304200597102699,117
+TRH,Gene,0.0007304200597102699,117
+DNTT,Gene,0.0007304200597102699,117
+DMD,Gene,0.0007304200597102699,117
+LEP,Gene,0.0007304200597102699,117
+BDNF,Gene,0.0007304200597102699,117
+CHKB,Gene,0.0007304200597102699,117
+CHKA,Gene,0.0007304200597102699,117
+GDNF,Gene,0.0007304200597102699,117
+HNRNPA1,Gene,0.0007304200597102699,117
+POLG,Gene,0.0007304200597102699,117
+ACTB,Gene,0.0007304200597102699,117
+CMPK1,Gene,0.0007304200597102699,117
+CHIT1,Gene,0.0007304200597102699,117
+TP53,Gene,0.0007304200597102699,117
+NR3C1,Gene,0.0007304200597102699,117
+FUT1,Gene,0.0007304200597102699,117
+GCG,Gene,0.0007304200597102699,117
+H3P33,Gene,0.0007304200597102699,117
