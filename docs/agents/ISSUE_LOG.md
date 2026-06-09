@@ -17,6 +17,22 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-09 - Stage 3 outputs were stale after stabilized Stage 2
+
+- Symptom: Stage 3 fusion outputs still reflected the older 2664-triple Stage 2
+  input, while the stabilized Stage 2 canonical input now contained 5738 merged
+  triples.
+- Cause: `dictionary_mapper.py`, `semantic_aligner.py`, and
+  `triples_aggregator.py` write directly to canonical output paths and had not
+  been rerun after the Stage 2 promotion.
+- Fix: Reran the Stage 3 scripts, captured pre-run snapshots, logs, output
+  snapshots, a manifest, and validation statistics under
+  `artifacts/runs/stage3_fusion_2026-06-09/`.
+- Verification: Stage 3 now reports 5738 mapped triples, 5738 aligned triples,
+  and 554 fused unique edges. A Stage 4 dry-read of
+  `data/processed/fused_triples.jsonl` loaded all 554 records with 0 missing core
+  fields.
+
 ### 2026-06-09 - Stage 2 full extraction needed recoverable execution
 
 - Symptom: Stage 2 LLM extraction was too slow and fragile as one monolithic

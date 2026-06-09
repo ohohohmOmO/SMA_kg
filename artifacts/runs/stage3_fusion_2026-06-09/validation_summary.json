@@ -1,0 +1,99 @@
+{
+  "extracted_records": 5738,
+  "mapped_records": 5738,
+  "aligned_records": 5738,
+  "fused_records": 554,
+  "mapping_changed_triples": 5276,
+  "alignment_changed_triples": 163,
+  "unique_entity_names_extracted": 492,
+  "unique_entity_names_mapped": 483,
+  "unique_entity_names_aligned": 448,
+  "mapped_entity_type_counts": {
+    "Drug": 1830,
+    "Phenotype": 682,
+    "Gene": 3743,
+    "Protein": 120,
+    "Disease": 5101
+  },
+  "aligned_entity_type_counts": {
+    "Drug": 1830,
+    "Phenotype": 682,
+    "Gene": 3743,
+    "Protein": 120,
+    "Disease": 5101
+  },
+  "fused_missing_core_fields": 0,
+  "fused_engine_counts": {
+    "LLM_deepseek-ai/DeepSeek-V4-Flash": 547,
+    "Regex_Fallback": 7
+  },
+  "fused_evidence_pmid_min": 1,
+  "fused_evidence_pmid_max": 1580,
+  "fused_evidence_pmid_avg": 10.096,
+  "compression_ratio_extracted_to_fused": 0.0965,
+  "top_fused_relations": [
+    [
+      "ASSOCIATED_WITH",
+      108
+    ],
+    [
+      "IMPROVES",
+      92
+    ],
+    [
+      "CAUSES",
+      55
+    ],
+    [
+      "TREATS",
+      20
+    ],
+    [
+      "INCREASES",
+      16
+    ],
+    [
+      "CORRELATED_WITH",
+      14
+    ],
+    [
+      "TARGETS",
+      14
+    ],
+    [
+      "PREVENTS",
+      12
+    ],
+    [
+      "LEADS_TO",
+      9
+    ],
+    [
+      "DECREASES",
+      8
+    ],
+    [
+      "ENHANCES",
+      8
+    ],
+    [
+      "MODULATES",
+      7
+    ],
+    [
+      "HAS_VARIANT",
+      6
+    ],
+    [
+      "REDUCES",
+      6
+    ],
+    [
+      "MODIFIES",
+      5
+    ]
+  ],
+  "alignment_second_run_same_hash": false,
+  "alignment_first_run_sha256": "3213d483e91e8e55ff28242b6a44a06ae5b6d5520a5eb45bf60456cb904c006b",
+  "alignment_second_run_sha256": "a25f4688302f17a1297304058699f7e00b77f43ea97bf5cb544d7a2ba1e2bb3a"
+}

@@ -306,3 +306,165 @@ Merge:
 ## Stage 2 Current Verdict
 
 第 2 阶段在 2026-06-08 的复现状态是：Regex fallback 和 merge 成功重跑，LLM 抽取因缺少 `SILICONFLOW_API_KEY` 未能忠实复现。当前 `data/processed/extracted_triples.jsonl` 可作为工程上的兼容中间产物继续探索，但不能作为完整 Stage 2 复现实验结果或最终准确性结论。若要严谨推进，应先修复 LLM fast-fail、输出目录参数化、PMID split manifest 和 schema validation，然后在有 key 的环境中完整重跑。
+
+---
+
+# Stage 3 Fusion Reproduction - 2026-06-09
+
+本节记录第 3 阶段语义融合与实体对齐的复现结果。第 3 阶段在当前仓库中指：
+
+- Dictionary mapping: `src/fusion/dictionary_mapper.py`
+- Semantic alignment: `src/fusion/semantic_aligner.py`
+- Triple aggregation: `src/fusion/triples_aggregator.py`
+
+本次复现基于已经稳定化并 promote 的 Stage 2 输出：
+
+- `data/processed/extracted_triples.jsonl`
+- 记录数：5738
+- SHA-256：`02ba3fa780f52228870f2171611448db2910dbbe70f30e3937772bf4104a60b4`
+
+## Stage 3 Run Context
+
+- 日期：2026-06-09
+- 仓库：`D:\kg_sma_0420`
+- Conda 环境：`KG_SMA_env`
+- Python：`C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe`
+- 运行前已阅读：`docs/agents/PLAN.md`
+- 诊断前已阅读：`docs/agents/ISSUE_LOG.md`
+
+## Stage 3 Output Convention
+
+第 3 阶段被后续阶段读取的数据本体继续放在 canonical pipeline 路径：
+
+- `data/interim/mapped_triples.jsonl`
+- `data/interim/aligned_triples.jsonl`
+- `data/processed/fused_triples.jsonl`
+
+本次复现证据放在 dated run 目录：
+
+- `artifacts/runs/stage3_fusion_2026-06-09/`
+- `artifacts/runs/stage3_fusion_2026-06-09/pre_run_outputs/`
+- `artifacts/runs/stage3_fusion_2026-06-09/outputs/`
+- `artifacts/runs/stage3_fusion_2026-06-09/manifest.csv`
+- `artifacts/runs/stage3_fusion_2026-06-09/validation_summary.json`
+- `artifacts/runs/stage3_fusion_2026-06-09/dictionary_mapper.log`
+- `artifacts/runs/stage3_fusion_2026-06-09/semantic_aligner.log`
+- `artifacts/runs/stage3_fusion_2026-06-09/triples_aggregator.log`
+
+这样处理后，后续 Stage 4 仍读取原来的 canonical 文件；复现日志、快照和统计则归档到 `artifacts/runs/`。
+
+## Stage 3 Commands Run
+
+```powershell
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' 'src\fusion\dictionary_mapper.py'
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' 'src\fusion\semantic_aligner.py'
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' 'src\fusion\triples_aggregator.py'
+```
+
+另外，为诊断确定性，额外对 `semantic_aligner.py` 做了第二次同输入运行，并比较 `aligned_triples.jsonl` hash。
+
+## Stage 3 Reproduction Results
+
+| Product | Old observed count | Reproduced count | JSON validity | SHA-256 |
+| --- | ---: | ---: | --- | --- |
+| `data/interim/mapped_triples.jsonl` | 2664 | 5738 | 0 bad JSON lines | `eb6787dd6db7f2ae42f23d600b5348dd15a97ba9e1033ced43571417505e6e1b` |
+| `data/interim/aligned_triples.jsonl` | 2664 | 5738 | 0 bad JSON lines | `3213d483e91e8e55ff28242b6a44a06ae5b6d5520a5eb45bf60456cb904c006b` |
+| `data/processed/fused_triples.jsonl` | 652 | 554 | 0 bad JSON lines | `b2dcab4262139ea5e4cfa6d6bd770d3720604b588b7d74486e7a9e2b682ce4b9` |
+
+Additional checks:
+
+- Input extracted triples: 5738
+- Dictionary mapping changed at least one entity name in 5276 triples
+- Semantic alignment changed at least one entity name in 163 triples
+- Unique entity names before mapping: 492
+- Unique entity names after dictionary mapping: 483
+- Unique entity names after semantic alignment: 448
+- Fused unique edges: 554
+- Fused records missing core fields: 0
+- Fused evidence PMID count min/max/avg: 1 / 1580 / 10.096
+- Compression ratio from extracted to fused: 0.0965
+- Fused edge engine coverage: `LLM_deepseek-ai/DeepSeek-V4-Flash` appears in 547 fused edge evidence engine lists; `Regex_Fallback` appears in 7
+- Top fused relations: `ASSOCIATED_WITH` 108, `IMPROVES` 92, `CAUSES` 55, `TREATS` 20, `INCREASES` 16
+
+Stage 4 dry-read check:
+
+```text
+stage4_fused_triples_dry_read=ok records=554 missing_core=0
+```
+
+## Stage 3 Correctness Assessment
+
+第 3 阶段本次复现成功，且产物可以被后续阶段读取。`mapped_triples.jsonl` 与 `aligned_triples.jsonl` 保持与 Stage 2 merged 输入相同的 5738 行，`fused_triples.jsonl` 输出 554 条融合边。JSONL 格式合法，fused 产物没有缺失核心字段，Stage 4 对 fused 文件的 dry-read 通过。
+
+需要注意的是，fused 条数从旧的 652 变为 554，并不表示信息一定减少。Stage 2 已经从旧的 Qwen 历史抽取切换到 DeepSeek V4 Flash 完整抽取，关系词和实体命名分布都改变了；同时 Regex fallback 的 5101 条共现型边在聚合后高度压缩，只形成少数独立 fused edge。这个结果在工程上合理，但在科学评估上需要后续用人工/LLM 评估验证质量。
+
+## Stage 3 Accuracy And Reasonableness
+
+Dictionary mapping:
+
+- 能将核心药物、疾病、基因别名统一到少量 canonical 名称。
+- 本次 5276 条 triple 发生了至少一个实体名变化，主要来自 Regex 产物中大量 `SMA` 被映射为 `Spinal Muscular Atrophy`，以及少量药物/基因别名归一。
+- 字典覆盖范围很小，只覆盖少数 SMA 高价值实体；对 LLM 产物中的大量表型、机制、复杂治疗名称覆盖不足。
+
+Semantic alignment:
+
+- 成功加载 `sentence-transformers/all-MiniLM-L6-v2` 并完成 embedding 对齐。
+- 将 unique entity names 从 483 降到 448，说明 fuzzy alignment 确实产生了额外归并。
+- 但第二次同输入运行产生不同 `aligned_triples.jsonl` hash：
+  - first run：`3213d483e91e8e55ff28242b6a44a06ae5b6d5520a5eb45bf60456cb904c006b`
+  - second run：`a25f4688302f17a1297304058699f7e00b77f43ea97bf5cb544d7a2ba1e2bb3a`
+- 因此当前 semantic alignment 不是严格可复现的确定性步骤。
+
+Aggregation:
+
+- 按 `(entity_1.name, entity_1.type, relation, entity_2.name, entity_2.type)` 聚合，能把同一语义边的多个 PMID evidence 合并。
+- 聚合后 evidence 中保留 `pmid_list` 和 `extraction_engines`，适合 Stage 4 图导入和后续可视化。
+- 当前 confidence boost 只按 extraction engine 数量加权，不按 PMID 数量、来源质量、关系类型或抽取器可靠性加权，因此更像工程启发式，不是校准后的置信度。
+
+## Stage 3 Diagnosed Code Issues
+
+1. `semantic_aligner.py` is non-deterministic.
+   - Cause: entities are collected in Python `set`, converted to unsorted `list`, then clustered greedily.
+   - Evidence: two runs with the same `mapped_triples.jsonl` produced different `aligned_triples.jsonl` hashes.
+   - Impact: downstream fused graph can vary across runs even with identical input.
+   - Recommendation: sort entity lists before embedding and implement true connected-components clustering over the similarity graph.
+
+2. The semantic clustering is not a true connected-components algorithm.
+   - Cause: the code only compares each unvisited anchor to later entities and marks direct neighbors visited.
+   - Impact: if A is similar to B and B is similar to C, but A is not similar to C, C may not be clustered with A/B.
+   - Recommendation: build graph edges for all pairs above threshold, then compute connected components deterministically.
+
+3. HuggingFace mirror configuration is misleading.
+   - Cause: the script sets `HF_ENDPOINT` inside `main()`, but observed logs still show requests to `huggingface.co`.
+   - Impact: operators may believe a mirror is used when the run actually depends on HuggingFace availability.
+   - Recommendation: set `HF_ENDPOINT` before importing/loading model code, read it from environment, and log the effective endpoint.
+
+4. Fusion scripts write directly to canonical outputs.
+   - Cause: `dictionary_mapper.py`, `semantic_aligner.py`, and `triples_aggregator.py` all use hard-coded input/output paths.
+   - Impact: failed or partial Stage 3 runs can overwrite canonical files.
+   - Recommendation: add a Stage 3 runner with run-dir, validation, and promote-only-after-validation, mirroring the Stage 2 stabilization pattern.
+
+5. Dictionary coverage is narrow and embedded in code.
+   - Cause: `DICTIONARY` is a small hard-coded dictionary.
+   - Impact: biomedical synonym handling is incomplete and difficult to audit.
+   - Recommendation: move dictionary resources to a versioned config/data file and record mapping hit counts by entity type.
+
+6. Confidence scoring is heuristic.
+   - Cause: aggregator uses max confidence plus a small boost for multiple engines.
+   - Impact: output confidence looks numeric but is not calibrated.
+   - Recommendation: rename or document it as heuristic confidence until evaluation calibrates it.
+
+## Stage 3 Need For Refinement
+
+需要精进，但不必立即全量重构。建议优先级：
+
+1. Make semantic alignment deterministic by sorting entities and using true connected components.
+2. Add a Stage 3 runner with dated run outputs, validation, and promote-only-after-validation.
+3. Move dictionary mapping to a versioned resource file and write mapping coverage stats.
+4. Record effective HuggingFace endpoint and model revision in the run manifest.
+5. Add a small fixture test for dictionary mapping, alignment determinism, and aggregation output schema.
+6. Revisit confidence semantics after Stage 4/5 evaluation, not before.
+
+## Stage 3 Current Verdict
+
+第 3 阶段在 2026-06-09 的复现结果为成功：canonical 产物已更新，run artifacts 已归档，Stage 4 dry-read 通过。当前产物可继续进入下一阶段。但该阶段仍存在明确工程风险：semantic alignment 非确定性、输出直接覆盖、字典覆盖不足、confidence 未校准。若要把 Stage 3 作为严格可复现实验环节，下一步应优先做确定性修复和 Stage 3 runner。

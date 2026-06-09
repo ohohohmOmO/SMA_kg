@@ -1,0 +1,5 @@
+path,records,bad_json_lines,bytes,sha256
+data/processed/extracted_triples.jsonl,5738,0,1305952,02ba3fa780f52228870f2171611448db2910dbbe70f30e3937772bf4104a60b4
+data/interim/mapped_triples.jsonl,5738,0,1411417,eb6787dd6db7f2ae42f23d600b5348dd15a97ba9e1033ced43571417505e6e1b
+data/interim/aligned_triples.jsonl,5738,0,1411344,3213d483e91e8e55ff28242b6a44a06ae5b6d5520a5eb45bf60456cb904c006b
+data/processed/fused_triples.jsonl,554,0,215892,b2dcab4262139ea5e4cfa6d6bd770d3720604b588b7d74486e7a9e2b682ce4b9
