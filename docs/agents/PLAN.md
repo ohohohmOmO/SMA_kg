@@ -220,8 +220,19 @@ requirements from 2026-06-09.
   `.scratch/stage3-prep/issues/02-build-gold-set-before-medical-model-finetuning.md`.
 - Stage 3 is ready to rerun against the latest Stage 2 canonical output. Treat
   `data/interim/mapped_triples.jsonl`, `data/interim/aligned_triples.jsonl`,
-  and `data/processed/fused_triples.jsonl` as stale until the Stage 3 rerun
-  completes.
+  and `data/processed/fused_triples.jsonl` as stale only for the pre-run state
+  captured in `docs/reproduction/STAGE3_PREP_2026-06-09.md`.
+- Stage 3 full rerun is complete and promoted. Current Stage 3 output is
+  `data/processed/fused_triples.jsonl`, with 11155 fused edges and SHA-256
+  `1771293aad8258befe717c7c7ca00c349fe5fdb782b84245b1357ad45e332b5a`.
+  Conflict detection wrote 59 conflict records to
+  `data/interim/relation_conflicts.jsonl`.
+- Stage 4 full rerun is complete and promoted. Neo4j import succeeded with
+  11155 fused literature triples and 164 Open Targets relationships. Topology
+  evaluation reported 6648 nodes, 11208 relationships, average degree
+  3.371841155234657, and 0 isolated nodes.
+- Current Stage 3/4 reproduction record:
+  `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`.
 
 ## Before Each Run
 

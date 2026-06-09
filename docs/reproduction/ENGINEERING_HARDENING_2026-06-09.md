@@ -12,6 +12,7 @@ after reading `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`.
 - `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`
 - `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
 - `docs/reproduction/STAGE3_PREP_2026-06-09.md`
+- `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`
 - `.scratch/stage3-prep/PRD.md`
 - `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
@@ -110,12 +111,20 @@ Stage 3:
 - Updated `src/fusion/triples_aggregator.py` to use fused confidence scoring and
   relation conflict detection.
 - Added `src/fusion/run_stage3_fusion.py`.
+- Reran Stage 3 against the latest full Stage 2 canonical output. The promoted
+  result contains 11155 fused edges and 59 relation conflict records.
 
 Stage 4:
 
 - Updated `src/database/neo4j_importer.py` to sanitize labels and relationship
   types through the biomedical schema.
 - Added `src/database/run_stage4_graph.py`.
+- Updated Stage 4 scripts to write run-directory outputs before promotion,
+  verify Neo4j connectivity, write Neo4j import summaries and topology metrics,
+  and promote analytics/viewer outputs only after validation passes.
+- Reran Stage 4 with Neo4j reachable at the configured Bolt URI. The promoted
+  run imported 11155 fused literature triples and 164 Open Targets
+  relationships, then generated local analytics and the graph viewer.
 
 Tests:
 

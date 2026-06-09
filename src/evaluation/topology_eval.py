@@ -1,8 +1,16 @@
+import argparse
+import json
 import os
 
 from neo4j import GraphDatabase
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Evaluate Neo4j graph topology.")
+    parser.add_argument("--output-file", default="")
+    return parser.parse_args()
+
 def main():
+    args = parse_args()
     print("==================================================")
     print("   GRAPH TOPOLOGY EVALUATION REPORT")
     print("==================================================")
@@ -13,10 +21,12 @@ def main():
 
     try:
         driver = GraphDatabase.driver(uri, auth=(user, password))
+        driver.verify_connectivity()
     except Exception as e:
         print(f"Failed to connect to Neo4j at {uri}: {e}")
-        return
+        return 1
 
+    metrics = {}
     try:
         with driver.session() as session:
             # Total Nodes
@@ -36,6 +46,13 @@ def main():
             
             avg_degree = (2.0 * total_rels) / total_nodes if total_nodes > 0 else 0.0
             isolated_ratio = (isolated_nodes / total_nodes) if total_nodes > 0 else 0.0
+            metrics = {
+                "total_nodes": total_nodes,
+                "total_relationships": total_rels,
+                "average_node_degree": avg_degree,
+                "isolated_nodes": isolated_nodes,
+                "isolated_nodes_ratio": isolated_ratio,
+            }
             
             print(f"Graph Topology Evaluation:")
             print(f" - Total Nodes: {total_nodes}")
@@ -44,10 +61,17 @@ def main():
             
     except Exception as e:
         print(f"Error querying Neo4j: {e}")
+        return 1
     finally:
         driver.close()
 
+    if args.output_file:
+        with open(args.output_file, "w", encoding="utf-8") as f:
+            json.dump(metrics, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+
     print("==================================================")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

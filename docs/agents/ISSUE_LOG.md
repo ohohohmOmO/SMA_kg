@@ -17,6 +17,21 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-09 - Neo4j relationship sanitizer allowed schema-external relation tokens
+
+- Symptom: The new unit test for Neo4j dynamic Cypher sanitization failed
+  because `safe_relationship_type("bad rel`) DELETE r //")` returned
+  `BAD_REL_DELETE_R` instead of falling back to `ASSOCIATED_WITH`.
+- Cause: `safe_relationship_type` normalized arbitrary text into a Cypher-safe
+  token after schema normalization failed, so schema-external relation names
+  could still become dynamic relationship types.
+- Fix: Changed `safe_relationship_type` to accept only relations that normalize
+  through the biomedical schema; all schema-external values fall back to
+  `ASSOCIATED_WITH`.
+- Verification: `python -m py_compile src/database/neo4j_importer.py
+  tests/unit/test_biomedical_quality.py` passed; `python -m unittest discover -s
+  tests/unit -v` passed 10 tests.
+
 ### 2026-06-09 - Stage 2 canonical LLM coverage was limited to 200 abstracts
 
 - Symptom: A full rerun request still used the historical `--llm-limit 200`

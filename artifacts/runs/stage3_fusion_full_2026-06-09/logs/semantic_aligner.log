@@ -1,0 +1,32 @@
+2026-06-09 20:33:19,902 - INFO - Loading triples for semantic alignment...
+2026-06-09 20:33:20,143 - INFO - Loading biomedical SentenceTransformer model: NeuML/pubmedbert-base-embeddings
+2026-06-09 20:33:20,144 - INFO - Use pytorch device_name: cpu
+2026-06-09 20:33:20,144 - INFO - Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+2026-06-09 20:33:22,287 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/modules.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:22,622 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/config_sentence_transformers.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:22,953 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/config_sentence_transformers.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:23,273 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/README.md "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:23,610 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/modules.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:23,941 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/sentence_bert_config.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:24,269 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/adapter_config.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:24,592 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/config.json "HTTP/1.1 308 Permanent Redirect"
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 5704.35it/s]
+2026-06-09 20:33:25,528 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/config.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:26,214 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/tokenizer_config.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:26,546 - INFO - HTTP Request: GET https://hf-mirror.com/api/models/NeuML/pubmedbert-base-embeddings/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:28,675 - INFO - HTTP Request: GET https://huggingface.co/api/models/NeuML/pubmedbert-base-embeddings/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-09 20:33:29,000 - INFO - HTTP Request: GET https://hf-mirror.com/api/models/NeuML/pubmedbert-base-embeddings/tree/main?recursive=true&expand=false "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:29,282 - INFO - HTTP Request: GET https://huggingface.co/api/models/NeuML/pubmedbert-base-embeddings/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-09 20:33:29,686 - INFO - HTTP Request: HEAD https://hf-mirror.com/NeuML/pubmedbert-base-embeddings/resolve/main/1_Pooling/config.json "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:30,022 - INFO - HTTP Request: GET https://hf-mirror.com/api/models/NeuML/pubmedbert-base-embeddings "HTTP/1.1 308 Permanent Redirect"
+2026-06-09 20:33:30,296 - INFO - HTTP Request: GET https://huggingface.co/api/models/NeuML/pubmedbert-base-embeddings "HTTP/1.1 200 OK"
+2026-06-09 20:33:30,313 - INFO - Computing embeddings for 356 entities of type 'Disease'.
+2026-06-09 20:33:33,061 - INFO - Computing embeddings for 904 entities of type 'Drug'.
+2026-06-09 20:33:37,648 - INFO - Computing embeddings for 541 entities of type 'Gene'.
+2026-06-09 20:33:39,635 - INFO - Computing embeddings for 5557 entities of type 'Phenotype'.
+2026-06-09 20:34:12,832 - INFO - Computing embeddings for 783 entities of type 'Protein'.
+2026-06-09 20:34:16,932 - INFO - Computing embeddings for 1084 entities of type 'Variant'.
+2026-06-09 20:34:26,805 - INFO - Applying canonical alignments over dataset...
+2026-06-09 20:34:26,983 - INFO - Alignment complete. Wrote 18288 triples to D:\kg_sma_0420\artifacts\runs\stage3_fusion_full_2026-06-09\outputs\data\interim\aligned_triples.jsonl.

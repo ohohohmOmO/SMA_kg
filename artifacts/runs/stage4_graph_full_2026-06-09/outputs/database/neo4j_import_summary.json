@@ -1,0 +1,13 @@
+{
+  "uri": "bolt://localhost:7687",
+  "user": "neo4j",
+  "fused_file": "data\\processed\\fused_triples.jsonl",
+  "opentargets_file": "data\\external\\sma_gda_baseline.jsonl",
+  "clear_managed_graph": true,
+  "managed_clear": {
+    "relationships_deleted": 11208,
+    "nodes_deleted": 6648
+  },
+  "open_targets_imported": 164,
+  "fused_triples_imported": 11155
+}

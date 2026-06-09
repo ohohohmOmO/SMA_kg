@@ -1,3 +1,4 @@
+import argparse
 import os
 import json
 import logging
@@ -27,7 +28,7 @@ def safe_label(raw_type):
 
 
 def safe_relationship_type(raw_relation):
-    rel = normalize_relation(raw_relation) or relation_key(raw_relation) or "ASSOCIATED_WITH"
+    rel = normalize_relation(raw_relation) or "ASSOCIATED_WITH"
     if not SAFE_CYPHER_TOKEN.match(rel):
         return "ASSOCIATED_WITH"
     return rel
@@ -49,14 +50,41 @@ class Neo4jImporter:
             session.run(query)
             logging.info("Unique constraint on Entity.name established.")
 
+    def clear_managed_graph(self):
+        with self.driver.session() as session:
+            rel_result = session.run(
+                """
+                MATCH ()-[r]->()
+                WHERE r.source IN ['OpenTargets', 'Literature_NLP']
+                WITH collect(r) AS rels, count(r) AS rel_count
+                FOREACH (rel IN rels | DELETE rel)
+                RETURN rel_count
+                """
+            ).single()
+            node_result = session.run(
+                """
+                MATCH (n:Entity)
+                WHERE n.kg_sma_managed = true OR NOT (n)--()
+                WITH collect(n) AS nodes, count(n) AS node_count
+                FOREACH (node IN nodes | DETACH DELETE node)
+                RETURN node_count
+                """
+            ).single()
+        rel_count = rel_result["rel_count"] if rel_result else 0
+        node_count = node_result["node_count"] if node_result else 0
+        logging.info("Cleared %s managed relationships and %s managed/orphan Entity nodes.", rel_count, node_count)
+        return {"relationships_deleted": rel_count, "nodes_deleted": node_count}
+
     def import_open_targets(self, filepath):
         if not Path(filepath).exists():
             logging.warning(f"{filepath} not found. Skipping Open Targets import.")
-            return
+            return 0
 
         query = """
         MERGE (disease:Entity:Disease {name: trim($disease_name)})
+        SET disease.kg_sma_managed = true
         MERGE (gene:Entity:Gene {name: trim($gene_symbol)})
+        SET gene.kg_sma_managed = true
         MERGE (gene)-[r:ASSOCIATED_WITH]->(disease)
         SET r.score = toFloat($score),
             r.source = 'OpenTargets'
@@ -74,11 +102,12 @@ class Neo4jImporter:
                                 score=data.get("score", 0.0))
                     count += 1
         logging.info(f"Imported {count} Open Targets baseline associations.")
+        return count
 
     def import_fused_triples(self, filepath):
         if not Path(filepath).exists():
             logging.warning(f"{filepath} not found. Skipping combined literature import.")
-            return
+            return 0
 
         count = 0
         with self.driver.session() as session:
@@ -100,13 +129,16 @@ class Neo4jImporter:
                     # Dynamic Cypher query injection securely resolving relation tags directly without APOC dependency
                     query = f"""
                     MERGE (e1:Entity {{name: trim($e1_name)}})
-                    SET e1:{e1_type}
+                    SET e1:{e1_type},
+                        e1.kg_sma_managed = true
                     MERGE (e2:Entity {{name: trim($e2_name)}})
-                    SET e2:{e2_type}
+                    SET e2:{e2_type},
+                        e2.kg_sma_managed = true
                     MERGE (e1)-[r:{rel_type}]->(e2)
                     SET r.confidence = toFloat($confidence),
                         r.evidence_pmids = $pmids,
-                        r.source = 'Literature_NLP'
+                        r.source = 'Literature_NLP',
+                        r.review_status = $review_status
                     """
                     
                     try:
@@ -114,26 +146,55 @@ class Neo4jImporter:
                                     e1_name=e1_name, 
                                     e2_name=e2_name, 
                                     confidence=conf, 
-                                    pmids=pmids)
+                                    pmids=pmids,
+                                    review_status=data.get("review_status", "accepted"))
                         count += 1
                     except Exception as e:
                         logging.error(f"Failed to insert triple bounds: {e1_name} -> {rel_type} -> {e2_name}. Error: {e}")
 
         logging.info(f"Imported {count} fused literature triples tightly aligned to constraints.")
+        return count
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Import SMA KG outputs into Neo4j.")
+    parser.add_argument("--fused-file", default="data/processed/fused_triples.jsonl")
+    parser.add_argument("--opentargets-file", default="data/external/sma_gda_baseline.jsonl")
+    parser.add_argument("--summary-file", default="")
+    parser.add_argument("--clear-managed-graph", action="store_true")
+    return parser.parse_args()
 
 def main():
+    args = parse_args()
     uri = os.getenv("NEO4J_URI", "bolt://localhost:7687")
     user = os.getenv("NEO4J_USER", "neo4j")
     password = os.getenv("NEO4J_PASSWORD", "password")
 
     importer = Neo4jImporter(uri, user, password)
+    summary = {
+        "uri": uri,
+        "user": user,
+        "fused_file": args.fused_file,
+        "opentargets_file": args.opentargets_file,
+        "clear_managed_graph": args.clear_managed_graph,
+        "managed_clear": {},
+        "open_targets_imported": 0,
+        "fused_triples_imported": 0,
+    }
     try:
+        importer.verify_connectivity()
         importer.setup_constraints()
-        importer.import_open_targets("data/external/sma_gda_baseline.jsonl")
-        importer.import_fused_triples("data/processed/fused_triples.jsonl")
+        if args.clear_managed_graph:
+            summary["managed_clear"] = importer.clear_managed_graph()
+        summary["open_targets_imported"] = importer.import_open_targets(args.opentargets_file)
+        summary["fused_triples_imported"] = importer.import_fused_triples(args.fused_file)
         logging.info("Neo4j Graph Database structural arrays successfully deployed.")
     finally:
         importer.close()
+    if args.summary_file:
+        summary_path = Path(args.summary_file)
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
+        summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

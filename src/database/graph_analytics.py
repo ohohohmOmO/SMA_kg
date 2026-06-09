@@ -1,6 +1,7 @@
 import json
 import logging
 from pathlib import Path
+import argparse
 
 import networkx as nx
 import pandas as pd
@@ -33,16 +34,23 @@ def build_networkx_from_jsonl(filepath):
             
     return G
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Compute deterministic local graph analytics.")
+    parser.add_argument("--input-file", default="data/processed/fused_triples.jsonl")
+    parser.add_argument("--opentargets-file", default="data/external/sma_gda_baseline.jsonl")
+    parser.add_argument("--output-file", default="data/processed/analytics_metrics.csv")
+    return parser.parse_args()
+
 def main():
-    fused_file = "data/processed/fused_triples.jsonl"
-    output_dir = Path("data/processed")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    out_file = output_dir / "analytics_metrics.csv"
+    args = parse_args()
+    fused_file = args.input_file
+    out_file = Path(args.output_file)
+    out_file.parent.mkdir(parents=True, exist_ok=True)
     
     logging.info("Building NetworkX graph from offline fused triples...")
     G = build_networkx_from_jsonl(fused_file)
     
-    ot_file = Path("data/external/sma_gda_baseline.jsonl")
+    ot_file = Path(args.opentargets_file)
     if ot_file.exists():
         with open(ot_file, "r", encoding="utf-8") as f:
             for line in f:
@@ -56,7 +64,7 @@ def main():
     
     if len(G.nodes) == 0:
         logging.error("Graph is empty. Cannot compute analytics.")
-        return
+        return 1
 
     logging.info(f"Graph natively loaded over standard memory bounds. Nodes: {len(G.nodes)}, Edges: {len(G.edges)}")
     
@@ -89,6 +97,7 @@ def main():
     df = pd.DataFrame(records).sort_values(by=["PageRank", "Entity"], ascending=[False, True])
     df.to_csv(out_file, index=False)
     logging.info(f"Topology analytics logic entirely complete! Top nodes structurally aligned successfully out to {out_file}.")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

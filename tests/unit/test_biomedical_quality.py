@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
+from unittest.mock import patch
 
 from src.biomedical.confidence import normalize_and_score
 from src.biomedical.schema import (
@@ -12,6 +13,8 @@ from src.biomedical.schema import (
 from src.extraction.local_pipeline import rule_candidate_extraction
 from src.extraction.merge_triples import merge_jsonl
 from src.extraction.run_stage2_extraction import build_split
+from src.database.neo4j_importer import safe_label, safe_relationship_type
+from src.fusion.triples_aggregator import main as aggregate_triples_main
 
 
 class BiomedicalQualityTests(unittest.TestCase):
@@ -124,6 +127,63 @@ class BiomedicalQualityTests(unittest.TestCase):
 
             merged = [json.loads(line) for line in canonical_file.read_text(encoding="utf-8").splitlines()]
             self.assertEqual(merged, [llm_record])
+
+    def test_neo4j_dynamic_tokens_are_sanitized(self):
+        self.assertEqual(safe_label("Drug`) DETACH DELETE n //"), "Unknown")
+        self.assertEqual(safe_relationship_type("treated-with"), "TREATS")
+        self.assertEqual(safe_relationship_type("bad rel`) DELETE r //"), "ASSOCIATED_WITH")
+
+    def test_stage3_aggregator_flags_relation_polarity_conflicts(self):
+        with TemporaryDirectory() as tmp:
+            tmp_dir = Path(tmp)
+            input_file = tmp_dir / "aligned.jsonl"
+            output_file = tmp_dir / "fused.jsonl"
+            conflict_file = tmp_dir / "conflicts.jsonl"
+            rejected_file = tmp_dir / "rejected.jsonl"
+            records = [
+                {
+                    "source_pmid": "1",
+                    "entity_1": {"name": "Nusinersen", "type": "Drug"},
+                    "relation": "IMPROVES",
+                    "entity_2": {"name": "motor function", "type": "Phenotype"},
+                    "evidence_text": "Nusinersen improves motor function.",
+                    "extracted_by": "LLM_test",
+                    "computed_confidence": 0.91,
+                },
+                {
+                    "source_pmid": "2",
+                    "entity_1": {"name": "Nusinersen", "type": "Drug"},
+                    "relation": "WORSENS",
+                    "entity_2": {"name": "motor function", "type": "Phenotype"},
+                    "evidence_text": "Nusinersen worsens motor function in this report.",
+                    "extracted_by": "LLM_test",
+                    "computed_confidence": 0.82,
+                },
+            ]
+            input_file.write_text(
+                "".join(json.dumps(item) + "\n" for item in records),
+                encoding="utf-8",
+            )
+            argv = [
+                "triples_aggregator.py",
+                "--input-file",
+                str(input_file),
+                "--output-file",
+                str(output_file),
+                "--conflict-file",
+                str(conflict_file),
+                "--rejected-file",
+                str(rejected_file),
+            ]
+            with patch("sys.argv", argv):
+                self.assertEqual(aggregate_triples_main(), 0)
+
+            fused = [json.loads(line) for line in output_file.read_text(encoding="utf-8").splitlines()]
+            conflicts = [json.loads(line) for line in conflict_file.read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(len(fused), 2)
+            self.assertEqual(len(conflicts), 1)
+            self.assertTrue(all(item["review_status"] == "needs_review" for item in fused))
+            self.assertEqual(conflicts[0]["review_status"], "needs_review")
 
 
 if __name__ == "__main__":

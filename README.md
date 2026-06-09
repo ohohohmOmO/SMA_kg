@@ -107,15 +107,19 @@ python src/evaluation/metrics_calculator.py
 - `data/interim/mapped_triples.jsonl`: dictionary-normalized triples.
 - `data/interim/aligned_triples.jsonl`: semantically aligned triples.
 - `data/processed/fused_triples.jsonl`: fused unique graph edges.
+- `data/interim/relation_conflicts.jsonl`: Stage 3 relation polarity conflicts
+  requiring review.
+- `data/interim/aggregation_rejected.jsonl`: Stage 3 rejected aggregation
+  records.
 - `data/processed/analytics_metrics.csv`: PageRank and community metrics.
 - `docs/graph_viewer.html`: generated interactive graph viewer.
 - `artifacts/reports/`: archived historical command outputs and evaluation
   reports.
 
-As of 2026-06-09, Stage 1 acquisition/topic clustering and Stage 2 full
-LLM-only extraction have been rerun successfully. Stage 3 should be rerun next
-against `data/processed/extracted_triples.jsonl`; current mapped, aligned, and
-fused outputs predate the latest Stage 2 run and should be treated as stale.
+As of 2026-06-09, Stage 1 acquisition/topic clustering, Stage 2 full LLM-only
+extraction, Stage 3 fusion/alignment/conflict detection, and Stage 4 Neo4j plus
+local graph generation have been rerun successfully. Current Stage 3/4 results
+are recorded in `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`.
 
 Open decisions before changing Stage 1 or Stage 2 inputs:
 

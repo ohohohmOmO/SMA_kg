@@ -1,0 +1,6 @@
+artifact,path,records,bytes,sha256,notes
+validation_summary,artifacts\runs\stage4_graph_full_2026-06-09\validation_summary.json,,3203,28b4de11fc5a06b002ecdc6c79b9fe64739804a44227f025a7e0761d4f8624df,neo4j_status=ok
+analytics_metrics,artifacts\runs\stage4_graph_full_2026-06-09\outputs\data\processed\analytics_metrics.csv,6648,369158,fd7703dd2bab7751ea7ca7542042105d1b6274b7b714ab69b0eb83dae829684e,stage4 run snapshot
+graph_viewer,artifacts\runs\stage4_graph_full_2026-06-09\outputs\docs\graph_viewer.html,,4149758,ddb1dc0c48cc1522e1211282a856847bcf577b59891052903795f3ff8d6b861f,stage4 run snapshot
+neo4j_import_summary,artifacts\runs\stage4_graph_full_2026-06-09\outputs\database\neo4j_import_summary.json,,375,a16d188a3ab9e04ed381c766fdd7de0167bf246a024d21e66b403f3457f672ea,stage4 Neo4j import counts
+topology_metrics,artifacts\runs\stage4_graph_full_2026-06-09\outputs\evaluation\topology_metrics.json,,163,58c38ce888d7908e0d8e69eda3cd8e863fff29da0a49eadd939f38cdecc937cc,stage4 Neo4j topology metrics

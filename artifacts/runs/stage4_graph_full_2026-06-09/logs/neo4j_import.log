@@ -1,0 +1,6 @@
+2026-06-09 20:41:22,683 - INFO - Unique constraint on Entity.name established.
+2026-06-09 20:41:22,687 - INFO - Received notification from DBMS server: <GqlStatusObject gql_status='00NA0', status_description="note: successful completion - index or constraint already exists. The command 'CREATE CONSTRAINT entity_name_unique IF NOT EXISTS FOR (e:Entity) REQUIRE (e.name) IS UNIQUE' has no effect. The index or constraint specified by 'CONSTRAINT entity_name_unique FOR (e:Entity) REQUIRE (e.name) IS UNIQUE' already exists.", position=None, raw_classification='SCHEMA', classification=<NotificationClassification.SCHEMA: 'SCHEMA'>, raw_severity='INFORMATION', severity=<NotificationSeverity.INFORMATION: 'INFORMATION'>, diagnostic_record={'_classification': 'SCHEMA', '_severity': 'INFORMATION', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}> for query: 'CREATE CONSTRAINT entity_name_unique IF NOT EXISTS FOR (e:Entity) REQUIRE e.name IS UNIQUE'
+2026-06-09 20:41:23,831 - INFO - Cleared 11208 managed relationships and 6648 managed/orphan Entity nodes.
+2026-06-09 20:41:25,035 - INFO - Imported 164 Open Targets baseline associations.
+2026-06-09 20:42:10,214 - INFO - Imported 11155 fused literature triples tightly aligned to constraints.
+2026-06-09 20:42:10,214 - INFO - Neo4j Graph Database structural arrays successfully deployed.

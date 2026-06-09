@@ -26,10 +26,22 @@ def sha256_file(path):
 
 
 def validate_jsonl(path, require_core=True):
+    path = Path(path)
+    if not path.exists():
+        return {
+            "path": str(path.relative_to(REPO_ROOT)) if path.is_absolute() and path.is_relative_to(REPO_ROOT) else str(path),
+            "records": 0,
+            "bad_json_lines": 0,
+            "invalid_triples": 0,
+            "bytes": "",
+            "sha256": "",
+            "valid": False,
+            "missing": True,
+        }
     records = 0
     bad_json = 0
     invalid = 0
-    for line in Path(path).read_text(encoding="utf-8", errors="replace").splitlines():
+    for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
         if not line.strip():
             continue
         records += 1
@@ -43,11 +55,11 @@ def validate_jsonl(path, require_core=True):
             if problems:
                 invalid += 1
     return {
-        "path": str(Path(path).relative_to(REPO_ROOT)),
+        "path": str(path.relative_to(REPO_ROOT)) if path.is_absolute() and path.is_relative_to(REPO_ROOT) else str(path),
         "records": records,
         "bad_json_lines": bad_json,
         "invalid_triples": invalid,
-        "bytes": Path(path).stat().st_size,
+        "bytes": path.stat().st_size,
         "sha256": sha256_file(path),
         "valid": bad_json == 0 and invalid == 0,
     }
@@ -64,6 +76,27 @@ def write_manifest(run_dir, validations):
         writer = csv.DictWriter(f, fieldnames=["path", "records", "bad_json_lines", "invalid_triples", "bytes", "sha256", "valid"])
         writer.writeheader()
         writer.writerows(validations)
+
+
+def write_readme(run_dir, summary):
+    lines = [
+        "# Stage 3 Fusion Run",
+        "",
+        f"- Valid: {summary['valid']}",
+        f"- Input file: `{summary['input_file']}`",
+        f"- Input SHA-256: `{summary['input_sha256']}`",
+        f"- Alignment model: `{summary['alignment_model']}`",
+        f"- Promoted: {summary['promoted']}",
+        "",
+        "## Outputs",
+        "",
+    ]
+    for item in summary["outputs"]:
+        lines.append(f"- `{item['path']}`: records={item['records']}, valid={item['valid']}, sha256=`{item['sha256']}`")
+    lines.extend(["", "## Commands", ""])
+    for command in summary["commands"]:
+        lines.append(f"- {command['name']}: exit_code={command['exit_code']}, log=`{command['log']}`")
+    (run_dir / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def parse_args():
@@ -90,7 +123,8 @@ def main():
         path.parent.mkdir(parents=True, exist_ok=True)
     logs.mkdir(parents=True, exist_ok=True)
 
-    commands = [
+    commands = []
+    commands.append(
         run_command(
             "dictionary_mapper",
             [
@@ -102,38 +136,44 @@ def main():
                 str(mapped),
             ],
             logs / "dictionary_mapper.log",
-        ),
-        run_command(
-            "semantic_aligner",
-            [
-                sys.executable,
-                "src/fusion/semantic_aligner.py",
-                "--input-file",
-                str(mapped),
-                "--output-file",
-                str(aligned),
-                "--model",
-                args.alignment_model,
-            ],
-            logs / "semantic_aligner.log",
-        ),
-        run_command(
-            "triples_aggregator",
-            [
-                sys.executable,
-                "src/fusion/triples_aggregator.py",
-                "--input-file",
-                str(aligned),
-                "--output-file",
-                str(fused),
-                "--conflict-file",
-                str(conflicts),
-                "--rejected-file",
-                str(rejected),
-            ],
-            logs / "triples_aggregator.log",
-        ),
-    ]
+        )
+    )
+    if commands[-1]["exit_code"] == 0:
+        commands.append(
+            run_command(
+                "semantic_aligner",
+                [
+                    sys.executable,
+                    "src/fusion/semantic_aligner.py",
+                    "--input-file",
+                    str(mapped),
+                    "--output-file",
+                    str(aligned),
+                    "--model",
+                    args.alignment_model,
+                ],
+                logs / "semantic_aligner.log",
+            )
+        )
+    if commands[-1]["exit_code"] == 0:
+        commands.append(
+            run_command(
+                "triples_aggregator",
+                [
+                    sys.executable,
+                    "src/fusion/triples_aggregator.py",
+                    "--input-file",
+                    str(aligned),
+                    "--output-file",
+                    str(fused),
+                    "--conflict-file",
+                    str(conflicts),
+                    "--rejected-file",
+                    str(rejected),
+                ],
+                logs / "triples_aggregator.log",
+            )
+        )
 
     validations = [
         validate_jsonl(mapped),
@@ -154,6 +194,7 @@ def main():
     }
     (run_dir / "validation_summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     write_manifest(run_dir, validations)
+    write_readme(run_dir, summary)
 
     if not all_valid:
         return 1

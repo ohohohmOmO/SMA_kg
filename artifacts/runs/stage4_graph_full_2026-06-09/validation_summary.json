@@ -1,0 +1,55 @@
+{
+  "valid": true,
+  "neo4j_status": "ok",
+  "neo4j_env_ready": {
+    "NEO4J_URI": true,
+    "NEO4J_USER": true,
+    "NEO4J_PASSWORD": true
+  },
+  "neo4j_tcp_check": {
+    "ok": true,
+    "detail": "localhost:7687"
+  },
+  "input_file": "data\\processed\\fused_triples.jsonl",
+  "input_sha256": "1771293aad8258befe717c7c7ca00c349fe5fdb782b84245b1357ad45e332b5a",
+  "opentargets_file": "data\\external\\sma_gda_baseline.jsonl",
+  "opentargets_sha256": "f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb",
+  "promoted": true,
+  "preserve_neo4j": false,
+  "commands": [
+    {
+      "name": "neo4j_import",
+      "command": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe src/database/neo4j_importer.py --fused-file data\\processed\\fused_triples.jsonl --opentargets-file data\\external\\sma_gda_baseline.jsonl --summary-file D:\\kg_sma_0420\\artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\database\\neo4j_import_summary.json --clear-managed-graph",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage4_graph_full_2026-06-09\\logs\\neo4j_import.log",
+      "ok": true
+    },
+    {
+      "name": "topology_eval",
+      "command": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe src/evaluation/topology_eval.py --output-file D:\\kg_sma_0420\\artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\evaluation\\topology_metrics.json",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage4_graph_full_2026-06-09\\logs\\topology_eval.log",
+      "ok": true
+    },
+    {
+      "name": "graph_analytics",
+      "command": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe src/database/graph_analytics.py --input-file data\\processed\\fused_triples.jsonl --opentargets-file data\\external\\sma_gda_baseline.jsonl --output-file D:\\kg_sma_0420\\artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\data\\processed\\analytics_metrics.csv",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage4_graph_full_2026-06-09\\logs\\graph_analytics.log",
+      "ok": true
+    },
+    {
+      "name": "generate_pyvis",
+      "command": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe src/database/generate_pyvis.py --input-file data\\processed\\fused_triples.jsonl --metrics-file D:\\kg_sma_0420\\artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\data\\processed\\analytics_metrics.csv --opentargets-file data\\external\\sma_gda_baseline.jsonl --output-file D:\\kg_sma_0420\\artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\docs\\graph_viewer.html",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage4_graph_full_2026-06-09\\logs\\generate_pyvis.log",
+      "ok": true
+    }
+  ],
+  "outputs": {
+    "analytics_metrics": "artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\data\\processed\\analytics_metrics.csv",
+    "graph_viewer": "artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\docs\\graph_viewer.html",
+    "neo4j_import_summary": "artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\database\\neo4j_import_summary.json",
+    "topology_metrics": "artifacts\\runs\\stage4_graph_full_2026-06-09\\outputs\\evaluation\\topology_metrics.json"
+  }
+}

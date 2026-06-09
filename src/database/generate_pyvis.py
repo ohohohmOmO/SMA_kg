@@ -1,6 +1,7 @@
 import json
 import logging
 from pathlib import Path
+import argparse
 
 import pandas as pd
 from pyvis.network import Network
@@ -15,13 +16,29 @@ def get_color(etype):
     if "phenotype" in etype or "disease" in etype: return "#3498db" # Isolate base tags universally blue
     return "#95a5a6"
 
+
+def strip_trailing_whitespace(path):
+    text = Path(path).read_text(encoding="utf-8", errors="replace")
+    cleaned = "\n".join(line.rstrip() for line in text.splitlines()) + "\n"
+    Path(path).write_text(cleaned, encoding="utf-8")
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Generate an interactive PyVis graph viewer.")
+    parser.add_argument("--input-file", default="data/processed/fused_triples.jsonl")
+    parser.add_argument("--metrics-file", default="data/processed/analytics_metrics.csv")
+    parser.add_argument("--opentargets-file", default="data/external/sma_gda_baseline.jsonl")
+    parser.add_argument("--output-file", default="docs/graph_viewer.html")
+    return parser.parse_args()
+
 def main():
-    fused_file = Path("data/processed/fused_triples.jsonl")
-    metrics_file = Path("data/processed/analytics_metrics.csv")
+    args = parse_args()
+    fused_file = Path(args.input_file)
+    metrics_file = Path(args.metrics_file)
     
     if not fused_file.exists():
         logging.error("Source fused graph logic not found.")
-        return
+        return 1
 
     metrics_map = {}
     if metrics_file.exists():
@@ -65,7 +82,7 @@ def main():
             conf = data.get("computed_confidence", 0.0)
             net.add_edge(e1, e2, title=f"Relation Bounds: {rel}<br>Accuracy Edge: {conf}", label=rel, physics=True)
 
-    ot_file = Path("data/external/sma_gda_baseline.jsonl")
+    ot_file = Path(args.opentargets_file)
     if ot_file.exists():
         disease_name = "Spinal Muscular Atrophy"
         add_node_safe(disease_name, "Disease")
@@ -78,12 +95,13 @@ def main():
                 add_node_safe(gene, "Gene")
                 net.add_edge(gene, disease_name, title=f"Relation: ASSOCIATED_WITH<br>Graph Target Score: {score}", label="ASSOCIATED_WITH", physics=True, color="#bdc3c7")
 
-    out_dir = Path("docs")
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_html = out_dir / "graph_viewer.html"
+    out_html = Path(args.output_file)
+    out_html.parent.mkdir(parents=True, exist_ok=True)
     
     net.save_graph(str(out_html))
+    strip_trailing_whitespace(out_html)
     logging.info(f"Topological interactive network visualization universally packaged down successfully out to {out_html}.")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

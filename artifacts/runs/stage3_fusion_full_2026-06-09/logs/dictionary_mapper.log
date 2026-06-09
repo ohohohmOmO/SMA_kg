@@ -1,0 +1,3 @@
+2026-06-09 20:33:07,616 - INFO - Dictionary/relation mapping complete. Processed 18288 triples to D:\kg_sma_0420\artifacts\runs\stage3_fusion_full_2026-06-09\outputs\data\interim\mapped_triples.jsonl.
+2026-06-09 20:33:07,616 - INFO - Entity mapping hits by type: {'Disease': 5745, 'Variant': 2, 'Drug': 2721, 'Gene': 61, 'Protein': 55}
+2026-06-09 20:33:07,616 - INFO - Relation mapping hits: {}

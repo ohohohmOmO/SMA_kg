@@ -1,0 +1,6 @@
+path,records,bad_json_lines,invalid_triples,bytes,sha256,valid
+artifacts\runs\stage3_fusion_full_2026-06-09\outputs\data\interim\mapped_triples.jsonl,18288,0,0,9943391,7f10841e68bcd54aeb58658562e1147b20c5a4502b8ef5928ef08c7637b9e4f8,True
+artifacts\runs\stage3_fusion_full_2026-06-09\outputs\data\interim\aligned_triples.jsonl,18288,0,0,9914761,65fc3e961e37e5361b47dd46dccef4916575d0e3b71130a8e6c775a18b36e58e,True
+artifacts\runs\stage3_fusion_full_2026-06-09\outputs\data\processed\fused_triples.jsonl,11155,0,0,6748003,1771293aad8258befe717c7c7ca00c349fe5fdb782b84245b1357ad45e332b5a,True
+artifacts\runs\stage3_fusion_full_2026-06-09\outputs\data\interim\relation_conflicts.jsonl,59,0,0,15047,96c8923c9d67776b00936169323ee092979870d40b15c5a932d37a022b2924db,True
+artifacts\runs\stage3_fusion_full_2026-06-09\outputs\data\interim\aggregation_rejected.jsonl,0,0,0,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,True
