@@ -27,6 +27,12 @@ the date, symptom, root cause, fix, and verification command or result.
 When completing a task that changes files, stage and commit the changes before
 the final response unless the user explicitly asks not to commit.
 
+When a task asks for feature planning, implementation, documentation, or other
+changes intended to improve fit for AI application engineering roles, do not
+work or commit on local `main`. First create and switch to a feature branch named
+`feature/huawei-ai应用工程师-ai技术应用/<specific-feature>-<timestamp>`, then stage
+and commit the changes only on that branch.
+
 Use local markdown issue tracking for this repo. PRDs and implementation issues
 live under `.scratch/`; see `docs/agents/issue-tracker.md`.
 
