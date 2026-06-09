@@ -1,0 +1,1 @@
+{"source_pmid": "37369805", "problems": ["relation_invalid"], "record": {"source_pmid": "37369805", "entity_1": {"name": "SMN", "type": "Protein"}, "relation": "BINDS_WITH", "entity_2": {"name": "GEMIN5", "type": "Protein"}, "evidence_text": "SMN binds to the C-terminus of GEMIN5", "llm_confidence": 0.93, "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash"}}

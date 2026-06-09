@@ -1,0 +1,415 @@
+[
+  {
+    "topic": 65,
+    "current_count": 15,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"vrk1\"[Title/Abstract] OR \"kinase\"[Title/Abstract] OR \"variants\"[Title/Abstract] OR \"distal\"[Title/Abstract] OR \"of vrk1\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 62,
+    "current_count": 17,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"pain\"[Title/Abstract] OR \"hip\"[Title/Abstract] OR \"shaft\"[Title/Abstract] OR \"pain in\"[Title/Abstract] OR \"angle\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 63,
+    "current_count": 17,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"nbs\"[Title/Abstract] OR \"cost\"[Title/Abstract] OR \"screening\"[Title/Abstract] OR \"costs\"[Title/Abstract] OR \"nbs for\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 4
+  },
+  {
+    "topic": 64,
+    "current_count": 17,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"trpv4\"[Title/Abstract] OR \"dysplasia\"[Title/Abstract] OR \"skeletal\"[Title/Abstract] OR \"trpv4 related\"[Title/Abstract] OR \"dysplasias\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 58,
+    "current_count": 18,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"cost\"[Title/Abstract] OR \"nusinersen\"[Title/Abstract] OR \"costs\"[Title/Abstract] OR \"onasemnogene\"[Title/Abstract] OR \"onasemnogene abeparvovec\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 10
+  },
+  {
+    "topic": 59,
+    "current_count": 18,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"carrier\"[Title/Abstract] OR \"women\"[Title/Abstract] OR \"prenatal\"[Title/Abstract] OR \"carriers\"[Title/Abstract] OR \"prenatal diagnosis\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 8
+  },
+  {
+    "topic": 60,
+    "current_count": 18,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"als\"[Title/Abstract] OR \"gene therapy\"[Title/Abstract] OR \"amyotrophic lateral sclerosis\"[Title/Abstract] OR \"amyotrophic lateral\"[Title/Abstract] OR \"amyotrophic\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 61,
+    "current_count": 18,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"ighmbp2\"[Title/Abstract] OR \"smard1\"[Title/Abstract] OR \"cmt2s\"[Title/Abstract] OR \"distress\"[Title/Abstract] OR \"respiratory distress\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 55,
+    "current_count": 19,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"prevalence\"[Title/Abstract] OR \"incidence\"[Title/Abstract] OR \"000\"[Title/Abstract] OR \"prevalence of\"[Title/Abstract] OR \"sma in\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 56,
+    "current_count": 19,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"csf\"[Title/Abstract] OR \"nusinersen\"[Title/Abstract] OR \"biomarkers\"[Title/Abstract] OR \"csf samples\"[Title/Abstract] OR \"proteomic\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 9
+  },
+  {
+    "topic": 57,
+    "current_count": 19,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"myostatin\"[Title/Abstract] OR \"skeletal\"[Title/Abstract] OR \"skeletal muscle\"[Title/Abstract] OR \"inhibition\"[Title/Abstract] OR \"smn\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 52,
+    "current_count": 21,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"rna\"[Title/Abstract] OR \"rbps\"[Title/Abstract] OR \"local\"[Title/Abstract] OR \"translation\"[Title/Abstract] OR \"proteins\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 53,
+    "current_count": 21,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"pcr\"[Title/Abstract] OR \"dbs\"[Title/Abstract] OR \"dna\"[Title/Abstract] OR \"smn1\"[Title/Abstract] OR \"blood\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 54,
+    "current_count": 21,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"ascc1\"[Title/Abstract] OR \"asc\"[Title/Abstract] OR \"fractures\"[Title/Abstract] OR \"bone\"[Title/Abstract] OR \"bone fractures\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 7
+  },
+  {
+    "topic": 50,
+    "current_count": 22,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"cognitive\"[Title/Abstract] OR \"language\"[Title/Abstract] OR \"communication\"[Title/Abstract] OR \"children with\"[Title/Abstract] OR \"treated\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 6
+  },
+  {
+    "topic": 51,
+    "current_count": 22,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"screening\"[Title/Abstract] OR \"newborn\"[Title/Abstract] OR \"newborn screening\"[Title/Abstract] OR \"of the disease\"[Title/Abstract] OR \"smn1\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 47,
+    "current_count": 23,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"the article\"[Title/Abstract] OR \"article\"[Title/Abstract] OR \"doi\"[Title/Abstract] OR \"corrects the\"[Title/Abstract] OR \"doi 10\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 2
+  },
+  {
+    "topic": 48,
+    "current_count": 23,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"caregivers\"[Title/Abstract] OR \"attributes\"[Title/Abstract] OR \"preferences\"[Title/Abstract] OR \"treatments\"[Title/Abstract] OR \"and caregivers\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 49,
+    "current_count": 23,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"body\"[Title/Abstract] OR \"mass\"[Title/Abstract] OR \"bmi\"[Title/Abstract] OR \"body composition\"[Title/Abstract] OR \"fat\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 45,
+    "current_count": 24,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"liver\"[Title/Abstract] OR \"mice\"[Title/Abstract] OR \"smn\"[Title/Abstract] OR \"metabolic\"[Title/Abstract] OR \"metabolism\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 46,
+    "current_count": 24,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"quality of life\"[Title/Abstract] OR \"of life\"[Title/Abstract] OR \"quality of\"[Title/Abstract] OR \"hrqol\"[Title/Abstract] OR \"quality\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 44,
+    "current_count": 25,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"smn1\"[Title/Abstract] OR \"carrier\"[Title/Abstract] OR \"smn2\"[Title/Abstract] OR \"copy\"[Title/Abstract] OR \"smn1 and\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 43,
+    "current_count": 26,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"mir\"[Title/Abstract] OR \"mirnas\"[Title/Abstract] OR \"mirna\"[Title/Abstract] OR \"lncrnas\"[Title/Abstract] OR \"expression\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 42,
+    "current_count": 28,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"registry\"[Title/Abstract] OR \"registries\"[Title/Abstract] OR \"cndr\"[Title/Abstract] OR \"care\"[Title/Abstract] OR \"the registry\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 39,
+    "current_count": 29,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"screening\"[Title/Abstract] OR \"carrier\"[Title/Abstract] OR \"attitudes\"[Title/Abstract] OR \"about\"[Title/Abstract] OR \"carrier screening\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 40,
+    "current_count": 29,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"nds\"[Title/Abstract] OR \"neurodegenerative\"[Title/Abstract] OR \"neurodegenerative diseases\"[Title/Abstract] OR \"parkinson\"[Title/Abstract] OR \"alzheimer\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 41,
+    "current_count": 29,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"biomarkers\"[Title/Abstract] OR \"biomarker\"[Title/Abstract] OR \"crn\"[Title/Abstract] OR \"levels\"[Title/Abstract] OR \"progression\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 36,
+    "current_count": 31,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"smard1\"[Title/Abstract] OR \"respiratory\"[Title/Abstract] OR \"respiratory distress\"[Title/Abstract] OR \"distress\"[Title/Abstract] OR \"with respiratory\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 37,
+    "current_count": 31,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"aav9\"[Title/Abstract] OR \"vector\"[Title/Abstract] OR \"smn\"[Title/Abstract] OR \"aav9 smn\"[Title/Abstract] OR \"mice\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 38,
+    "current_count": 31,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"costs\"[Title/Abstract] OR \"healthcare\"[Title/Abstract] OR \"burden\"[Title/Abstract] OR \"medical\"[Title/Abstract] OR \"direct\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 34,
+    "current_count": 33,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"pme\"[Title/Abstract] OR \"asah1\"[Title/Abstract] OR \"sma pme\"[Title/Abstract] OR \"myoclonic\"[Title/Abstract] OR \"epilepsy\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 25
+  },
+  {
+    "topic": 35,
+    "current_count": 33,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"cmt\"[Title/Abstract] OR \"neuropathy\"[Title/Abstract] OR \"marie tooth\"[Title/Abstract] OR \"charcot marie\"[Title/Abstract] OR \"charcot marie tooth\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 33,
+    "current_count": 34,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"bicd2\"[Title/Abstract] OR \"smaled2\"[Title/Abstract] OR \"dynein\"[Title/Abstract] OR \"cargo\"[Title/Abstract] OR \"mutations\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 2
+  },
+  {
+    "topic": 30,
+    "current_count": 35,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"nusinersen\"[Title/Abstract] OR \"smn2\"[Title/Abstract] OR \"of nusinersen\"[Title/Abstract] OR \"protein\"[Title/Abstract] OR \"oligonucleotide\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 9
+  },
+  {
+    "topic": 31,
+    "current_count": 35,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"dystrophy\"[Title/Abstract] OR \"nmds\"[Title/Abstract] OR \"muscular dystrophy\"[Title/Abstract] OR \"duchenne\"[Title/Abstract] OR \"duchenne muscular dystrophy\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 32,
+    "current_count": 35,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"swallowing\"[Title/Abstract] OR \"oral\"[Title/Abstract] OR \"feeding\"[Title/Abstract] OR \"infants\"[Title/Abstract] OR \"bulbar\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 29,
+    "current_count": 38,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"als\"[Title/Abstract] OR \"mnds\"[Title/Abstract] OR \"lower motor\"[Title/Abstract] OR \"sclerosis\"[Title/Abstract] OR \"lateral\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 28,
+    "current_count": 39,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"aav\"[Title/Abstract] OR \"gene therapy\"[Title/Abstract] OR \"vectors\"[Title/Abstract] OR \"vector\"[Title/Abstract] OR \"adeno\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 27,
+    "current_count": 40,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"cost\"[Title/Abstract] OR \"price\"[Title/Abstract] OR \"coverage\"[Title/Abstract] OR \"health\"[Title/Abstract] OR \"medications\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 2
+  },
+  {
+    "topic": 26,
+    "current_count": 42,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"nfl\"[Title/Abstract] OR \"csf\"[Title/Abstract] OR \"levels\"[Title/Abstract] OR \"il\"[Title/Abstract] OR \"neurofilament\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 4
+  },
+  {
+    "topic": 25,
+    "current_count": 45,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"gene therapy\"[Title/Abstract] OR \"viral\"[Title/Abstract] OR \"vectors\"[Title/Abstract] OR \"of gene\"[Title/Abstract] OR \"gene therapies\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 4
+  },
+  {
+    "topic": 24,
+    "current_count": 46,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"dync1h1\"[Title/Abstract] OR \"mutation\"[Title/Abstract] OR \"dync1h1 gene\"[Title/Abstract] OR \"mutations\"[Title/Abstract] OR \"dynein\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 23,
+    "current_count": 48,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"pls3\"[Title/Abstract] OR \"actin\"[Title/Abstract] OR \"vapb\"[Title/Abstract] OR \"smn\"[Title/Abstract] OR \"protein\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 21,
+    "current_count": 50,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"neurons\"[Title/Abstract] OR \"mouse\"[Title/Abstract] OR \"synaptic\"[Title/Abstract] OR \"motor neurons\"[Title/Abstract] OR \"mice\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 22,
+    "current_count": 50,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"cells\"[Title/Abstract] OR \"stem\"[Title/Abstract] OR \"neurons\"[Title/Abstract] OR \"human\"[Title/Abstract] OR \"pluripotent\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 20,
+    "current_count": 51,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"smn\"[Title/Abstract] OR \"mice\"[Title/Abstract] OR \"in sma\"[Title/Abstract] OR \"jnk\"[Title/Abstract] OR \"protein\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 19,
+    "current_count": 53,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"training\"[Title/Abstract] OR \"exercise\"[Title/Abstract] OR \"mobility\"[Title/Abstract] OR \"powered\"[Title/Abstract] OR \"intervention\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 18,
+    "current_count": 55,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"smn1\"[Title/Abstract] OR \"pcr\"[Title/Abstract] OR \"copy\"[Title/Abstract] OR \"assay\"[Title/Abstract] OR \"samples\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 17,
+    "current_count": 57,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"parents\"[Title/Abstract] OR \"care\"[Title/Abstract] OR \"child\"[Title/Abstract] OR \"family\"[Title/Abstract] OR \"interviews\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 16,
+    "current_count": 59,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"carrier\"[Title/Abstract] OR \"screening\"[Title/Abstract] OR \"carrier screening\"[Title/Abstract] OR \"reproductive\"[Title/Abstract] OR \"couples\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 15,
+    "current_count": 61,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"smn\"[Title/Abstract] OR \"smn protein\"[Title/Abstract] OR \"smn2\"[Title/Abstract] OR \"mice\"[Title/Abstract] OR \"protein\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 0
+  },
+  {
+    "topic": 14,
+    "current_count": 63,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"smn\"[Title/Abstract] OR \"assembly\"[Title/Abstract] OR \"sm\"[Title/Abstract] OR \"protein\"[Title/Abstract] OR \"of smn\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 12,
+    "current_count": 71,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"case\"[Title/Abstract] OR \"weakness\"[Title/Abstract] OR \"report\"[Title/Abstract] OR \"old\"[Title/Abstract] OR \"year old\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 13,
+    "current_count": 71,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"asos\"[Title/Abstract] OR \"aso\"[Title/Abstract] OR \"antisense\"[Title/Abstract] OR \"oligonucleotides\"[Title/Abstract] OR \"antisense oligonucleotides\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 11,
+    "current_count": 85,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"risdiplam\"[Title/Abstract] OR \"of risdiplam\"[Title/Abstract] OR \"safety\"[Title/Abstract] OR \"months\"[Title/Abstract] OR \"adverse\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  },
+  {
+    "topic": 10,
+    "current_count": 90,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"muscles\"[Title/Abstract] OR \"nerve\"[Title/Abstract] OR \"mri\"[Title/Abstract] OR \"controls\"[Title/Abstract] OR \"imaging\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 1
+  },
+  {
+    "topic": 8,
+    "current_count": 91,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"intrathecal\"[Title/Abstract] OR \"lumbar\"[Title/Abstract] OR \"nusinersen\"[Title/Abstract] OR \"puncture\"[Title/Abstract] OR \"guided\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 10
+  },
+  {
+    "topic": 9,
+    "current_count": 91,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"scoliosis\"[Title/Abstract] OR \"surgery\"[Title/Abstract] OR \"degrees\"[Title/Abstract] OR \"deformity\"[Title/Abstract] OR \"surgical\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 2
+  },
+  {
+    "topic": 7,
+    "current_count": 92,
+    "query": "\"Spinal Muscular Atrophy\"[Title/Abstract] AND (\"screening\"[Title/Abstract] OR \"nbs\"[Title/Abstract] OR \"newborn\"[Title/Abstract] OR \"newborn screening\"[Title/Abstract] OR \"newborns\"[Title/Abstract])",
+    "returned_pmids": 100,
+    "new_candidate_pmids": 3
+  }
+]

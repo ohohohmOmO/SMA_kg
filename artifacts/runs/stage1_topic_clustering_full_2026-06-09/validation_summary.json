@@ -1,0 +1,19 @@
+{
+  "input_file": "data\\raw\\pubmed_sma_abstracts.jsonl",
+  "input_sha256": "5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48",
+  "records": 4554,
+  "model": "NeuML/pubmedbert-base-embeddings",
+  "vectorizer": {
+    "stop_words": null,
+    "ngram_range": [
+      1,
+      3
+    ],
+    "min_df": 2,
+    "max_df": 0.85
+  },
+  "output_file": "artifacts\\runs\\stage1_topic_clustering_full_2026-06-09\\outputs\\data\\processed\\clustered_abstracts.jsonl",
+  "summary_file": "artifacts\\runs\\stage1_topic_clustering_full_2026-06-09\\topic_summary.csv",
+  "topic_terms_file": "artifacts\\runs\\stage1_topic_clustering_full_2026-06-09\\topic_terms.json",
+  "output_sha256": "7e88584462561b4e9d42c3adf1e58c72bb12093d015a84fe682c9d0aa4a20d63"
+}

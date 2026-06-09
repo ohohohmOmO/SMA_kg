@@ -1,0 +1,1 @@
+{"source_pmid": "40774447", "problems": ["relation_invalid"], "record": {"source_pmid": "40774447", "entity_1": {"name": "SPSMC", "type": "Drug"}, "relation": "DETECTS", "entity_2": {"name": "SMN1", "type": "Gene"}, "evidence_text": "This strategy has been used for the detection of the SMN1 gene", "llm_confidence": 0.96, "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash"}}

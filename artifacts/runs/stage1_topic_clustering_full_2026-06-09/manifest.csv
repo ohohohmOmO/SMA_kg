@@ -1,0 +1,4 @@
+artifact,path,records,bytes,sha256,notes
+clustered_abstracts,artifacts\runs\stage1_topic_clustering_full_2026-06-09\outputs\data\processed\clustered_abstracts.jsonl,4554,7768236,7e88584462561b4e9d42c3adf1e58c72bb12093d015a84fe682c9d0aa4a20d63,domain-aware vectorizer without static stop-word removal
+topic_summary,artifacts\runs\stage1_topic_clustering_full_2026-06-09\topic_summary.csv,,409526,6f0af282bcf2413d569acc83146ef2cdfabb68bd65d8bc13ebf377069b345030,domain-aware vectorizer without static stop-word removal
+topic_terms,artifacts\runs\stage1_topic_clustering_full_2026-06-09\topic_terms.json,,53902,8d44cb1b7468e33fa37695932f8aa310664cca4ec41052f1028604c4ba996332,domain-aware vectorizer without static stop-word removal

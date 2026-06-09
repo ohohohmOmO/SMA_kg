@@ -17,6 +17,25 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-09 - Stage 2 canonical LLM coverage was limited to 200 abstracts
+
+- Symptom: A full rerun request still used the historical `--llm-limit 200`
+  setting, which would make the new LLM-only canonical Stage 2 output cover only
+  the first 200 PubMed abstracts.
+- Cause: The Stage 2 runner inherited the old design where LLM handled a
+  200-abstract high-precision window and local Regex/rule fallback handled the
+  remaining abstracts. After rules were demoted to auxiliary candidates, that
+  default no longer matched the canonical LLM-only policy.
+- Fix: Updated `src/extraction/run_stage2_extraction.py` so `--llm-limit -1`
+  means all input abstracts and made it the default. Updated README, PLAN, and
+  reproduction docs to use full-corpus LLM extraction with
+  `--chunk-size 5 --parallel-workers 32`.
+- Verification: `python -m unittest discover -s tests/unit -v` passed 8 tests;
+  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/` completed with
+  `llm_limit_effective=4554`, `parallel_workers=32`, 18347 validated raw LLM
+  triples, 18288 canonical LLM-only triples, 0 bad JSON lines, and 0 invalid
+  triples.
+
 ### 2026-06-09 - Stage 2 rule candidates could enter canonical graph output
 
 - Symptom: Stage 2 discussions identified that local rule extraction is too

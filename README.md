@@ -71,7 +71,7 @@ python src/crawler/pubmed_crawler.py
 python src/crawler/topic_clustering.py
 python src/crawler/topic_balanced_pubmed.py --topic-terms-file <topic_terms.json>
 
-python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --promote
+python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --llm-limit -1 --chunk-size 5 --parallel-workers 32 --promote
 python src/extraction/verify_rule_candidates.py --input-file data/interim/rule_candidate_triples.jsonl --limit 50
 python src/extraction/build_gold_candidates.py --run-dir artifacts/runs/stage2_gold_candidates_<stamp> --limit 750
 

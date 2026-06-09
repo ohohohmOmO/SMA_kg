@@ -1,0 +1,4 @@
+path,records,bad_json_lines,invalid_triples,duplicate_stage_signature_count,unique_pmids,bytes,sha256,valid,source_counts
+artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\outputs\data\processed\llm_extracted_triples.jsonl,18347,0,0,59,3656,9943543,d8fa349581edde56066c629a022cf658236bee004d6e5cf174188edf5529b1c2,True,"{""LLM_deepseek-ai/DeepSeek-V4-Flash"": 18347}"
+artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\outputs\data\interim\rule_candidate_triples.jsonl,0,0,0,0,0,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,True,{}
+artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\outputs\data\processed\extracted_triples.jsonl,18288,0,0,0,3656,9911733,0d23d5dd162744dd70228905e6367800658e5d0af0b7328df50a6e62bfde76cb,True,"{""LLM_deepseek-ai/DeepSeek-V4-Flash"": 18288}"

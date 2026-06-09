@@ -1,0 +1,35 @@
+{
+  "valid": true,
+  "commands": [
+    {
+      "name": "api_fetcher",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage1_data_acquisition_full_2026-06-09\\logs\\api_fetcher.log"
+    },
+    {
+      "name": "pubmed_crawler",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage1_data_acquisition_full_2026-06-09\\logs\\pubmed_crawler.log"
+    }
+  ],
+  "outputs": [
+    {
+      "artifact": "opentargets_gda",
+      "path": "artifacts\\runs\\stage1_data_acquisition_full_2026-06-09\\outputs\\data\\external\\sma_gda_baseline.jsonl",
+      "records": 164,
+      "bad_json_lines": 0,
+      "bytes": 19677,
+      "sha256": "f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb",
+      "valid": true
+    },
+    {
+      "artifact": "pubmed_abstracts",
+      "path": "artifacts\\runs\\stage1_data_acquisition_full_2026-06-09\\outputs\\data\\raw\\pubmed_sma_abstracts.jsonl",
+      "records": 4554,
+      "bad_json_lines": 0,
+      "bytes": 7761733,
+      "sha256": "5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48",
+      "valid": true
+    }
+  ]
+}

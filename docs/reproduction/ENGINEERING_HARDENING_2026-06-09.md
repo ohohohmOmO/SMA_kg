@@ -10,6 +10,7 @@ after reading `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`.
 - `docs/agents/PLAN.md`
 - `docs/agents/ISSUE_LOG.md`
 - `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`
+- `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
 - `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
 ## Pre-Improvement Baseline
@@ -77,6 +78,9 @@ Stage 2:
   LLM output only, with optional explicitly verified rule candidate files.
 - Added `src/extraction/verify_rule_candidates.py` for optional LLM verification
   of local rule candidates into `verified_rule_triples.jsonl`.
+- Updated `src/extraction/run_stage2_extraction.py` so `--llm-limit -1` assigns
+  every input abstract to LLM extraction. The current full rerun policy is
+  full-corpus LLM extraction with `--chunk-size 5 --parallel-workers 32`.
 - Added `src/extraction/build_gold_candidates.py`.
 
 Stage 3:
@@ -175,16 +179,35 @@ usefulness as a quality-control and coverage tool.
 ## Current State
 
 The hardening code and probes are in place. Stage 2 has now been further
-stabilized so raw rule candidates are separated from canonical LLM output. Any
-new full Stage 2 rerun should promote only the validated LLM file to
+stabilized so raw rule candidates are separated from canonical LLM output.
+
+The full Stage 2 LLM-only rerun completed on 2026-06-09 with 32 workers. It
+covered all 4554 current PubMed abstracts and promoted the validated LLM-only
+canonical output:
+
+- Run directory: `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/`
+- Detailed report:
+  `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
+- LLM raw triples: 18347
+- Canonical LLM-only triples: 18288
+- Unique PMIDs with triples: 3656
+- Bad JSON lines: 0
+- Invalid triples: 0
+- Rule candidates in this canonical run: 0
+
+Future full Stage 2 reruns should cover all current PubMed abstracts with LLM
+extraction, promote only the validated LLM file to
 `data/processed/extracted_triples.jsonl`, then rerun Stage 3 on that canonical
-output.
+output. The command shape is:
+
+```powershell
+python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --llm-limit -1 --chunk-size 5 --parallel-workers 32 --promote
+```
 
 Next recommended execution:
 
-1. Run full hardened Stage 2 with a dated run directory and `--promote`.
-2. Run Stage 3 runner on the promoted Stage 2 output with `--promote`.
-3. Start Neo4j and run `src/database/run_stage4_graph.py` without
+1. Run Stage 3 runner on the promoted full Stage 2 output with `--promote`.
+2. Start Neo4j and run `src/database/run_stage4_graph.py` without
    `--skip-neo4j`.
-4. Update this document and the original reproduction document with the final
+3. Update this document and the original reproduction document with the final
    promoted output counts and hashes.

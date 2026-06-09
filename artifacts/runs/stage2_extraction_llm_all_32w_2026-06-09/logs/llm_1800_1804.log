@@ -1,0 +1,22 @@
+2026-06-09 16:36:26,909 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 16:37:23,711 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 16:37:23,731 - WARNING - Malformed JSON for PMID 36678797. Skipping. Error: Expecting value: line 146 column 27 (char 7020). Raw output preview: {
+  "triples": [
+    {
+      "entity_1": {"name": "nusinersen", "type": "Drug"},
+      "relation": "TREATS",
+      "entity_2": {"name": "spinal muscular atrophy", "type": "Disease"},
+      "evidence_text": "children with SMA treated with nusinersen",
+      "confidence": 0.95
+    },
+    {
+      "entity_1": {"name": "miR-7-5p", "type": "Gene"},
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {"name": "spinal muscular atrophy", "type": "Disease"},
+      "evidence_text": "differentially expre
+2026-06-09 16:38:23,739 - INFO - Retrying request to /chat/completions in 0.466963 seconds
+2026-06-09 16:39:04,889 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 16:39:38,187 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 16:40:07,072 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 16:40:07,077 - INFO - LLM Extraction complete. Extracted 18 triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_1800_1804.jsonl. malformed_outputs=1 failed_records=0
+2026-06-09 16:40:07,077 - INFO - Rejected 0 invalid LLM triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_1800_1804.jsonl.rejected.jsonl.

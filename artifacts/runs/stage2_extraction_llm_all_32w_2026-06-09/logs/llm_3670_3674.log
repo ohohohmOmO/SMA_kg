@@ -1,0 +1,22 @@
+2026-06-09 17:23:27,554 - INFO - Retrying request to /chat/completions in 0.464601 seconds
+2026-06-09 17:23:52,083 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:23:53,000 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:24:52,739 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:24:52,741 - WARNING - Malformed JSON for PMID 29656927. Skipping. Error: Unterminated string starting at: line 144 column 46 (char 6303). Raw output preview: {
+  "triples": [
+    {
+      "entity_1": {"name": "EXOSC3", "type": "Gene"},
+      "relation": "HAS_VARIANT",
+      "entity_2": {"name": "p.G31A", "type": "Variant"},
+      "evidence_text": "Homozygous p.G31A/EXOSC3 mutation was identified in 14 Roma patients",
+      "confidence": 0.95
+    },
+    {
+      "entity_1": {"name": "p.G31A", "type": "Variant"},
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {"name": "Pontocerebellar hypoplasia type 1", "type": "Disease"},
+      "evidence_text":
+2026-06-09 17:25:35,996 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:25:40,175 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:25:40,176 - INFO - LLM Extraction complete. Extracted 22 triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_3670_3674.jsonl. malformed_outputs=1 failed_records=0
+2026-06-09 17:25:40,176 - INFO - Rejected 0 invalid LLM triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_3670_3674.jsonl.rejected.jsonl.

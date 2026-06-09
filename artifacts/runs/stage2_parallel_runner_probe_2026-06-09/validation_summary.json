@@ -1,0 +1,98 @@
+{
+  "valid": true,
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "chunk_size": 1,
+  "llm_limit": 2,
+  "parallel_workers": 2,
+  "canonical_policy": "LLM-only; rule candidates are auxiliary and not merged into extracted_triples.jsonl",
+  "chunk_results": [
+    {
+      "chunk": "llm_000_000",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_parallel_runner_probe_2026-06-09\\chunks\\llm_000_000.jsonl",
+      "records": 7,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "evidence_required": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 7
+      },
+      "unique_pmids": 1,
+      "bytes": 3580,
+      "sha256": "bb34e65eaaff9d0c31f76fb56c87c5f852c395a927db806b39f1c0f732965ec7"
+    },
+    {
+      "chunk": "llm_001_001",
+      "status": "completed",
+      "exit_code": 0,
+      "path": "artifacts\\runs\\stage2_parallel_runner_probe_2026-06-09\\chunks\\llm_001_001.jsonl",
+      "records": 1,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "evidence_required": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 1
+      },
+      "unique_pmids": 1,
+      "bytes": 610,
+      "sha256": "0414d06b432ef30c0f3247f739459039839d0f2b0ada31dc85f0526ee5648d19"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "artifacts\\runs\\stage2_parallel_runner_probe_2026-06-09\\outputs\\data\\processed\\llm_extracted_triples.jsonl",
+      "records": 8,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "evidence_required": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 8
+      },
+      "unique_pmids": 2,
+      "bytes": 4190,
+      "sha256": "9d4083c53728678d714a65bade9212b97bdae3e1cb4950231d998da936f60414"
+    },
+    {
+      "path": "artifacts\\runs\\stage2_parallel_runner_probe_2026-06-09\\outputs\\data\\interim\\rule_candidate_triples.jsonl",
+      "records": 2515,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": true,
+      "evidence_required": true,
+      "valid": true,
+      "source_counts": {
+        "Rule_Candidate": 2515
+      },
+      "unique_pmids": 1651,
+      "bytes": 1503183,
+      "sha256": "206e4ac4da16a4f28501839eb3afeb11f6ef7858e05f5d88d80b639bc6f492f8"
+    },
+    {
+      "path": "artifacts\\runs\\stage2_parallel_runner_probe_2026-06-09\\outputs\\data\\processed\\extracted_triples.jsonl",
+      "records": 8,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "duplicate_stage_signature_count": 0,
+      "duplicates_allowed": false,
+      "evidence_required": true,
+      "valid": true,
+      "source_counts": {
+        "LLM_deepseek-ai/DeepSeek-V4-Flash": 8
+      },
+      "unique_pmids": 2,
+      "bytes": 4190,
+      "sha256": "9d4083c53728678d714a65bade9212b97bdae3e1cb4950231d998da936f60414"
+    }
+  ]
+}

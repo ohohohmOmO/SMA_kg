@@ -6,6 +6,7 @@ import logging
 import shutil
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
@@ -196,14 +197,17 @@ def build_split(input_file, llm_limit, model, chunk_size):
     if bad_lines:
         raise ValueError(f"Input file has {len(bad_lines)} invalid JSON lines: {input_file}")
     pmids = [str(record.get("pmid", "")) for record in records]
+    effective_llm_limit = len(records) if llm_limit < 0 else min(llm_limit, len(records))
     return {
         "input_file": display_path(input_file),
         "input_sha256": sha256_file(input_file),
         "input_records": len(records),
         "llm_model": model,
         "chunk_size": chunk_size,
-        "llm_pmids": pmids[:llm_limit],
-        "rule_candidate_pmids": pmids[llm_limit:],
+        "requested_llm_limit": llm_limit,
+        "effective_llm_limit": effective_llm_limit,
+        "llm_pmids": pmids[:effective_llm_limit],
+        "rule_candidate_pmids": pmids[effective_llm_limit:],
     }, records
 
 
@@ -265,8 +269,14 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Run Stage 2 extraction with chunk/resume/validate/promote.")
     parser.add_argument("--input-file", default="data/raw/pubmed_sma_abstracts.jsonl")
     parser.add_argument("--run-dir", default="")
-    parser.add_argument("--llm-limit", type=int, default=200)
+    parser.add_argument(
+        "--llm-limit",
+        type=int,
+        default=-1,
+        help="Number of abstracts assigned to LLM extraction. Use -1 for all input records.",
+    )
     parser.add_argument("--chunk-size", type=int, default=20)
+    parser.add_argument("--parallel-workers", type=int, default=1)
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--max-tokens", type=int, default=1024)
     parser.add_argument("--promote", action="store_true")
@@ -290,12 +300,31 @@ def main():
     write_json(run_dir / "stage2_input_split.json", split)
 
     chunk_results = []
-    for start, end in chunk_ranges(len(split["llm_pmids"]), args.chunk_size):
-        result = run_llm_chunk(args, run_dir, start, end)
-        chunk_results.append(result)
-        if result["status"] == "failed":
+    ranges = list(chunk_ranges(len(split["llm_pmids"]), args.chunk_size))
+    worker_count = max(1, args.parallel_workers)
+    if worker_count == 1 or len(ranges) <= 1:
+        for start, end in ranges:
+            result = run_llm_chunk(args, run_dir, start, end)
+            chunk_results.append(result)
+            if result["status"] == "failed":
+                write_json(run_dir / "validation_summary.json", {"valid": False, "chunk_results": chunk_results})
+                logging.error("Stopping because chunk %s failed", result["chunk"])
+                return 1
+    else:
+        logging.info("Running %s LLM chunks with %s parallel workers.", len(ranges), worker_count)
+        with ThreadPoolExecutor(max_workers=worker_count) as executor:
+            future_to_range = {
+                executor.submit(run_llm_chunk, args, run_dir, start, end): (start, end)
+                for start, end in ranges
+            }
+            for future in as_completed(future_to_range):
+                result = future.result()
+                chunk_results.append(result)
+        chunk_results.sort(key=lambda item: item["chunk"])
+        failed_chunks = [item for item in chunk_results if item["status"] == "failed"]
+        if failed_chunks:
             write_json(run_dir / "validation_summary.json", {"valid": False, "chunk_results": chunk_results})
-            logging.error("Stopping because chunk %s failed", result["chunk"])
+            logging.error("Stopping because %s LLM chunks failed.", len(failed_chunks))
             return 1
 
     llm_output = run_dir / "outputs" / "data" / "processed" / "llm_extracted_triples.jsonl"
@@ -307,7 +336,8 @@ def main():
 
     rule_candidate_output = run_dir / "outputs" / "data" / "interim" / "rule_candidate_triples.jsonl"
     rule_candidate_output.parent.mkdir(parents=True, exist_ok=True)
-    rule_candidate_triples = run_rule_candidates(records, args.llm_limit, rule_candidate_output)
+    effective_llm_limit = len(split["llm_pmids"])
+    rule_candidate_triples = run_rule_candidates(records, effective_llm_limit, rule_candidate_output)
     logging.info("Rule candidate extraction wrote %s candidates", len(rule_candidate_triples))
 
     canonical_output = run_dir / "outputs" / "data" / "processed" / "extracted_triples.jsonl"
@@ -323,7 +353,9 @@ def main():
         "valid": all_valid,
         "model": args.model,
         "chunk_size": args.chunk_size,
-        "llm_limit": args.llm_limit,
+        "llm_limit_requested": args.llm_limit,
+        "llm_limit_effective": effective_llm_limit,
+        "parallel_workers": worker_count,
         "canonical_policy": "LLM-only; rule candidates are auxiliary and not merged into extracted_triples.jsonl",
         "chunk_results": chunk_results,
         "outputs": validations,
@@ -337,7 +369,9 @@ def main():
         f"- Model: `{args.model}`\n"
         f"- Input: `{args.input_file}`\n"
         f"- LLM PMIDs: {len(split['llm_pmids'])}\n"
+        f"- Requested LLM limit: {args.llm_limit}\n"
         f"- Rule candidate PMIDs: {len(split['rule_candidate_pmids'])}\n"
+        f"- Parallel workers: {worker_count}\n"
         "- Canonical policy: `LLM-only extracted_triples.jsonl`; rule candidates are auxiliary\n"
         f"- Validation: {'passed' if all_valid else 'failed'}\n"
         f"- Promoted: {bool(args.promote and all_valid)}\n",

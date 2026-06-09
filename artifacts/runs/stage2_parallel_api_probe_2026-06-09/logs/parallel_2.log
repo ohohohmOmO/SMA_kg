@@ -1,0 +1,3 @@
+2026-06-09 14:52:57,518 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 14:52:57,542 - INFO - LLM Extraction complete. Extracted 1 triples to artifacts\runs\stage2_parallel_api_probe_2026-06-09\outputs\parallel_2.jsonl. malformed_outputs=0 failed_records=0
+2026-06-09 14:52:57,542 - INFO - Rejected 0 invalid LLM triples to artifacts\runs\stage2_parallel_api_probe_2026-06-09\outputs\parallel_2.jsonl.rejected.jsonl.

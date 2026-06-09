@@ -1,0 +1,10 @@
+{
+  "clustered_file": "data\\processed\\clustered_abstracts.jsonl",
+  "topic_terms_file": "artifacts\\runs\\stage1_topic_clustering_full_2026-06-09\\topic_terms.json",
+  "source_file": "data\\raw\\pubmed_sma_abstracts.jsonl",
+  "min_topic_count": 100,
+  "max_topic_fetch": 100,
+  "new_records": 27,
+  "output_file": "artifacts\\runs\\stage1_topic_balanced_pubmed_full_2026-06-09\\outputs\\data\\raw\\topic_balanced_pubmed_sma_abstracts.jsonl",
+  "output_sha256": "5aa3f22b46615302f8911c84f0978632215bf254001a68eba79e813b2abfdcdd"
+}

@@ -1,0 +1,2774 @@
+{
+  "0": [
+    {
+      "term": "nusinersen",
+      "weight": 0.024189978123226673
+    },
+    {
+      "term": "months",
+      "weight": 0.010976608408745864
+    },
+    {
+      "term": "of nusinersen",
+      "weight": 0.010565309226547026
+    },
+    {
+      "term": "with nusinersen",
+      "weight": 0.008375682785066799
+    },
+    {
+      "term": "nusinersen treatment",
+      "weight": 0.007956268285200555
+    },
+    {
+      "term": "motor function",
+      "weight": 0.007694055289620191
+    },
+    {
+      "term": "baseline",
+      "weight": 0.007364726553428679
+    },
+    {
+      "term": "improvement",
+      "weight": 0.007025839247585843
+    },
+    {
+      "term": "with sma",
+      "weight": 0.006898699490674689
+    },
+    {
+      "term": "hfmse",
+      "weight": 0.0066202757921291905
+    }
+  ],
+  "1": [
+    {
+      "term": "drugs",
+      "weight": 0.006888775152269257
+    },
+    {
+      "term": "treatments",
+      "weight": 0.006328636467216321
+    },
+    {
+      "term": "trials",
+      "weight": 0.0062462538169949094
+    },
+    {
+      "term": "care",
+      "weight": 0.005975213397793674
+    },
+    {
+      "term": "nusinersen",
+      "weight": 0.005034445322356344
+    },
+    {
+      "term": "drug",
+      "weight": 0.0048074247541211495
+    },
+    {
+      "term": "strategies",
+      "weight": 0.004665936349314702
+    },
+    {
+      "term": "modifying",
+      "weight": 0.004648073000587282
+    },
+    {
+      "term": "smn",
+      "weight": 0.004555928491769275
+    },
+    {
+      "term": "approved",
+      "weight": 0.004551236754541098
+    }
+  ],
+  "2": [
+    {
+      "term": "reliability",
+      "weight": 0.011585638665007838
+    },
+    {
+      "term": "measures",
+      "weight": 0.010588564046009469
+    },
+    {
+      "term": "scale",
+      "weight": 0.009833191642600091
+    },
+    {
+      "term": "validity",
+      "weight": 0.009072400670889783
+    },
+    {
+      "term": "outcome",
+      "weight": 0.008952523035659523
+    },
+    {
+      "term": "upper",
+      "weight": 0.008479873658427272
+    },
+    {
+      "term": "upper limb",
+      "weight": 0.007544661689117217
+    },
+    {
+      "term": "limb",
+      "weight": 0.007266822108860449
+    },
+    {
+      "term": "scales",
+      "weight": 0.007018420688115435
+    },
+    {
+      "term": "motor function",
+      "weight": 0.006982867038950781
+    }
+  ],
+  "3": [
+    {
+      "term": "onasemnogene",
+      "weight": 0.024799115966654538
+    },
+    {
+      "term": "onasemnogene abeparvovec",
+      "weight": 0.024161802973740345
+    },
+    {
+      "term": "abeparvovec",
+      "weight": 0.024151108242144077
+    },
+    {
+      "term": "oa",
+      "weight": 0.014304593294261708
+    },
+    {
+      "term": "months",
+      "weight": 0.011039516138944851
+    },
+    {
+      "term": "adverse",
+      "weight": 0.007760342519281
+    },
+    {
+      "term": "safety",
+      "weight": 0.007351415198242055
+    },
+    {
+      "term": "of onasemnogene",
+      "weight": 0.007298501735543233
+    },
+    {
+      "term": "treated",
+      "weight": 0.007098981744867187
+    },
+    {
+      "term": "of onasemnogene abeparvovec",
+      "weight": 0.007009783329215135
+    }
+  ],
+  "4": [
+    {
+      "term": "splicing",
+      "weight": 0.03956490196556824
+    },
+    {
+      "term": "exon",
+      "weight": 0.026600053149763166
+    },
+    {
+      "term": "rna",
+      "weight": 0.015404494966429942
+    },
+    {
+      "term": "smn2",
+      "weight": 0.01443790100446408
+    },
+    {
+      "term": "mrna",
+      "weight": 0.012809747160925108
+    },
+    {
+      "term": "skipping",
+      "weight": 0.012336846000204094
+    },
+    {
+      "term": "splice",
+      "weight": 0.011445217324381862
+    },
+    {
+      "term": "inclusion",
+      "weight": 0.010530290152479683
+    },
+    {
+      "term": "pre mrna",
+      "weight": 0.010441374783763365
+    },
+    {
+      "term": "alternative",
+      "weight": 0.009796313769751097
+    }
+  ],
+  "5": [
+    {
+      "term": "respiratory",
+      "weight": 0.02342621326520636
+    },
+    {
+      "term": "sleep",
+      "weight": 0.0179373208790015
+    },
+    {
+      "term": "niv",
+      "weight": 0.016433727433316576
+    },
+    {
+      "term": "ventilation",
+      "weight": 0.014829062463917454
+    },
+    {
+      "term": "airway",
+      "weight": 0.010238578242437865
+    },
+    {
+      "term": "children with",
+      "weight": 0.00929931894250713
+    },
+    {
+      "term": "failure",
+      "weight": 0.00891503874705907
+    },
+    {
+      "term": "mechanical",
+      "weight": 0.008836502019581737
+    },
+    {
+      "term": "nmd",
+      "weight": 0.008428662978080821
+    },
+    {
+      "term": "lung",
+      "weight": 0.008343944500910538
+    }
+  ],
+  "6": [
+    {
+      "term": "smn1",
+      "weight": 0.02853683109385096
+    },
+    {
+      "term": "smn2",
+      "weight": 0.02251254486711075
+    },
+    {
+      "term": "copy",
+      "weight": 0.020802851721378534
+    },
+    {
+      "term": "deletion",
+      "weight": 0.01597040963613257
+    },
+    {
+      "term": "copy number",
+      "weight": 0.014548109885795564
+    },
+    {
+      "term": "of smn1",
+      "weight": 0.01425212913844002
+    },
+    {
+      "term": "copies",
+      "weight": 0.013203060760049106
+    },
+    {
+      "term": "naip",
+      "weight": 0.01169037474135251
+    },
+    {
+      "term": "exon",
+      "weight": 0.011289426649475404
+    },
+    {
+      "term": "smn2 copy",
+      "weight": 0.011149752514369388
+    }
+  ],
+  "7": [
+    {
+      "term": "screening",
+      "weight": 0.029313026581311494
+    },
+    {
+      "term": "nbs",
+      "weight": 0.027795843523385495
+    },
+    {
+      "term": "newborn",
+      "weight": 0.023238230053372878
+    },
+    {
+      "term": "newborn screening",
+      "weight": 0.020789615921303475
+    },
+    {
+      "term": "newborns",
+      "weight": 0.017393108409771294
+    },
+    {
+      "term": "program",
+      "weight": 0.012991427449550218
+    },
+    {
+      "term": "copies",
+      "weight": 0.01001410217908389
+    },
+    {
+      "term": "screening nbs",
+      "weight": 0.00955338806737792
+    },
+    {
+      "term": "pilot",
+      "weight": 0.009453158150969865
+    },
+    {
+      "term": "infants",
+      "weight": 0.009215062271554648
+    }
+  ],
+  "8": [
+    {
+      "term": "intrathecal",
+      "weight": 0.03453044526113555
+    },
+    {
+      "term": "lumbar",
+      "weight": 0.025260868291624102
+    },
+    {
+      "term": "nusinersen",
+      "weight": 0.023375741257737954
+    },
+    {
+      "term": "puncture",
+      "weight": 0.02206923268044602
+    },
+    {
+      "term": "guided",
+      "weight": 0.015534706372741833
+    },
+    {
+      "term": "administration",
+      "weight": 0.015414422956619113
+    },
+    {
+      "term": "injections",
+      "weight": 0.014867776477583979
+    },
+    {
+      "term": "lumbar puncture",
+      "weight": 0.014156539079663303
+    },
+    {
+      "term": "intrathecal nusinersen",
+      "weight": 0.013248359583672787
+    },
+    {
+      "term": "scoliosis",
+      "weight": 0.012692218841235024
+    }
+  ],
+  "9": [
+    {
+      "term": "scoliosis",
+      "weight": 0.029645030140430476
+    },
+    {
+      "term": "surgery",
+      "weight": 0.023645704073157466
+    },
+    {
+      "term": "degrees",
+      "weight": 0.023459746059422013
+    },
+    {
+      "term": "deformity",
+      "weight": 0.01380562514041859
+    },
+    {
+      "term": "surgical",
+      "weight": 0.013649937967900977
+    },
+    {
+      "term": "postoperative",
+      "weight": 0.012768680744207343
+    },
+    {
+      "term": "pelvic",
+      "weight": 0.012224110021869163
+    },
+    {
+      "term": "follow up",
+      "weight": 0.012219499476715471
+    },
+    {
+      "term": "follow",
+      "weight": 0.01219330724979503
+    },
+    {
+      "term": "preoperative",
+      "weight": 0.011975857182275377
+    }
+  ],
+  "10": [
+    {
+      "term": "muscles",
+      "weight": 0.01328649292011459
+    },
+    {
+      "term": "nerve",
+      "weight": 0.012482455625065838
+    },
+    {
+      "term": "mri",
+      "weight": 0.012254339003416053
+    },
+    {
+      "term": "controls",
+      "weight": 0.01133282785898485
+    },
+    {
+      "term": "imaging",
+      "weight": 0.011071080844360356
+    },
+    {
+      "term": "munix",
+      "weight": 0.010839012094946194
+    },
+    {
+      "term": "healthy",
+      "weight": 0.009502919907094887
+    },
+    {
+      "term": "als",
+      "weight": 0.007698559499607689
+    },
+    {
+      "term": "thickness",
+      "weight": 0.007561602010893988
+    },
+    {
+      "term": "sma patients",
+      "weight": 0.007519722848793111
+    }
+  ],
+  "11": [
+    {
+      "term": "risdiplam",
+      "weight": 0.04070826064570905
+    },
+    {
+      "term": "of risdiplam",
+      "weight": 0.014911811199259049
+    },
+    {
+      "term": "safety",
+      "weight": 0.012082649073034373
+    },
+    {
+      "term": "months",
+      "weight": 0.009466299356337117
+    },
+    {
+      "term": "adverse",
+      "weight": 0.008406777394099106
+    },
+    {
+      "term": "apitegromab",
+      "weight": 0.007569720963317065
+    },
+    {
+      "term": "risdiplam in",
+      "weight": 0.007366248292552951
+    },
+    {
+      "term": "12",
+      "weight": 0.007260366213921971
+    },
+    {
+      "term": "placebo",
+      "weight": 0.007205947058856068
+    },
+    {
+      "term": "drug",
+      "weight": 0.007141879083320743
+    }
+  ],
+  "12": [
+    {
+      "term": "case",
+      "weight": 0.016057855029204815
+    },
+    {
+      "term": "weakness",
+      "weight": 0.01205380186296962
+    },
+    {
+      "term": "report",
+      "weight": 0.010394073488685868
+    },
+    {
+      "term": "old",
+      "weight": 0.010135026605583
+    },
+    {
+      "term": "year old",
+      "weight": 0.009631075917183448
+    },
+    {
+      "term": "year",
+      "weight": 0.00894756063550869
+    },
+    {
+      "term": "the patient",
+      "weight": 0.008745223182965918
+    },
+    {
+      "term": "diagnosis",
+      "weight": 0.008487908042386095
+    },
+    {
+      "term": "he",
+      "weight": 0.007992176087014989
+    },
+    {
+      "term": "case of",
+      "weight": 0.007670389267380368
+    }
+  ],
+  "13": [
+    {
+      "term": "asos",
+      "weight": 0.034935252515658446
+    },
+    {
+      "term": "aso",
+      "weight": 0.02579581013302975
+    },
+    {
+      "term": "antisense",
+      "weight": 0.023388547419784547
+    },
+    {
+      "term": "oligonucleotides",
+      "weight": 0.020286617051824378
+    },
+    {
+      "term": "antisense oligonucleotides",
+      "weight": 0.01614634862534693
+    },
+    {
+      "term": "pmo",
+      "weight": 0.013185174549207895
+    },
+    {
+      "term": "rna",
+      "weight": 0.012383809382113592
+    },
+    {
+      "term": "of asos",
+      "weight": 0.011625596940765513
+    },
+    {
+      "term": "target",
+      "weight": 0.011449492481115044
+    },
+    {
+      "term": "delivery",
+      "weight": 0.01098854337750298
+    }
+  ],
+  "14": [
+    {
+      "term": "smn",
+      "weight": 0.03733624747564921
+    },
+    {
+      "term": "assembly",
+      "weight": 0.02163645869076396
+    },
+    {
+      "term": "sm",
+      "weight": 0.018269560591262935
+    },
+    {
+      "term": "protein",
+      "weight": 0.016322392931065903
+    },
+    {
+      "term": "of smn",
+      "weight": 0.01584903419566761
+    },
+    {
+      "term": "complex",
+      "weight": 0.01563294363080039
+    },
+    {
+      "term": "rna",
+      "weight": 0.015440960881642584
+    },
+    {
+      "term": "proteins",
+      "weight": 0.012557624468823607
+    },
+    {
+      "term": "mrna",
+      "weight": 0.011642646623688841
+    },
+    {
+      "term": "mrnas",
+      "weight": 0.011372219139195245
+    }
+  ],
+  "15": [
+    {
+      "term": "smn",
+      "weight": 0.023745998422356678
+    },
+    {
+      "term": "smn protein",
+      "weight": 0.017611658391267375
+    },
+    {
+      "term": "smn2",
+      "weight": 0.017462907788788423
+    },
+    {
+      "term": "mice",
+      "weight": 0.017186767947422917
+    },
+    {
+      "term": "protein",
+      "weight": 0.016512609277740634
+    },
+    {
+      "term": "levels",
+      "weight": 0.011583134999481291
+    },
+    {
+      "term": "compounds",
+      "weight": 0.010835409857255725
+    },
+    {
+      "term": "sma mice",
+      "weight": 0.010589064309940452
+    },
+    {
+      "term": "splicing",
+      "weight": 0.009924669980534375
+    },
+    {
+      "term": "increase",
+      "weight": 0.009763710031157963
+    }
+  ],
+  "16": [
+    {
+      "term": "carrier",
+      "weight": 0.03847236493433379
+    },
+    {
+      "term": "screening",
+      "weight": 0.036506526657830725
+    },
+    {
+      "term": "carrier screening",
+      "weight": 0.029047590315354466
+    },
+    {
+      "term": "reproductive",
+      "weight": 0.016501182480008272
+    },
+    {
+      "term": "couples",
+      "weight": 0.01619784235432987
+    },
+    {
+      "term": "risk",
+      "weight": 0.015598184752298735
+    },
+    {
+      "term": "testing",
+      "weight": 0.015111962126577757
+    },
+    {
+      "term": "conditions",
+      "weight": 0.012463027534775994
+    },
+    {
+      "term": "population",
+      "weight": 0.011455109661703511
+    },
+    {
+      "term": "prenatal",
+      "weight": 0.01134128913111026
+    }
+  ],
+  "17": [
+    {
+      "term": "parents",
+      "weight": 0.03685052079859735
+    },
+    {
+      "term": "care",
+      "weight": 0.025926263542083734
+    },
+    {
+      "term": "child",
+      "weight": 0.019664373978653938
+    },
+    {
+      "term": "family",
+      "weight": 0.014609654609374587
+    },
+    {
+      "term": "interviews",
+      "weight": 0.012972843663741743
+    },
+    {
+      "term": "health",
+      "weight": 0.012853017740453063
+    },
+    {
+      "term": "experiences",
+      "weight": 0.012695903353896275
+    },
+    {
+      "term": "parents of",
+      "weight": 0.011895823696602944
+    },
+    {
+      "term": "of children",
+      "weight": 0.011679596343427091
+    },
+    {
+      "term": "families",
+      "weight": 0.01052950023400409
+    }
+  ],
+  "18": [
+    {
+      "term": "smn1",
+      "weight": 0.0271426449897703
+    },
+    {
+      "term": "pcr",
+      "weight": 0.019840847625455085
+    },
+    {
+      "term": "copy",
+      "weight": 0.019786514388763988
+    },
+    {
+      "term": "assay",
+      "weight": 0.019446127768456112
+    },
+    {
+      "term": "samples",
+      "weight": 0.019265666853242602
+    },
+    {
+      "term": "mlpa",
+      "weight": 0.017454235339542375
+    },
+    {
+      "term": "detection",
+      "weight": 0.017420364875411404
+    },
+    {
+      "term": "ddpcr",
+      "weight": 0.014606278214263562
+    },
+    {
+      "term": "method",
+      "weight": 0.013524101946639248
+    },
+    {
+      "term": "of smn1",
+      "weight": 0.013515530648378014
+    }
+  ],
+  "19": [
+    {
+      "term": "training",
+      "weight": 0.024758078727675135
+    },
+    {
+      "term": "exercise",
+      "weight": 0.019414535784253523
+    },
+    {
+      "term": "mobility",
+      "weight": 0.014231710640636839
+    },
+    {
+      "term": "powered",
+      "weight": 0.013015144587845475
+    },
+    {
+      "term": "intervention",
+      "weight": 0.009542497138262584
+    },
+    {
+      "term": "participants",
+      "weight": 0.00939631761638608
+    },
+    {
+      "term": "physical",
+      "weight": 0.00930307821187367
+    },
+    {
+      "term": "week",
+      "weight": 0.009113731040898347
+    },
+    {
+      "term": "group",
+      "weight": 0.009098518650709661
+    },
+    {
+      "term": "participation",
+      "weight": 0.008981051655570954
+    }
+  ],
+  "20": [
+    {
+      "term": "smn",
+      "weight": 0.028561845615390685
+    },
+    {
+      "term": "mice",
+      "weight": 0.013829034199300292
+    },
+    {
+      "term": "in sma",
+      "weight": 0.013269117119848193
+    },
+    {
+      "term": "jnk",
+      "weight": 0.013049385966259791
+    },
+    {
+      "term": "protein",
+      "weight": 0.011996597696126737
+    },
+    {
+      "term": "pathway",
+      "weight": 0.010677222686706803
+    },
+    {
+      "term": "of smn",
+      "weight": 0.010038529074617305
+    },
+    {
+      "term": "mouse",
+      "weight": 0.009462166926918156
+    },
+    {
+      "term": "activation",
+      "weight": 0.009311248610874378
+    },
+    {
+      "term": "skeletal",
+      "weight": 0.009250128902241138
+    }
+  ],
+  "21": [
+    {
+      "term": "neurons",
+      "weight": 0.017043237185063197
+    },
+    {
+      "term": "mouse",
+      "weight": 0.01677457667133158
+    },
+    {
+      "term": "synaptic",
+      "weight": 0.014075123015034554
+    },
+    {
+      "term": "motor neurons",
+      "weight": 0.012547870614368227
+    },
+    {
+      "term": "mice",
+      "weight": 0.012324350312327878
+    },
+    {
+      "term": "in sma",
+      "weight": 0.012287599154907068
+    },
+    {
+      "term": "sma mice",
+      "weight": 0.010565734920687572
+    },
+    {
+      "term": "smn",
+      "weight": 0.009846725078081011
+    },
+    {
+      "term": "mouse model",
+      "weight": 0.009787821784785851
+    },
+    {
+      "term": "synapses",
+      "weight": 0.00977100032170355
+    }
+  ],
+  "22": [
+    {
+      "term": "cells",
+      "weight": 0.025145604918882736
+    },
+    {
+      "term": "stem",
+      "weight": 0.024466489002053178
+    },
+    {
+      "term": "neurons",
+      "weight": 0.019267100380379796
+    },
+    {
+      "term": "human",
+      "weight": 0.019205377770424203
+    },
+    {
+      "term": "pluripotent",
+      "weight": 0.01890619174989478
+    },
+    {
+      "term": "cell",
+      "weight": 0.018092900456022833
+    },
+    {
+      "term": "pluripotent stem",
+      "weight": 0.0177919569339626
+    },
+    {
+      "term": "stem cells",
+      "weight": 0.015422099226729784
+    },
+    {
+      "term": "vitro",
+      "weight": 0.015181846444900674
+    },
+    {
+      "term": "in vitro",
+      "weight": 0.015181846444900674
+    }
+  ],
+  "23": [
+    {
+      "term": "pls3",
+      "weight": 0.02904808965974214
+    },
+    {
+      "term": "actin",
+      "weight": 0.02359681144769051
+    },
+    {
+      "term": "vapb",
+      "weight": 0.0234032339795222
+    },
+    {
+      "term": "smn",
+      "weight": 0.023213362704797746
+    },
+    {
+      "term": "protein",
+      "weight": 0.015378496336776007
+    },
+    {
+      "term": "golgi",
+      "weight": 0.015262368165475514
+    },
+    {
+      "term": "p56s",
+      "weight": 0.011858197108706395
+    },
+    {
+      "term": "endocytosis",
+      "weight": 0.009908555697928844
+    },
+    {
+      "term": "defects",
+      "weight": 0.009280513195954063
+    },
+    {
+      "term": "levels",
+      "weight": 0.00917504858914717
+    }
+  ],
+  "24": [
+    {
+      "term": "dync1h1",
+      "weight": 0.05210707085107154
+    },
+    {
+      "term": "mutation",
+      "weight": 0.016499376101868198
+    },
+    {
+      "term": "dync1h1 gene",
+      "weight": 0.016056069164748443
+    },
+    {
+      "term": "mutations",
+      "weight": 0.015195686870421608
+    },
+    {
+      "term": "dynein",
+      "weight": 0.014916381547132563
+    },
+    {
+      "term": "the dync1h1",
+      "weight": 0.012268219451751246
+    },
+    {
+      "term": "variant",
+      "weight": 0.011982857142700724
+    },
+    {
+      "term": "variants",
+      "weight": 0.01166237356022771
+    },
+    {
+      "term": "phenotype",
+      "weight": 0.010729533094088625
+    },
+    {
+      "term": "lower extremity",
+      "weight": 0.010394349855937983
+    }
+  ],
+  "25": [
+    {
+      "term": "gene therapy",
+      "weight": 0.03604450354272408
+    },
+    {
+      "term": "viral",
+      "weight": 0.01684745770892914
+    },
+    {
+      "term": "vectors",
+      "weight": 0.015648493139568145
+    },
+    {
+      "term": "of gene",
+      "weight": 0.014069289529326253
+    },
+    {
+      "term": "gene therapies",
+      "weight": 0.012052991039306581
+    },
+    {
+      "term": "delivery",
+      "weight": 0.011401968888956303
+    },
+    {
+      "term": "of gene therapy",
+      "weight": 0.011319604834362808
+    },
+    {
+      "term": "editing",
+      "weight": 0.009401285138553869
+    },
+    {
+      "term": "challenges",
+      "weight": 0.008984801962341617
+    },
+    {
+      "term": "viral vectors",
+      "weight": 0.008189502251958431
+    }
+  ],
+  "26": [
+    {
+      "term": "nfl",
+      "weight": 0.02716631135775121
+    },
+    {
+      "term": "csf",
+      "weight": 0.025488908107942455
+    },
+    {
+      "term": "levels",
+      "weight": 0.023818649392433788
+    },
+    {
+      "term": "il",
+      "weight": 0.020548550543272884
+    },
+    {
+      "term": "neurofilament",
+      "weight": 0.014934900970822966
+    },
+    {
+      "term": "nf",
+      "weight": 0.014171414167774404
+    },
+    {
+      "term": "nusinersen",
+      "weight": 0.014122333948049346
+    },
+    {
+      "term": "tau",
+      "weight": 0.013070347461618219
+    },
+    {
+      "term": "serum",
+      "weight": 0.012877269721749135
+    },
+    {
+      "term": "biomarker",
+      "weight": 0.011535842623144494
+    }
+  ],
+  "27": [
+    {
+      "term": "cost",
+      "weight": 0.01909343233450608
+    },
+    {
+      "term": "price",
+      "weight": 0.015188193465170528
+    },
+    {
+      "term": "coverage",
+      "weight": 0.014398505511043259
+    },
+    {
+      "term": "health",
+      "weight": 0.013514591530151355
+    },
+    {
+      "term": "medications",
+      "weight": 0.012145401158320098
+    },
+    {
+      "term": "effectiveness",
+      "weight": 0.011654371269715354
+    },
+    {
+      "term": "drug",
+      "weight": 0.01059915833072578
+    },
+    {
+      "term": "economic",
+      "weight": 0.010364992651364606
+    },
+    {
+      "term": "reimbursement",
+      "weight": 0.01015266119660135
+    },
+    {
+      "term": "costs",
+      "weight": 0.0097695363562919
+    }
+  ],
+  "28": [
+    {
+      "term": "aav",
+      "weight": 0.06445528071751214
+    },
+    {
+      "term": "gene therapy",
+      "weight": 0.025365675640113047
+    },
+    {
+      "term": "vectors",
+      "weight": 0.023457195650753538
+    },
+    {
+      "term": "vector",
+      "weight": 0.021513806893977704
+    },
+    {
+      "term": "adeno",
+      "weight": 0.01924195229128981
+    },
+    {
+      "term": "adeno associated",
+      "weight": 0.01924195229128981
+    },
+    {
+      "term": "aav vectors",
+      "weight": 0.01683537954199008
+    },
+    {
+      "term": "of aav",
+      "weight": 0.016143304425805475
+    },
+    {
+      "term": "delivery",
+      "weight": 0.015139805804495825
+    },
+    {
+      "term": "immune",
+      "weight": 0.01488236691841639
+    }
+  ],
+  "29": [
+    {
+      "term": "als",
+      "weight": 0.01757742617429051
+    },
+    {
+      "term": "mnds",
+      "weight": 0.014293042788465908
+    },
+    {
+      "term": "lower motor",
+      "weight": 0.014291747805264743
+    },
+    {
+      "term": "sclerosis",
+      "weight": 0.014076190381651097
+    },
+    {
+      "term": "lateral",
+      "weight": 0.01376148511129461
+    },
+    {
+      "term": "lateral sclerosis",
+      "weight": 0.013608280913015162
+    },
+    {
+      "term": "hereditary",
+      "weight": 0.012590195391824899
+    },
+    {
+      "term": "amyotrophic",
+      "weight": 0.012168383932207556
+    },
+    {
+      "term": "amyotrophic lateral sclerosis",
+      "weight": 0.011439144076254161
+    },
+    {
+      "term": "amyotrophic lateral",
+      "weight": 0.011432859398826425
+    }
+  ],
+  "30": [
+    {
+      "term": "nusinersen",
+      "weight": 0.02513740413292819
+    },
+    {
+      "term": "smn2",
+      "weight": 0.008900202751753657
+    },
+    {
+      "term": "of nusinersen",
+      "weight": 0.007729699164486359
+    },
+    {
+      "term": "protein",
+      "weight": 0.007713006591605381
+    },
+    {
+      "term": "oligonucleotide",
+      "weight": 0.00755443715946917
+    },
+    {
+      "term": "drug",
+      "weight": 0.007318513728312111
+    },
+    {
+      "term": "smn protein",
+      "weight": 0.007139039579083884
+    },
+    {
+      "term": "nusinersen is",
+      "weight": 0.007023489318716224
+    },
+    {
+      "term": "approved",
+      "weight": 0.006873521451003178
+    },
+    {
+      "term": "trials",
+      "weight": 0.006792067426686724
+    }
+  ],
+  "31": [
+    {
+      "term": "dystrophy",
+      "weight": 0.013156843503348697
+    },
+    {
+      "term": "nmds",
+      "weight": 0.012123428472403396
+    },
+    {
+      "term": "muscular dystrophy",
+      "weight": 0.011952282297197908
+    },
+    {
+      "term": "duchenne",
+      "weight": 0.010460523539362937
+    },
+    {
+      "term": "duchenne muscular dystrophy",
+      "weight": 0.010204102030340853
+    },
+    {
+      "term": "duchenne muscular",
+      "weight": 0.010195612863609916
+    },
+    {
+      "term": "neuromuscular diseases",
+      "weight": 0.009359497576418702
+    },
+    {
+      "term": "orphan",
+      "weight": 0.009020587111739881
+    },
+    {
+      "term": "advances",
+      "weight": 0.008617327549844388
+    },
+    {
+      "term": "genetic therapies",
+      "weight": 0.008146261876758399
+    }
+  ],
+  "32": [
+    {
+      "term": "swallowing",
+      "weight": 0.0461926171410744
+    },
+    {
+      "term": "oral",
+      "weight": 0.021018816088715343
+    },
+    {
+      "term": "feeding",
+      "weight": 0.016532476836805286
+    },
+    {
+      "term": "infants",
+      "weight": 0.01526777094555965
+    },
+    {
+      "term": "bulbar",
+      "weight": 0.015146943854521078
+    },
+    {
+      "term": "mastication",
+      "weight": 0.013373314337795894
+    },
+    {
+      "term": "with sma",
+      "weight": 0.013203105819746043
+    },
+    {
+      "term": "dysphagia",
+      "weight": 0.013143554683572412
+    },
+    {
+      "term": "oral function",
+      "weight": 0.012449289476999132
+    },
+    {
+      "term": "vfss",
+      "weight": 0.01190801602147743
+    }
+  ],
+  "33": [
+    {
+      "term": "bicd2",
+      "weight": 0.09024592626342477
+    },
+    {
+      "term": "smaled2",
+      "weight": 0.02669221175037711
+    },
+    {
+      "term": "dynein",
+      "weight": 0.022518924400187226
+    },
+    {
+      "term": "cargo",
+      "weight": 0.019516266780412395
+    },
+    {
+      "term": "mutations",
+      "weight": 0.01892405187968439
+    },
+    {
+      "term": "lower extremity",
+      "weight": 0.017798927038259395
+    },
+    {
+      "term": "in bicd2",
+      "weight": 0.016701687877064397
+    },
+    {
+      "term": "extremity",
+      "weight": 0.016641893799128633
+    },
+    {
+      "term": "bicd2 mutations",
+      "weight": 0.013347185038869799
+    },
+    {
+      "term": "dominant",
+      "weight": 0.012873090379494115
+    }
+  ],
+  "34": [
+    {
+      "term": "pme",
+      "weight": 0.044237094839643575
+    },
+    {
+      "term": "asah1",
+      "weight": 0.038380612984479416
+    },
+    {
+      "term": "sma pme",
+      "weight": 0.0378744098862795
+    },
+    {
+      "term": "myoclonic",
+      "weight": 0.03205239402251735
+    },
+    {
+      "term": "epilepsy",
+      "weight": 0.031234224557841472
+    },
+    {
+      "term": "myoclonic epilepsy",
+      "weight": 0.028414149963103583
+    },
+    {
+      "term": "progressive myoclonic",
+      "weight": 0.024954685132102045
+    },
+    {
+      "term": "progressive myoclonic epilepsy",
+      "weight": 0.024401183450762507
+    },
+    {
+      "term": "asah1 gene",
+      "weight": 0.01995646542787424
+    },
+    {
+      "term": "ceramidase",
+      "weight": 0.01862603439934929
+    }
+  ],
+  "35": [
+    {
+      "term": "cmt",
+      "weight": 0.034317979952544334
+    },
+    {
+      "term": "neuropathy",
+      "weight": 0.019529763204630023
+    },
+    {
+      "term": "marie tooth",
+      "weight": 0.018357806950822182
+    },
+    {
+      "term": "charcot marie",
+      "weight": 0.018357806950822182
+    },
+    {
+      "term": "charcot marie tooth",
+      "weight": 0.018357806950822182
+    },
+    {
+      "term": "marie",
+      "weight": 0.018357806950822182
+    },
+    {
+      "term": "tooth",
+      "weight": 0.01833261558654241
+    },
+    {
+      "term": "charcot",
+      "weight": 0.018233580878825716
+    },
+    {
+      "term": "sensory",
+      "weight": 0.0163290878635372
+    },
+    {
+      "term": "dhmn",
+      "weight": 0.01584799624547658
+    }
+  ],
+  "36": [
+    {
+      "term": "smard1",
+      "weight": 0.03744474627145512
+    },
+    {
+      "term": "respiratory",
+      "weight": 0.030140454567281576
+    },
+    {
+      "term": "respiratory distress",
+      "weight": 0.029624541302161845
+    },
+    {
+      "term": "distress",
+      "weight": 0.028628481242969923
+    },
+    {
+      "term": "with respiratory",
+      "weight": 0.02736329739674284
+    },
+    {
+      "term": "ighmbp2",
+      "weight": 0.023253996954241882
+    },
+    {
+      "term": "with respiratory distress",
+      "weight": 0.02266849746374192
+    },
+    {
+      "term": "atrophy with respiratory",
+      "weight": 0.021261213995510668
+    },
+    {
+      "term": "respiratory distress type",
+      "weight": 0.02060445763660767
+    },
+    {
+      "term": "distress type",
+      "weight": 0.020549970804125222
+    }
+  ],
+  "37": [
+    {
+      "term": "aav9",
+      "weight": 0.03125251475667095
+    },
+    {
+      "term": "vector",
+      "weight": 0.023729114602763994
+    },
+    {
+      "term": "smn",
+      "weight": 0.021770929717905094
+    },
+    {
+      "term": "aav9 smn",
+      "weight": 0.015045635117384845
+    },
+    {
+      "term": "mice",
+      "weight": 0.014912642569216292
+    },
+    {
+      "term": "transgene",
+      "weight": 0.01418089907445471
+    },
+    {
+      "term": "gene therapy",
+      "weight": 0.013899259074196764
+    },
+    {
+      "term": "virus",
+      "weight": 0.012272831237587961
+    },
+    {
+      "term": "expression",
+      "weight": 0.012220051712509747
+    },
+    {
+      "term": "injection",
+      "weight": 0.010737178316434184
+    }
+  ],
+  "38": [
+    {
+      "term": "costs",
+      "weight": 0.04094260356761906
+    },
+    {
+      "term": "healthcare",
+      "weight": 0.01764020145419549
+    },
+    {
+      "term": "burden",
+      "weight": 0.01746827432198179
+    },
+    {
+      "term": "medical",
+      "weight": 0.016517650541902046
+    },
+    {
+      "term": "direct",
+      "weight": 0.015861845121125002
+    },
+    {
+      "term": "cost",
+      "weight": 0.01567064635248244
+    },
+    {
+      "term": "caregivers",
+      "weight": 0.015196169775789447
+    },
+    {
+      "term": "economic",
+      "weight": 0.014073934049677442
+    },
+    {
+      "term": "per",
+      "weight": 0.013917003837927006
+    },
+    {
+      "term": "care",
+      "weight": 0.013907710561455209
+    }
+  ],
+  "39": [
+    {
+      "term": "screening",
+      "weight": 0.040611235483233026
+    },
+    {
+      "term": "carrier",
+      "weight": 0.017322110626850278
+    },
+    {
+      "term": "attitudes",
+      "weight": 0.016998482394385537
+    },
+    {
+      "term": "about",
+      "weight": 0.016544572086501827
+    },
+    {
+      "term": "carrier screening",
+      "weight": 0.015186782932580625
+    },
+    {
+      "term": "knowledge",
+      "weight": 0.014729977731563397
+    },
+    {
+      "term": "parents",
+      "weight": 0.013505901408939371
+    },
+    {
+      "term": "newborn",
+      "weight": 0.013367448324826474
+    },
+    {
+      "term": "nbs",
+      "weight": 0.012082025445239092
+    },
+    {
+      "term": "newborn screening",
+      "weight": 0.01190708491649982
+    }
+  ],
+  "40": [
+    {
+      "term": "nds",
+      "weight": 0.02542445058571039
+    },
+    {
+      "term": "neurodegenerative",
+      "weight": 0.02397109823707955
+    },
+    {
+      "term": "neurodegenerative diseases",
+      "weight": 0.023332960210520275
+    },
+    {
+      "term": "parkinson",
+      "weight": 0.013570320624889666
+    },
+    {
+      "term": "alzheimer",
+      "weight": 0.013570320624889666
+    },
+    {
+      "term": "sclerosis",
+      "weight": 0.01339167183966099
+    },
+    {
+      "term": "parkinson disease",
+      "weight": 0.012621658317142943
+    },
+    {
+      "term": "alzheimer disease",
+      "weight": 0.012595476388735899
+    },
+    {
+      "term": "ad",
+      "weight": 0.012241989331142998
+    },
+    {
+      "term": "pd",
+      "weight": 0.012119822933085797
+    }
+  ],
+  "41": [
+    {
+      "term": "biomarkers",
+      "weight": 0.03792230657804491
+    },
+    {
+      "term": "biomarker",
+      "weight": 0.015896540390768415
+    },
+    {
+      "term": "crn",
+      "weight": 0.014086202799202148
+    },
+    {
+      "term": "levels",
+      "weight": 0.01062679924309944
+    },
+    {
+      "term": "progression",
+      "weight": 0.010215148506397155
+    },
+    {
+      "term": "prognostic",
+      "weight": 0.009392985414477738
+    },
+    {
+      "term": "markers",
+      "weight": 0.0089786167602942
+    },
+    {
+      "term": "disease progression",
+      "weight": 0.008339111282697986
+    },
+    {
+      "term": "hs",
+      "weight": 0.007969975913393034
+    },
+    {
+      "term": "with sma",
+      "weight": 0.007867470566012287
+    }
+  ],
+  "42": [
+    {
+      "term": "registry",
+      "weight": 0.03218645564148896
+    },
+    {
+      "term": "registries",
+      "weight": 0.015497318603185302
+    },
+    {
+      "term": "cndr",
+      "weight": 0.011275984850909094
+    },
+    {
+      "term": "care",
+      "weight": 0.009922774468474262
+    },
+    {
+      "term": "the registry",
+      "weight": 0.009915201197196596
+    },
+    {
+      "term": "nmd",
+      "weight": 0.008878108857771485
+    },
+    {
+      "term": "network",
+      "weight": 0.008269933238324258
+    },
+    {
+      "term": "prospective",
+      "weight": 0.007336058493567833
+    },
+    {
+      "term": "with sma",
+      "weight": 0.0072024931192417275
+    },
+    {
+      "term": "outcomes",
+      "weight": 0.007057199273053056
+    }
+  ],
+  "43": [
+    {
+      "term": "mir",
+      "weight": 0.04880855426023635
+    },
+    {
+      "term": "mirnas",
+      "weight": 0.028817905863017832
+    },
+    {
+      "term": "mirna",
+      "weight": 0.028259495514026414
+    },
+    {
+      "term": "lncrnas",
+      "weight": 0.018060720781436754
+    },
+    {
+      "term": "expression",
+      "weight": 0.016730326874234338
+    },
+    {
+      "term": "micrornas",
+      "weight": 0.015383839919212763
+    },
+    {
+      "term": "206",
+      "weight": 0.015232183357406087
+    },
+    {
+      "term": "in sma",
+      "weight": 0.012791168656781557
+    },
+    {
+      "term": "that mir",
+      "weight": 0.012389426584154675
+    },
+    {
+      "term": "neurons",
+      "weight": 0.012027028416689253
+    }
+  ],
+  "44": [
+    {
+      "term": "smn1",
+      "weight": 0.0404275657823496
+    },
+    {
+      "term": "carrier",
+      "weight": 0.020831519280180587
+    },
+    {
+      "term": "smn2",
+      "weight": 0.02079603461829179
+    },
+    {
+      "term": "copy",
+      "weight": 0.020074442287800483
+    },
+    {
+      "term": "smn1 and",
+      "weight": 0.019834588176637375
+    },
+    {
+      "term": "carriers",
+      "weight": 0.01956820532149954
+    },
+    {
+      "term": "smn1 and smn2",
+      "weight": 0.018318526152403286
+    },
+    {
+      "term": "and smn2",
+      "weight": 0.017309137237645083
+    },
+    {
+      "term": "lrs",
+      "weight": 0.0169053157982558
+    },
+    {
+      "term": "samples",
+      "weight": 0.015842768407395562
+    }
+  ],
+  "45": [
+    {
+      "term": "liver",
+      "weight": 0.031026287010957696
+    },
+    {
+      "term": "mice",
+      "weight": 0.021268428013904474
+    },
+    {
+      "term": "smn",
+      "weight": 0.019622647553327557
+    },
+    {
+      "term": "metabolic",
+      "weight": 0.018105457470475386
+    },
+    {
+      "term": "metabolism",
+      "weight": 0.017657426075676105
+    },
+    {
+      "term": "fatty",
+      "weight": 0.015444304408719998
+    },
+    {
+      "term": "amino",
+      "weight": 0.014476544486226171
+    },
+    {
+      "term": "in sma",
+      "weight": 0.01389006021649859
+    },
+    {
+      "term": "lipid",
+      "weight": 0.013575785559359949
+    },
+    {
+      "term": "acid",
+      "weight": 0.012392495774429415
+    }
+  ],
+  "46": [
+    {
+      "term": "quality of life",
+      "weight": 0.02230889329670618
+    },
+    {
+      "term": "of life",
+      "weight": 0.021619122431414745
+    },
+    {
+      "term": "quality of",
+      "weight": 0.021497124590898954
+    },
+    {
+      "term": "hrqol",
+      "weight": 0.020222051872455203
+    },
+    {
+      "term": "quality",
+      "weight": 0.019348062284182392
+    },
+    {
+      "term": "health",
+      "weight": 0.017524664079343246
+    },
+    {
+      "term": "pedsql",
+      "weight": 0.01726273760444267
+    },
+    {
+      "term": "qol",
+      "weight": 0.016424337560631018
+    },
+    {
+      "term": "well being",
+      "weight": 0.013392275086725065
+    },
+    {
+      "term": "with sma",
+      "weight": 0.012316691824109865
+    }
+  ],
+  "47": [
+    {
+      "term": "the article",
+      "weight": 0.2709014158568069
+    },
+    {
+      "term": "article",
+      "weight": 0.2541674147861875
+    },
+    {
+      "term": "doi",
+      "weight": 0.23655514603976482
+    },
+    {
+      "term": "corrects the",
+      "weight": 0.22216791349110473
+    },
+    {
+      "term": "doi 10",
+      "weight": 0.20988002374780035
+    },
+    {
+      "term": "corrects",
+      "weight": 0.20916034564912797
+    },
+    {
+      "term": "1212",
+      "weight": 0.08520479704271178
+    },
+    {
+      "term": "paper",
+      "weight": 0.06582748194098446
+    },
+    {
+      "term": "error",
+      "weight": 0.051655890383625586
+    },
+    {
+      "term": "et al",
+      "weight": 0.04867493294631563
+    }
+  ],
+  "48": [
+    {
+      "term": "caregivers",
+      "weight": 0.013539558302242315
+    },
+    {
+      "term": "attributes",
+      "weight": 0.011993592408122719
+    },
+    {
+      "term": "preferences",
+      "weight": 0.011613779883858017
+    },
+    {
+      "term": "treatments",
+      "weight": 0.011437960473778305
+    },
+    {
+      "term": "and caregivers",
+      "weight": 0.011094664674768492
+    },
+    {
+      "term": "survey",
+      "weight": 0.010196331776765368
+    },
+    {
+      "term": "risk",
+      "weight": 0.01005977514055233
+    },
+    {
+      "term": "breathing function",
+      "weight": 0.009281435230980465
+    },
+    {
+      "term": "about",
+      "weight": 0.009128247421478313
+    },
+    {
+      "term": "social media",
+      "weight": 0.009022487422417829
+    }
+  ],
+  "49": [
+    {
+      "term": "body",
+      "weight": 0.022803843117517097
+    },
+    {
+      "term": "mass",
+      "weight": 0.02052315280122125
+    },
+    {
+      "term": "bmi",
+      "weight": 0.018275879752121884
+    },
+    {
+      "term": "body composition",
+      "weight": 0.018080459972246117
+    },
+    {
+      "term": "fat",
+      "weight": 0.0178086511881324
+    },
+    {
+      "term": "composition",
+      "weight": 0.01683655966603226
+    },
+    {
+      "term": "bia",
+      "weight": 0.013901269361763564
+    },
+    {
+      "term": "nutritional",
+      "weight": 0.013634092828070028
+    },
+    {
+      "term": "igf",
+      "weight": 0.013464227525351296
+    },
+    {
+      "term": "children with",
+      "weight": 0.01232221680304216
+    }
+  ],
+  "50": [
+    {
+      "term": "cognitive",
+      "weight": 0.04256164974426078
+    },
+    {
+      "term": "language",
+      "weight": 0.018940235655568915
+    },
+    {
+      "term": "communication",
+      "weight": 0.012412412282365714
+    },
+    {
+      "term": "children with",
+      "weight": 0.011861370818472368
+    },
+    {
+      "term": "treated",
+      "weight": 0.010584353942422164
+    },
+    {
+      "term": "infants",
+      "weight": 0.010503959833723181
+    },
+    {
+      "term": "iq",
+      "weight": 0.010254427568685078
+    },
+    {
+      "term": "social",
+      "weight": 0.010173002589817879
+    },
+    {
+      "term": "scores",
+      "weight": 0.009923368570368685
+    },
+    {
+      "term": "sma1",
+      "weight": 0.009629181258729719
+    }
+  ],
+  "51": [
+    {
+      "term": "screening",
+      "weight": 0.014565965417682849
+    },
+    {
+      "term": "newborn",
+      "weight": 0.014008340861428362
+    },
+    {
+      "term": "newborn screening",
+      "weight": 0.013677765377704201
+    },
+    {
+      "term": "of the disease",
+      "weight": 0.00835533757634702
+    },
+    {
+      "term": "smn1",
+      "weight": 0.007756202778922201
+    },
+    {
+      "term": "detection",
+      "weight": 0.00775287601246615
+    },
+    {
+      "term": "management",
+      "weight": 0.007678885525565105
+    },
+    {
+      "term": "treatments",
+      "weight": 0.007169708666197621
+    },
+    {
+      "term": "diagnosis",
+      "weight": 0.007111273786088958
+    },
+    {
+      "term": "live",
+      "weight": 0.006881688619546172
+    }
+  ],
+  "52": [
+    {
+      "term": "rna",
+      "weight": 0.030255348637220132
+    },
+    {
+      "term": "rbps",
+      "weight": 0.028167982075325934
+    },
+    {
+      "term": "local",
+      "weight": 0.023508653029455054
+    },
+    {
+      "term": "translation",
+      "weight": 0.020379068477777557
+    },
+    {
+      "term": "proteins",
+      "weight": 0.01950482290012756
+    },
+    {
+      "term": "local translation",
+      "weight": 0.01793584027974561
+    },
+    {
+      "term": "rna binding",
+      "weight": 0.01731071177589643
+    },
+    {
+      "term": "mrna",
+      "weight": 0.017043128130505555
+    },
+    {
+      "term": "axons",
+      "weight": 0.016806789054875884
+    },
+    {
+      "term": "mrnas",
+      "weight": 0.015700996516207336
+    }
+  ],
+  "53": [
+    {
+      "term": "pcr",
+      "weight": 0.06631721650205989
+    },
+    {
+      "term": "dbs",
+      "weight": 0.04544923357176637
+    },
+    {
+      "term": "dna",
+      "weight": 0.03463248892628987
+    },
+    {
+      "term": "smn1",
+      "weight": 0.02981768306862323
+    },
+    {
+      "term": "blood",
+      "weight": 0.02338132812226169
+    },
+    {
+      "term": "deletion",
+      "weight": 0.02212321922490979
+    },
+    {
+      "term": "amplification",
+      "weight": 0.021386943056511006
+    },
+    {
+      "term": "rflp",
+      "weight": 0.02125056749230038
+    },
+    {
+      "term": "real time",
+      "weight": 0.020990210642097534
+    },
+    {
+      "term": "pcr rflp",
+      "weight": 0.020261082509173443
+    }
+  ],
+  "54": [
+    {
+      "term": "ascc1",
+      "weight": 0.061485772170842834
+    },
+    {
+      "term": "asc",
+      "weight": 0.02767928698297991
+    },
+    {
+      "term": "fractures",
+      "weight": 0.02574027734705871
+    },
+    {
+      "term": "bone",
+      "weight": 0.02440802407761798
+    },
+    {
+      "term": "bone fractures",
+      "weight": 0.02305467092421279
+    },
+    {
+      "term": "variants",
+      "weight": 0.02251939272767665
+    },
+    {
+      "term": "congenital",
+      "weight": 0.022206142734852274
+    },
+    {
+      "term": "variant",
+      "weight": 0.020503041494992602
+    },
+    {
+      "term": "congenital bone fractures",
+      "weight": 0.019397299019399447
+    },
+    {
+      "term": "congenital bone",
+      "weight": 0.019397299019399447
+    }
+  ],
+  "55": [
+    {
+      "term": "prevalence",
+      "weight": 0.020690254826719514
+    },
+    {
+      "term": "incidence",
+      "weight": 0.01893431316560583
+    },
+    {
+      "term": "000",
+      "weight": 0.013549782697052004
+    },
+    {
+      "term": "prevalence of",
+      "weight": 0.01327304925058665
+    },
+    {
+      "term": "sma in",
+      "weight": 0.012475924498432309
+    },
+    {
+      "term": "per",
+      "weight": 0.011672735319283534
+    },
+    {
+      "term": "100 000",
+      "weight": 0.011445971659715342
+    },
+    {
+      "term": "diagnosis",
+      "weight": 0.011016749729432984
+    },
+    {
+      "term": "epidemiological",
+      "weight": 0.010527719768875756
+    },
+    {
+      "term": "100",
+      "weight": 0.009540740960352682
+    }
+  ],
+  "56": [
+    {
+      "term": "csf",
+      "weight": 0.040607636265727914
+    },
+    {
+      "term": "nusinersen",
+      "weight": 0.022815039018589767
+    },
+    {
+      "term": "biomarkers",
+      "weight": 0.01655159629981845
+    },
+    {
+      "term": "csf samples",
+      "weight": 0.016040551701719787
+    },
+    {
+      "term": "proteomic",
+      "weight": 0.01586518488115745
+    },
+    {
+      "term": "sma patients",
+      "weight": 0.015478916221890694
+    },
+    {
+      "term": "fluid csf",
+      "weight": 0.013137677397729483
+    },
+    {
+      "term": "cerebrospinal fluid csf",
+      "weight": 0.012397433516906914
+    },
+    {
+      "term": "fluid",
+      "weight": 0.012191863646143167
+    },
+    {
+      "term": "samples",
+      "weight": 0.012186157219230285
+    }
+  ],
+  "57": [
+    {
+      "term": "myostatin",
+      "weight": 0.03201456273759732
+    },
+    {
+      "term": "skeletal",
+      "weight": 0.018881198253488427
+    },
+    {
+      "term": "skeletal muscle",
+      "weight": 0.017302211400408704
+    },
+    {
+      "term": "inhibition",
+      "weight": 0.015123510448865745
+    },
+    {
+      "term": "smn",
+      "weight": 0.01509806888607793
+    },
+    {
+      "term": "liraglutide",
+      "weight": 0.01333305275018206
+    },
+    {
+      "term": "muscle atrophy",
+      "weight": 0.01136576116293177
+    },
+    {
+      "term": "muscle mass",
+      "weight": 0.009514707474150163
+    },
+    {
+      "term": "hdac6",
+      "weight": 0.009333136925127442
+    },
+    {
+      "term": "in sma",
+      "weight": 0.008947505474228297
+    }
+  ],
+  "58": [
+    {
+      "term": "cost",
+      "weight": 0.034461243674181644
+    },
+    {
+      "term": "nusinersen",
+      "weight": 0.029227812194458642
+    },
+    {
+      "term": "costs",
+      "weight": 0.023736440337358583
+    },
+    {
+      "term": "onasemnogene",
+      "weight": 0.022933740025463844
+    },
+    {
+      "term": "onasemnogene abeparvovec",
+      "weight": 0.02174369390774329
+    },
+    {
+      "term": "abeparvovec",
+      "weight": 0.021665723372524228
+    },
+    {
+      "term": "cost effectiveness",
+      "weight": 0.01993797801897742
+    },
+    {
+      "term": "qaly",
+      "weight": 0.019413222141663956
+    },
+    {
+      "term": "avxs",
+      "weight": 0.019120142600720008
+    },
+    {
+      "term": "avxs 101",
+      "weight": 0.019120142600720008
+    }
+  ],
+  "59": [
+    {
+      "term": "carrier",
+      "weight": 0.041647639545658977
+    },
+    {
+      "term": "women",
+      "weight": 0.03345499625795523
+    },
+    {
+      "term": "prenatal",
+      "weight": 0.02906309354691215
+    },
+    {
+      "term": "carriers",
+      "weight": 0.028157212193165616
+    },
+    {
+      "term": "prenatal diagnosis",
+      "weight": 0.023977523174964373
+    },
+    {
+      "term": "e7",
+      "weight": 0.022548710909906233
+    },
+    {
+      "term": "screening",
+      "weight": 0.022247499201192806
+    },
+    {
+      "term": "pregnant women",
+      "weight": 0.020903881496957714
+    },
+    {
+      "term": "e8",
+      "weight": 0.019191767220454157
+    },
+    {
+      "term": "pregnant",
+      "weight": 0.018858149153909883
+    }
+  ],
+  "60": [
+    {
+      "term": "als",
+      "weight": 0.04403834567490137
+    },
+    {
+      "term": "gene therapy",
+      "weight": 0.017762236077866814
+    },
+    {
+      "term": "amyotrophic lateral sclerosis",
+      "weight": 0.016890023330190112
+    },
+    {
+      "term": "amyotrophic lateral",
+      "weight": 0.016880743934138312
+    },
+    {
+      "term": "amyotrophic",
+      "weight": 0.016843831950159722
+    },
+    {
+      "term": "lateral sclerosis",
+      "weight": 0.016743981642656783
+    },
+    {
+      "term": "lateral",
+      "weight": 0.016474853247743202
+    },
+    {
+      "term": "sclerosis",
+      "weight": 0.016408145921544628
+    },
+    {
+      "term": "sod1",
+      "weight": 0.014500556814438188
+    },
+    {
+      "term": "for als",
+      "weight": 0.014338881159948821
+    }
+  ],
+  "61": [
+    {
+      "term": "ighmbp2",
+      "weight": 0.06759353923140453
+    },
+    {
+      "term": "smard1",
+      "weight": 0.06221941108522621
+    },
+    {
+      "term": "cmt2s",
+      "weight": 0.018632843474664703
+    },
+    {
+      "term": "distress",
+      "weight": 0.018192631162447043
+    },
+    {
+      "term": "respiratory distress",
+      "weight": 0.017929143415336714
+    },
+    {
+      "term": "with respiratory distress",
+      "weight": 0.017075577180061127
+    },
+    {
+      "term": "smard1 is",
+      "weight": 0.016844485555747267
+    },
+    {
+      "term": "type smard1",
+      "weight": 0.01668402925182181
+    },
+    {
+      "term": "distress type smard1",
+      "weight": 0.01668402925182181
+    },
+    {
+      "term": "distress type",
+      "weight": 0.016317474805797188
+    }
+  ],
+  "62": [
+    {
+      "term": "pain",
+      "weight": 0.0740801416812295
+    },
+    {
+      "term": "hip",
+      "weight": 0.050832567806347186
+    },
+    {
+      "term": "shaft",
+      "weight": 0.02350822340122797
+    },
+    {
+      "term": "pain in",
+      "weight": 0.019454376743492766
+    },
+    {
+      "term": "angle",
+      "weight": 0.018433385189150428
+    },
+    {
+      "term": "hip pain",
+      "weight": 0.01700314489151757
+    },
+    {
+      "term": "chronic pain",
+      "weight": 0.014790235060890045
+    },
+    {
+      "term": "of hip",
+      "weight": 0.013804219390164043
+    },
+    {
+      "term": "hips",
+      "weight": 0.013539583110305209
+    },
+    {
+      "term": "neck",
+      "weight": 0.013289726270451194
+    }
+  ],
+  "63": [
+    {
+      "term": "nbs",
+      "weight": 0.050231118424696644
+    },
+    {
+      "term": "cost",
+      "weight": 0.04098861873337009
+    },
+    {
+      "term": "screening",
+      "weight": 0.028852668177470144
+    },
+    {
+      "term": "costs",
+      "weight": 0.024539911352794132
+    },
+    {
+      "term": "nbs for",
+      "weight": 0.023805042916272324
+    },
+    {
+      "term": "cost effectiveness",
+      "weight": 0.02036149579227
+    },
+    {
+      "term": "nbs for sma",
+      "weight": 0.01962857265743984
+    },
+    {
+      "term": "qaly",
+      "weight": 0.018846551537470023
+    },
+    {
+      "term": "newborn",
+      "weight": 0.01809852687166978
+    },
+    {
+      "term": "newborn screening",
+      "weight": 0.01798380298412415
+    }
+  ],
+  "64": [
+    {
+      "term": "trpv4",
+      "weight": 0.10751384069142243
+    },
+    {
+      "term": "dysplasia",
+      "weight": 0.03483194030053589
+    },
+    {
+      "term": "skeletal",
+      "weight": 0.026036801040897926
+    },
+    {
+      "term": "trpv4 related",
+      "weight": 0.024083833232959324
+    },
+    {
+      "term": "dysplasias",
+      "weight": 0.021903962054533238
+    },
+    {
+      "term": "of trpv4",
+      "weight": 0.02070847791053319
+    },
+    {
+      "term": "trpv4 gene",
+      "weight": 0.020534964426124912
+    },
+    {
+      "term": "mutation",
+      "weight": 0.01703744695406196
+    },
+    {
+      "term": "dominant",
+      "weight": 0.01537276834718212
+    },
+    {
+      "term": "vocal",
+      "weight": 0.015186217134391007
+    }
+  ],
+  "65": [
+    {
+      "term": "vrk1",
+      "weight": 0.13237913142363883
+    },
+    {
+      "term": "kinase",
+      "weight": 0.03523246700318328
+    },
+    {
+      "term": "variants",
+      "weight": 0.029462624168421468
+    },
+    {
+      "term": "distal",
+      "weight": 0.028734944977447857
+    },
+    {
+      "term": "of vrk1",
+      "weight": 0.026433327965972166
+    },
+    {
+      "term": "vaccinia",
+      "weight": 0.018626166626865785
+    },
+    {
+      "term": "vaccinia related kinase",
+      "weight": 0.018626166626865785
+    },
+    {
+      "term": "vaccinia related",
+      "weight": 0.018626166626865785
+    },
+    {
+      "term": "variant",
+      "weight": 0.018608536917497427
+    },
+    {
+      "term": "vrk1 gene",
+      "weight": 0.018244451799761703
+    }
+  ]
+}

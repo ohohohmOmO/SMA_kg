@@ -134,6 +134,14 @@ requirements from 2026-06-09.
   through the shared validator and confidence scorer. Promotion must set
   `data/processed/extracted_triples.jsonl` to the validated LLM output, not to a
   merge of LLM plus rules.
+- Full Stage 2 reruns must assign all current PubMed abstracts to LLM extraction
+  by using `--llm-limit -1`. Do not fall back to a 200-abstract LLM window for
+  canonical runs.
+- Same-key SiliconFlow parallel extraction is supported after the 2026-06-09
+  probe. Use `--chunk-size 5 --parallel-workers 32` for the current full Stage 2
+  rerun. If rate limits, repeated API errors, or unstable chunk validation
+  appears, keep the same run directory and resume with lower parallelism rather
+  than reducing LLM coverage.
 - Store rule candidates under `data/interim/rule_candidate_triples.jsonl` or the
   current run directory. Store LLM/human-accepted rule candidates separately as
   `verified_rule_triples.jsonl` if that workflow is used.

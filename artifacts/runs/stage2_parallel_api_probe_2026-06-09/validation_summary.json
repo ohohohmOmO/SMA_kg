@@ -1,0 +1,22 @@
+{
+  "elapsed_seconds": 60.64,
+  "jobs": [
+    {
+      "job": 1,
+      "exit_code": 0,
+      "records": 4,
+      "bad_json_lines": 0,
+      "output": "artifacts\\runs\\stage2_parallel_api_probe_2026-06-09\\outputs\\parallel_1.jsonl",
+      "log": "artifacts\\runs\\stage2_parallel_api_probe_2026-06-09\\logs\\parallel_1.log"
+    },
+    {
+      "job": 2,
+      "exit_code": 0,
+      "records": 1,
+      "bad_json_lines": 0,
+      "output": "artifacts\\runs\\stage2_parallel_api_probe_2026-06-09\\outputs\\parallel_2.jsonl",
+      "log": "artifacts\\runs\\stage2_parallel_api_probe_2026-06-09\\logs\\parallel_2.log"
+    }
+  ],
+  "parallel_supported": true
+}

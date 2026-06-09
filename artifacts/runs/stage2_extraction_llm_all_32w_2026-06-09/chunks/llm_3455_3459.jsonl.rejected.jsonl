@@ -1,0 +1,1 @@
+{"source_pmid": "30649277", "problems": ["relation_invalid"], "record": {"source_pmid": "30649277", "entity_1": {"name": "SYNCRIP", "type": "Protein"}, "relation": "INTERACTS_WITH", "entity_2": {"name": "SMN", "type": "Protein"}, "evidence_text": "SYNCRIP interacts only with full-length SMN", "llm_confidence": 0.95, "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash"}}

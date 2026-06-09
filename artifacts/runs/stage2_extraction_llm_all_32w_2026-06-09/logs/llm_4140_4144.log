@@ -1,0 +1,23 @@
+2026-06-09 17:34:49,670 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:35:40,906 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:35:40,944 - WARNING - Malformed JSON for PMID 27331400. Skipping. Error: Unterminated string starting at: line 160 column 20 (char 6565). Raw output preview: {
+  "triples": [
+    {
+      "entity_1": {"name": "SMN1", "type": "Gene"},
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {"name": "Spinal muscular atrophy", "type": "Disease"},
+      "evidence_text": "resulting from a recessive mutation in the SMN1 gene",
+      "confidence": 0.95
+    },
+    {
+      "entity_1": {"name": "Bmp4", "type": "Gene"},
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {"name": "Spinal muscular atrophy", "type": "Disease"},
+      "evidence_text": "Seven nove
+2026-06-09 17:36:06,270 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:36:08,362 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:37:08,369 - INFO - Retrying request to /chat/completions in 0.442874 seconds
+2026-06-09 17:38:09,069 - INFO - Retrying request to /chat/completions in 0.793456 seconds
+2026-06-09 17:38:45,198 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 17:38:45,211 - INFO - LLM Extraction complete. Extracted 20 triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_4140_4144.jsonl. malformed_outputs=1 failed_records=0
+2026-06-09 17:38:45,211 - INFO - Rejected 0 invalid LLM triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_4140_4144.jsonl.rejected.jsonl.

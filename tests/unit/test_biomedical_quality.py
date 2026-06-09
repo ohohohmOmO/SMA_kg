@@ -80,6 +80,23 @@ class BiomedicalQualityTests(unittest.TestCase):
             self.assertEqual(split["rule_candidate_pmids"], ["2", "3"])
             self.assertNotIn("regex_pmids", split)
 
+    def test_stage2_split_negative_llm_limit_assigns_all_records_to_llm(self):
+        with TemporaryDirectory() as tmp:
+            input_file = Path(tmp) / "abstracts.jsonl"
+            records = [
+                {"pmid": "1", "abstract": "A"},
+                {"pmid": "2", "abstract": "B"},
+                {"pmid": "3", "abstract": "C"},
+            ]
+            input_file.write_text(
+                "".join(json.dumps(item) + "\n" for item in records),
+                encoding="utf-8",
+            )
+            split, _ = build_split(input_file, llm_limit=-1, model="test-model", chunk_size=5)
+            self.assertEqual(split["effective_llm_limit"], 3)
+            self.assertEqual(split["llm_pmids"], ["1", "2", "3"])
+            self.assertEqual(split["rule_candidate_pmids"], [])
+
     def test_stage2_canonical_merge_can_exclude_rule_candidates(self):
         with TemporaryDirectory() as tmp:
             tmp_dir = Path(tmp)

@@ -1,0 +1,13 @@
+2026-06-09 15:51:44,767 - INFO - Retrying request to /chat/completions in 0.377732 seconds
+2026-06-09 15:52:45,412 - INFO - Retrying request to /chat/completions in 0.827635 seconds
+2026-06-09 15:53:18,039 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 15:53:25,764 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 15:54:25,782 - INFO - Retrying request to /chat/completions in 0.469943 seconds
+2026-06-09 15:54:42,733 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 15:55:42,740 - INFO - Retrying request to /chat/completions in 0.412971 seconds
+2026-06-09 15:56:43,408 - INFO - Retrying request to /chat/completions in 0.837276 seconds
+2026-06-09 15:58:46,567 - INFO - Retrying request to /chat/completions in 0.430950 seconds
+2026-06-09 15:59:06,327 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 15:59:37,790 - INFO - HTTP Request: POST https://api.siliconflow.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-09 15:59:37,853 - INFO - LLM Extraction complete. Extracted 16 triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_215_219.jsonl. malformed_outputs=0 failed_records=0
+2026-06-09 15:59:37,853 - INFO - Rejected 4 invalid LLM triples to D:\kg_sma_0420\artifacts\runs\stage2_extraction_llm_all_32w_2026-06-09\chunks\llm_215_219.jsonl.rejected.jsonl.
