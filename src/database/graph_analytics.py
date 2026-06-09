@@ -1,16 +1,9 @@
 import json
 import logging
 from pathlib import Path
-import sys
-import subprocess
 
-try:
-    import networkx as nx
-    import pandas as pd
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "networkx", "pandas"])
-    import networkx as nx
-    import pandas as pd
+import networkx as nx
+import pandas as pd
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 

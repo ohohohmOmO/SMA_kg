@@ -1,0 +1,33 @@
+{
+  "valid": true,
+  "neo4j_status": "skipped",
+  "neo4j_env_ready": {
+    "NEO4J_URI": true,
+    "NEO4J_USER": true,
+    "NEO4J_PASSWORD": true
+  },
+  "neo4j_tcp_check": {
+    "ok": false,
+    "detail": ""
+  },
+  "commands": [
+    {
+      "name": "graph_analytics",
+      "command": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe src/database/graph_analytics.py",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage4_runner_probe_2026-06-09\\logs\\graph_analytics.log",
+      "ok": true
+    },
+    {
+      "name": "generate_pyvis",
+      "command": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe src/database/generate_pyvis.py",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage4_runner_probe_2026-06-09\\logs\\generate_pyvis.log",
+      "ok": true
+    }
+  ],
+  "outputs": {
+    "analytics_metrics": "artifacts\\runs\\stage4_runner_probe_2026-06-09\\outputs\\data\\processed\\analytics_metrics.csv",
+    "graph_viewer": "artifacts\\runs\\stage4_runner_probe_2026-06-09\\outputs\\docs\\graph_viewer.html"
+  }
+}

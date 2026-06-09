@@ -1,0 +1,23 @@
+{
+  "valid": true,
+  "artifacts": [
+    {
+      "artifact": "llm_triples",
+      "path": "artifacts\\runs\\stage2_llm_hardened_probe_2026-06-09\\llm_extracted_triples.jsonl",
+      "records": 18,
+      "bytes": 10047,
+      "sha256": "b07da050ae102c8551f36247d3c18625601ed21f2d5de310cc6d7b61592ea3ee",
+      "notes": "5-record hardened LLM probe"
+    },
+    {
+      "artifact": "rejected",
+      "path": "artifacts\\runs\\stage2_llm_hardened_probe_2026-06-09\\rejected.jsonl",
+      "records": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "notes": "validator rejections"
+    }
+  ],
+  "input_slice": "data/raw/pubmed_sma_abstracts.jsonl offset=0 limit=5",
+  "model": "deepseek-ai/DeepSeek-V4-Flash"
+}

@@ -1,16 +1,12 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
-import sys
-import subprocess
-try:
-    from bertopic import BERTopic
-    from sentence_transformers import SentenceTransformer
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "bertopic", "sentence-transformers", "pandas"])
-    from bertopic import BERTopic
-    from sentence_transformers import SentenceTransformer
 import json
 import os
+
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+
+from bertopic import BERTopic
+from sentence_transformers import SentenceTransformer
 
 data_path = '../data/raw/pubmed_sma_abstracts.jsonl'
 if not os.path.exists(data_path):
@@ -23,9 +19,7 @@ df = df[df['abstract'].str.strip() != '']
 print(f"Loaded {len(df)} abstracts for clustering.")
 
 abstracts = df['abstract'].tolist()
-import os
-os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
-vectorizer_model = CountVectorizer(stop_words="english")
+vectorizer_model = CountVectorizer(stop_words=None, ngram_range=(1, 3), min_df=2, max_df=0.85)
 embedding_model = SentenceTransformer('NeuML/pubmedbert-base-embeddings')
 
 

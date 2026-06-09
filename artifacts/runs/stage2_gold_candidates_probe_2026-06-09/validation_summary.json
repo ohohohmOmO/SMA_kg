@@ -1,0 +1,7 @@
+{
+  "triples_file": "data\\processed\\extracted_triples.jsonl",
+  "abstracts_file": "data\\raw\\pubmed_sma_abstracts.jsonl",
+  "candidate_count": 50,
+  "target_use": "manual gold standard before BioBERT/UIE-med fine-tuning",
+  "fine_tuning_recommendation": "Do not fine-tune until this candidate set is reviewed and baseline errors justify model training."
+}

@@ -1,16 +1,10 @@
+import argparse
 import json
 import logging
-import sys
-import subprocess
 from pathlib import Path
 
-try:
-    import requests
-    from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests", "tenacity"])
-    import requests
-    from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
+import requests
+from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -40,20 +34,23 @@ query associatedTargets($diseaseId: String!, $page: Pagination) {
     stop=stop_after_attempt(5),
     retry=retry_if_exception_type(requests.exceptions.RequestException)
 )
-def fetch_page(variables):
+def fetch_page(variables, verify_tls=True):
     """Fetch a single page from Open Targets API with exponential backoff retries."""
     response = requests.post(
         API_URL,
         json={"query": QUERY_STRING, "variables": variables},
         timeout=30,
-        verify=False
+        verify=verify_tls
     )
     if not response.ok:
         logging.error(f"GraphQL Error Response: {response.text}")
     response.raise_for_status()
-    return response.json()
+    payload = response.json()
+    if payload.get("errors"):
+        raise ValueError(f"Open Targets GraphQL errors: {json.dumps(payload['errors'])}")
+    return payload
 
-def fetch_opentargets_gda(disease_id: str = "MONDO_0009669"):
+def fetch_opentargets_gda(disease_id: str = "MONDO_0009669", verify_tls=True):
     """Iterate through pages to fetch all associated targets for a given disease ID."""
     logging.info(f"Fetching Open Targets data for {disease_id}...")
     all_rows = []
@@ -64,7 +61,7 @@ def fetch_opentargets_gda(disease_id: str = "MONDO_0009669"):
     while True:
         variables = {"diseaseId": disease_id, "page": {"index": index, "size": size}}
         
-        response = fetch_page(variables)
+        response = fetch_page(variables, verify_tls=verify_tls)
         disease_node = response.get("data", {}).get("disease")
         
         if not disease_node:
@@ -87,13 +84,20 @@ def fetch_opentargets_gda(disease_id: str = "MONDO_0009669"):
         
     return {"id": disease_node.get("id") if disease_node else disease_id, "rows": all_rows}
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Fetch SMA gene-disease associations from Open Targets.")
+    parser.add_argument("--disease-id", default="MONDO_0009669")
+    parser.add_argument("--output-file", default="data/external/sma_gda_baseline.jsonl")
+    parser.add_argument("--allow-insecure-tls", action="store_true")
+    return parser.parse_args()
+
 def main():
-    output_dir = Path("data/external")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / "sma_gda_baseline.jsonl"
+    args = parse_args()
+    output_file = Path(args.output_file)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
     
     try:
-        data = fetch_opentargets_gda()
+        data = fetch_opentargets_gda(args.disease_id, verify_tls=not args.allow_insecure_tls)
         disease_id = data.get("id", "EFO_0000109")
         rows = data.get("rows", [])
         
@@ -109,9 +113,11 @@ def main():
                 f.write(json.dumps(record) + "\n")
                 
         logging.info(f"Successfully saved {len(rows)} associations to {output_file}")
+        return 0
         
     except Exception as e:
         logging.exception(f"Failed to fetch or process data: {e}")
+        return 1
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

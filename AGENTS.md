@@ -13,6 +13,13 @@ mandatory preflight document because the project will continue to evolve.
 Before running commands, tests, scripts, or pipeline steps, read
 `docs/agents/PLAN.md`.
 
+If context was compacted, memory was lost, or the current development state is
+uncertain, reread `AGENTS.md`, `docs/agents/PLAN.md`,
+`docs/agents/ISSUE_LOG.md`, `CONTEXT.md`, and the current stage's reproduction
+or run artifact documents before continuing. Do not rely on remembered paths,
+counts, hashes, environment state, or pipeline status when uncertainty is
+present.
+
 When an error, failed run, broken dependency, data issue, or unexpected behavior
 appears, read `docs/agents/ISSUE_LOG.md` before diagnosing. If the problem is
 successfully resolved, append a concise entry to `docs/agents/ISSUE_LOG.md` with

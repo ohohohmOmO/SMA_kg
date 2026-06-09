@@ -3,15 +3,17 @@ import logging
 import pandas as pd
 import argparse
 import os
+import sys
 from pathlib import Path
 from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
 
-try:
-    import openai
-except ImportError:
-    import subprocess; import sys
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "openai"])
-    import openai
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from src.biomedical.confidence import normalize_and_score
+
+import openai
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -27,7 +29,9 @@ Example Output Format:
     {
       "entity_1": {"name": "Zolgensma", "type": "Drug"},
       "relation": "IMPROVES",
-      "entity_2": {"name": "motor function", "type": "Phenotype"}
+      "entity_2": {"name": "motor function", "type": "Phenotype"},
+      "evidence_text": "Zolgensma treatment significantly improves motor function",
+      "confidence": 0.92
     }
   ]
 }
@@ -37,6 +41,15 @@ CRITICAL RULES:
 2. DO NOT include any conversational text, greetings, explanations, or preambles.
 3. DO NOT wrap the output in markdown blocks (e.g., no ```json).
 4. If there are no relevant triples, output exactly: {"triples": []}
+5. Entity type MUST be one of: Gene, Protein, Phenotype, Drug, Disease, Variant.
+6. Relation MUST be one of: ASSOCIATED_WITH, TREATS, IMPROVES, WORSENS, CAUSES,
+   DECREASES, INCREASES, REGULATES, TARGETS, PREVENTS, HAS_VARIANT,
+   HAS_PHENOTYPE, BIOMARKER_FOR, DIAGNOSES, EXPRESSED_IN, ADMINISTERED_BY,
+   ENCODES, MODELS, CO_OCCURS_WITH, COMPARED_WITH, USED_IN, NO_EFFECT.
+7. evidence_text MUST be a short exact quote or close span from the abstract
+   supporting the triple.
+8. confidence MUST be a calibrated self-score from 0.0 to 1.0 based on explicit
+   textual evidence, not general biomedical plausibility.
 """
 
 def load_local_env():
@@ -85,6 +98,7 @@ def parse_args():
     parser.add_argument("--model", default="deepseek-ai/DeepSeek-V4-Flash")
     parser.add_argument("--max-tokens", type=int, default=1024)
     parser.add_argument("--min-triples", type=int, default=1)
+    parser.add_argument("--rejected-file", default="")
     return parser.parse_args()
 
 def main():
@@ -99,6 +113,8 @@ def main():
     output_file = Path(args.output_file)
     output_file.parent.mkdir(parents=True, exist_ok=True)
     temp_output_file = output_file.with_name(f"{output_file.name}.tmp")
+    rejected_file = Path(args.rejected_file) if args.rejected_file else output_file.with_name(f"{output_file.name}.rejected.jsonl")
+    rejected_file.parent.mkdir(parents=True, exist_ok=True)
 
     if not input_file.exists():
         logging.error(f"Input file {input_file} not found.")
@@ -108,10 +124,11 @@ def main():
     stop = None if args.limit < 0 else args.offset + args.limit
     df = pd.read_json(input_file, lines=True).iloc[args.offset:stop]
     successful_triples = 0
+    rejected_triples = 0
     malformed_outputs = 0
     failed_records = 0
 
-    with open(temp_output_file, 'w', encoding='utf-8') as f:
+    with open(temp_output_file, 'w', encoding='utf-8') as f, open(rejected_file, 'w', encoding='utf-8') as rejected:
         for idx, row in df.iterrows():
             pmid = str(row.get("pmid", ""))
             abstract = row.get("abstract", "")
@@ -143,15 +160,25 @@ def main():
                     continue
                 
                 for triple in result_data.get("triples", []):
-                    unified_triple = {
+                    raw_triple = {
                         "source_pmid": pmid,
                         "entity_1": triple.get("entity_1", {}),
                         "relation": triple.get("relation", ""),
                         "entity_2": triple.get("entity_2", {}),
-                        "computed_confidence": 0.90,
+                        "evidence_text": triple.get("evidence_text", ""),
+                        "llm_confidence": triple.get("confidence"),
                         "extracted_by": f"LLM_{args.model}"
                     }
-                    f.write(json.dumps(unified_triple) + "\n")
+                    unified_triple, problems = normalize_and_score(raw_triple, require_evidence=True)
+                    if problems:
+                        rejected.write(json.dumps({
+                            "source_pmid": pmid,
+                            "problems": problems,
+                            "record": raw_triple,
+                        }, ensure_ascii=False) + "\n")
+                        rejected_triples += 1
+                        continue
+                    f.write(json.dumps(unified_triple, ensure_ascii=False) + "\n")
                     successful_triples += 1
             except Exception as e:
                 failed_records += 1
@@ -174,6 +201,7 @@ def main():
         malformed_outputs,
         failed_records,
     )
+    logging.info("Rejected %s invalid LLM triples to %s.", rejected_triples, rejected_file)
     return 0
 
 if __name__ == "__main__":

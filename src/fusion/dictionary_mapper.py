@@ -1,66 +1,89 @@
+import argparse
 import json
 import logging
+import sys
+from collections import Counter
 from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from src.biomedical.schema import normalize_entity_type, normalize_relation
+
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-DICTIONARY = {
-    "drug": {
-        "nusinersen": "Nusinersen",
-        "spinraza": "Nusinersen",
-        "risdiplam": "Risdiplam",
-        "evrysdi": "Risdiplam",
-        "zolgensma": "Onasemnogene Abeparvovec",
-        "oa": "Onasemnogene Abeparvovec",
-        "onasemnogene abeparvovec": "Onasemnogene Abeparvovec",
-        "onasemnogene": "Onasemnogene Abeparvovec"
-    },
-    "disease": {
-        "sma": "Spinal Muscular Atrophy",
-        "spinal muscular atrophy": "Spinal Muscular Atrophy",
-        "sma type 1": "Spinal Muscular Atrophy Type 1",
-        "sma1": "Spinal Muscular Atrophy Type 1"
-    },
-    "gene": {
-        "smn1": "SMN1",
-        "smn2": "SMN2",
-        "smn": "SMN",
-        "exon 7": "SMN2 (Exon 7)"
-    }
-}
+DEFAULT_DICTIONARY = REPO_ROOT / "resources" / "entity_dictionary.json"
 
-def map_entity(entity):
-    name = entity.get("name", "")
-    etype = entity.get("type", "").lower()
-    lower_name = name.lower().strip()
-    
-    if etype in DICTIONARY and lower_name in DICTIONARY[etype]:
-        entity["name"] = DICTIONARY[etype][lower_name]
+
+def load_dictionary(path):
+    with Path(path).open("r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def map_entity(entity, dictionary):
+    entity = dict(entity or {})
+    name = str(entity.get("name", "")).strip()
+    etype = normalize_entity_type(entity.get("type")) or str(entity.get("type", "")).strip()
+    lower_name = name.lower()
+    mapped_name = dictionary.get(etype.lower(), {}).get(lower_name)
+    entity["name"] = mapped_name or name
+    entity["type"] = etype
     return entity
 
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Normalize entity names and relation aliases.")
+    parser.add_argument("--input-file", default="data/processed/extracted_triples.jsonl")
+    parser.add_argument("--output-file", default="data/interim/mapped_triples.jsonl")
+    parser.add_argument("--dictionary-file", default=str(DEFAULT_DICTIONARY))
+    return parser.parse_args()
+
+
 def main():
-    input_file = Path("data/processed/extracted_triples.jsonl")
-    output_dir = Path("data/interim")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / "mapped_triples.jsonl"
-    
+    args = parse_args()
+    input_file = Path(args.input_file)
+    output_file = Path(args.output_file)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    dictionary = load_dictionary(args.dictionary_file)
+
     if not input_file.exists():
-        logging.error(f"File {input_file} not found!")
-        return
-        
+        logging.error("File %s not found.", input_file)
+        return 1
+
     mapped_count = 0
-    with open(input_file, 'r', encoding='utf-8') as f_in, open(output_file, 'w', encoding='utf-8') as f_out:
+    entity_mapping_hits = Counter()
+    relation_mapping_hits = Counter()
+    with input_file.open("r", encoding="utf-8") as f_in, output_file.open("w", encoding="utf-8") as f_out:
         for line in f_in:
-            if not line.strip(): continue
+            if not line.strip():
+                continue
             data = json.loads(line)
-            
-            data["entity_1"] = map_entity(data["entity_1"])
-            data["entity_2"] = map_entity(data["entity_2"])
-            
-            f_out.write(json.dumps(data) + "\n")
+
+            before_e1 = data.get("entity_1", {}).get("name", "")
+            before_e2 = data.get("entity_2", {}).get("name", "")
+            before_relation = data.get("relation", "")
+
+            data["entity_1"] = map_entity(data.get("entity_1", {}), dictionary)
+            data["entity_2"] = map_entity(data.get("entity_2", {}), dictionary)
+            data["relation"] = normalize_relation(before_relation) or before_relation
+
+            if data["entity_1"].get("name") != before_e1:
+                entity_mapping_hits[data["entity_1"].get("type", "Unknown")] += 1
+            if data["entity_2"].get("name") != before_e2:
+                entity_mapping_hits[data["entity_2"].get("type", "Unknown")] += 1
+            if data["relation"] != before_relation:
+                relation_mapping_hits[f"{before_relation}->{data['relation']}"] += 1
+
+            f_out.write(json.dumps(data, ensure_ascii=False) + "\n")
             mapped_count += 1
-            
-    logging.info(f"Dictionary mapping complete. Processed {mapped_count} triples to {output_file}.")
+
+    logging.info("Dictionary/relation mapping complete. Processed %s triples to %s.", mapped_count, output_file)
+    logging.info("Entity mapping hits by type: %s", dict(entity_mapping_hits))
+    logging.info("Relation mapping hits: %s", dict(relation_mapping_hits))
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

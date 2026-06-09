@@ -3,19 +3,8 @@ import numpy as np
 import json
 import os
 
-try:
-    from sklearn.metrics import cohen_kappa_score
-except ImportError:
-    import subprocess, sys
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-learn"])
-    from sklearn.metrics import cohen_kappa_score
-
-try:
-    import openai
-except ImportError:
-    import subprocess, sys
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "openai"])
-    import openai
+from sklearn.metrics import cohen_kappa_score
+import openai
 
 from tenacity import retry, wait_exponential, stop_after_attempt
 

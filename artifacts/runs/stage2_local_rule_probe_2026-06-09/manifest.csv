@@ -1,0 +1,3 @@
+artifact,path,records,bytes,sha256,notes
+local_rule_triples,artifacts\runs\stage2_local_rule_probe_2026-06-09\spacy_extracted_triples.jsonl,138,82249,c141c305fd547832e74883237a2842e79a55c4402a4fcd971b5107e36f671800,sentence-level local rule probe
+rejected,artifacts\runs\stage2_local_rule_probe_2026-06-09\rejected.jsonl,0,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,validator rejections

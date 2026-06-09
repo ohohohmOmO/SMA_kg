@@ -1,0 +1,71 @@
+{
+  "valid": true,
+  "input_file": "artifacts/runs/stage2_local_rule_probe_2026-06-09/spacy_extracted_triples.jsonl",
+  "input_sha256": "c141c305fd547832e74883237a2842e79a55c4402a4fcd971b5107e36f671800",
+  "alignment_model": "NeuML/pubmedbert-base-embeddings",
+  "commands": [
+    {
+      "name": "dictionary_mapper",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\logs\\dictionary_mapper.log"
+    },
+    {
+      "name": "semantic_aligner",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\logs\\semantic_aligner.log"
+    },
+    {
+      "name": "triples_aggregator",
+      "exit_code": 0,
+      "log": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\logs\\triples_aggregator.log"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\outputs\\data\\interim\\mapped_triples.jsonl",
+      "records": 138,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "bytes": 82249,
+      "sha256": "c141c305fd547832e74883237a2842e79a55c4402a4fcd971b5107e36f671800",
+      "valid": true
+    },
+    {
+      "path": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\outputs\\data\\interim\\aligned_triples.jsonl",
+      "records": 138,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "bytes": 82249,
+      "sha256": "c141c305fd547832e74883237a2842e79a55c4402a4fcd971b5107e36f671800",
+      "valid": true
+    },
+    {
+      "path": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\outputs\\data\\processed\\fused_triples.jsonl",
+      "records": 11,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "bytes": 7485,
+      "sha256": "0813bf338227ba4c8608ad23c027419aa783e029a3e13f05c4fbdb20e83f409d",
+      "valid": true
+    },
+    {
+      "path": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\outputs\\data\\interim\\relation_conflicts.jsonl",
+      "records": 0,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "valid": true
+    },
+    {
+      "path": "artifacts\\runs\\stage3_fusion_probe_2026-06-09\\outputs\\data\\interim\\aggregation_rejected.jsonl",
+      "records": 0,
+      "bad_json_lines": 0,
+      "invalid_triples": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "valid": true
+    }
+  ],
+  "promoted": false
+}

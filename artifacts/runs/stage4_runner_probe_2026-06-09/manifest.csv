@@ -1,0 +1,4 @@
+artifact,path,records,bytes,sha256,notes
+validation_summary,artifacts\runs\stage4_runner_probe_2026-06-09\validation_summary.json,,1084,998be769c9e6be4f754e29f80d19cb31227699d741c2d0119f087a704651f6af,neo4j_status=skipped
+analytics_metrics,artifacts\runs\stage4_runner_probe_2026-06-09\outputs\data\processed\analytics_metrics.csv,607,30012,3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116,stage4 run snapshot
+graph_viewer,artifacts\runs\stage4_runner_probe_2026-06-09\outputs\docs\graph_viewer.html,,322717,fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0,stage4 run snapshot

@@ -1,0 +1,10 @@
+2026-06-09 11:06:47,553 - INFO - Loading triples for semantic alignment...
+2026-06-09 11:06:47,578 - INFO - Loading biomedical SentenceTransformer model: NeuML/pubmedbert-base-embeddings
+2026-06-09 11:06:47,583 - INFO - Use pytorch device_name: cpu
+2026-06-09 11:06:47,583 - INFO - Load pretrained SentenceTransformer: NeuML/pubmedbert-base-embeddings
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)' thrown while requesting HEAD https://huggingface.co/NeuML/pubmedbert-base-embeddings/resolve/main/adapter_config.json
+2026-06-09 11:07:04,768 - WARNING - '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1028)' thrown while requesting HEAD https://huggingface.co/NeuML/pubmedbert-base-embeddings/resolve/main/adapter_config.json
+Retrying in 1s [Retry 1/5].
+2026-06-09 11:07:04,768 - WARNING - Retrying in 1s [Retry 1/5].
+2026-06-09 11:07:05,772 - WARNING - Biomedical semantic model failed to load: Cannot send a request, as the client has been closed.
+2026-06-09 11:07:05,773 - WARNING - Bypassing fuzzy semantic alignment. Proceeding with dictionary-mapped alignments.

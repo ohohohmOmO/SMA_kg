@@ -1,0 +1,42 @@
+{
+  "drug": {
+    "nusinersen": "Nusinersen",
+    "spinraza": "Nusinersen",
+    "risdiplam": "Risdiplam",
+    "evrysdi": "Risdiplam",
+    "zolgensma": "Onasemnogene Abeparvovec",
+    "oa": "Onasemnogene Abeparvovec",
+    "onasemnogene": "Onasemnogene Abeparvovec",
+    "onasemnogene abeparvovec": "Onasemnogene Abeparvovec",
+    "onasemnogene abeparvovec-xioi": "Onasemnogene Abeparvovec"
+  },
+  "disease": {
+    "sma": "Spinal Muscular Atrophy",
+    "spinal muscular atrophy": "Spinal Muscular Atrophy",
+    "spinal muscular atrophies": "Spinal Muscular Atrophy",
+    "sma type 1": "Spinal Muscular Atrophy Type 1",
+    "sma1": "Spinal Muscular Atrophy Type 1",
+    "type 1 sma": "Spinal Muscular Atrophy Type 1"
+  },
+  "gene": {
+    "smn1": "SMN1",
+    "smn2": "SMN2",
+    "smn": "SMN",
+    "survival motor neuron": "SMN",
+    "exon 7": "SMN2 (Exon 7)"
+  },
+  "protein": {
+    "smn protein": "SMN protein",
+    "survival motor neuron protein": "SMN protein"
+  },
+  "phenotype": {
+    "motor function": "motor function",
+    "motor milestone": "motor milestones",
+    "motor milestones": "motor milestones",
+    "muscle weakness": "muscle weakness"
+  },
+  "variant": {
+    "smn1-smn2 hybrid allele": "SMN1-SMN2 hybrid allele",
+    "smn1-smn2 hybrid alleles": "SMN1-SMN2 hybrid allele"
+  }
+}

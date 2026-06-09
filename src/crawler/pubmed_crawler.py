@@ -1,21 +1,13 @@
+import argparse
 import io
 import json
 import time
 import logging
-import sys
-import subprocess
 from pathlib import Path
-from urllib.error import HTTPError
 
-try:
-    from Bio import Entrez, Medline
-    from tqdm import tqdm
-    from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "biopython", "tqdm", "tenacity", "requests"])
-    from Bio import Entrez, Medline
-    from tqdm import tqdm
-    from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
+from Bio import Entrez, Medline
+from tqdm import tqdm
+from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -55,28 +47,37 @@ def parse_medline_records(raw_text):
     parsed_data = []
     
     for record in records:
-        if "AB" in record: # Enforce only parsing records that have an abstract
+        abstract = str(record.get("AB", "")).strip()
+        if abstract:
             pub_date = record.get("DP", "")
             parsed_data.append({
                 "pmid": record.get("PMID", ""),
                 "title": record.get("TI", ""),
-                "abstract": record.get("AB", ""),
+                "abstract": abstract,
                 "pub_date": pub_date
             })
     return parsed_data
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Fetch SMA abstracts from PubMed.")
+    parser.add_argument("--query", default=SEARCH_QUERY)
+    parser.add_argument("--retmax", type=int, default=RETMAX)
+    parser.add_argument("--batch-size", type=int, default=BATCH_SIZE)
+    parser.add_argument("--output-file", default="data/raw/pubmed_sma_abstracts.jsonl")
+    return parser.parse_args()
+
 def main():
-    output_dir = Path("data/raw")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / "pubmed_sma_abstracts.jsonl"
+    args = parse_args()
+    output_file = Path(args.output_file)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
     
     try:
-        pmids = fetch_pmids(SEARCH_QUERY, retmax=RETMAX)
+        pmids = fetch_pmids(args.query, retmax=args.retmax)
         logging.info(f"Found {len(pmids)} PMIDs.")
         
         with open(output_file, 'w', encoding='utf-8') as f:
-            for i in tqdm(range(0, len(pmids), BATCH_SIZE), desc="Fetching pubmed batches"):
-                batch_pmids = pmids[i:i+BATCH_SIZE]
+            for i in tqdm(range(0, len(pmids), args.batch_size), desc="Fetching pubmed batches"):
+                batch_pmids = pmids[i:i+args.batch_size]
                 raw_text = fetch_abstracts_batch(batch_pmids)
                 
                 parsed_records = parse_medline_records(raw_text)
@@ -87,9 +88,11 @@ def main():
                 time.sleep(0.35)
                 
         logging.info(f"Finished extracting abstracts. Saved to {output_file}")
+        return 0
         
     except Exception as e:
         logging.exception(f"Crawler failed to execute: {e}")
+        return 1
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

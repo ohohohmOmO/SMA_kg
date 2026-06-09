@@ -11,6 +11,8 @@ quality.
 - Agent and contributor rules: `AGENTS.md`
 - Run checklist: `docs/agents/PLAN.md`
 - Issue log: `docs/agents/ISSUE_LOG.md`
+- Current hardening notes: `docs/reproduction/ENGINEERING_HARDENING_2026-06-09.md`
+- Pre-improvement baseline: `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 - Dated handoff snapshot: `docs/PROJECT_HANDOFF_2026-06-08.md`
 - Archived old overview: `docs/archive/SMA_KG_Project_Overview_OLD.md`
 
@@ -51,6 +53,7 @@ src/
   fusion/         dictionary mapping, semantic alignment, triple aggregation
   database/       Neo4j import, NetworkX analytics, PyVis graph export
   evaluation/     baseline evaluation, human/LLM scoring, novelty analysis
+resources/        Biomedical schema and entity dictionary resources
 notebooks/        BERTopic exploration and topic visualization
 docs/             handoff snapshots, generated graph viewer, agent docs
 artifacts/        archived run reports and ad hoc test results
@@ -65,17 +68,15 @@ Run from the repository root.
 ```powershell
 python src/crawler/api_fetcher.py
 python src/crawler/pubmed_crawler.py
+python src/crawler/topic_clustering.py
+python src/crawler/topic_balanced_pubmed.py --topic-terms-file <topic_terms.json>
 
-python src/extraction/llm_extractor.py
-python src/extraction/local_pipeline.py
-python src/extraction/merge_triples.py
+python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --promote
+python src/extraction/build_gold_candidates.py --run-dir artifacts/runs/stage2_gold_candidates_<stamp> --limit 750
 
-python src/fusion/dictionary_mapper.py
-python src/fusion/semantic_aligner.py
-python src/fusion/triples_aggregator.py
+python src/fusion/run_stage3_fusion.py --run-dir artifacts/runs/stage3_fusion_<stamp> --promote
 
-python src/database/graph_analytics.py
-python src/database/generate_pyvis.py
+python src/database/run_stage4_graph.py --run-dir artifacts/runs/stage4_graph_database_<stamp>
 
 python src/evaluation/baseline_eval_advanced.py
 python src/evaluation/ablation_study.py

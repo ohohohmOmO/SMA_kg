@@ -1,0 +1,125 @@
+{
+  "purpose": "Pre-improvement baseline before rigorous engineering hardening requested on 2026-06-09.",
+  "reference_docs": [
+    "docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md",
+    "docs/agents/PLAN.md",
+    "docs/agents/ISSUE_LOG.md",
+    "AGENTS.md",
+    "CONTEXT.md"
+  ],
+  "archive_dir": "artifacts\\runs\\pre_improvement_baseline_2026-06-09",
+  "archived_files": [
+    {
+      "canonical_path": "data\\external\\sma_gda_baseline.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\external\\sma_gda_baseline.jsonl",
+      "records": 164,
+      "bytes": 19677,
+      "sha256": "f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\raw\\pubmed_sma_abstracts.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\raw\\pubmed_sma_abstracts.jsonl",
+      "records": 4555,
+      "bytes": 7761720,
+      "sha256": "21015fe3963a1ed038e3aa5e43fc719cb3bd823e9903630aaa78d5d336e91aaa",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\clustered_abstracts.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\clustered_abstracts.jsonl",
+      "records": 1840,
+      "bytes": 3287395,
+      "sha256": "50fe1629f3a413d29e810d3884c344691b7fe2aeea97ca4267fd335de446cb08",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\llm_extracted_triples.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\llm_extracted_triples.jsonl",
+      "records": 638,
+      "bytes": 164525,
+      "sha256": "95897853f57d6bcd9342a53580a32164bc90a073fc36ff2db22daf1b6e771f40",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\spacy_extracted_triples.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\spacy_extracted_triples.jsonl",
+      "records": 5101,
+      "bytes": 1141675,
+      "sha256": "cf4e817ae155a536e0bb86321af9fac2b0e8f025aa02d68870a060e2c8422ac7",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\extracted_triples.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\extracted_triples.jsonl",
+      "records": 5738,
+      "bytes": 1305952,
+      "sha256": "02ba3fa780f52228870f2171611448db2910dbbe70f30e3937772bf4104a60b4",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\interim\\mapped_triples.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\interim\\mapped_triples.jsonl",
+      "records": 5738,
+      "bytes": 1411417,
+      "sha256": "eb6787dd6db7f2ae42f23d600b5348dd15a97ba9e1033ced43571417505e6e1b",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\interim\\aligned_triples.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\interim\\aligned_triples.jsonl",
+      "records": 5738,
+      "bytes": 1411344,
+      "sha256": "3213d483e91e8e55ff28242b6a44a06ae5b6d5520a5eb45bf60456cb904c006b",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\fused_triples.jsonl",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\fused_triples.jsonl",
+      "records": 554,
+      "bytes": 215892,
+      "sha256": "b2dcab4262139ea5e4cfa6d6bd770d3720604b588b7d74486e7a9e2b682ce4b9",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\analytics_metrics.csv",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\analytics_metrics.csv",
+      "records": 607,
+      "bytes": 30012,
+      "sha256": "3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\human_evaluation_sample.csv",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\human_evaluation_sample.csv",
+      "records": 100,
+      "bytes": 15696,
+      "sha256": "1eee88882728f28f90a99000ccacc6698492fd3c17940b434f709aaae4a2d0ef",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\human_evaluation_sample_scored.csv",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\human_evaluation_sample_scored.csv",
+      "records": 101,
+      "bytes": 15932,
+      "sha256": "0f68fe57d0679f70ed2ca801e4bb57a575e97b2f4f050abb679e8cbc886190b4",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "data\\processed\\llm_novel_discoveries.csv",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\data\\processed\\llm_novel_discoveries.csv",
+      "records": 10,
+      "bytes": 618,
+      "sha256": "df0d269d24d746dc204b11a3072610d5e7e8bc89712084e3b2cfbd90d34720b8",
+      "status": "archived"
+    },
+    {
+      "canonical_path": "docs\\graph_viewer.html",
+      "archive_path": "artifacts\\runs\\pre_improvement_baseline_2026-06-09\\canonical_outputs\\docs\\graph_viewer.html",
+      "records": "",
+      "bytes": 322717,
+      "sha256": "fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0",
+      "status": "archived"
+    }
+  ]
+}

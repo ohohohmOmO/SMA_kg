@@ -1,11 +1,6 @@
 import os
 
-try:
-    from neo4j import GraphDatabase
-except ImportError:
-    import subprocess, sys
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "neo4j"])
-    from neo4j import GraphDatabase
+from neo4j import GraphDatabase
 
 def main():
     print("==================================================")

@@ -10,13 +10,17 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 from local_pipeline import regex_fallback_extraction
 from merge_triples import merge_jsonl
+from src.biomedical.schema import normalize_triple
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MODEL = "deepseek-ai/DeepSeek-V4-Flash"
 
 
@@ -60,7 +64,7 @@ def chunk_ranges(total, chunk_size):
         yield start, end
 
 
-def validate_triples(path, rejected_path=None, allow_duplicates=True):
+def validate_triples(path, rejected_path=None, allow_duplicates=True, require_evidence=True):
     records, bad_lines = load_jsonl(path)
     invalid = []
     seen = set()
@@ -87,6 +91,8 @@ def validate_triples(path, rejected_path=None, allow_duplicates=True):
         extracted_by = record.get("extracted_by", "")
         if "LLM" not in extracted_by and extracted_by != "Regex_Fallback":
             missing.append("extracted_by")
+        _, schema_problems = normalize_triple(record, require_evidence=require_evidence)
+        missing.extend(schema_problems)
 
         sig = (
             str(record.get("source_pmid", "")),
@@ -116,6 +122,7 @@ def validate_triples(path, rejected_path=None, allow_duplicates=True):
         "invalid_triples": len(invalid),
         "duplicate_stage_signature_count": duplicate_count,
         "duplicates_allowed": allow_duplicates,
+        "evidence_required": require_evidence,
         "valid": len(bad_lines) == 0 and len(invalid) == 0 and (allow_duplicates or duplicate_count == 0),
         "source_counts": dict(Counter(record.get("extracted_by", "") for record in records)),
         "unique_pmids": len({str(record.get("source_pmid", "")) for record in records if record.get("source_pmid")}),
@@ -130,7 +137,7 @@ def run_llm_chunk(args, run_dir, start, end):
     log_file = run_dir / "logs" / f"{chunk_name}.log"
 
     if chunk_file.exists():
-        validation = validate_triples(chunk_file, allow_duplicates=True)
+        validation = validate_triples(chunk_file, allow_duplicates=True, require_evidence=True)
         if validation["valid"]:
             logging.info("Skipping existing valid chunk %s", chunk_file)
             return {"chunk": chunk_name, "status": "skipped", **validation}
@@ -163,6 +170,7 @@ def run_llm_chunk(args, run_dir, start, end):
         chunk_file,
         rejected_path=run_dir / "rejected" / f"{chunk_name}_invalid.jsonl",
         allow_duplicates=True,
+        require_evidence=True,
     )
     status = "completed" if proc.returncode == 0 and validation["valid"] else "failed"
     return {"chunk": chunk_name, "status": status, "exit_code": proc.returncode, **validation}
@@ -290,9 +298,9 @@ def main():
     merge_jsonl([str(llm_output), str(regex_output)], str(merged_output))
 
     validations = [
-        validate_triples(llm_output, run_dir / "rejected" / "llm_invalid.jsonl", allow_duplicates=True),
-        validate_triples(regex_output, run_dir / "rejected" / "regex_invalid.jsonl", allow_duplicates=True),
-        validate_triples(merged_output, run_dir / "rejected" / "merged_invalid.jsonl", allow_duplicates=False),
+        validate_triples(llm_output, run_dir / "rejected" / "llm_invalid.jsonl", allow_duplicates=True, require_evidence=True),
+        validate_triples(regex_output, run_dir / "rejected" / "regex_invalid.jsonl", allow_duplicates=True, require_evidence=True),
+        validate_triples(merged_output, run_dir / "rejected" / "merged_invalid.jsonl", allow_duplicates=False, require_evidence=True),
     ]
     all_valid = all(item["valid"] for item in validations)
     summary = {

@@ -1,0 +1,3 @@
+artifact,path,records,bytes,sha256,notes
+gold_candidates_jsonl,artifacts\runs\stage2_gold_candidates_probe_2026-06-09\gold_candidates.jsonl,50,135365,f8aa89e610286bb6be46dac4cc9e3e367d7d47c86f7e3e9bbeb779cc7692e34a,pending manual review
+gold_candidates_csv,artifacts\runs\stage2_gold_candidates_probe_2026-06-09\gold_candidates.csv,50,121706,1586e1d1dd3f18af8eed0da81d8764d1cb7ae80148e6421dba1bbf7e4fbfac26,pending manual review

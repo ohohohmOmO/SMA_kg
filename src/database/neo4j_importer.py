@@ -3,19 +3,41 @@ import json
 import logging
 from pathlib import Path
 import sys
-import subprocess
+import re
 
-try:
-    from neo4j import GraphDatabase
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "neo4j"])
-    from neo4j import GraphDatabase
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from src.biomedical.schema import normalize_entity_type, normalize_relation, relation_key
+
+from neo4j import GraphDatabase
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+
+SAFE_CYPHER_TOKEN = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+
+def safe_label(raw_type):
+    label = normalize_entity_type(raw_type) or "Unknown"
+    if not SAFE_CYPHER_TOKEN.match(label):
+        return "Unknown"
+    return label
+
+
+def safe_relationship_type(raw_relation):
+    rel = normalize_relation(raw_relation) or relation_key(raw_relation) or "ASSOCIATED_WITH"
+    if not SAFE_CYPHER_TOKEN.match(rel):
+        return "ASSOCIATED_WITH"
+    return rel
 
 class Neo4jImporter:
     def __init__(self, uri, user, password):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
+
+    def verify_connectivity(self):
+        self.driver.verify_connectivity()
 
     def close(self):
         self.driver.close()
@@ -66,12 +88,11 @@ class Neo4jImporter:
                     data = json.loads(line)
 
                     e1_name = data.get("entity_1", {}).get("name", "Unknown")
-                    e1_type = data.get("entity_1", {}).get("type", "Unknown")
+                    e1_type = safe_label(data.get("entity_1", {}).get("type", "Unknown"))
                     e2_name = data.get("entity_2", {}).get("name", "Unknown")
-                    e2_type = data.get("entity_2", {}).get("type", "Unknown")
+                    e2_type = safe_label(data.get("entity_2", {}).get("type", "Unknown"))
                     
-                    # Sanitize relation type for Cypher natively
-                    rel_type = data.get("relation", "ASSOCIATED").upper().replace(" ", "_").replace("-", "_")
+                    rel_type = safe_relationship_type(data.get("relation", "ASSOCIATED_WITH"))
                     conf = data.get("computed_confidence", 0.0)
                     evidence = data.get("evidence", {})
                     pmids = evidence.get("pmid_list", [])

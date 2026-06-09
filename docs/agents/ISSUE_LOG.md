@@ -17,6 +17,46 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-09 - Stage 1 crawlers used insecure TLS and runtime installs
+
+- Symptom: Stage 1 diagnosis found `verify=False`, runtime `pip install` calls,
+  hard-coded output paths, and swallowed failures in crawler scripts.
+- Cause: The original crawler scripts were written as ad hoc runnable scripts
+  rather than reproducible pipeline entrypoints.
+- Fix: Updated Open Targets and PubMed crawler entrypoints to rely on the
+  prepared environment, verify TLS by default, accept output/query arguments,
+  check GraphQL errors, filter empty abstracts, and return non-zero on failure.
+- Verification: `python -m py_compile src/crawler/api_fetcher.py
+  src/crawler/pubmed_crawler.py src/crawler/topic_clustering.py
+  src/crawler/topic_balanced_pubmed.py` passed; source scan no longer finds
+  `verify=False` or `subprocess.check_call` in `src/crawler`.
+
+### 2026-06-09 - Hardened script entrypoints could not import `src`
+
+- Symptom: Running new scripts directly with commands such as
+  `python src/extraction/local_pipeline.py` failed with
+  `ModuleNotFoundError: No module named 'src'`.
+- Cause: Python placed the script directory on `sys.path`, but not reliably the
+  repository root where the namespace package `src` is resolved.
+- Fix: Added a small repository-root `sys.path` guard to script entrypoints that
+  import shared `src.*` modules.
+- Verification: `python -m py_compile` passed for the updated crawler,
+  extraction, fusion, and database scripts; Stage 2 local-rule and gold-candidate
+  probes ran successfully afterward.
+
+### 2026-06-09 - HuggingFace endpoint was set too late for medical alignment
+
+- Symptom: Stage 3 fusion probe attempted to load
+  `NeuML/pubmedbert-base-embeddings` through `huggingface.co` and failed with an
+  SSL/client error, then fell back to dictionary-only alignment.
+- Cause: `HF_ENDPOINT` was set inside `main()` after importing
+  `sentence_transformers`, so HuggingFace client configuration could already be
+  initialized.
+- Fix: Set the default `HF_ENDPOINT` before importing `sentence_transformers` in
+  the Stage 3 semantic aligner and Stage 1 topic clustering runner.
+- Verification: `python -m py_compile src/fusion/semantic_aligner.py
+  src/crawler/topic_clustering.py` passed, and unit tests still pass.
+
 ### 2026-06-09 - Stage 4 analytics community IDs were non-deterministic
 
 - Symptom: Two Stage 4 local reruns with identical `fused_triples.jsonl` and
