@@ -27,6 +27,8 @@ Read these when starting, resuming after compaction, or resolving uncertainty:
 - `docs/agents/ISSUE_LOG.md`
 - `CONTEXT.md`
 - `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`
+- `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
+- `docs/reproduction/STAGE3_PREP_2026-06-09.md`
 - `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
 The pre-improvement baseline archive was created before the 2026-06-09 hardening
@@ -198,6 +200,28 @@ requirements from 2026-06-09.
    external services are ready and validation gates pass.
 9. Update reproduction docs and issue log entries for resolved problems.
 10. Stage and commit completed file-changing work before the final response.
+
+## Current Development Status - 2026-06-09
+
+- Stage 1 acquisition hardening is complete and rerun successfully.
+- Stage 1 topic clustering hardening is complete and rerun successfully.
+- Stage 1 topic-balanced retrieval is implemented and rerun, but its 27
+  candidate records are not promoted into canonical PubMed input. The decision
+  is tracked in
+  `.scratch/stage3-prep/issues/01-review-topic-balanced-expansion.md`.
+- Stage 2 LLM-only hardening is complete and rerun successfully over all 4554
+  canonical PubMed abstracts with 32 workers.
+- Stage 2 canonical output for Stage 3 is
+  `data/processed/extracted_triples.jsonl`, with 18288 validated LLM-derived
+  triples and SHA-256
+  `0d23d5dd162744dd70228905e6367800658e5d0af0b7328df50a6e62bfde76cb`.
+- BioBERT/UIE-med fine tuning is not started. The gold-standard review decision
+  is tracked in
+  `.scratch/stage3-prep/issues/02-build-gold-set-before-medical-model-finetuning.md`.
+- Stage 3 is ready to rerun against the latest Stage 2 canonical output. Treat
+  `data/interim/mapped_triples.jsonl`, `data/interim/aligned_triples.jsonl`,
+  and `data/processed/fused_triples.jsonl` as stale until the Stage 3 rerun
+  completes.
 
 ## Before Each Run
 

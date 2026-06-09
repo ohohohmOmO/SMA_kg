@@ -12,6 +12,7 @@ quality.
 - Run checklist: `docs/agents/PLAN.md`
 - Issue log: `docs/agents/ISSUE_LOG.md`
 - Current hardening notes: `docs/reproduction/ENGINEERING_HARDENING_2026-06-09.md`
+- Stage 3 preparation status: `docs/reproduction/STAGE3_PREP_2026-06-09.md`
 - Pre-improvement baseline: `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 - Dated handoff snapshot: `docs/PROJECT_HANDOFF_2026-06-08.md`
 - Archived old overview: `docs/archive/SMA_KG_Project_Overview_OLD.md`
@@ -95,6 +96,7 @@ python src/evaluation/metrics_calculator.py
 ## Current Outputs
 
 - `data/raw/pubmed_sma_abstracts.jsonl`: PubMed SMA abstracts.
+- `data/processed/clustered_abstracts.jsonl`: Stage 1 topic clustering output.
 - `data/external/sma_gda_baseline.jsonl`: Open Targets gene-disease baseline.
 - `data/processed/llm_extracted_triples.jsonl`: validated LLM extraction output.
 - `data/processed/extracted_triples.jsonl`: Stage 2 canonical LLM-only output.
@@ -109,6 +111,16 @@ python src/evaluation/metrics_calculator.py
 - `docs/graph_viewer.html`: generated interactive graph viewer.
 - `artifacts/reports/`: archived historical command outputs and evaluation
   reports.
+
+As of 2026-06-09, Stage 1 acquisition/topic clustering and Stage 2 full
+LLM-only extraction have been rerun successfully. Stage 3 should be rerun next
+against `data/processed/extracted_triples.jsonl`; current mapped, aligned, and
+fused outputs predate the latest Stage 2 run and should be treated as stale.
+
+Open decisions before changing Stage 1 or Stage 2 inputs:
+
+- `.scratch/stage3-prep/issues/01-review-topic-balanced-expansion.md`
+- `.scratch/stage3-prep/issues/02-build-gold-set-before-medical-model-finetuning.md`
 
 See `docs/PROJECT_HANDOFF_2026-06-08.md` for the detailed state and result
 summary captured on 2026-06-08.

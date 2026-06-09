@@ -11,6 +11,8 @@ after reading `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`.
 - `docs/agents/ISSUE_LOG.md`
 - `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`
 - `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
+- `docs/reproduction/STAGE3_PREP_2026-06-09.md`
+- `.scratch/stage3-prep/PRD.md`
 - `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
 ## Pre-Improvement Baseline
@@ -82,6 +84,21 @@ Stage 2:
   every input abstract to LLM extraction. The current full rerun policy is
   full-corpus LLM extraction with `--chunk-size 5 --parallel-workers 32`.
 - Added `src/extraction/build_gold_candidates.py`.
+
+Stage 1-2 completion status:
+
+- Stage 1 acquisition, topic clustering, and topic-balanced retrieval runners
+  have been implemented and rerun.
+- Stage 2 LLM-only extraction has been rerun across all 4554 canonical PubMed
+  abstracts with 32 workers, producing 18288 validated canonical triples.
+- Topic-balanced PubMed candidate promotion remains an open research decision,
+  tracked in
+  `.scratch/stage3-prep/issues/01-review-topic-balanced-expansion.md`.
+- BioBERT/UIE-med fine tuning remains a later decision after gold-standard
+  review, tracked in
+  `.scratch/stage3-prep/issues/02-build-gold-set-before-medical-model-finetuning.md`.
+- Stage 3 preparation is recorded in
+  `docs/reproduction/STAGE3_PREP_2026-06-09.md`.
 
 Stage 3:
 
