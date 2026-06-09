@@ -114,7 +114,8 @@ Historical or archived context:
   `.scratch/stage3-prep/issues/02-build-gold-set-before-medical-model-finetuning.md`
 - Review the 59 Stage 3 relation conflict records in
   `data/interim/relation_conflicts.jsonl` if the graph needs conflict
-  adjudication rather than `needs_review` marking.
+  adjudication rather than `needs_review` marking:
+  `.scratch/stage3-prep/issues/03-adjudicate-stage3-relation-conflicts.md`
 
 ## Before Each Run
 

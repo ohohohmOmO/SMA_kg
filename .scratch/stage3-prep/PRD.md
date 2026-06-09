@@ -37,6 +37,8 @@ stale fused or aligned artifacts.
 
 - Open Stage 1 and Stage 2 research decisions are tracked as implementation
   issues under this PRD.
+- Open Stage 3 relation conflict adjudication is tracked as an implementation
+  issue under this PRD.
 - Stage 3 run plan names the exact Stage 2 input and stale artifacts to replace.
 - Future Stage 3 work records consumed input paths, hashes, output paths, and
   validation results in a dated run directory.
