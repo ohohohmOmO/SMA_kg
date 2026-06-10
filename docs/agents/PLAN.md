@@ -19,6 +19,11 @@ The 2026-06-09 engineering hardening plan has been completed and archived at:
   state is unclear, reread the reference documents listed below before acting.
 - When completing a task that changes files, stage and commit the changes before
   the final response unless the user explicitly asks not to commit.
+- When pushing role-specific local feature branches to a remote repository,
+  remove all job or role information from the remote branch name. For example,
+  push local
+  `feature/huawei-ai应用工程师-ai技术应用/graph-rag-conflict-prd-plan-20260609-225214`
+  to remote `feature/graph-rag-conflict-prd-plan-20260609-225214`.
 
 ## Runtime Requirements
 

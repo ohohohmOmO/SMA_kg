@@ -33,6 +33,11 @@ work or commit on local `main`. First create and switch to a feature branch name
 `feature/huawei-ai应用工程师-ai技术应用/<specific-feature>-<timestamp>`, then stage
 and commit the changes only on that branch.
 
+When pushing role-specific local feature branches to a remote repository, remove
+all job or role information from the remote branch name. For example, push local
+`feature/huawei-ai应用工程师-ai技术应用/graph-rag-conflict-prd-plan-20260609-225214`
+to remote `feature/graph-rag-conflict-prd-plan-20260609-225214`.
+
 Use local markdown issue tracking for this repo. PRDs and implementation issues
 live under `.scratch/`; see `docs/agents/issue-tracker.md`.
 
