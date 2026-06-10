@@ -87,8 +87,10 @@ python src/evaluation/baseline_eval_advanced.py
 python src/evaluation/ablation_study.py
 python src/evaluation/novelty_analysis.py
 
-python src/qa/build_index.py --run-dir artifacts/runs/graph_rag_index_<stamp>
-python src/qa/run_graph_rag.py --question "What evidence links SMN1 to spinal muscular atrophy?" --dry-run --output-file artifacts/runs/graph_rag_answer_probe_<stamp>/answer_dry_run.json
+python src/qa/build_index.py --retrieval-mode hybrid_tfidf --run-dir artifacts/runs/graph_rag_index_<stamp>
+python src/qa/run_graph_rag.py --question "What evidence links SMN1 to spinal muscular atrophy?" --retrieval-mode hybrid_tfidf --dry-run --output-file artifacts/runs/graph_rag_answer_probe_<stamp>/answer_dry_run.json
+python src/qa/run_graph_rag.py --question "Which genes are strongly connected to Spinal Muscular Atrophy?" --retrieval-mode hybrid_tfidf --include-neo4j-neighborhood --dry-run
+python src/fusion/prepare_conflict_adjudication_review.py --adjudications-file artifacts/runs/conflict_adjudication_live_<stamp>/adjudications.jsonl --run-dir artifacts/runs/conflict_adjudication_review_<stamp>
 ```
 
 Optional steps that require external services:
@@ -134,7 +136,10 @@ are recorded in `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`.
 As of 2026-06-10, Graph RAG retrieval and relation-conflict adjudication v1 are
 implemented as local-retrieval-first CLIs. Local retrieval builds bounded
 Evidence Context packages from canonical JSONL files; LLM calls are optional and
-consume only that evidence. Reproduction details are recorded in
+consume only that evidence. Retrieval supports lexical/entity mode,
+`hybrid_tfidf` reranking, and optional read-only Neo4j neighborhood expansion.
+Conflict adjudication outputs must be converted into human-review proposals
+before any graph promotion. Reproduction details are recorded in
 `docs/reproduction/GRAPH_RAG_CONFLICT_ADJUDICATION_2026-06-10.md`.
 
 Open decisions before changing Stage 1 or Stage 2 inputs:

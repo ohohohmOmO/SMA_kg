@@ -38,6 +38,7 @@ def build_dry_run_answer(question, context):
         "supporting_pmids": context.get("supporting_pmids", []),
         "supporting_triples": context.get("aligned_triples", [])[:8],
         "graph_context": context.get("fused_edges", [])[:8],
+        "graph_neighborhood": context.get("graph_neighborhood", [])[:8],
         "limitations": ["dry_run: no LLM answer generated"],
         "model": "",
         "retrieval": context.get("retrieval", {}),

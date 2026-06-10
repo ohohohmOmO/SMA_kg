@@ -1,0 +1,18 @@
+{
+  "valid": true,
+  "mode": "live",
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "conflict_records_input": 59,
+  "conflict_records_selected": 1,
+  "payload_records": 1,
+  "adjudication_records": 1,
+  "unresolved_records": 0,
+  "failed_records": 0,
+  "outputs": {
+    "payloads": "artifacts\\runs\\conflict_adjudication_live_probe_2026-06-10_125030\\payloads.jsonl",
+    "adjudications": "artifacts\\runs\\conflict_adjudication_live_probe_2026-06-10_125030\\adjudications.jsonl",
+    "unresolved": "artifacts\\runs\\conflict_adjudication_live_probe_2026-06-10_125030\\unresolved.jsonl",
+    "rejected_or_failed": "artifacts\\runs\\conflict_adjudication_live_probe_2026-06-10_125030\\rejected_or_failed.jsonl"
+  },
+  "canonical_graph_mutated": false
+}

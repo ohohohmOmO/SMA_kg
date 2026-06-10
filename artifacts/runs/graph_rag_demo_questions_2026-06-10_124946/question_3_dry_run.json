@@ -1,0 +1,2048 @@
+{
+  "question": "What evidence links SMN protein to motor neuron degeneration?",
+  "answer_status": "dry_run_requires_llm",
+  "answer": "",
+  "supporting_pmids": [
+    "31272106",
+    "33382987",
+    "31488953",
+    "41958916",
+    "27170316",
+    "28054357",
+    "28270613",
+    "32676861",
+    "33999256",
+    "34445199",
+    "29069603",
+    "31851921",
+    "26586529",
+    "27466204",
+    "27652289",
+    "30012555",
+    "30116818",
+    "30171534",
+    "30724851",
+    "34302176",
+    "34734684",
+    "25346245",
+    "26206889",
+    "26681261",
+    "27452470",
+    "27894243",
+    "29799103",
+    "29985170",
+    "30667343",
+    "31183542",
+    "33893753",
+    "34097287"
+  ],
+  "supporting_triples": [
+    {
+      "source_pmid": "31272106",
+      "entity_1": {
+        "name": "JNK-c-Jun signaling",
+        "type": "Protein"
+      },
+      "relation": "NO_EFFECT",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence_text": "no evidence of stress-activated JNK-c-Jun signaling in MNs of SMA mice or human tissues",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "33382987",
+      "entity_1": {
+        "name": "P21",
+        "type": "Protein"
+      },
+      "relation": "NO_EFFECT",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence_text": "p53 and p21 depletion did not modulate the timing or degree of Smn(2B/-) motor neuron loss",
+      "llm_confidence": 0.92,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.939,
+      "confidence_components": {
+        "model_or_self_score": 0.92,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "31488953",
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Spinal muscular atrophy is characterized by the degeneration of the spinal cord motor neurons caused by chronic low levels of SMN protein",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "41958916",
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "SMA is characterized by degeneration of the spinal cord motor neurons caused by chronic low levels of survival motor neuron (SMN) protein.",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "27170316",
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence_text": "primarily affecting lower motor neurons",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "28054357",
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence_text": "bringing transcriptome homeostasis into the spotlight as a common theme in motor neuron degeneration",
+      "llm_confidence": 0.85,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.912,
+      "confidence_components": {
+        "model_or_self_score": 0.85,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "28270613",
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence_text": "leading to motor neuron death",
+      "llm_confidence": 0.75,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.874,
+      "confidence_components": {
+        "model_or_self_score": 0.75,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "32676861",
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence_text": "Reduced SMN levels lead to motor neuron degeneration and muscular atrophy.",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    }
+  ],
+  "graph_context": [
+    {
+      "entity_1": {
+        "name": "SMN protein",
+        "type": "Protein"
+      },
+      "relation": "CAUSES",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "25346245",
+          "26206889",
+          "26681261",
+          "27452470",
+          "27894243",
+          "29799103",
+          "29985170",
+          "30667343",
+          "31183542",
+          "33893753",
+          "34097287",
+          "34232342",
+          "35763114",
+          "36329412",
+          "37705059",
+          "37762045",
+          "39067446",
+          "39955442"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 18
+      },
+      "computed_confidence": 0.907,
+      "confidence_components": {
+        "base_score": 0.954,
+        "avg_raw_score": 0.941,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 18,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "negative",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "CAUSES",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "26586529",
+          "27466204",
+          "27652289",
+          "30012555",
+          "30116818",
+          "30171534",
+          "30724851",
+          "34302176",
+          "34734684",
+          "35373853",
+          "37019880",
+          "39201486",
+          "41928955"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 13
+      },
+      "computed_confidence": 0.905,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.941,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 13,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "negative",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "SMN protein",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "25245431",
+          "25358252",
+          "26793058",
+          "29263925",
+          "31363739",
+          "32668756",
+          "33642371",
+          "33845129",
+          "34425216",
+          "37289324",
+          "38916214",
+          "39408601",
+          "41107965"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 13
+      },
+      "computed_confidence": 0.904,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.931,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 13,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "27170316",
+          "28054357",
+          "28270613",
+          "32676861",
+          "33999256",
+          "34445199"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 6
+      },
+      "computed_confidence": 0.899,
+      "confidence_components": {
+        "base_score": 0.943,
+        "avg_raw_score": 0.919,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 6,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "HAS_PHENOTYPE",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "31272106",
+          "35338505",
+          "37678880"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 3
+      },
+      "computed_confidence": 0.842,
+      "confidence_components": {
+        "base_score": 0.939,
+        "avg_raw_score": 0.927,
+        "pmid_support_score": 0.69,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 3,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "SMN protein",
+        "type": "Protein"
+      },
+      "relation": "NO_EFFECT",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "39976226"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.808,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.95,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "survival motor neuron (SMN) protein",
+        "type": "Protein"
+      },
+      "relation": "CAUSES",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "34678665"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.797,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.931,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "negative",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "SMN deficiency",
+        "type": "Protein"
+      },
+      "relation": "CAUSES",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "41929160"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.792,
+      "confidence_components": {
+        "base_score": 0.924,
+        "avg_raw_score": 0.924,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "negative",
+      "review_status": "accepted"
+    }
+  ],
+  "limitations": [
+    "dry_run: no LLM answer generated"
+  ],
+  "model": "",
+  "retrieval": {
+    "mode": "lexical_entity",
+    "tokens": [
+      "what",
+      "evidence",
+      "links",
+      "smn",
+      "protein",
+      "to",
+      "motor",
+      "neuron",
+      "degeneration"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 12071,
+    "fused_candidates": 11155,
+    "conflict_candidates": 38
+  },
+  "evidence_context": {
+    "context_id": "graph-rag-what-evidence-links-smn-protein-to-motor-neuron-degeneration",
+    "purpose": "graph_rag_answer",
+    "query": "What evidence links SMN protein to motor neuron degeneration?",
+    "entities": [
+      {
+        "name": "JNK-c-Jun signaling",
+        "type": "Protein"
+      },
+      {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      {
+        "name": "P21",
+        "type": "Protein"
+      },
+      {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      {
+        "name": "muscle weakness",
+        "type": "Phenotype"
+      },
+      {
+        "name": "ribosome biology",
+        "type": "Phenotype"
+      },
+      {
+        "name": "Stasimon dysfunction",
+        "type": "Phenotype"
+      },
+      {
+        "name": "SMN protein",
+        "type": "Protein"
+      },
+      {
+        "name": "survival motor neuron (SMN) protein",
+        "type": "Protein"
+      },
+      {
+        "name": "SMN deficiency",
+        "type": "Protein"
+      },
+      {
+        "name": "SMN/SYNCRIP complex",
+        "type": "Protein"
+      },
+      {
+        "name": "loss of SMN protein",
+        "type": "Phenotype"
+      },
+      {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      {
+        "name": "SMN deficiency",
+        "type": "Phenotype"
+      },
+      {
+        "name": "survival motor neuron",
+        "type": "Protein"
+      },
+      {
+        "name": "SMN expression",
+        "type": "Phenotype"
+      }
+    ],
+    "abstracts": [
+      {
+        "pmid": "31272106",
+        "title": "Motor neuron loss in SMA is not associated with somal stress-activated JNK/c-Jun signaling.",
+        "abstract": "A pathological hallmark of spinal muscular atrophy (SMA) is severe motor neuron (MN) loss, which results in muscle weakness and often infantile or childhood mortality. Although it is well established that deficient expression of survival motor neuron (SMN) protein causes SMA, the molecular pathways that execute MN cell death are poorly defined. The c-Jun NH2-terminal kinases (JNKs) are stress-activated kinases with multiple substrates including c-Jun, which can be activated during neuronal injury and neurodegenerative disease leading to neuronal apoptosis. Recently, increased JNK-c-Jun signaling was reported in SMA raising the possibility that JNK inhibitors could be a novel treatment for this disease. We examined JNK-c-Jun activity in SMA mouse and human cultured cells and tissues. Anisomycin treatment of human SMA fibroblasts and sciatic nerve ligation in SMA mice provoked robust phosphorylated-c-Jun (p-c-Jun) expression indicating that SMN-deficiency does not prevent activation of the stress-induced JNK-c-Jun signaling pathway. Despite retained capacity to activate JNK-c-Jun, we observed no basal increase of p-c-Jun levels in SMA compared to control cultured cells, human or mous...",
+        "pub_date": "2019 Oct 1"
+      },
+      {
+        "pmid": "33382987",
+        "title": "Spinal motor neuron loss occurs through a p53-and-p21-independent mechanism in the Smn(2B/-) mouse model of spinal muscular atrophy.",
+        "abstract": "Spinal muscular atrophy (SMA) is a pediatric neuromuscular disease caused by genetic deficiency of the survival motor neuron (SMN) protein. Pathological hallmarks of SMA are spinal motor neuron loss and skeletal muscle atrophy. The molecular mechanisms that elicit and drive preferential motor neuron degeneration and death in SMA remain unclear. Transcriptomic studies consistently report p53 pathway activation in motor neurons and spinal cord tissue of SMA mice. Recent work has identified p53 as an inducer of spinal motor neuron loss in severe Delta7 SMA mice. Additionally, the cyclin-dependent kinase inhibitor P21 (Cdkn1a), an inducer of cell cycle arrest and mediator of skeletal muscle atrophy, is consistently increased in motor neurons, spinal cords, and other tissues of various SMA models. p21 is a p53 transcriptional target but can be independently induced by cellular stressors. To ascertain whether p53 and p21 signaling pathways mediate spinal motor neuron death in milder SMA mice, and how they affect the overall SMA phenotype, we introduced Trp53 and P21 null alleles onto the Smn(2B/-) background. We found that p53 and p21 depletion did not modulate the timing or degree of Sm...",
+        "pub_date": "2021 Mar"
+      },
+      {
+        "pmid": "31488953",
+        "title": "ZPR1-Dependent Neurodegeneration Is Mediated by the JNK Signaling Pathway.",
+        "abstract": "The zinc finger protein ZPR1 deficiency causes neurodegeneration and results in a mild spinal muscular atrophy (SMA)-like disease in mice with reduced Zpr1 gene dosage. Mutation of the survival motor neuron 1 (SMN1) gene causes SMA. Spinal muscular atrophy is characterized by the degeneration of the spinal cord motor neurons caused by chronic low levels of SMN protein. ZPR1 interacts with SMN and is required for nuclear accumulation of SMN. Patients with SMA express reduced levels of ZPR1. Reduced Zpr1 gene dosage increases neurodegeneration and severity of SMA disease in mice. Mechanisms underlying ZPR1-dependent neurodegeneration are largely unknown. We report that neurodegeneration caused by ZPR1 deficiency is mediated by the c-Jun NH(2)-terminal kinase (JNK) group of mitogen-activated protein kinases (MAPK). ZPR1-dependent neuron degeneration is mediated by central nervous system (CNS)-specific isoform JNK3. ZPR1 deficiency activates the MAPK signaling cascade, MLK3 --> MKK7 --> JNK3, which phosphorylates c-Jun and activates caspase-mediated neuron degeneration. Neurons from Jnk3-null mice show resistance to ZPR1-dependent neurodegeneration. Pharmacologic inhibition of JNK redu...",
+        "pub_date": "2019"
+      },
+      {
+        "pmid": "41958916",
+        "title": "Survival motor neuron protein-independent amelioration of spinal muscular atrophy by pharmacological inhibition of c-Jun-NH(2) terminal kinase.",
+        "abstract": "Spinal muscular atrophy (SMA) is an autosomal recessive neurodegenerative disorder caused by mutation of the survival motor neuron 1 (SMN1) gene. SMA is characterized by degeneration of the spinal cord motor neurons caused by chronic low levels of survival motor neuron (SMN) protein. Prevention or slowing of neurodegeneration has been shown to ameliorate SMA disease severity. Significant progress has been made to develop SMN-dependent treatments that increase SMN levels. However, there is an unmet need to develop alternative therapeutic methods that are SMN-independent. The c-Jun-NH(2) terminal kinase (JNK) signalling pathway mediates motor neuron degeneration in SMA. Genetic inactivation of the neuron-specific isoform, JNK3, ameliorates the disease phenotype in SMA mice without affecting SMN protein levels, indicating that JNK3 may represent a promising SMN-independent target for pharmacological intervention. We report that pharmacological inhibition of JNK using novel drug compounds based on three distinct chemical scaffolds, Anthrapyrazolone, Pyrimidinyl, and Pyridopyrimidine, prevents degeneration of SMN-deficient in vitro cultured primary cerebellum neurons and the spinal cord...",
+        "pub_date": "2026"
+      },
+      {
+        "pmid": "27170316",
+        "title": "Restoration of SMN in Schwann cells reverses myelination defects and improves neuromuscular function in spinal muscular atrophy.",
+        "abstract": "Spinal muscular atrophy (SMA) is a neuromuscular disease caused by low levels of SMN protein, primarily affecting lower motor neurons. Recent evidence from SMA and related conditions suggests that glial cells can influence disease severity. Here, we investigated the role of glial cells in the peripheral nervous system by creating SMA mice selectively overexpressing SMN in myelinating Schwann cells (Smn(-/-);SMN2(tg/0);SMN1(SC)). Restoration of SMN protein levels restricted solely to Schwann cells reversed myelination defects, significantly improved neuromuscular function and ameliorated neuromuscular junction pathology in SMA mice. However, restoration of SMN in Schwann cells had no impact on motor neuron soma loss from the spinal cord or ongoing systemic and peripheral pathology. This study provides evidence for a defined, intrinsic contribution of glial cells to SMA disease pathogenesis and suggests that therapies designed to include Schwann cells in their target tissues are likely to be required in order to rescue myelination defects and associated disease symptoms.",
+        "pub_date": "2016 Jul 1"
+      },
+      {
+        "pmid": "28054357",
+        "title": "Linking amyotrophic lateral sclerosis and spinal muscular atrophy through RNA-transcriptome homeostasis: a genomics perspective.",
+        "abstract": "In this review, we present our most recent understanding of key biomolecular processes that underlie two motor neuron degenerative disorders, amyotrophic lateral sclerosis, and spinal muscular atrophy. We focus on the role of four multifunctional proteins involved in RNA metabolism (TDP-43, FUS, SMN, and Senataxin) that play a causal role in these diseases. Recent results have led to a novel scenario of intricate connections between these four proteins, bringing transcriptome homeostasis into the spotlight as a common theme in motor neuron degeneration. We review reported functional and physical interactions between these four proteins, highlighting their common association with nuclear bodies and small nuclear ribonucleoprotein particle biogenesis and function. We discuss how these interactions are turning out to be particularly relevant for the control of transcription and chromatin homeostasis, including the recent identification of an association between SMN and Senataxin required to ensure the resolution of DNA-RNA hybrid formation and proper termination by RNA polymerase II. These connections strongly support the existence of common pathways underlying the spinal muscular atr...",
+        "pub_date": "2017 Apr"
+      },
+      {
+        "pmid": "28270613",
+        "title": "SMN deficiency in severe models of spinal muscular atrophy causes widespread intron retention and DNA damage.",
+        "abstract": "Spinal muscular atrophy (SMA), an autosomal recessive neuromuscular disease, is the leading monogenic cause of infant mortality. Homozygous loss of the gene survival of motor neuron 1 (SMN1) causes the selective degeneration of lower motor neurons and subsequent atrophy of proximal skeletal muscles. The SMN1 protein product, survival of motor neuron (SMN), is ubiquitously expressed and is a key factor in the assembly of the core splicing machinery. The molecular mechanisms by which disruption of the broad functions of SMN leads to neurodegeneration remain unclear. We used an antisense oligonucleotide (ASO)-based inducible mouse model of SMA to investigate the SMN-specific transcriptome changes associated with neurodegeneration. We found evidence of widespread intron retention, particularly of minor U12 introns, in the spinal cord of mice 30 d after SMA induction, which was then rescued by a therapeutic ASO. Intron retention was concomitant with a strong induction of the p53 pathway and DNA damage response, manifesting as gamma-H2A.X positivity in neurons of the spinal cord and brain. Widespread intron retention and markers of the DNA damage response were also observed with SMN depl...",
+        "pub_date": "2017 Mar 21"
+      },
+      {
+        "pmid": "32676861",
+        "title": "Mislocalization of SMN from the I-band and M-band in human skeletal myofibers in spinal muscular atrophy associates with primary structural alterations of the sarcomere.",
+        "abstract": "Spinal muscular atrophy (SMA) is caused by a deletion or mutation of the survival motor neuron 1 (SMN1) gene. Reduced SMN levels lead to motor neuron degeneration and muscular atrophy. SMN protein localizes to the cytoplasm and Cajal bodies. Moreover, in myofibrils from Drosophila and mice, SMN is a sarcomeric protein localized to the Z-disc. Although SMN participates in multiple functions, including the biogenesis of spliceosomal small nuclear ribonucleoproteins, its role in the sarcomere is unclear. Here, we analyzed the sarcomeric organization of SMN in human control and type I SMA skeletal myofibers. In control sarcomeres, we demonstrate that human SMN is localized to the titin-positive M-band and actin-positive I-band, and to SMN-positive granules that flanked the Z-discs. Co-immunoprecipitation assays revealed that SMN interacts with the sarcomeric protein actin, alpha-actinin, titin, and profilin2. In the type I SMA muscle, SMN levels were reduced, and atrophic (denervated) and hypertrophic (nondenervated) myofibers coexisted. The hypertrophied myofibers, which are potential primary targets of SMN deficiency, exhibited sites of focal or segmental alterations of the actin cyt...",
+        "pub_date": "2020 Sep"
+      }
+    ],
+    "aligned_triples": [
+      {
+        "source_pmid": "31272106",
+        "entity_1": {
+          "name": "JNK-c-Jun signaling",
+          "type": "Protein"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "no evidence of stress-activated JNK-c-Jun signaling in MNs of SMA mice or human tissues",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33382987",
+        "entity_1": {
+          "name": "P21",
+          "type": "Protein"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "p53 and p21 depletion did not modulate the timing or degree of Smn(2B/-) motor neuron loss",
+        "llm_confidence": 0.92,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.939,
+        "confidence_components": {
+          "model_or_self_score": 0.92,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "31488953",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Spinal muscular atrophy is characterized by the degeneration of the spinal cord motor neurons caused by chronic low levels of SMN protein",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41958916",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMA is characterized by degeneration of the spinal cord motor neurons caused by chronic low levels of survival motor neuron (SMN) protein.",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27170316",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "primarily affecting lower motor neurons",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "28054357",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "bringing transcriptome homeostasis into the spotlight as a common theme in motor neuron degeneration",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "28270613",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "leading to motor neuron death",
+        "llm_confidence": 0.75,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.874,
+        "confidence_components": {
+          "model_or_self_score": 0.75,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "32676861",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Reduced SMN levels lead to motor neuron degeneration and muscular atrophy.",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33999256",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "loss of the survival of motor neurons (SMN) protein, which leads to degeneration of lower motor neurons",
+        "llm_confidence": 0.93,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.943,
+        "confidence_components": {
+          "model_or_self_score": 0.93,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "34445199",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "how deficiency of SMN results in motor neuron loss",
+        "llm_confidence": 0.88,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.924,
+        "confidence_components": {
+          "model_or_self_score": 0.88,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "32676861",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "muscle weakness",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Reduced SMN levels lead to motor neuron degeneration and muscular atrophy.",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33999256",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "muscle weakness",
+          "type": "Phenotype"
+        },
+        "evidence_text": "loss of the survival of motor neurons (SMN) protein, which leads to degeneration of lower motor neurons, and muscle atrophy",
+        "llm_confidence": 0.91,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.935,
+        "confidence_components": {
+          "model_or_self_score": 0.91,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "29069603",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "ribosome biology",
+          "type": "Phenotype"
+        },
+        "evidence_text": "ribosome biology as an important, yet largely overlooked, factor in motor neuron degeneration",
+        "llm_confidence": 0.88,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.924,
+        "confidence_components": {
+          "model_or_self_score": 0.88,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33999256",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "loss of the survival of motor neurons (SMN) protein, which leads to degeneration of lower motor neurons, and muscle atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "31851921",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "Stasimon dysfunction",
+          "type": "Phenotype"
+        },
+        "evidence_text": "These findings identify Stasimon dysfunction induced by SMN deficiency as an upstream driver of distinct cellular cascades that lead to synaptic loss and motor neuron degeneration",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "26586529",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "SMN deficiency leads to spinal motor neuron-specific degeneration",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27466204",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "cause progressive motor neuron degeneration in spinal muscular atrophy",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27652289",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Deficiency of the ubiquitous SMN function results in spinal cord alpha-motor neuron degeneration",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30012555",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Ubiquitous deficiency in the survival motor neuron (SMN) protein causes death of motor neurons",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30116818",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "deficiency of survival motor neuron protein (SMN) ... selectively deteriorates motor neurons",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30171534",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Insufficient levels of SMN results in the loss of motor neurons",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30724851",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "SMN deficiency causes motor neuron degeneration",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "34302176",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "motor neuron loss and locomotor deficiencies became evident at 21 days",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "34734684",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "The lack of functional protein SMN determines motor neuron (MN) degeneration and skeletal muscle atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      }
+    ],
+    "fused_edges": [
+      {
+        "entity_1": {
+          "name": "SMN protein",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25346245",
+            "26206889",
+            "26681261",
+            "27452470",
+            "27894243",
+            "29799103",
+            "29985170",
+            "30667343",
+            "31183542",
+            "33893753",
+            "34097287",
+            "34232342",
+            "35763114",
+            "36329412",
+            "37705059",
+            "37762045",
+            "39067446",
+            "39955442"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 18
+        },
+        "computed_confidence": 0.907,
+        "confidence_components": {
+          "base_score": 0.954,
+          "avg_raw_score": 0.941,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 18,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "26586529",
+            "27466204",
+            "27652289",
+            "30012555",
+            "30116818",
+            "30171534",
+            "30724851",
+            "34302176",
+            "34734684",
+            "35373853",
+            "37019880",
+            "39201486",
+            "41928955"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 13
+        },
+        "computed_confidence": 0.905,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.941,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 13,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN protein",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25245431",
+            "25358252",
+            "26793058",
+            "29263925",
+            "31363739",
+            "32668756",
+            "33642371",
+            "33845129",
+            "34425216",
+            "37289324",
+            "38916214",
+            "39408601",
+            "41107965"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 13
+        },
+        "computed_confidence": 0.904,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 13,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "27170316",
+            "28054357",
+            "28270613",
+            "32676861",
+            "33999256",
+            "34445199"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 6
+        },
+        "computed_confidence": 0.899,
+        "confidence_components": {
+          "base_score": 0.943,
+          "avg_raw_score": 0.919,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 6,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "31272106",
+            "35338505",
+            "37678880"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 3
+        },
+        "computed_confidence": 0.842,
+        "confidence_components": {
+          "base_score": 0.939,
+          "avg_raw_score": 0.927,
+          "pmid_support_score": 0.69,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 3,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN protein",
+          "type": "Protein"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "39976226"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.808,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "survival motor neuron (SMN) protein",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "34678665"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.797,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN deficiency",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "41929160"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.792,
+        "confidence_components": {
+          "base_score": 0.924,
+          "avg_raw_score": 0.924,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN/SYNCRIP complex",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "30649277"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.779,
+        "confidence_components": {
+          "base_score": 0.901,
+          "avg_raw_score": 0.901,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "loss of SMN protein",
+          "type": "Phenotype"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "41655958"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.751,
+        "confidence_components": {
+          "base_score": 0.855,
+          "avg_raw_score": 0.855,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ENCODES",
+        "entity_2": {
+          "name": "survival motor neuron (SMN) protein",
+          "type": "Protein"
+        },
+        "evidence": {
+          "pmid_list": [
+            "28173138",
+            "29703692",
+            "30171535",
+            "30582825",
+            "33283185",
+            "34678665",
+            "35927425",
+            "36329412",
+            "39202360",
+            "40287831",
+            "41103255"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 12
+        },
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "base_score": 0.965,
+          "avg_raw_score": 0.945,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 11,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN deficiency",
+          "type": "Phenotype"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "26423457",
+            "26908606",
+            "27124114",
+            "27460292",
+            "27472505",
+            "30475554",
+            "31927482",
+            "40585211"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 8
+        },
+        "computed_confidence": 0.907,
+        "confidence_components": {
+          "base_score": 0.958,
+          "avg_raw_score": 0.932,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 8,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25514431",
+            "27260405",
+            "32129749",
+            "36930296",
+            "39000416"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 5
+        },
+        "computed_confidence": 0.891,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.93,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 5,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "needs_review",
+        "conflict_reason": "positive_and_negative_relation_polarity",
+        "conflict_relations": [
+          "CAUSES",
+          "HAS_PHENOTYPE",
+          "PREVENTS"
+        ]
+      },
+      {
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ENCODES",
+        "entity_2": {
+          "name": "survival motor neuron",
+          "type": "Protein"
+        },
+        "evidence": {
+          "pmid_list": [
+            "26250347",
+            "28624227",
+            "31863335"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 4
+        },
+        "computed_confidence": 0.855,
+        "confidence_components": {
+          "base_score": 0.965,
+          "avg_raw_score": 0.938,
+          "pmid_support_score": 0.69,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 3,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "survival motor neuron (SMN) protein",
+          "type": "Protein"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "32311115",
+            "38136082",
+            "41655958"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 3
+        },
+        "computed_confidence": 0.851,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.69,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 3,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "SMN expression",
+          "type": "Phenotype"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "30200278",
+            "30553700",
+            "37376212"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 3
+        },
+        "computed_confidence": 0.848,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.69,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 3,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      }
+    ],
+    "conflicts": [
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "CAUSES",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "CAUSES",
+          "HAS_PHENOTYPE",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "motoneuron defects",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "CAUSES",
+          "HAS_PHENOTYPE",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN2 copy number",
+          "type": "Variant"
+        },
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "IMPROVES",
+          "INCREASES",
+          "NO_EFFECT",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "tauS202A,T205A",
+          "type": "Variant"
+        },
+        "entity_2": {
+          "name": "motor neuron defects",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "IMPROVES",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "motor endpoints",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "IMPROVES",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "motor outcomes",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "IMPROVES",
+          "NO_EFFECT",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "DNA-PKcs",
+          "type": "Protein"
+        },
+        "relations": [
+          "DECREASES",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      }
+    ],
+    "supporting_pmids": [
+      "31272106",
+      "33382987",
+      "31488953",
+      "41958916",
+      "27170316",
+      "28054357",
+      "28270613",
+      "32676861",
+      "33999256",
+      "34445199",
+      "29069603",
+      "31851921",
+      "26586529",
+      "27466204",
+      "27652289",
+      "30012555",
+      "30116818",
+      "30171534",
+      "30724851",
+      "34302176",
+      "34734684",
+      "25346245",
+      "26206889",
+      "26681261",
+      "27452470",
+      "27894243",
+      "29799103",
+      "29985170",
+      "30667343",
+      "31183542",
+      "33893753",
+      "34097287"
+    ],
+    "missing_evidence": [],
+    "limits": {
+      "max_abstracts": 8,
+      "max_aligned_triples": 24,
+      "max_fused_edges": 16,
+      "max_conflicts": 8,
+      "max_abstract_chars": 1200,
+      "max_supporting_pmids": 32
+    },
+    "retrieval": {
+      "mode": "lexical_entity",
+      "tokens": [
+        "what",
+        "evidence",
+        "links",
+        "smn",
+        "protein",
+        "to",
+        "motor",
+        "neuron",
+        "degeneration"
+      ],
+      "top_k": 8,
+      "aligned_candidates": 12071,
+      "fused_candidates": 11155,
+      "conflict_candidates": 38
+    }
+  }
+}

@@ -1,11 +1,6 @@
 {
-  "index_kind": "manifest_only",
-  "retrieval_mode": "hybrid_tfidf",
-  "available_retrieval_modes": [
-    "lexical_entity",
-    "hybrid_tfidf"
-  ],
-  "created_at": "2026-06-10_125652",
+  "valid": true,
+  "manifest_file": "data\\processed\\graph_rag_index_manifest.json",
   "inputs": [
     {
       "path": "data/raw/pubmed_sma_abstracts.jsonl",
@@ -31,6 +26,5 @@
       "bytes": 15047,
       "sha256": "96c8923c9d67776b00936169323ee092979870d40b15c5a932d37a022b2924db"
     }
-  ],
-  "notes": "Local retrieval reads canonical JSONL files directly. hybrid_tfidf adds a local TF-IDF cosine reranker over lexical candidates."
+  ]
 }

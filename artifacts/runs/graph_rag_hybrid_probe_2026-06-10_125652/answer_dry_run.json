@@ -1,0 +1,2332 @@
+{
+  "question": "How does Nusinersen affect motor function?",
+  "answer_status": "dry_run_requires_llm",
+  "answer": "",
+  "supporting_pmids": [
+    "37927272",
+    "36933672",
+    "30202772",
+    "32333596",
+    "35314252",
+    "41114807",
+    "41811872",
+    "40150095",
+    "41137787",
+    "39344612",
+    "35787224",
+    "33118682",
+    "36873628",
+    "29689734",
+    "37095427",
+    "34828753",
+    "39030456",
+    "36854931",
+    "40011938",
+    "33688130",
+    "38532567",
+    "35337708",
+    "32180828",
+    "30618374",
+    "27939059",
+    "28799578",
+    "28884620",
+    "29091570",
+    "29443664",
+    "29556256",
+    "30008228",
+    "30027400"
+  ],
+  "supporting_triples": [
+    {
+      "source_pmid": "37927272",
+      "entity_1": {
+        "name": "SMN protein",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "cognitive function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "reduced SMN protein expression does not severely affect cognitive function in SMA patients",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "36933672",
+      "entity_1": {
+        "name": "p.Phe580Tyr",
+        "type": "Variant"
+      },
+      "relation": "HAS_PHENOTYPE",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "a mutation known instead to primarily affect motor function",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "30202772",
+      "entity_1": {
+        "name": "AAV9-IGHMBP2",
+        "type": "Drug"
+      },
+      "relation": "NO_EFFECT",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "IV delivery of a low dose does not improve motor function",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "32333596",
+      "entity_1": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "relation": "NO_EFFECT",
+      "entity_2": {
+        "name": "bulbar function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "Improvement of motor function does not imply similar gains in bulbar function",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "35314252",
+      "entity_1": {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      "relation": "NO_EFFECT",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "did not affect motoric performance or neuromuscular junction (NMJ) morphology",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "41114807",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "While nusinersen improves motor function",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "41811872",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "nusinersen improves motor function",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "40150095",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "improves motor function",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    }
+  ],
+  "graph_context": [
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "27939059",
+          "28799578",
+          "28884620",
+          "29091570",
+          "29443664",
+          "29556256",
+          "29689734",
+          "30008228",
+          "30027400",
+          "30158155",
+          "30185733",
+          "30246272",
+          "30284761",
+          "30315070",
+          "30396824",
+          "30414815",
+          "30617569",
+          "30618374",
+          "31019106",
+          "31123861",
+          "31298747",
+          "31388901",
+          "31799720",
+          "31847032",
+          "32006461",
+          "32032473",
+          "32180828",
+          "32199097",
+          "32253736",
+          "32333595",
+          "32333596",
+          "32361837",
+          "32505480",
+          "32515646",
+          "32532349",
+          "32538864",
+          "32632203",
+          "32800069",
+          "33003005",
+          "33029682",
+          "33059774",
+          "33074187",
+          "33106369",
+          "33118682",
+          "33147378",
+          "33184859",
+          "33307321",
+          "33429824",
+          "33459657",
+          "33501671",
+          "33573692",
+          "33608138",
+          "33635773",
+          "33682724",
+          "33688130",
+          "33711791",
+          "33854470",
+          "33899154",
+          "34093395",
+          "34099377",
+          "34287247",
+          "34476123",
+          "34645478",
+          "34745470",
+          "34809526",
+          "34828753",
+          "34850360",
+          "34884240",
+          "34919695",
+          "35140677",
+          "35166467",
+          "35178673",
+          "35337708",
+          "35352647",
+          "35510740",
+          "35522792",
+          "35527201",
+          "35547367",
+          "35606491",
+          "35738181",
+          "35748255",
+          "35768357",
+          "35787224",
+          "35857854",
+          "35871521",
+          "36049072",
+          "36274155",
+          "36278622",
+          "36297509",
+          "36316089",
+          "36329412",
+          "36382221",
+          "36441395",
+          "36457580",
+          "36513962",
+          "36525882",
+          "36565133",
+          "36690929",
+          "36810103",
+          "36854931",
+          "36872785",
+          "36873628",
+          "36880698",
+          "37095427",
+          "37109175",
+          "37393513",
+          "37512056",
+          "37563072",
+          "37568304",
+          "37572575",
+          "37602664",
+          "37657961",
+          "37843301",
+          "37989659",
+          "38073395",
+          "38090542",
+          "38103972",
+          "38111627",
+          "38135619",
+          "38192577",
+          "38233181",
+          "38310720",
+          "38363614",
+          "38532567",
+          "38589769",
+          "38722537",
+          "38831860",
+          "38861761",
+          "38902631",
+          "38905882",
+          "38921951",
+          "38929947",
+          "38929996",
+          "38932995",
+          "38954034",
+          "39030456",
+          "39076847",
+          "39200246",
+          "39222296",
+          "39344612",
+          "39447351",
+          "39505005",
+          "39585055",
+          "39604484",
+          "39675174",
+          "39685824",
+          "39718202",
+          "39744899",
+          "39787994",
+          "39829133",
+          "39832442",
+          "39955912",
+          "39960588",
+          "39969920",
+          "40011938",
+          "40047158",
+          "40085221",
+          "40150095",
+          "40163981",
+          "40180233",
+          "40212617",
+          "40241365",
+          "40270050",
+          "40317045",
+          "40317413",
+          "40320994",
+          "40451126",
+          "40482302",
+          "40553176",
+          "40566025",
+          "40576143",
+          "40576875",
+          "40762286",
+          "40770841",
+          "40879446",
+          "40913965",
+          "40956616",
+          "41060652",
+          "41114807",
+          "41137787",
+          "41299848",
+          "41350238",
+          "41402085",
+          "41607729",
+          "41655361",
+          "41795276",
+          "41806494",
+          "41811872",
+          "41908528"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 189
+      },
+      "computed_confidence": 0.908,
+      "confidence_components": {
+        "base_score": 0.962,
+        "avg_raw_score": 0.93,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 189,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "positive",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "37062018"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.779,
+      "confidence_components": {
+        "base_score": 0.901,
+        "avg_raw_score": 0.901,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "NO_EFFECT",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "32665408",
+          "35000792",
+          "37109175",
+          "38839888",
+          "40922023"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 5
+      },
+      "computed_confidence": 0.878,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.905,
+        "pmid_support_score": 0.93,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 5,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "distal motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "36175810",
+          "37989659"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 2
+      },
+      "computed_confidence": 0.816,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.921,
+        "pmid_support_score": 0.57,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 2,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "positive",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "peripheral motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "37290230"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.751,
+      "confidence_components": {
+        "base_score": 0.855,
+        "avg_raw_score": 0.855,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "positive",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "bulbar function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "31773738"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.797,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.931,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "positive",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "muscle function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "40938644"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.797,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.931,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "positive",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "hand motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "32935160",
+          "35833245"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 2
+      },
+      "computed_confidence": 0.83,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.95,
+        "pmid_support_score": 0.57,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 2,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "positive",
+      "review_status": "accepted"
+    }
+  ],
+  "limitations": [
+    "dry_run: no LLM answer generated"
+  ],
+  "model": "",
+  "retrieval": {
+    "mode": "hybrid_tfidf",
+    "tokens": [
+      "how",
+      "does",
+      "nusinersen",
+      "affect",
+      "motor",
+      "function"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 6798,
+    "fused_candidates": 11155,
+    "conflict_candidates": 18,
+    "reranker": "local_tfidf_cosine"
+  },
+  "evidence_context": {
+    "context_id": "graph-rag-how-does-nusinersen-affect-motor-function",
+    "purpose": "graph_rag_answer",
+    "query": "How does Nusinersen affect motor function?",
+    "entities": [
+      {
+        "name": "SMN protein",
+        "type": "Protein"
+      },
+      {
+        "name": "cognitive function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "p.Phe580Tyr",
+        "type": "Variant"
+      },
+      {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "AAV9-IGHMBP2",
+        "type": "Drug"
+      },
+      {
+        "name": "bulbar function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "SMN",
+        "type": "Protein"
+      },
+      {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      {
+        "name": "distal motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "peripheral motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "muscle function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "hand motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "nusinersen sodium",
+        "type": "Drug"
+      },
+      {
+        "name": "overall motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "motor function decline",
+        "type": "Phenotype"
+      },
+      {
+        "name": "pulmonary function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "respiratory function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "motor strength",
+        "type": "Phenotype"
+      },
+      {
+        "name": "physical function",
+        "type": "Phenotype"
+      }
+    ],
+    "abstracts": [
+      {
+        "pmid": "37927272",
+        "title": "Impaired Neurodevelopment in Children with 5q-SMA - 2 Years After Newborn Screening.",
+        "abstract": "OBJECTIVE: Numerous studies have consistently found that reduced SMN protein expression does not severely affect cognitive function in SMA patients. However, the average intelligence quotient of SMA patients has ranged above to below average in different studies. The cognitive development of SMA patients identified through newborn screening remains largely unknown. METHODS: 40 of 47 eligible SMA patients (23 females/17 males) from 39 families identified through newborn screening between January 2018 and December 2020 underwent developmental testing using Bayley III (BSID) after the 2 years of age. The mean age was 29.25 months (23-42 months). 17 patients had 2, 11 patients had 3 and 12 patients had >/=4 copies of SMN2. RESULTS: cognitive scale: mean 94.55 (SD 24.01); language scale: mean 86.09 (SD 26.41); motor scale: 81.28 (SD 28.07). Overall, the cognitive scales show that 14 children were below average, 20 children were average and 6 children were above average. 10/14 children with below average scores had 2 SMN2 copies. The post-hoc pairwise comparisons showed that the cognition main scale was significantly more sensitive to the number of SMN2 copies than the motor main scale o...",
+        "pub_date": "2024"
+      },
+      {
+        "pmid": "36933672",
+        "title": "A human dynein heavy chain mutation impacts cortical progenitor cells causing developmental defects, reduced brain size and altered brain architecture.",
+        "abstract": "Dynein heavy chain (DYNC1H1) mutations can either lead to severe cerebral cortical malformations, or alternatively may be associated with the development of spinal muscular atrophy with lower extremity predominance (SMA-LED). To assess the origin of such differences, we studied a new Dync1h1 knock-in mouse carrying the cortical malformation p.Lys3334Asn mutation. Comparing with an existing neurodegenerative Dync1h1 mutant (Legs at odd angles, Loa, p.Phe580Tyr/+), we assessed Dync1h1's roles in cortical progenitor and especially radial glia functions during embryogenesis, and assessed neuronal differentiation. p.Lys3334Asn /+ mice exhibit reduced brain and body size. Embryonic brains show increased and disorganized radial glia: interkinetic nuclear migration occurs in mutants, however there are increased basally positioned cells and abventricular mitoses. The ventricular boundary is disorganized potentially contributing to progenitor mislocalization and death. Morphologies of mitochondria and Golgi apparatus are perturbed in vitro, with different effects also in Loa mice. Perturbations of neuronal migration and layering are also observed in p.Lys3334Asn /+ mutants. Overall, we ident...",
+        "pub_date": "2023 May"
+      },
+      {
+        "pmid": "30202772",
+        "title": "A Direct Comparison of IV and ICV Delivery Methods for Gene Replacement Therapy in a Mouse Model of SMARD1.",
+        "abstract": "Spinal muscular atrophy with respiratory distress type 1 (SMARD1) is an infantile autosomal recessive disease caused by the loss of the ubiquitously expressed IGHMBP2 gene. SMARD1 causes degeneration of alpha-motor neurons, resulting in distal muscle weakness, diaphragm paralysis, and respiratory malfunction. We have reported that delivery of a low dose of AAV9-IGHMBP2 to the CNS results in a significant rescue of the SMARD1 mouse model (nmd). To examine how a delivery route can impact efficacy, a direct comparison of intravenous (IV) and intracerebroventricular (ICV) delivery of AAV9-IGHMBP2 was performed. Using a low-dose, both IV and ICV delivery routes led to a significant extension in survival and increased body weight. Conversely, only ICV-treated animals demonstrated improvements in the hindlimb muscle, neuromuscular junction, and motor function. The hindlimb phenotype of IV-treated mice resembled the untreated nmd mice. We investigated whether the increased survival of IV-treated nmd mice was the result of a positive impact on the cardiac function. Our results revealed that cardiac function and pathology were similarly improved in IV- and ICV-treated mice. We concluded that...",
+        "pub_date": "2018 Sep 21"
+      },
+      {
+        "pmid": "32333596",
+        "title": "Feeding and Swallowing Problems in Infants with Spinal Muscular Atrophy Type 1: an Observational Study.",
+        "abstract": "BACKGROUND: Infantile hereditary proximal spinal muscular atrophy (SMA) type 1 is characterized by onset in the first 6 months of life and severe and progressive muscle weakness. Dysphagia is a common complication but has not been studied in detail. OBJECTIVE: To study feeding and swallowing problems in infants with SMA type 1, and to explore the relation between these problems and functional motor scores. METHODS: We prospectively included 16 infants with SMA type 1 between September 2016 and October 2018. Eleven infants received palliative care and five infants best supportive care in combination with nusinersen. We compiled and used an observation list with feeding related issues and observed feeding sessions during inpatient and outpatient visits. The Children's Hospital of Philadelphia Infant Test of Neuromuscular Disorders (CHOP INTEND) was used as a measure of motor function. RESULTS: All infants in the palliative care group (median onset of disease 14 days (range 1-56); median inclusion in the study 52 days (range 16-252) demonstrated symptoms of fatigue during feeding and unsafe swallowing. Symptoms were short nursing sessions (10-15 minutes), and not being able to finish...",
+        "pub_date": "2020"
+      },
+      {
+        "pmid": "35314252",
+        "title": "Disruption of Survival Motor Neuron in Glia Impacts Survival but has no Effect on Neuromuscular Function in Drosophila.",
+        "abstract": "Increasing evidence points to the involvement of cell types other than motor neurons in both amyotrophic lateral sclerosis (ALS) and spinal muscular atrophy (SMA), the predominant motor neuron disease in adults and infants, respectively. The contribution of glia to ALS pathophysiology is well documented. Studies have since focused on evaluating the contribution of glia in SMA. Here, we made use of the Drosophila model to ask whether the survival motor neuron (Smn) protein, the causative factor for SMA, is required selectively in glia. We show that the specific loss of Smn function in glia during development reduced survival to adulthood but did not affect motoric performance or neuromuscular junction (NMJ) morphology in flies. In contrast, gain rather than loss of ALS-linked TDP-43, FUS or C9orf72 function in glia induced significant defects in motor behaviour in addition to reduced survival. Furthermore, glia-specific gain of TDP-43 function caused both NMJ defects and muscle atrophy. Smn together with Gemins 2-8 and Unrip, form the Smn complex which is indispensable for the assembly of spliceosomal small nuclear ribonucleoproteins (snRNPs). We show that glial-selective perturbati...",
+        "pub_date": "2022 May 21"
+      },
+      {
+        "pmid": "41114807",
+        "title": "Respiratory effects of nusinersen treatment in pediatric patients with spinal muscular atrophy types 2 and 3.",
+        "abstract": "Spinal muscular atrophy (SMA) is a progressive neuromuscular disorder characterized by respiratory decline. While nusinersen improves motor function, its long-term respiratory effects in milder SMA types (2 and 3) remain unclear. This study evaluates pulmonary outcomes following 3 years of treatment. We retrospectively reviewed genetically confirmed SMA 2 and 3 pediatric patients treated with nusinersen (2017-2022). Data included demographics, non-invasive ventilation (NIV) and mechanical insufflation-exsufflation (MIE) use, body mass index (BMI), feeding method, scoliosis, and respiratory hospitalizations. Pulmonary function tests (PFTs) at baseline and at year 3 included percent-predicted forced vital capacity (ppFVC), FEV1/FVC ratio, peak cough flow (PCF), maximal voluntary ventilation (MVV), maximal inspiratory pressure (MIP), and maximal expiratory pressure (MEP). Included were 15 patients with type 2 and 13 patients with type 3 SMA. Their mean age at diagnosis was 3.5 +/- 4 years and 13.8 +/- 5.4 years at nusinersen initiation. One was lost to follow-up. At baseline, 6 patients used NIV and 8 used MIE. After 3 years, NIV use increased to 7/27 and MIE to 14/27. All 27 patients...",
+        "pub_date": "2025 Oct 20"
+      },
+      {
+        "pmid": "41811872",
+        "title": "Perceived Impact on the Daily Lives of Patients with Spinal Muscular Atrophy Treated with Nusinersen: A Natural Language Processing Approach.",
+        "abstract": "OBJECTIVES: Spinal muscular atrophy (SMA) is a rare neuromuscular disorder caused by SMN1 mutations, leading to progressive muscle weakness. Although nusinersen improves motor function, its broader impact on daily life remains insufficiently understood. This study explored caregivers' perceptions of nusinersen treatment and identified themes reflecting its influence on everyday functioning. METHODS: An observational study included 23 children with SMA (10 type 2, 7 type 3, 6 type 1) treated with nusinersen for up to 36 months. The mean age at interview was 6.3 years (SD 2.3). Caregivers completed a semi-structured questionnaire with closed and open-ended items. Narrative responses were analyzed using natural language processing (NLP) and topic modeling to identify recurring patterns. RESULTS: Caregivers reported consistent positive effects. NLP identified three thematic clusters: Functional and Daily Progress (34.9%), Global Improvement and Quality of Life (33.6%), and Hospitalization and Physical Recovery (31.5%). Reported benefits included improved swallowing, easier breathing, fewer hospitalizations, increased independence, and enhanced mood. Families emphasized reduced stress a...",
+        "pub_date": "2026 Mar 10"
+      },
+      {
+        "pmid": "40150095",
+        "title": "Total Intramuscular Fat Fraction of Thigh Muscles as a Predictor of Nusinersen Efficacy in Pediatric SMA Type II and III.",
+        "abstract": "Background/Objectives: Nusinersen is a disease-modifying drug for spinal muscular atrophy (SMA) that improves motor function. However, its effects on the skeletal muscles remain unclear. This study aimed to assess the intramuscular fat fraction in patients with SMA types II and III using muscle magnetic resonance imaging (MRI) and to explore the relationship between muscle tissue, lipid metabolism, and motor function during nusinersen treatment. Methods: This study included seven pediatric patients with SMA types II and III who received nusinersen treatment. Muscle MRIs were performed at three time points. Images of the central thigh were used to measure the cross-sectional area (CSA) and muscle fat area, and the intramuscular fat fraction (IMFF) was calculated. The thigh muscles were categorized into three groups: quadriceps, adductor, and hamstrings. Results: The median (range) of total IMFF for SMA type II and III at T-0, T-2, and T-4 were 18.5 (12.6-48.4), 24.4 (10.1-61.4), and 39.0 (30.0-68.6) % and increased over time. In five patients whose motor function was evaluated, a moderate negative correlation was observed between the changes in the Hammersmith Functional Motor Score...",
+        "pub_date": "2025 Mar 17"
+      }
+    ],
+    "aligned_triples": [
+      {
+        "source_pmid": "37927272",
+        "entity_1": {
+          "name": "SMN protein",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "cognitive function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "reduced SMN protein expression does not severely affect cognitive function in SMA patients",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36933672",
+        "entity_1": {
+          "name": "p.Phe580Tyr",
+          "type": "Variant"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "a mutation known instead to primarily affect motor function",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30202772",
+        "entity_1": {
+          "name": "AAV9-IGHMBP2",
+          "type": "Drug"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "IV delivery of a low dose does not improve motor function",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "32333596",
+        "entity_1": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "bulbar function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Improvement of motor function does not imply similar gains in bulbar function",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35314252",
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "did not affect motoric performance or neuromuscular junction (NMJ) morphology",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41114807",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "While nusinersen improves motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41811872",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "nusinersen improves motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "40150095",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "improves motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41137787",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "improvement in motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "39344612",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Although their motor function was improved",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35787224",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Nusinersen improved motor function scores",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33118682",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Nusinersen is associated with an improvement in motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36873628",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Nusinersen can improve the motor function of SMA patients",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "29689734",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "improvement of motor function after six months of treatment with nusinersen",
+        "llm_confidence": 0.93,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.943,
+        "confidence_components": {
+          "model_or_self_score": 0.93,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "37095427",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "nusinersen and risdiplam, improve motor function in SMA",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "34828753",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "nusinersen has been demonstrated to improve motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "39030456",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Nusinersen effectively improves motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36854931",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Nusinersen was effective in improving motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "40011938",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Nusinersen significantly improved motor function in SMA patients",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33688130",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "All patients showed improvement in motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "38532567",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "9 patients showed motor function improvement",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35337708",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "gains in motor function",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "32180828",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "stabilization of motor function",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30618374",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "all children had improved motor function",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      }
+    ],
+    "fused_edges": [
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "27939059",
+            "28799578",
+            "28884620",
+            "29091570",
+            "29443664",
+            "29556256",
+            "29689734",
+            "30008228",
+            "30027400",
+            "30158155",
+            "30185733",
+            "30246272",
+            "30284761",
+            "30315070",
+            "30396824",
+            "30414815",
+            "30617569",
+            "30618374",
+            "31019106",
+            "31123861",
+            "31298747",
+            "31388901",
+            "31799720",
+            "31847032",
+            "32006461",
+            "32032473",
+            "32180828",
+            "32199097",
+            "32253736",
+            "32333595",
+            "32333596",
+            "32361837",
+            "32505480",
+            "32515646",
+            "32532349",
+            "32538864",
+            "32632203",
+            "32800069",
+            "33003005",
+            "33029682",
+            "33059774",
+            "33074187",
+            "33106369",
+            "33118682",
+            "33147378",
+            "33184859",
+            "33307321",
+            "33429824",
+            "33459657",
+            "33501671",
+            "33573692",
+            "33608138",
+            "33635773",
+            "33682724",
+            "33688130",
+            "33711791",
+            "33854470",
+            "33899154",
+            "34093395",
+            "34099377",
+            "34287247",
+            "34476123",
+            "34645478",
+            "34745470",
+            "34809526",
+            "34828753",
+            "34850360",
+            "34884240",
+            "34919695",
+            "35140677",
+            "35166467",
+            "35178673",
+            "35337708",
+            "35352647",
+            "35510740",
+            "35522792",
+            "35527201",
+            "35547367",
+            "35606491",
+            "35738181",
+            "35748255",
+            "35768357",
+            "35787224",
+            "35857854",
+            "35871521",
+            "36049072",
+            "36274155",
+            "36278622",
+            "36297509",
+            "36316089",
+            "36329412",
+            "36382221",
+            "36441395",
+            "36457580",
+            "36513962",
+            "36525882",
+            "36565133",
+            "36690929",
+            "36810103",
+            "36854931",
+            "36872785",
+            "36873628",
+            "36880698",
+            "37095427",
+            "37109175",
+            "37393513",
+            "37512056",
+            "37563072",
+            "37568304",
+            "37572575",
+            "37602664",
+            "37657961",
+            "37843301",
+            "37989659",
+            "38073395",
+            "38090542",
+            "38103972",
+            "38111627",
+            "38135619",
+            "38192577",
+            "38233181",
+            "38310720",
+            "38363614",
+            "38532567",
+            "38589769",
+            "38722537",
+            "38831860",
+            "38861761",
+            "38902631",
+            "38905882",
+            "38921951",
+            "38929947",
+            "38929996",
+            "38932995",
+            "38954034",
+            "39030456",
+            "39076847",
+            "39200246",
+            "39222296",
+            "39344612",
+            "39447351",
+            "39505005",
+            "39585055",
+            "39604484",
+            "39675174",
+            "39685824",
+            "39718202",
+            "39744899",
+            "39787994",
+            "39829133",
+            "39832442",
+            "39955912",
+            "39960588",
+            "39969920",
+            "40011938",
+            "40047158",
+            "40085221",
+            "40150095",
+            "40163981",
+            "40180233",
+            "40212617",
+            "40241365",
+            "40270050",
+            "40317045",
+            "40317413",
+            "40320994",
+            "40451126",
+            "40482302",
+            "40553176",
+            "40566025",
+            "40576143",
+            "40576875",
+            "40762286",
+            "40770841",
+            "40879446",
+            "40913965",
+            "40956616",
+            "41060652",
+            "41114807",
+            "41137787",
+            "41299848",
+            "41350238",
+            "41402085",
+            "41607729",
+            "41655361",
+            "41795276",
+            "41806494",
+            "41811872",
+            "41908528"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 189
+        },
+        "computed_confidence": 0.908,
+        "confidence_components": {
+          "base_score": 0.962,
+          "avg_raw_score": 0.93,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 189,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "37062018"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.779,
+        "confidence_components": {
+          "base_score": 0.901,
+          "avg_raw_score": 0.901,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "32665408",
+            "35000792",
+            "37109175",
+            "38839888",
+            "40922023"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 5
+        },
+        "computed_confidence": 0.878,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.905,
+          "pmid_support_score": 0.93,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 5,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "distal motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "36175810",
+            "37989659"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 2
+        },
+        "computed_confidence": 0.816,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.921,
+          "pmid_support_score": 0.57,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 2,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "peripheral motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "37290230"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.751,
+        "confidence_components": {
+          "base_score": 0.855,
+          "avg_raw_score": 0.855,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "bulbar function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "31773738"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.797,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "muscle function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "40938644"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.797,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "hand motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "32935160",
+            "35833245"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 2
+        },
+        "computed_confidence": 0.83,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.57,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 2,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "nusinersen sodium",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "39014952"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.808,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "overall motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "37069197"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.797,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "PREVENTS",
+        "entity_2": {
+          "name": "motor function decline",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "41484582"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.774,
+        "confidence_components": {
+          "base_score": 0.893,
+          "avg_raw_score": 0.893,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "pulmonary function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "33963091",
+            "37062018",
+            "39518446",
+            "39834441",
+            "40107088",
+            "42096675"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 6
+        },
+        "computed_confidence": 0.902,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.92,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 6,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "respiratory function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "32035635",
+            "33147378",
+            "33459657",
+            "34476123",
+            "36310036",
+            "36873628",
+            "37563072",
+            "38090542",
+            "38589769",
+            "38916214",
+            "38932995",
+            "39518446",
+            "40241365"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 13
+        },
+        "computed_confidence": 0.901,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.918,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 13,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "bulbar function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "35103306",
+            "36382221",
+            "39447351",
+            "40212617"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 4
+        },
+        "computed_confidence": 0.856,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.903,
+          "pmid_support_score": 0.81,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 4,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor strength",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38107546"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.808,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "physical function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38040488",
+            "38713777"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 2
+        },
+        "computed_confidence": 0.791,
+        "confidence_components": {
+          "base_score": 0.912,
+          "avg_raw_score": 0.827,
+          "pmid_support_score": 0.57,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 2,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      }
+    ],
+    "conflicts": [
+      {
+        "entity_1": {
+          "name": "SMN2 copy number",
+          "type": "Variant"
+        },
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "IMPROVES",
+          "INCREASES",
+          "NO_EFFECT",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "motor endpoints",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "IMPROVES",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "motor outcomes",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "IMPROVES",
+          "NO_EFFECT",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "CAUSES",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "tauS202A,T205A",
+          "type": "Variant"
+        },
+        "entity_2": {
+          "name": "motor neuron defects",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "IMPROVES",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "CAUSES",
+          "HAS_PHENOTYPE",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "hospitalisation",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "DECREASES",
+          "IMPROVES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "fatigue",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "DECREASES",
+          "IMPROVES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      }
+    ],
+    "supporting_pmids": [
+      "37927272",
+      "36933672",
+      "30202772",
+      "32333596",
+      "35314252",
+      "41114807",
+      "41811872",
+      "40150095",
+      "41137787",
+      "39344612",
+      "35787224",
+      "33118682",
+      "36873628",
+      "29689734",
+      "37095427",
+      "34828753",
+      "39030456",
+      "36854931",
+      "40011938",
+      "33688130",
+      "38532567",
+      "35337708",
+      "32180828",
+      "30618374",
+      "27939059",
+      "28799578",
+      "28884620",
+      "29091570",
+      "29443664",
+      "29556256",
+      "30008228",
+      "30027400"
+    ],
+    "missing_evidence": [],
+    "limits": {
+      "max_abstracts": 8,
+      "max_aligned_triples": 24,
+      "max_fused_edges": 16,
+      "max_conflicts": 8,
+      "max_abstract_chars": 1200,
+      "max_supporting_pmids": 32
+    },
+    "retrieval": {
+      "mode": "hybrid_tfidf",
+      "tokens": [
+        "how",
+        "does",
+        "nusinersen",
+        "affect",
+        "motor",
+        "function"
+      ],
+      "top_k": 8,
+      "aligned_candidates": 6798,
+      "fused_candidates": 11155,
+      "conflict_candidates": 18,
+      "reranker": "local_tfidf_cosine"
+    }
+  }
+}

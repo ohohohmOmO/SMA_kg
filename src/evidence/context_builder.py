@@ -85,8 +85,8 @@ class EvidenceContextBuilder:
             "limits": dict(self.limits),
         }
 
-    def build_question_context(self, question, top_k=8):
-        candidates = self.retrieve_question_evidence(question, top_k=top_k)
+    def build_question_context(self, question, top_k=8, retrieval_mode="lexical_entity"):
+        candidates = self.retrieve_question_evidence(question, top_k=top_k, retrieval_mode=retrieval_mode)
         aligned = candidates["aligned_triples"][: self.limits["max_aligned_triples"]]
         fused = candidates["fused_edges"][: self.limits["max_fused_edges"]]
         conflicts = candidates["conflicts"][: self.limits["max_conflicts"]]
@@ -108,7 +108,7 @@ class EvidenceContextBuilder:
             "retrieval": candidates["retrieval"],
         }
 
-    def retrieve_question_evidence(self, question, top_k=8):
+    def retrieve_question_evidence(self, question, top_k=8, retrieval_mode="lexical_entity"):
         tokens = tokenize_query(question)
         aligned_scored = [
             (self._score_aligned(record, tokens), record)
@@ -122,20 +122,42 @@ class EvidenceContextBuilder:
             (self._score_conflict(record, tokens), record)
             for record in self.conflicts
         ]
-        aligned = [record for score, record in sorted(aligned_scored, key=lambda item: (-item[0], _record_sort_key(item[1]))) if score > 0]
-        fused = [record for score, record in sorted(fused_scored, key=lambda item: (-item[0], _record_sort_key(item[1]))) if score > 0]
-        conflicts = [record for score, record in sorted(conflict_scored, key=lambda item: (-item[0], _record_sort_key(item[1]))) if score > 0]
+        if retrieval_mode == "hybrid_tfidf":
+            aligned = self._rank_with_tfidf(
+                question,
+                aligned_scored,
+                self._aligned_text,
+                max(top_k, self.limits["max_aligned_triples"]),
+            )
+            fused = self._rank_with_tfidf(
+                question,
+                fused_scored,
+                self._fused_text,
+                max(top_k, self.limits["max_fused_edges"]),
+            )
+            conflicts = self._rank_with_tfidf(
+                question,
+                conflict_scored,
+                self._conflict_text,
+                self.limits["max_conflicts"],
+            )
+        else:
+            retrieval_mode = "lexical_entity"
+            aligned = [record for score, record in sorted(aligned_scored, key=lambda item: (-item[0], _record_sort_key(item[1]))) if score > 0]
+            fused = [record for score, record in sorted(fused_scored, key=lambda item: (-item[0], _record_sort_key(item[1]))) if score > 0]
+            conflicts = [record for score, record in sorted(conflict_scored, key=lambda item: (-item[0], _record_sort_key(item[1]))) if score > 0]
         return {
             "aligned_triples": aligned[: max(top_k, self.limits["max_aligned_triples"])],
             "fused_edges": fused[: max(top_k, self.limits["max_fused_edges"])],
             "conflicts": conflicts[: self.limits["max_conflicts"]],
             "retrieval": {
-                "mode": "lexical_entity",
+                "mode": retrieval_mode,
                 "tokens": tokens,
                 "top_k": top_k,
                 "aligned_candidates": sum(1 for score, _ in aligned_scored if score > 0),
                 "fused_candidates": sum(1 for score, _ in fused_scored if score > 0),
                 "conflict_candidates": sum(1 for score, _ in conflict_scored if score > 0),
+                "reranker": "local_tfidf_cosine" if retrieval_mode == "hybrid_tfidf" else "",
             },
         }
 
@@ -212,39 +234,65 @@ class EvidenceContextBuilder:
         return entities[:24]
 
     def _score_aligned(self, record, tokens):
-        haystack = " ".join([
+        haystack = self._aligned_text(record).lower()
+        return _token_score(haystack, tokens)
+
+    def _score_fused(self, record, tokens):
+        haystack = self._fused_text(record).lower()
+        score = _token_score(haystack, tokens)
+        score += float(record.get("computed_confidence", 0.0)) * 0.1
+        return score
+
+    def _score_conflict(self, record, tokens):
+        haystack = self._conflict_text(record).lower()
+        return _token_score(haystack, tokens)
+
+    def _rank_with_tfidf(self, question, scored_records, text_func, limit):
+        scored_records = [(score, record) for score, record in scored_records if score > 0]
+        if not scored_records:
+            return []
+        lexical_sorted = sorted(scored_records, key=lambda item: (-item[0], _record_sort_key(item[1])))
+        pool = lexical_sorted[: max(200, limit * 20)]
+        docs = [text_func(record) for _, record in pool]
+        tfidf_scores = _tfidf_cosine_scores(question, docs)
+        ranked = sorted(
+            [
+                (tfidf_scores[idx], lexical_score, record)
+                for idx, (lexical_score, record) in enumerate(pool)
+            ],
+            key=lambda item: (-item[0], -item[1], _record_sort_key(item[2])),
+        )
+        return [record for _, _, record in ranked[:limit]]
+
+    def _aligned_text(self, record):
+        return " ".join([
             record.get("entity_1", {}).get("name", ""),
             record.get("entity_1", {}).get("type", ""),
             record.get("relation", ""),
             record.get("entity_2", {}).get("name", ""),
             record.get("entity_2", {}).get("type", ""),
             record.get("evidence_text", ""),
-        ]).lower()
-        return _token_score(haystack, tokens)
+        ])
 
-    def _score_fused(self, record, tokens):
-        haystack = " ".join([
+    def _fused_text(self, record):
+        return " ".join([
             record.get("entity_1", {}).get("name", ""),
             record.get("entity_1", {}).get("type", ""),
             record.get("relation", ""),
             record.get("entity_2", {}).get("name", ""),
             record.get("entity_2", {}).get("type", ""),
             record.get("review_status", ""),
-        ]).lower()
-        score = _token_score(haystack, tokens)
-        score += float(record.get("computed_confidence", 0.0)) * 0.1
-        return score
+        ])
 
-    def _score_conflict(self, record, tokens):
-        haystack = " ".join([
+    def _conflict_text(self, record):
+        return " ".join([
             record.get("entity_1", {}).get("name", ""),
             record.get("entity_1", {}).get("type", ""),
             " ".join(record.get("relations", [])),
             record.get("entity_2", {}).get("name", ""),
             record.get("entity_2", {}).get("type", ""),
             record.get("reason", ""),
-        ]).lower()
-        return _token_score(haystack, tokens)
+        ])
 
     def _sort_aligned(self, records):
         return sorted(
@@ -310,6 +358,29 @@ def _token_score(haystack, tokens):
         if token in haystack:
             score += 1.0 * weight
     return score
+
+
+def _tfidf_cosine_scores(question, documents):
+    try:
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        from sklearn.metrics.pairwise import cosine_similarity
+    except Exception:
+        query_tokens = set(tokenize_query(question))
+        return [_token_overlap_score(query_tokens, doc) for doc in documents]
+    corpus = [question, *documents]
+    try:
+        matrix = TfidfVectorizer(stop_words="english").fit_transform(corpus)
+        return cosine_similarity(matrix[0:1], matrix[1:]).ravel().tolist()
+    except ValueError:
+        query_tokens = set(tokenize_query(question))
+        return [_token_overlap_score(query_tokens, doc) for doc in documents]
+
+
+def _token_overlap_score(query_tokens, document):
+    if not query_tokens:
+        return 0.0
+    doc_tokens = set(tokenize_query(document))
+    return len(query_tokens & doc_tokens) / len(query_tokens)
 
 
 def _dedupe_records(records, signature_func):

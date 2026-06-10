@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "adjudication_records": 1,
+  "proposal_records": 1,
+  "promotion_action_counts": {
+    "propose_relation_updates": 1
+  },
+  "output_file": "artifacts\\runs\\conflict_adjudication_review_2026-06-10_125652\\adjudication_review_proposals.jsonl",
+  "canonical_graph_mutated": false,
+  "next_step": "Human reviewer must approve proposals before any canonical graph promotion."
+}

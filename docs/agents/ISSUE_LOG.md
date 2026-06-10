@@ -17,6 +17,18 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-10 - Neo4j neighborhood query used deprecated subquery syntax
+
+- Symptom: The first read-only Graph RAG Neo4j neighborhood probe succeeded but
+  Neo4j emitted a deprecation warning for `CALL { WITH e ... }` subquery syntax.
+- Cause: The neighborhood expansion query used the older unscoped subquery form.
+- Fix: Updated `src/qa/neo4j_neighborhood.py` to use `CALL (e) { ... }`, keeping
+  the query read-only and parameterized.
+- Verification: `python -m unittest tests.unit.test_graph_rag -v` passed 4
+  tests; the rerun
+  `artifacts/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/`
+  returned 67 neighborhood records with no graph mutation.
+
 ### 2026-06-10 - Graph RAG evidence contexts could become oversized
 
 - Symptom: The first Graph RAG dry-run answer package for `SMN1` returned an

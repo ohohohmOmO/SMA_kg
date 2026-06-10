@@ -1,0 +1,60 @@
+{
+  "valid": true,
+  "questions": [
+    {
+      "file": "question_1_dry_run.json",
+      "question": "What is known about SMN1 in SMA?",
+      "answer_status": "dry_run_requires_llm",
+      "supporting_pmids": 32,
+      "abstracts": 8,
+      "aligned_triples": 24,
+      "fused_edges": 16,
+      "conflicts": 8,
+      "retrieval_mode": "lexical_entity"
+    },
+    {
+      "file": "question_2_dry_run.json",
+      "question": "How does Nusinersen affect motor function?",
+      "answer_status": "dry_run_requires_llm",
+      "supporting_pmids": 32,
+      "abstracts": 8,
+      "aligned_triples": 24,
+      "fused_edges": 16,
+      "conflicts": 8,
+      "retrieval_mode": "lexical_entity"
+    },
+    {
+      "file": "question_3_dry_run.json",
+      "question": "What evidence links SMN protein to motor neuron degeneration?",
+      "answer_status": "dry_run_requires_llm",
+      "supporting_pmids": 32,
+      "abstracts": 8,
+      "aligned_triples": 24,
+      "fused_edges": 16,
+      "conflicts": 8,
+      "retrieval_mode": "lexical_entity"
+    },
+    {
+      "file": "question_4_dry_run.json",
+      "question": "Are there contradictory findings for Onasemnogene Abeparvovec?",
+      "answer_status": "dry_run_requires_llm",
+      "supporting_pmids": 32,
+      "abstracts": 8,
+      "aligned_triples": 24,
+      "fused_edges": 16,
+      "conflicts": 8,
+      "retrieval_mode": "lexical_entity"
+    },
+    {
+      "file": "question_5_dry_run.json",
+      "question": "Which genes are strongly connected to Spinal Muscular Atrophy?",
+      "answer_status": "dry_run_requires_llm",
+      "supporting_pmids": 32,
+      "abstracts": 8,
+      "aligned_triples": 24,
+      "fused_edges": 16,
+      "conflicts": 8,
+      "retrieval_mode": "lexical_entity"
+    }
+  ]
+}

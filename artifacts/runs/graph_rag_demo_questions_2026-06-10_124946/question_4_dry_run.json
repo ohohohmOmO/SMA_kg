@@ -1,0 +1,2251 @@
+{
+  "question": "Are there contradictory findings for Onasemnogene Abeparvovec?",
+  "answer_status": "dry_run_requires_llm",
+  "answer": "",
+  "supporting_pmids": [
+    "33309881",
+    "42157963",
+    "41671781",
+    "33130193",
+    "35352647",
+    "35734367",
+    "36285446",
+    "37843301",
+    "40009418",
+    "40625130",
+    "33708361",
+    "39982664",
+    "36946394",
+    "39420400",
+    "41284552",
+    "34236007",
+    "36520510",
+    "30879249",
+    "36126155",
+    "37065340",
+    "37177842",
+    "37587305",
+    "38181723",
+    "38669792",
+    "40569556",
+    "33485382",
+    "35040693",
+    "35606491",
+    "40013321",
+    "38189761",
+    "31105909",
+    "34119073"
+  ],
+  "supporting_triples": [
+    {
+      "source_pmid": "33309881",
+      "entity_1": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "We review gene therapy for neuromuscular disorders (spinal muscular atrophy [SMA]; Duchenne muscular dystrophy [DMD]; X-linked myotubular myopathy [XLMTM]; and diseases of the central nervous system, including Alzheimer's disease, Parkinson's disease, Canavan disease, aromatic l-amino acid decarboxylase [AADC] deficiency, and giant axonal neuropathy), ocular disorders (Leber congenital amaurosis, age-related macular degeneration [AMD], choroideremia, achromatopsia, retinitis pigmentosa, and X-linked retinoschisis), the bleeding disorder hemophilia, and lysosomal storage disorders. There are now five treatments approved for commercialization and currently available, i.e., Luxturna, Zolgensma, the two chimeric antigen receptor T cell (CAR-T) therapies (Yescarta and Kymriah), and Strimvelis (the gammaretrovirus approved for adenosine deaminase-severe combined immunodeficiency [ADA-SCID] in Europe).",
+      "llm_confidence": 0.85,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.912,
+      "confidence_components": {
+        "model_or_self_score": 0.85,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "42157963",
+      "entity_1": {
+        "name": "AAV9-Ab",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "evidence_text": "AAV9-Ab immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold and eligible for intravenous onasemnogene abeparvovec treatment",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "41671781",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "evidence_text": "There was a significant difference in baseline Great Ormond Respiratory Score between the nusinersen group and the onasemnogene abeparvovec group (p = 0.002).",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "33130193",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "drug therapies including injectables such as onasemnogene abeparvovec-xioi (ZOLGENSMA(R)), nusinersen (SPINRAZA(R)), and an oral-solution, risdiplam (EVRYSDI), are medications that have been FDA-approved for the treatment of SMA",
+      "llm_confidence": 0.97,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.958,
+      "confidence_components": {
+        "model_or_self_score": 0.97,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "33130193",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "drug therapies including injectables such as onasemnogene abeparvovec-xioi (ZOLGENSMA(R)), nusinersen (SPINRAZA(R)), and an oral-solution, risdiplam (EVRYSDI), are medications that have been FDA-approved for the treatment of SMA",
+      "llm_confidence": 0.97,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.958,
+      "confidence_components": {
+        "model_or_self_score": 0.97,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "35352647",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "With the approval of the antisense oligonucleotide nusinersen, the vector-based therapy with onasemnogene abeparvovec and the small molecule splicing modifier risdiplam, three gene therapeutic drugs are available for the treatment of SMA",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "35734367",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Nusinersen, risdiplam, and onasemnogene abeparvovec are presently the only approved disease modifying therapies for SMA",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "36285446",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "In Spain, there are two orphan medicines that are currently financed by the state, nusinersen and onasemnogene abeparvovec and, a third in process, risdiplam.",
+      "llm_confidence": 0.8,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.893,
+      "confidence_components": {
+        "model_or_self_score": 0.8,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    }
+  ],
+  "graph_context": [
+    {
+      "entity_1": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "evidence": {
+        "pmid_list": [
+          "30879249",
+          "33708361",
+          "34236007",
+          "36126155",
+          "37065340",
+          "37177842",
+          "37587305",
+          "38181723",
+          "38669792",
+          "39982664",
+          "40569556"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 11
+      },
+      "computed_confidence": 0.91,
+      "confidence_components": {
+        "base_score": 0.962,
+        "avg_raw_score": 0.939,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 11,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "evidence": {
+        "pmid_list": [
+          "33485382",
+          "35040693",
+          "35606491",
+          "40013321",
+          "41671781"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 5
+      },
+      "computed_confidence": 0.888,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.912,
+        "pmid_support_score": 0.93,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 5,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Risdiplam",
+        "type": "Drug"
+      },
+      "evidence": {
+        "pmid_list": [
+          "38181723",
+          "38189761",
+          "40569556"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 3
+      },
+      "computed_confidence": 0.851,
+      "confidence_components": {
+        "base_score": 0.962,
+        "avg_raw_score": 0.922,
+        "pmid_support_score": 0.69,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 3,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Risdiplam",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "evidence": {
+        "pmid_list": [
+          "35040693",
+          "38669792",
+          "40013321"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 3
+      },
+      "computed_confidence": 0.834,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.899,
+        "pmid_support_score": 0.69,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 3,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "onasemnogene abeparvovec (AVXS-101)",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "evidence": {
+        "pmid_list": [
+          "31105909",
+          "34119073"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 2
+      },
+      "computed_confidence": 0.834,
+      "confidence_components": {
+        "base_score": 0.962,
+        "avg_raw_score": 0.947,
+        "pmid_support_score": 0.57,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 2,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "best supportive care",
+        "type": "Drug"
+      },
+      "evidence": {
+        "pmid_list": [
+          "40569556"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.813,
+      "confidence_components": {
+        "base_score": 0.958,
+        "avg_raw_score": 0.958,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "best supportive care",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "33708361"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.808,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.95,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "second-generation AAV9 gene therapy",
+        "type": "Drug"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "evidence": {
+        "pmid_list": [
+          "38413838"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.808,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.95,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    }
+  ],
+  "limitations": [
+    "dry_run: no LLM answer generated"
+  ],
+  "model": "",
+  "retrieval": {
+    "mode": "lexical_entity",
+    "tokens": [
+      "are",
+      "there",
+      "contradictory",
+      "findings",
+      "for",
+      "onasemnogene",
+      "abeparvovec"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 4426,
+    "fused_candidates": 11155,
+    "conflict_candidates": 11
+  },
+  "evidence_context": {
+    "context_id": "graph-rag-are-there-contradictory-findings-for-onasemnogene-abeparvovec",
+    "purpose": "graph_rag_answer",
+    "query": "Are there contradictory findings for Onasemnogene Abeparvovec?",
+    "entities": [
+      {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      {
+        "name": "AAV9-Ab",
+        "type": "Protein"
+      },
+      {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      {
+        "name": "best supportive care",
+        "type": "Phenotype"
+      },
+      {
+        "name": "mortality rate",
+        "type": "Phenotype"
+      },
+      {
+        "name": "caregiver burden",
+        "type": "Phenotype"
+      },
+      {
+        "name": "disease progression",
+        "type": "Phenotype"
+      },
+      {
+        "name": "event-free survival",
+        "type": "Phenotype"
+      },
+      {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "overall survival",
+        "type": "Phenotype"
+      },
+      {
+        "name": "prognosis",
+        "type": "Phenotype"
+      },
+      {
+        "name": "survival",
+        "type": "Phenotype"
+      },
+      {
+        "name": "walking independently",
+        "type": "Phenotype"
+      },
+      {
+        "name": "Risdiplam",
+        "type": "Drug"
+      },
+      {
+        "name": "onasemnogene abeparvovec (AVXS-101)",
+        "type": "Drug"
+      },
+      {
+        "name": "best supportive care",
+        "type": "Drug"
+      },
+      {
+        "name": "second-generation AAV9 gene therapy",
+        "type": "Drug"
+      },
+      {
+        "name": "need for nutritional or respiratory support",
+        "type": "Phenotype"
+      },
+      {
+        "name": "motor performance",
+        "type": "Phenotype"
+      },
+      {
+        "name": "use of oxygen or a breathing machine for more than 16 h",
+        "type": "Phenotype"
+      },
+      {
+        "name": "spinal deformity",
+        "type": "Phenotype"
+      }
+    ],
+    "abstracts": [
+      {
+        "pmid": "33309881",
+        "title": "Current Clinical Applications of In Vivo Gene Therapy with AAVs.",
+        "abstract": "Hereditary diseases are caused by mutations in genes, and more than 7,000 rare diseases affect over 30 million Americans. For more than 30 years, hundreds of researchers have maintained that genetic modifications would provide effective treatments for many inherited human diseases, offering durable and possibly curative clinical benefit with a single treatment. This review is limited to gene therapy using adeno-associated virus (AAV) because the gene delivered by this vector does not integrate into the patient genome and has a low immunogenicity. There are now five treatments approved for commercialization and currently available, i.e., Luxturna, Zolgensma, the two chimeric antigen receptor T cell (CAR-T) therapies (Yescarta and Kymriah), and Strimvelis (the gammaretrovirus approved for adenosine deaminase-severe combined immunodeficiency [ADA-SCID] in Europe). Dozens of other treatments are under clinical trials. The review article presents a broad overview of the field of therapy by in vivo gene transfer. We review gene therapy for neuromuscular disorders (spinal muscular atrophy [SMA]; Duchenne muscular dystrophy [DMD]; X-linked myotubular myopathy [XLMTM]; and diseases of the c...",
+        "pub_date": "2021 Feb 3"
+      },
+      {
+        "pmid": "42157963",
+        "title": "Global age-related seroprevalence for adeno-associated virus serotype 9 immunoglobulin G.",
+        "abstract": "Adeno-associated virus serotype 9 antibody (AAV9-Ab) immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold and eligible for intravenous onasemnogene abeparvovec treatment. This cross-sectional analysis evaluated AAV9-Ab immunoglobulin G titers by region or country, year, and age in a population of individuals with SMA from a wide range of countries (excluding the United States and Japan). Anonymized serum samples were utilized for total AAV9-Ab immunoglobulin G enzyme-linked immunosorbent assay tests (2020-2025). A total of 4,149 samples from individuals with documented age and first test information from 75 countries were analyzed. AAV9-Ab immunoglobulin G data were similar by region, country, and year, except for a greater proportion of individuals with AAV9-Ab immunoglobulin G titers >/=1:100 from Russia compared with other countries. Individuals in the 0-month age group had greater likelihood of AAV9-Ab immunoglobulin G titers >/=1:100 than those in other age groups. Logistic regression analysis revealed that the predicted AAV9-Ab immunoglobulin G ti...",
+        "pub_date": "2026 Mar 12"
+      },
+      {
+        "pmid": "41671781",
+        "title": "Longitudinal assessment of respiratory status utilising the amended Great Ormond Street Respiratory Score in treated spinal muscular atrophy type 1 children.",
+        "abstract": "Spinal muscular atrophy type 1 phenotypes have changed since the introduction of disease modifying therapies. The Great Ormond Respiratory Score has been used to assess respiratory function in children with spinal muscular atrophy. This paper presents an updated version of the score and aims to describe preliminary data reviewing the two-year changes of respiratory status in a cohort of spinal muscular atrophy type 1 patients treated with monotherapy or sequential disease modifying treatments. Patients were assessed using the amended Great Ormond Respiratory score at baseline, 6 months, 12 months and 24 months. 59 patients were reviewed. In total, 32 first initiated nusinersen therapy, 16 first initiated onasemnogene abeparvovec and 11 first initiated risdiplam therapy. There was a significant difference in baseline Great Ormond Respiratory Score between the nusinersen group and the onasemnogene abeparvovec group (p = 0.002). Risdiplam data is limited and is identified as preliminary. The data identifies treatment prior to 6 weeks of age stabilise at a lower score, with this being impacted by age of treatment. Those treated after one year show worse scores but stabilise. Despite th...",
+        "pub_date": "2026 Apr"
+      },
+      {
+        "pmid": "33130193",
+        "title": "Current and emerging therapies for Duchenne muscular dystrophy and spinal muscular atrophy.",
+        "abstract": "Many neuromuscular diseases are genetically inherited or caused by mutations in motor function proteins. Two of the most prevalent neuromuscular diseases are Duchenne Muscular Dystrophy (DMD) and Spinal Muscular Atrophy (SMA), which are often diagnosed during the early years of life, contributing to life-long debilitation and shorter longevity. DMD is caused by mutations in the dystrophin gene resulting in critical muscle wasting, with cardiac or respiratory failure by age 30. Lack of dystrophin protein is the leading cause of degeneration of skeletal and cardiac muscle. Corticosteroids and artificial respirators remain as the gold-standard management of complications and have significantly extended the life span of these patients. Additionally, drug therapies including eteplirsen (EXONDYS 51(R)), golodirsen (VYONDYS 53), and viltolarsen (VILTEPSO(R)) have been approved by the FDA to treat specific types of DMD. SMA is defined by the degeneration of the anterior horn cells in the spinal cord and destruction of motor neuron nuclei in the lower brain-stem caused by SMN1 gene deletion. Loss of SMN1 protein is partly compensated by SMN2 protein synthesis with disease severity being aff...",
+        "pub_date": "2021 Apr"
+      },
+      {
+        "pmid": "35352647",
+        "title": "Treatment of Adult Spinal Muscular Atrophy: Overview and Recent Developments.",
+        "abstract": "Spinal muscular atrophy (SMA) is a rare genetic neuromuscular disease leading to progressive and, in many cases, severe muscle weakness and atrophy in the natural disease course. An increasing number of gene-based treatment options have become available in recent years. Growing knowledge regarding the underlying genetic mechanisms makes the disease well amenable to them. Over the past few years, data on new treatments, their mechanisms of action and therapeutic outcomes have been published, reflecting the current dynamics in this field. With the approval of the antisense oligonucleotide nusinersen, the vector-based therapy with onasemnogene abeparvovec and the small molecule splicing modifier risdiplam, three gene therapeutic drugs are available for the treatment of SMA showing improvement in motor function. But in the pivotal studies, several relevant parameters have not been addressed. There is a data gap for the treatment outcome of adult individuals with SMA as well as for several other relevant outcome parameters, like bulbary or ventilatory function. With increasing treatment options, additional individual therapies have become necessary. Studies on combination therapies or s...",
+        "pub_date": "2022"
+      },
+      {
+        "pmid": "35734367",
+        "title": "Disease Modifying Therapies for the Management of Children with Spinal Muscular Atrophy (5q SMA): An Update on the Emerging Evidence.",
+        "abstract": "SMA (5q SMA) is an autosomal recessive neuromuscular disease with an estimated incidence of approximately 1 in 11,000 live births, characterized by progressive degeneration and loss of alpha-motor neurons in the spinal cord and brain stem, resulting in progressive muscle weakness. The disease spectrum is wide, from a serious congenital to a mild adult-onset disease. SMA is caused by biallelic mutations in the SMN1 gene and disease severity is modified primarily by SMN2 copy number. Before the advent of specific disease altering treatments, SMA was the second most common fatal autosomal recessive disorder after cystic fibrosis and the most common genetic cause of infant mortality. Nusinersen, risdiplam, and onasemnogene abeparvovec are presently the only approved disease modifying therapies for SMA, and the aim of this review is to discuss their mode of action, effects, safety concerns, and results from real-world experience. All exert their action by increasing the level of SMN protein in lower motor neuron. Nusinersen and risdiplam by modifying the SMN2 gene product, and onasemnogene abeparvovec by delivering SMN1 gene copies into cells. All have an established clinical efficacy....",
+        "pub_date": "2022"
+      },
+      {
+        "pmid": "36285446",
+        "title": "[Access to orphan drugs for the treatment of spinal muscular atrophy in Spain].",
+        "abstract": "INTRODUCTION: Spinal muscular atrophy (SMA) is a rare disease whose diagnosis and treatment are complex. In Spain, there are two orphan medicines that are currently financed by the state, nusinersen and onasemnogene abeparvovec and, a third in process, risdiplam. The objective was to detect possible causes of inequity in the diagnosis and treatment of SMA in Spain. MATERIALS AND METHOD: Descriptive study realized in two phases: a first phase of bibliographic revision and a second phase of semi-structured interviews with clinical experts in SMA in Andalusia, Castilla-La Mancha, Catalonia and Murcia. RESULTS: The number of centers, services or units of reference, the availability of regional autonomous plans for rare diseases and pilot programs of neonatal screenings can regulate access to treatments. The number of new patients diagnosed per year is estimated between one and six in the four autonomous communities (ACs) of Spain studied. Differences were not found in logistical resources. Two of the four ACs studied have regional autonomous plans for rare diseases, however, their utility has only had relevance in one of two of the ACs. CONCLUSIONS: Important differences in access to n...",
+        "pub_date": "2022 Nov 1"
+      },
+      {
+        "pmid": "37843301",
+        "title": "Current and emerging targeted therapies for spinal muscular atrophy.",
+        "abstract": "INTRODUCTION: Spinal muscular atrophy (SMA) is a progressive neurodegenerative disorder caused by insufficiency or total absence of the survival motor neuron protein due to a mutation in the SMN1 gene. The copy number of its paralog, SMN2, influences disease onset and phenotype severity. Current therapeutic approaches include viral and non-viral modalities affecting gene expression. Regulatory-approved drugs Spinraza (Nusinersen), Zolgensma (Onasemnogene abeparvovec), and Evrysdi (Risdiplam) are still being investigated during clinical trials and show benefits in the long-term for symptomatic and pre-symptomatic patients. However, some ongoing interventions require repeated drug administration. AREAS COVERED: In this review, the authors describe the existing therapy based on point of application, focusing on recent clinical trials of antisense oligonucleotides, viral gene therapy, and splice modulators and thepotential routes for correcting the mutation to provide therapeutic levels of SMN protein. EXPERT OPINION: In the opinion of the authors, multiple treatment options for patients with SMA shifted the treatment paradigm from palliative supportive care to improvedmotor function,...",
+        "pub_date": "2023 Jul-Dec"
+      }
+    ],
+    "aligned_triples": [
+      {
+        "source_pmid": "33309881",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "We review gene therapy for neuromuscular disorders (spinal muscular atrophy [SMA]; Duchenne muscular dystrophy [DMD]; X-linked myotubular myopathy [XLMTM]; and diseases of the central nervous system, including Alzheimer's disease, Parkinson's disease, Canavan disease, aromatic l-amino acid decarboxylase [AADC] deficiency, and giant axonal neuropathy), ocular disorders (Leber congenital amaurosis, age-related macular degeneration [AMD], choroideremia, achromatopsia, retinitis pigmentosa, and X-linked retinoschisis), the bleeding disorder hemophilia, and lysosomal storage disorders. There are now five treatments approved for commercialization and currently available, i.e., Luxturna, Zolgensma, the two chimeric antigen receptor T cell (CAR-T) therapies (Yescarta and Kymriah), and Strimvelis (the gammaretrovirus approved for adenosine deaminase-severe combined immunodeficiency [ADA-SCID] in Europe).",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "42157963",
+        "entity_1": {
+          "name": "AAV9-Ab",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "evidence_text": "AAV9-Ab immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold and eligible for intravenous onasemnogene abeparvovec treatment",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41671781",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "evidence_text": "There was a significant difference in baseline Great Ormond Respiratory Score between the nusinersen group and the onasemnogene abeparvovec group (p = 0.002).",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33130193",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "drug therapies including injectables such as onasemnogene abeparvovec-xioi (ZOLGENSMA(R)), nusinersen (SPINRAZA(R)), and an oral-solution, risdiplam (EVRYSDI), are medications that have been FDA-approved for the treatment of SMA",
+        "llm_confidence": 0.97,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.958,
+        "confidence_components": {
+          "model_or_self_score": 0.97,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33130193",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "drug therapies including injectables such as onasemnogene abeparvovec-xioi (ZOLGENSMA(R)), nusinersen (SPINRAZA(R)), and an oral-solution, risdiplam (EVRYSDI), are medications that have been FDA-approved for the treatment of SMA",
+        "llm_confidence": 0.97,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.958,
+        "confidence_components": {
+          "model_or_self_score": 0.97,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35352647",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "With the approval of the antisense oligonucleotide nusinersen, the vector-based therapy with onasemnogene abeparvovec and the small molecule splicing modifier risdiplam, three gene therapeutic drugs are available for the treatment of SMA",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35734367",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Nusinersen, risdiplam, and onasemnogene abeparvovec are presently the only approved disease modifying therapies for SMA",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36285446",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "In Spain, there are two orphan medicines that are currently financed by the state, nusinersen and onasemnogene abeparvovec and, a third in process, risdiplam.",
+        "llm_confidence": 0.8,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.893,
+        "confidence_components": {
+          "model_or_self_score": 0.8,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "37843301",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Regulatory-approved drugs Spinraza (Nusinersen), Zolgensma (Onasemnogene abeparvovec), and Evrysdi (Risdiplam) are still being investigated during clinical trials and show benefits in the long-term for symptomatic and pre-symptomatic patients",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "40009418",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Three therapies are now available for the treatment of type 1 spinal muscular atrophy: onasemnogene abeparvovec (OA), nusinersen, and risdiplam.",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "40625130",
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Three innovative disease-modifying therapies (DMTs)-nusinersen, risdiplam, and onasemnogene abeparvovec-are available for treatment",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33708361",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "evidence_text": "incremental cost per QALY gained for onasemnogene abeparvovec was dominant against nusinersen",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "39982664",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "evidence_text": "costs were compared for onasemnogene abeparvovec, a one-time gene replacement therapy, versus nusinersen",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33708361",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "best supportive care",
+          "type": "Phenotype"
+        },
+        "evidence_text": "incremental cost per QALY gained for onasemnogene abeparvovec was dominant against nusinersen and $161,648 against BSC",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36946394",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "DECREASES",
+        "entity_2": {
+          "name": "mortality rate",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Modern drugs for the pathogenetic therapy of SMA are highly effective and reduce the mortality rate",
+        "llm_confidence": 0.8,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "relation_original": "REDUCES",
+        "computed_confidence": 0.893,
+        "confidence_components": {
+          "model_or_self_score": 0.8,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "39420400",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "caregiver burden",
+          "type": "Phenotype"
+        },
+        "evidence_text": "new treatment options for SMA showed observable effects for most parents",
+        "llm_confidence": 0.6,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.817,
+        "confidence_components": {
+          "model_or_self_score": 0.6,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41284552",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "disease progression",
+          "type": "Phenotype"
+        },
+        "evidence_text": "OA gene addition therapy for SMA demonstrates a clear advantage compared to the natural progression of the disease.",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "34236007",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "event-free survival",
+          "type": "Phenotype"
+        },
+        "evidence_text": "longer EFS for patients compared with nusinersen (HR of onasemnogene abeparvovec vs. nusinersen: 0.19)",
+        "llm_confidence": 0.93,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.943,
+        "confidence_components": {
+          "model_or_self_score": 0.93,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35352647",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "three gene therapeutic drugs are available for the treatment of SMA showing improvement in motor function",
+        "llm_confidence": 0.88,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.924,
+        "confidence_components": {
+          "model_or_self_score": 0.88,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "37843301",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence_text": "multiple treatment options for patients with SMA shifted the treatment paradigm from palliative supportive care to improved motor function, increased survival, and greater quality of life",
+        "llm_confidence": 0.7,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.855,
+        "confidence_components": {
+          "model_or_self_score": 0.7,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "34236007",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "overall survival",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Onasemnogene abeparvovec therapy was also associated with a favorable (but statistically nonsignificant) outcome for OS and may be associated with prolonged survival compared with nusinersen",
+        "llm_confidence": 0.78,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.886,
+        "confidence_components": {
+          "model_or_self_score": 0.78,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36520510",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "prognosis",
+          "type": "Phenotype"
+        },
+        "evidence_text": "disease-modifying therapies for SMA ... are expected to improve the prognosis of patients with SMA",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33708361",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "survival",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Updated survival (undiscounted) predicted by the model was 37.60 years for onasemnogene abeparvovec compared to 12.10 years for nusinersen and 7.27 years for BSC",
+        "llm_confidence": 0.98,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.962,
+        "confidence_components": {
+          "model_or_self_score": 0.98,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "34236007",
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "walking independently",
+          "type": "Phenotype"
+        },
+        "evidence_text": "A numerically greater likelihood of walking by 18 and 24 months was also observed for patients treated with onasemnogene abeparvovec compared with nusinersen",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      }
+    ],
+    "fused_edges": [
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "evidence": {
+          "pmid_list": [
+            "30879249",
+            "33708361",
+            "34236007",
+            "36126155",
+            "37065340",
+            "37177842",
+            "37587305",
+            "38181723",
+            "38669792",
+            "39982664",
+            "40569556"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 11
+        },
+        "computed_confidence": 0.91,
+        "confidence_components": {
+          "base_score": 0.962,
+          "avg_raw_score": 0.939,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 11,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "evidence": {
+          "pmid_list": [
+            "33485382",
+            "35040693",
+            "35606491",
+            "40013321",
+            "41671781"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 5
+        },
+        "computed_confidence": 0.888,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.912,
+          "pmid_support_score": 0.93,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 5,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Risdiplam",
+          "type": "Drug"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38181723",
+            "38189761",
+            "40569556"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 3
+        },
+        "computed_confidence": 0.851,
+        "confidence_components": {
+          "base_score": 0.962,
+          "avg_raw_score": 0.922,
+          "pmid_support_score": 0.69,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 3,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Risdiplam",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "evidence": {
+          "pmid_list": [
+            "35040693",
+            "38669792",
+            "40013321"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 3
+        },
+        "computed_confidence": 0.834,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.899,
+          "pmid_support_score": 0.69,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 3,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "onasemnogene abeparvovec (AVXS-101)",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "evidence": {
+          "pmid_list": [
+            "31105909",
+            "34119073"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 2
+        },
+        "computed_confidence": 0.834,
+        "confidence_components": {
+          "base_score": 0.962,
+          "avg_raw_score": 0.947,
+          "pmid_support_score": 0.57,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 2,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "best supportive care",
+          "type": "Drug"
+        },
+        "evidence": {
+          "pmid_list": [
+            "40569556"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.813,
+        "confidence_components": {
+          "base_score": 0.958,
+          "avg_raw_score": 0.958,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "best supportive care",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "33708361"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.808,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "second-generation AAV9 gene therapy",
+          "type": "Drug"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38413838"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.808,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "PREVENTS",
+        "entity_2": {
+          "name": "need for nutritional or respiratory support",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "35715567"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.806,
+        "confidence_components": {
+          "base_score": 0.946,
+          "avg_raw_score": 0.946,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "needs_review",
+        "conflict_reason": "positive_and_negative_relation_polarity",
+        "conflict_relations": [
+          "DECREASES",
+          "PREVENTS"
+        ]
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "DECREASES",
+        "entity_2": {
+          "name": "need for nutritional or respiratory support",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "34196026"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.804,
+        "confidence_components": {
+          "base_score": 0.943,
+          "avg_raw_score": 0.943,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "needs_review",
+        "conflict_reason": "positive_and_negative_relation_polarity",
+        "conflict_relations": [
+          "DECREASES",
+          "PREVENTS"
+        ]
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "motor performance",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38090542"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.804,
+        "confidence_components": {
+          "base_score": 0.943,
+          "avg_raw_score": 0.943,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "DECREASES",
+        "entity_2": {
+          "name": "use of oxygen or a breathing machine for more than 16 h",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "37776479"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.797,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "spinal deformity",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38929996"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.762,
+        "confidence_components": {
+          "base_score": 0.874,
+          "avg_raw_score": 0.874,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "IMPROVES",
+        "entity_2": {
+          "name": "caregiver burden",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "39420400"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.728,
+        "confidence_components": {
+          "base_score": 0.817,
+          "avg_raw_score": 0.817,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "NO_EFFECT",
+        "entity_2": {
+          "name": "spinal deformity",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "39272200"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.728,
+        "confidence_components": {
+          "base_score": 0.817,
+          "avg_raw_score": 0.817,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "20301526",
+            "29091557",
+            "30879249",
+            "31037425",
+            "31270752",
+            "31286145",
+            "31371124",
+            "31500113",
+            "31836454",
+            "32056234",
+            "32117013",
+            "32129749",
+            "32204605",
+            "32409122",
+            "32515646",
+            "32538213",
+            "32638429",
+            "32668756",
+            "32763124",
+            "32843442",
+            "32886442",
+            "33098622",
+            "33130193",
+            "33182994",
+            "33186633",
+            "33242238",
+            "33259859",
+            "33281605",
+            "33309881",
+            "33427694",
+            "33502897",
+            "33677142",
+            "33708361",
+            "33743238",
+            "33768131",
+            "33892848",
+            "33908277",
+            "33999158",
+            "34015517",
+            "34097287",
+            "34136444",
+            "34151905",
+            "34183144",
+            "34196026",
+            "34231920",
+            "34236007",
+            "34239394",
+            "34276047",
+            "34287987",
+            "34388834",
+            "34536405",
+            "34608334",
+            "34611322",
+            "34690692",
+            "34721262",
+            "34753336",
+            "34756190",
+            "34757842",
+            "34884240",
+            "34896114",
+            "34949120",
+            "34980814",
+            "34983696",
+            "35037967",
+            "35120759",
+            "35123543",
+            "35159227",
+            "35170254",
+            "35331006",
+            "35351784",
+            "35352647",
+            "35437095",
+            "35474244",
+            "35605311",
+            "35606491",
+            "35614235",
+            "35715566",
+            "35715567",
+            "35724821",
+            "35734367",
+            "35835557",
+            "35854272",
+            "35924856",
+            "35942665",
+            "35943879",
+            "35960489",
+            "36054863",
+            "36103897",
+            "36136906",
+            "36157294",
+            "36213336",
+            "36278622",
+            "36285446",
+            "36316089",
+            "36319109",
+            "36320416",
+            "36442421",
+            "36520510",
+            "36674643",
+            "36722610",
+            "36736907",
+            "36762938",
+            "36780114",
+            "36855136",
+            "36911944",
+            "36946394",
+            "36947403",
+            "37003633",
+            "37009768",
+            "37065340",
+            "37091744",
+            "37149951",
+            "37177842",
+            "37194521",
+            "37197706",
+            "37211209",
+            "37277563",
+            "37371230",
+            "37376212",
+            "37392188",
+            "37419673",
+            "37563072",
+            "37569314",
+            "37587305",
+            "37598295",
+            "37731145",
+            "37772805",
+            "37776479",
+            "37778092",
+            "37780708",
+            "37822718",
+            "37841286",
+            "37843301",
+            "37907848",
+            "37964159",
+            "38073249",
+            "38107546",
+            "38142474",
+            "38160362",
+            "38169987",
+            "38181723",
+            "38223869",
+            "38233181",
+            "38250783",
+            "38267192",
+            "38306058",
+            "38348442",
+            "38358081",
+            "38413837",
+            "38413838",
+            "38457958",
+            "38462459",
+            "38465810",
+            "38483631",
+            "38581740",
+            "38650097",
+            "38669792",
+            "38676690",
+            "38713659",
+            "38749258",
+            "38790585",
+            "38839888",
+            "38854961",
+            "38878146",
+            "38878702",
+            "38894541",
+            "38896399",
+            "39051410",
+            "39086961",
+            "39087519",
+            "39111255",
+            "39125934",
+            "39140576",
+            "39180957",
+            "39189228",
+            "39189230",
+            "39260228",
+            "39272200",
+            "39311111",
+            "39327607",
+            "39333302",
+            "39341653",
+            "39342433",
+            "39363429",
+            "39370660",
+            "39378752",
+            "39415296",
+            "39420400",
+            "39426797",
+            "39434961",
+            "39505005",
+            "39577865",
+            "39585055",
+            "39604484",
+            "39625559",
+            "39689850",
+            "39794476",
+            "39804575",
+            "39955617",
+            "39982664",
+            "40009418",
+            "40013321",
+            "40017665",
+            "40018025",
+            "40025752",
+            "40104176",
+            "40169808",
+            "40269260",
+            "40289052",
+            "40329332",
+            "40364205",
+            "40365794",
+            "40382143",
+            "40509660",
+            "40533496",
+            "40538117",
+            "40569556",
+            "40622452",
+            "40624473",
+            "40625130",
+            "40630496",
+            "40765022",
+            "40778350",
+            "40805927",
+            "40863714",
+            "40879810",
+            "40956616",
+            "41007120",
+            "41060652",
+            "41109767",
+            "41122612",
+            "41133701",
+            "41149786",
+            "41212681",
+            "41217888",
+            "41235102",
+            "41283841",
+            "41299848",
+            "41350752",
+            "41398093",
+            "41431300",
+            "41524367",
+            "41545588",
+            "41699720",
+            "41718941",
+            "41720432",
+            "41782369",
+            "41795276",
+            "41817636",
+            "41854353",
+            "41964328",
+            "42016922",
+            "42084965",
+            "42095821",
+            "42104248",
+            "42105903",
+            "42137283",
+            "42157963",
+            "42177183",
+            "42203536",
+            "42211742",
+            "42233939",
+            "42240059"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 270
+        },
+        "computed_confidence": 0.914,
+        "confidence_components": {
+          "base_score": 0.969,
+          "avg_raw_score": 0.943,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 263,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      }
+    ],
+    "conflicts": [
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "need for nutritional or respiratory support",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "DECREASES",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "AAV9-Ab titers",
+          "type": "Phenotype"
+        },
+        "entity_2": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "relations": [
+          "DECREASES",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "elevated aminotransferases",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "CAUSES",
+          "INCREASES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "nutritional support",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "DECREASES",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "ventilatory support",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "DECREASES",
+          "IMPROVES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Nusinersen",
+          "type": "Drug"
+        },
+        "entity_2": {
+          "name": "forced vital capacity",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "IMPROVES",
+          "NO_EFFECT",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "BIOMARKER_FOR",
+          "CAUSES",
+          "HAS_PHENOTYPE",
+          "MODELS",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN protein",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "BIOMARKER_FOR",
+          "CAUSES",
+          "DECREASES",
+          "IMPROVES",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      }
+    ],
+    "supporting_pmids": [
+      "33309881",
+      "42157963",
+      "41671781",
+      "33130193",
+      "35352647",
+      "35734367",
+      "36285446",
+      "37843301",
+      "40009418",
+      "40625130",
+      "33708361",
+      "39982664",
+      "36946394",
+      "39420400",
+      "41284552",
+      "34236007",
+      "36520510",
+      "30879249",
+      "36126155",
+      "37065340",
+      "37177842",
+      "37587305",
+      "38181723",
+      "38669792",
+      "40569556",
+      "33485382",
+      "35040693",
+      "35606491",
+      "40013321",
+      "38189761",
+      "31105909",
+      "34119073"
+    ],
+    "missing_evidence": [],
+    "limits": {
+      "max_abstracts": 8,
+      "max_aligned_triples": 24,
+      "max_fused_edges": 16,
+      "max_conflicts": 8,
+      "max_abstract_chars": 1200,
+      "max_supporting_pmids": 32
+    },
+    "retrieval": {
+      "mode": "lexical_entity",
+      "tokens": [
+        "are",
+        "there",
+        "contradictory",
+        "findings",
+        "for",
+        "onasemnogene",
+        "abeparvovec"
+      ],
+      "top_k": 8,
+      "aligned_candidates": 4426,
+      "fused_candidates": 11155,
+      "conflict_candidates": 11
+    }
+  }
+}

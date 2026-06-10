@@ -24,12 +24,14 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Write a Graph RAG local retrieval index manifest.")
     parser.add_argument("--run-dir", default="")
     parser.add_argument("--manifest-file", default="data/processed/graph_rag_index_manifest.json")
-    parser.add_argument("--mode", default="lexical_entity")
+    parser.add_argument("--mode", choices=["lexical_entity", "hybrid_tfidf"], default="lexical_entity")
+    parser.add_argument("--retrieval-mode", choices=["lexical_entity", "hybrid_tfidf"], default="")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
+    retrieval_mode = args.retrieval_mode or args.mode
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
     run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"graph_rag_index_{stamp}"
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -45,10 +47,11 @@ def main():
         })
     manifest = {
         "index_kind": "manifest_only",
-        "retrieval_mode": args.mode,
+        "retrieval_mode": retrieval_mode,
+        "available_retrieval_modes": ["lexical_entity", "hybrid_tfidf"],
         "created_at": stamp,
         "inputs": inputs,
-        "notes": "Lexical/entity retrieval reads canonical JSONL files directly; no opaque vector index is required for v1.",
+        "notes": "Local retrieval reads canonical JSONL files directly. hybrid_tfidf adds a local TF-IDF cosine reranker over lexical candidates.",
     }
     write_json(manifest_file, manifest)
     write_json(run_dir / "validation_summary.json", {"valid": True, "manifest_file": str(manifest_file.relative_to(REPO_ROOT)), "inputs": inputs})
@@ -68,10 +71,9 @@ def write_csv_manifest(path, inputs, manifest_file):
             "records": "",
             "bytes": manifest_file.stat().st_size,
             "sha256": sha256_file(manifest_file),
-            "notes": "manifest-only lexical/entity index",
+            "notes": "manifest-only local retrieval index",
         })
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

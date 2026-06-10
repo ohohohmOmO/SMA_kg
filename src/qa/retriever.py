@@ -13,8 +13,8 @@ class GraphRagRetriever:
     def __init__(self, builder=None):
         self.builder = builder or EvidenceContextBuilder()
 
-    def retrieve(self, question, top_k=8):
-        return self.builder.build_question_context(question, top_k=top_k)
+    def retrieve(self, question, top_k=8, retrieval_mode="lexical_entity"):
+        return self.builder.build_question_context(question, top_k=top_k, retrieval_mode=retrieval_mode)
 
 
 def context_to_prompt(question_or_context, context=None):
@@ -30,6 +30,8 @@ def context_to_prompt(question_or_context, context=None):
         "aligned_triples": context.get("aligned_triples", []),
         "fused_edges": context.get("fused_edges", []),
         "conflicts": context.get("conflicts", []),
+        "graph_neighborhood": context.get("graph_neighborhood", []),
+        "graph_neighborhood_error": context.get("graph_neighborhood_error", ""),
         "supporting_pmids": context.get("supporting_pmids", []),
         "missing_evidence": context.get("missing_evidence", []),
     }

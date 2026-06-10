@@ -1,0 +1,22 @@
+{
+  "valid": true,
+  "mode": "live",
+  "answer_file": "artifacts\\runs\\graph_rag_live_probe_2026-06-10_125030\\answer_live.json",
+  "question": "How does Nusinersen affect motor function?",
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "answer_keys": [
+    "answer",
+    "confidence",
+    "graph_context",
+    "limitations",
+    "model",
+    "question",
+    "retrieval",
+    "supporting_pmids",
+    "supporting_triples"
+  ],
+  "supporting_pmids": 8,
+  "supporting_triples": 3,
+  "graph_context": 2,
+  "canonical_graph_mutated": false
+}

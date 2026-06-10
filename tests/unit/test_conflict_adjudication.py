@@ -11,6 +11,7 @@ from src.fusion.adjudicate_relation_conflicts import (
     main,
     validate_adjudication,
 )
+from src.fusion.prepare_conflict_adjudication_review import build_review_proposal
 
 
 def write_jsonl(path, records):
@@ -107,6 +108,27 @@ class ConflictAdjudicationTest(unittest.TestCase):
         self.assertEqual(payload["conflict_id"], "cid")
         self.assertEqual(payload["conflict_index"], 3)
         self.assertEqual(payload["conflicting_relations"], ["X", "Y"])
+
+    def test_review_proposal_requires_human_approval_before_promotion(self):
+        adjudication = {
+            "conflict_id": "SMA-CONFLICT-0001",
+            "entity_1": {"name": "A"},
+            "entity_2": {"name": "B"},
+            "conflicting_relations": ["DECREASES", "PREVENTS"],
+            "decision": "relation_normalization_issue",
+            "retained_relations": ["PREVENTS"],
+            "rejected_relations": ["DECREASES"],
+            "supporting_pmids": ["1"],
+            "confidence": 0.95,
+            "rationale": "Normalize relation polarity.",
+        }
+
+        proposal = build_review_proposal(adjudication)
+
+        self.assertEqual(proposal["promotion_action"], "propose_relation_updates")
+        self.assertEqual(proposal["retain_relations_after_review"], ["PREVENTS"])
+        self.assertTrue(proposal["requires_human_approval"])
+        self.assertFalse(proposal["canonical_graph_mutated"])
 
 
 if __name__ == "__main__":

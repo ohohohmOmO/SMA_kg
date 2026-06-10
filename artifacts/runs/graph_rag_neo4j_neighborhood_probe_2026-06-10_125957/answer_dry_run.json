@@ -1,0 +1,6224 @@
+{
+  "question": "Which genes are strongly connected to Spinal Muscular Atrophy?",
+  "answer_status": "dry_run_requires_llm",
+  "answer": "",
+  "supporting_pmids": [
+    "33931501",
+    "27917293",
+    "32721240",
+    "41542782",
+    "35612622",
+    "40565604",
+    "39529156",
+    "37087898",
+    "36241230",
+    "29580671",
+    "26055105",
+    "28428045",
+    "36911944",
+    "38461796",
+    "32117462",
+    "25080519",
+    "39206217",
+    "28376816",
+    "28491897",
+    "32781490",
+    "33330280",
+    "34327716",
+    "34501722",
+    "34897574",
+    "36421785",
+    "37793404",
+    "39189230",
+    "25225621",
+    "29761130",
+    "30787777",
+    "31604576",
+    "33329961"
+  ],
+  "supporting_triples": [
+    {
+      "source_pmid": "33931501",
+      "entity_1": {
+        "name": "B-Raf",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Both clusters are connected by B-Raf as a major signaling hub",
+      "llm_confidence": 0.85,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.912,
+      "confidence_components": {
+        "model_or_self_score": 0.85,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "27917293",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "27917293",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "32721240",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "survivor motor neuron 1 (SMN1) and SMN2 genes ... spinal muscular atrophy (SMA)",
+      "llm_confidence": 0.98,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.962,
+      "confidence_components": {
+        "model_or_self_score": 0.98,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "32721240",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "survivor motor neuron 1 (SMN1) and SMN2 genes ... spinal muscular atrophy (SMA)",
+      "llm_confidence": 0.98,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.962,
+      "confidence_components": {
+        "model_or_self_score": 0.98,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "41542782",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "survival motor neurone genes (SMN1 and SMN2) associated with spinal muscular atrophy",
+      "llm_confidence": 0.99,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.965,
+      "confidence_components": {
+        "model_or_self_score": 0.99,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "41542782",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "survival motor neurone genes (SMN1 and SMN2) associated with spinal muscular atrophy",
+      "llm_confidence": 0.99,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.965,
+      "confidence_components": {
+        "model_or_self_score": 0.99,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "35612622",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "SMN1 and SMN2 are two highly homologous genes related to spinal muscular atrophy (SMA)",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    }
+  ],
+  "graph_context": [
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "top 10 genes",
+        "type": "Gene"
+      },
+      "evidence": {
+        "pmid_list": [
+          "38461796"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.785,
+      "confidence_components": {
+        "base_score": 0.912,
+        "avg_raw_score": 0.912,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "COX assembly genes",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence": {
+        "pmid_list": [
+          "28428045"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.808,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.95,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "large deletions extending into SMN1 and neighboring genes",
+        "type": "Variant"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence": {
+        "pmid_list": [
+          "32117462"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.762,
+      "confidence_components": {
+        "base_score": 0.874,
+        "avg_raw_score": 0.874,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence": {
+        "pmid_list": [
+          "25080519"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.797,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.931,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "spinobulbar muscular atrophy",
+        "type": "Disease"
+      },
+      "evidence": {
+        "pmid_list": [
+          "39206217"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.797,
+      "confidence_components": {
+        "base_score": 0.931,
+        "avg_raw_score": 0.931,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "HAS_PHENOTYPE",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "28376816",
+          "28491897",
+          "32781490",
+          "33330280",
+          "34327716",
+          "34501722",
+          "34897574",
+          "36421785",
+          "37793404",
+          "39189230"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 12
+      },
+      "computed_confidence": 0.899,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.906,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 10,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "HAS_PHENOTYPE",
+      "entity_2": {
+        "name": "hypotonia",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "25225621",
+          "29761130",
+          "30787777",
+          "31604576",
+          "33329961",
+          "33357592",
+          "33357593",
+          "33619801",
+          "34306789",
+          "34794294",
+          "34824924",
+          "36319109",
+          "36803361",
+          "37621829",
+          "38586164",
+          "39301367",
+          "39844848",
+          "39846593",
+          "40630496",
+          "40825903",
+          "41737973",
+          "42071833"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 22
+      },
+      "computed_confidence": 0.909,
+      "confidence_components": {
+        "base_score": 0.958,
+        "avg_raw_score": 0.941,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 22,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "33995241",
+          "35111124",
+          "37919207",
+          "37945485",
+          "39093767",
+          "39781427",
+          "40659577",
+          "40702928"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 8
+      },
+      "computed_confidence": 0.905,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.938,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 8,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    }
+  ],
+  "graph_neighborhood": [
+    {
+      "query_entity": "B-Raf",
+      "source_entity": "B-Raf",
+      "source_labels": [
+        "Protein"
+      ],
+      "relation": "DECREASES",
+      "neighbor": "motoneuron survival",
+      "neighbor_labels": [
+        "Phenotype"
+      ],
+      "confidence": 0.797,
+      "source": "Literature_NLP",
+      "review_status": "accepted",
+      "evidence_pmids": [
+        "33931501"
+      ]
+    },
+    {
+      "query_entity": "B-Raf",
+      "source_entity": "B-Raf",
+      "source_labels": [
+        "Protein"
+      ],
+      "relation": "REGULATES",
+      "neighbor": "MEK/ERK pathway",
+      "neighbor_labels": [
+        "Protein"
+      ],
+      "confidence": 0.792,
+      "source": "Literature_NLP",
+      "review_status": "accepted",
+      "evidence_pmids": [
+        "33931501"
+      ]
+    },
+    {
+      "query_entity": "B-Raf",
+      "source_entity": "B-Raf",
+      "source_labels": [
+        "Protein"
+      ],
+      "relation": "ASSOCIATED_WITH",
+      "neighbor": "Spinal Muscular Atrophy",
+      "neighbor_labels": [
+        "Disease"
+      ],
+      "confidence": 0.785,
+      "source": "Literature_NLP",
+      "review_status": "accepted",
+      "evidence_pmids": [
+        "33931501"
+      ]
+    },
+    {
+      "query_entity": "Spinal Muscular Atrophy",
+      "source_entity": "Spinal Muscular Atrophy",
+      "source_labels": [
+        "Disease"
+      ],
+      "relation": "TREATS",
+      "neighbor": "Onasemnogene Abeparvovec",
+      "neighbor_labels": [
+        "Drug"
+      ],
+      "confidence": 0.914,
+      "source": "Literature_NLP",
+      "review_status": "accepted",
+      "evidence_pmids": [
+        "20301526",
+        "29091557",
+        "30879249",
+        "31037425",
+        "31270752",
+        "31286145",
+        "31371124",
+        "31500113",
+        "31836454",
+        "32056234",
+        "32117013",
+        "32129749",
+        "32204605",
+        "32409122",
+        "32515646",
+        "32538213",
+        "32638429",
+        "32668756",
+        "32763124",
+        "32843442",
+        "32886442",
+        "33098622",
+        "33130193",
+        "33182994",
+        "33186633",
+        "33242238",
+        "33259859",
+        "33281605",
+        "33309881",
+        "33427694",
+        "33502897",
+        "33677142",
+        "33708361",
+        "33743238",
+        "33768131",
+        "33892848",
+        "33908277",
+        "33999158",
+        "34015517",
+        "34097287",
+        "34136444",
+        "34151905",
+        "34183144",
+        "34196026",
+        "34231920",
+        "34236007",
+        "34239394",
+        "34276047",
+        "34287987",
+        "34388834",
+        "34536405",
+        "34608334",
+        "34611322",
+        "34690692",
+        "34721262",
+        "34753336",
+        "34756190",
+        "34757842",
+        "34884240",
+        "34896114",
+        "34949120",
+        "34980814",
+        "34983696",
+        "35037967",
+        "35120759",
+        "35123543",
+        "35159227",
+        "35170254",
+        "35331006",
+        "35351784",
+        "35352647",
+        "35437095",
+        "35474244",
+        "35605311",
+        "35606491",
+        "35614235",
+        "35715566",
+        "35715567",
+        "35724821",
+        "35734367",
+        "35835557",
+        "35854272",
+        "35924856",
+        "35942665",
+        "35943879",
+        "35960489",
+        "36054863",
+        "36103897",
+        "36136906",
+        "36157294",
+        "36213336",
+        "36278622",
+        "36285446",
+        "36316089",
+        "36319109",
+        "36320416",
+        "36442421",
+        "36520510",
+        "36674643",
+        "36722610",
+        "36736907",
+        "36762938",
+        "36780114",
+        "36855136",
+        "36911944",
+        "36946394",
+        "36947403",
+        "37003633",
+        "37009768",
+        "37065340",
+        "37091744",
+        "37149951",
+        "37177842",
+        "37194521",
+        "37197706",
+        "37211209",
+        "37277563",
+        "37371230",
+        "37376212",
+        "37392188",
+        "37419673",
+        "37563072",
+        "37569314",
+        "37587305",
+        "37598295",
+        "37731145",
+        "37772805",
+        "37776479",
+        "37778092",
+        "37780708",
+        "37822718",
+        "37841286",
+        "37843301",
+        "37907848",
+        "37964159",
+        "38073249",
+        "38107546",
+        "38142474",
+        "38160362",
+        "38169987",
+        "38181723",
+        "38223869",
+        "38233181",
+        "38250783",
+        "38267192",
+        "38306058",
+        "38348442",
+        "38358081",
+        "38413837",
+        "38413838",
+        "38457958",
+        "38462459",
+        "38465810",
+        "38483631",
+        "38581740",
+        "38650097",
+        "38669792",
+        "38676690",
+        "38713659",
+        "38749258",
+        "38790585",
+        "38839888",
+        "38854961",
+        "38878146",
+        "38878702",
+        "38894541",
+        "38896399",
+        "39051410",
+        "39086961",
+        "39087519",
+        "39111255",
+        "39125934",
+        "39140576",
+        "39180957",
+        "39189228",
+        "39189230",
+        "39260228",
+        "39272200",
+        "39311111",
+        "39327607",
+        "39333302",
+        "39341653",
+        "39342433",
+        "39363429",
+        "39370660",
+        "39378752",
+        "39415296",
+        "39420400",
+        "39426797",
+        "39434961",
+        "39505005",
+        "39577865",
+        "39585055",
+        "39604484",
+        "39625559",
+        "39689850",
+        "39794476",
+        "39804575",
+        "39955617",
+        "39982664",
+        "40009418",
+        "40013321",
+        "40017665",
+        "40018025",
+        "40025752",
+        "40104176",
+        "40169808",
+        "40269260",
+        "40289052",
+        "40329332",
+        "40364205",
+        "40365794",
+        "40382143",
+        "40509660",
+        "40533496",
+        "40538117",
+        "40569556",
+        "40622452",
+        "40624473",
+        "40625130",
+        "40630496",
+        "40765022",
+        "40778350",
+        "40805927",
+        "40863714",
+        "40879810",
+        "40956616",
+        "41007120",
+        "41060652",
+        "41109767",
+        "41122612",
+        "41133701",
+        "41149786",
+        "41212681",
+        "41217888",
+        "41235102",
+        "41283841",
+        "41299848",
+        "41350752",
+        "41398093",
+        "41431300",
+        "41524367",
+        "41545588",
+        "41699720",
+        "41718941",
+        "41720432",
+        "41782369",
+        "41795276",
+        "41817636",
+        "41854353",
+        "41964328",
+        "42016922",
+        "42084965",
+        "42095821",
+        "42104248",
+        "42105903",
+        "42137283",
+        "42157963",
+        "42177183",
+        "42203536",
+        "42211742",
+        "42233939",
+        "42240059"
+      ]
+    },
+    {
+      "query_entity": "Spinal Muscular Atrophy",
+      "source_entity": "Spinal Muscular Atrophy",
+      "source_labels": [
+        "Disease"
+      ],
+      "relation": "CAUSES",
+      "neighbor": "SMN1",
+      "neighbor_labels": [
+        "Gene",
+        "Protein"
+      ],
+      "confidence": 0.914,
+      "source": "Literature_NLP",
+      "review_status": "needs_review",
+      "evidence_pmids": [
+        "24892836",
+        "24983518",
+        "25004100",
+        "25014214",
+        "25042492",
+        "25071210",
+        "25088406",
+        "25104390",
+        "25147906",
+        "25191843",
+        "25221469",
+        "25245431",
+        "25264200",
+        "25369768",
+        "25475034",
+        "25483032",
+        "25502182",
+        "25506695",
+        "25514431",
+        "25645699",
+        "25692239",
+        "25727246",
+        "25781985",
+        "25801509",
+        "25838041",
+        "25888055",
+        "25895942",
+        "25911676",
+        "26017350",
+        "26022173",
+        "26114395",
+        "26118191",
+        "26134627",
+        "26173388",
+        "26247043",
+        "26276812",
+        "26311540",
+        "26321202",
+        "26374403",
+        "26381381",
+        "26419278",
+        "26423457",
+        "26438828",
+        "26460027",
+        "26515624",
+        "26548498",
+        "26573968",
+        "26586529",
+        "26683872",
+        "26724723",
+        "26739529",
+        "26758873",
+        "26911699",
+        "26931466",
+        "26953792",
+        "27005422",
+        "27014701",
+        "27111068",
+        "27260405",
+        "27299419",
+        "27401142",
+        "27425821",
+        "27456062",
+        "27460292",
+        "27481219",
+        "27499521",
+        "27510309",
+        "27621445",
+        "27652289",
+        "27698380",
+        "27894243",
+        "27907033",
+        "27939059",
+        "28069797",
+        "28132687",
+        "28152480",
+        "28159932",
+        "28172892",
+        "28173138",
+        "28193854",
+        "28229309",
+        "28258160",
+        "28269795",
+        "28270613",
+        "28289706",
+        "28389270",
+        "28441483",
+        "28522225",
+        "28561813",
+        "28570645",
+        "28598128",
+        "28623256",
+        "28624227",
+        "28637335",
+        "28648462",
+        "28676062",
+        "28684086",
+        "28757001",
+        "28775379",
+        "28929094",
+        "28962115",
+        "28981879",
+        "28983837",
+        "29066780",
+        "29124224",
+        "29160009",
+        "29167380",
+        "29187847",
+        "29209912",
+        "29263925",
+        "29273277",
+        "29292768",
+        "29313812",
+        "29316633",
+        "29380287",
+        "29430530",
+        "29433793",
+        "29434173",
+        "29478602",
+        "29552580",
+        "29598153",
+        "29614695",
+        "29649521",
+        "29742241",
+        "29799103",
+        "29806836",
+        "29902268",
+        "29904179",
+        "29941967",
+        "29961886",
+        "29985170",
+        "30006696",
+        "30065610",
+        "30093179",
+        "30106667",
+        "30171534",
+        "30171558",
+        "30188931",
+        "30221755",
+        "30233310",
+        "30248687",
+        "30304024",
+        "30327977",
+        "30340076",
+        "30407821",
+        "30519476",
+        "30539904",
+        "30563832",
+        "30627660",
+        "30649277",
+        "30660867",
+        "30667343",
+        "30733501",
+        "30788592",
+        "31102025",
+        "31127156",
+        "31127278",
+        "31130987",
+        "31156382",
+        "31183542",
+        "31201046",
+        "31262178",
+        "31323435",
+        "31339938",
+        "31371553",
+        "31476167",
+        "31488953",
+        "31563042",
+        "31583591",
+        "31594243",
+        "31632295",
+        "31707372",
+        "31707373",
+        "31736847",
+        "31811660",
+        "31825542",
+        "31828288",
+        "31844498",
+        "31863335",
+        "31922583",
+        "31956257",
+        "31991812",
+        "31991852",
+        "32004094",
+        "32056234",
+        "32066871",
+        "32076758",
+        "32128742",
+        "32218991",
+        "32285042",
+        "32363199",
+        "32384912",
+        "32392694",
+        "32470325",
+        "32501283",
+        "32538213",
+        "32538864",
+        "32552676",
+        "32553550",
+        "32587237",
+        "32612161",
+        "32644120",
+        "32644125",
+        "32828271",
+        "32843442",
+        "32878721",
+        "32886442",
+        "33057172",
+        "33075805",
+        "33084884",
+        "33130193",
+        "33144430",
+        "33197628",
+        "33265090",
+        "33329961",
+        "33339220",
+        "33357595",
+        "33357600",
+        "33412266",
+        "33415588",
+        "33429824",
+        "33439594",
+        "33440839",
+        "33488772",
+        "33562482",
+        "33575118",
+        "33591660",
+        "33739559",
+        "33768131",
+        "33798739",
+        "33821292",
+        "33823304",
+        "33845129",
+        "33892995",
+        "33919289",
+        "33931501",
+        "34239394",
+        "34360669",
+        "34368854",
+        "34377212",
+        "34425216",
+        "34515035",
+        "34536405",
+        "34573328",
+        "34638572",
+        "34678665",
+        "34734684",
+        "34850360",
+        "34871761",
+        "34888619",
+        "34950009",
+        "34984269",
+        "35037967",
+        "35126465",
+        "35159227",
+        "35248528",
+        "35289093",
+        "35331287",
+        "35409296",
+        "35456491",
+        "35462564",
+        "35551393",
+        "35605311",
+        "35614235",
+        "35643151",
+        "35667685",
+        "35688133",
+        "35724821",
+        "35734367",
+        "35837793",
+        "35847983",
+        "35864358",
+        "35877682",
+        "35927425",
+        "35955418",
+        "36028610",
+        "36142791",
+        "36316089",
+        "36329412",
+        "36408582",
+        "36414255",
+        "36417168",
+        "36460469",
+        "36534265",
+        "36560896",
+        "36603028",
+        "36604149",
+        "36607273",
+        "36669496",
+        "36711797",
+        "36762938",
+        "36846472",
+        "36849544",
+        "36911944",
+        "36930296",
+        "36994015",
+        "36996170",
+        "37023488",
+        "37064776",
+        "37087898",
+        "37146794",
+        "37225410",
+        "37280513",
+        "37289324",
+        "37295266",
+        "37322133",
+        "37376212",
+        "37458045",
+        "37470033",
+        "37542300",
+        "37568462",
+        "37569314",
+        "37578329",
+        "37596438",
+        "37614112",
+        "37620083",
+        "37621829",
+        "37705059",
+        "37799281",
+        "37843301",
+        "37927698",
+        "38002071",
+        "38043977",
+        "38057426",
+        "38073249",
+        "38135619",
+        "38142474",
+        "38180726",
+        "38215341",
+        "38223869",
+        "38384244",
+        "38391004",
+        "38392683",
+        "38396640",
+        "38413837",
+        "38450080",
+        "38465810",
+        "38490302",
+        "38561840",
+        "38709394",
+        "38750052",
+        "38750391",
+        "38806879",
+        "38860968",
+        "38894621",
+        "38915908",
+        "38916214",
+        "38923503",
+        "38969036",
+        "39035824",
+        "39048567",
+        "39088538",
+        "39111255",
+        "39139818",
+        "39183150",
+        "39201486",
+        "39246602",
+        "39264856",
+        "39325116",
+        "39327607",
+        "39343938",
+        "39392101",
+        "39392569",
+        "39398417",
+        "39456991",
+        "39492846",
+        "39587573",
+        "39622884",
+        "39666039",
+        "39689850",
+        "39690549",
+        "39706225",
+        "39720178",
+        "39829133",
+        "39955442",
+        "39962788",
+        "39973467",
+        "39976226",
+        "39984716",
+        "40018937",
+        "40119448",
+        "40137462",
+        "40183438",
+        "40186953",
+        "40193572",
+        "40195114",
+        "40265545",
+        "40282862",
+        "40367190",
+        "40384931",
+        "40490594",
+        "40565604",
+        "40624473",
+        "40640928",
+        "40641403",
+        "40672150",
+        "40720033",
+        "40752627",
+        "40754463",
+        "40775246",
+        "40804727",
+        "40923389",
+        "41103255",
+        "41107965",
+        "41249338",
+        "41369341",
+        "41398093",
+        "41423447",
+        "41447746",
+        "41540943",
+        "41617535",
+        "41660396",
+        "41683702",
+        "41718420",
+        "41737973",
+        "41773285",
+        "41811872",
+        "41817636",
+        "41825231",
+        "41885937",
+        "41886383",
+        "41892024",
+        "41942601",
+        "41958916",
+        "41974892",
+        "41984556",
+        "42023171",
+        "42071833",
+        "42095821",
+        "42105903",
+        "42162012",
+        "42203536",
+        "42218378"
+      ]
+    },
+    {
+      "query_entity": "Spinal Muscular Atrophy",
+      "source_entity": "Spinal Muscular Atrophy",
+      "source_labels": [
+        "Disease"
+      ],
+      "relation": "HAS_VARIANT",
+      "neighbor": "SMN1 deletion",
+      "neighbor_labels": [
+        "Gene",
+        "Phenotype",
+        "Variant"
+      ],
+      "confidence": 0.914,
+      "source": "Literature_NLP",
+      "review_status": "accepted",
+      "evidence_pmids": [
+        "25572663",
+        "26118191",
+        "26724723",
+        "28522225",
+        "30660867",
+        "34719420",
+        "35003227",
+        "41714394"
+      ]
+    },
+    {
+      "query_entity": "Spinal Muscular Atrophy",
+      "source_entity": "Spinal Muscular Atrophy",
+      "source_labels": [
+        "Disease"
+      ],
+      "relation": "CAUSES",
+      "neighbor": "SMN",
+      "neighbor_labels": [
+        "Gene",
+        "Protein"
+      ],
+      "confidence": 0.913,
+      "source": "Literature_NLP",
+      "review_status": "needs_review",
+      "evidence_pmids": [
+        "25151848",
+        "25180019",
+        "25338097",
+        "25516063",
+        "26098872",
+        "26830971",
+        "26908624",
+        "27030765",
+        "27170316",
+        "27402754",
+        "27460344",
+        "27466204",
+        "27557711",
+        "28095296",
+        "28199839",
+        "28635376",
+        "28808928",
+        "28811488",
+        "28916199",
+        "29872871",
+        "30010942",
+        "30116818",
+        "31272106",
+        "32387331",
+        "32553550",
+        "32958857",
+        "33410474",
+        "33488772",
+        "33999256",
+        "34217376",
+        "34236053",
+        "34360794",
+        "34413305",
+        "34445199",
+        "34458251",
+        "35314252",
+        "35440492",
+        "35741415",
+        "35913953",
+        "36099045",
+        "36291733",
+        "36619669",
+        "36863345",
+        "37019880",
+        "37156649",
+        "37658769",
+        "37678880",
+        "37759179",
+        "37780204",
+        "38259504",
+        "38704739",
+        "39594995",
+        "40924492",
+        "40926051",
+        "41377955",
+        "41692783",
+        "41720432",
+        "41764202",
+        "41929160",
+        "42189425"
+      ]
+    },
+    {
+      "query_entity": "Spinal Muscular Atrophy",
+      "source_entity": "Spinal Muscular Atrophy",
+      "source_labels": [
+        "Disease"
+      ],
+      "relation": "CAUSES",
+      "neighbor": "SMN1 deletion",
+      "neighbor_labels": [
+        "Gene",
+        "Phenotype",
+        "Variant"
+      ],
+      "confidence": 0.913,
+      "source": "Literature_NLP",
+      "review_status": "accepted",
+      "evidence_pmids": [
+        "25716911",
+        "25727246",
+        "25791416",
+        "25848917",
+        "25916779",
+        "26468953",
+        "27042141",
+        "27422779",
+        "27452406",
+        "27577201",
+        "27917293",
+        "28139824",
+        "28634652",
+        "28676237",
+        "28792153",
+        "29327642",
+        "30171559",
+        "30200278",
+        "30352867",
+        "30788592",
+        "31004230",
+        "31363188",
+        "32006461",
+        "32034734",
+        "32117462",
+        "32659294",
+        "32718505",
+        "32761588",
+        "33036822",
+        "33072999",
+        "33281605",
+        "33329961",
+        "33429824",
+        "33777091",
+        "33877896",
+        "34608334",
+        "34620959",
+        "34681015",
+        "35225937",
+        "35241415",
+        "35624569",
+        "35741345",
+        "35885927",
+        "35943879",
+        "36314213",
+        "36375840",
+        "36376972",
+        "36709931",
+        "36864825",
+        "36973114",
+        "37218894",
+        "37510307",
+        "37572575",
+        "37841286",
+        "37851043",
+        "38325644",
+        "38581475",
+        "38781723",
+        "38893532",
+        "39051405",
+        "39051406",
+        "39088538",
+        "40076610",
+        "40094379",
+        "40176376",
+        "40267637",
+        "40412589",
+        "40720034",
+        "40843906",
+        "40869213",
+        "41247685",
+        "41572232",
+        "41691287",
+        "41711502",
+        "42104248",
+        "42128322",
+        "42137283"
+      ]
+    }
+  ],
+  "limitations": [
+    "dry_run: no LLM answer generated"
+  ],
+  "model": "",
+  "retrieval": {
+    "mode": "hybrid_tfidf",
+    "tokens": [
+      "which",
+      "genes",
+      "are",
+      "strongly",
+      "connected",
+      "to",
+      "spinal",
+      "muscular",
+      "atrophy"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 13127,
+    "fused_candidates": 11155,
+    "conflict_candidates": 22,
+    "reranker": "local_tfidf_cosine"
+  },
+  "evidence_context": {
+    "context_id": "graph-rag-which-genes-are-strongly-connected-to-spinal-muscular-atrophy",
+    "purpose": "graph_rag_answer",
+    "query": "Which genes are strongly connected to Spinal Muscular Atrophy?",
+    "entities": [
+      {
+        "name": "B-Raf",
+        "type": "Protein"
+      },
+      {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      {
+        "name": "HSPB1",
+        "type": "Gene"
+      },
+      {
+        "name": "St14",
+        "type": "Gene"
+      },
+      {
+        "name": "Sult1a1",
+        "type": "Gene"
+      },
+      {
+        "name": "IGHMBP2",
+        "type": "Gene"
+      },
+      {
+        "name": "25-OH D levels",
+        "type": "Phenotype"
+      },
+      {
+        "name": "DNAJB2",
+        "type": "Gene"
+      },
+      {
+        "name": "MORC2",
+        "type": "Gene"
+      },
+      {
+        "name": "COX assembly genes",
+        "type": "Gene"
+      },
+      {
+        "name": "low bone mineral density",
+        "type": "Phenotype"
+      },
+      {
+        "name": "top 10 genes",
+        "type": "Gene"
+      },
+      {
+        "name": "large deletions extending into SMN1 and neighboring genes",
+        "type": "Variant"
+      },
+      {
+        "name": "spinobulbar muscular atrophy",
+        "type": "Disease"
+      },
+      {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "hypotonia",
+        "type": "Phenotype"
+      },
+      {
+        "name": "respiratory function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "motor dysfunction",
+        "type": "Phenotype"
+      }
+    ],
+    "abstracts": [
+      {
+        "pmid": "33931501",
+        "title": "Impairment of the neurotrophic signaling hub B-Raf contributes to motoneuron degeneration in spinal muscular atrophy.",
+        "abstract": "Spinal muscular atrophy (SMA) is a motoneuron disease caused by deletions of the Survival of Motoneuron 1 gene (SMN1) and low SMN protein levels. SMN restoration is the concept behind a number of recently approved drugs which result in impressive yet limited effects. Since SMN has already been enhanced in treated patients, complementary SMN-independent approaches are needed. Previously, a number of altered signaling pathways which regulate motoneuron degeneration have been identified as candidate targets. However, signaling pathways form networks, and their connectivity is still unknown in SMA. Here, we used presymptomatic SMA mice to elucidate the network of altered signaling in SMA. The SMA network is structured in two clusters with AKT and 14-3-3 zeta/delta in their centers. Both clusters are connected by B-Raf as a major signaling hub. The direct interaction of B-Raf with 14-3-3 zeta/delta is important for an efficient neurotrophic activation of the MEK/ERK pathway and crucial for motoneuron survival. Further analyses in SMA mice revealed that both proteins were down-regulated in motoneurons and the spinal cord with B-Raf being reduced at presymptomatic stages. Primary fibrobla...",
+        "pub_date": "2021 May 4"
+      },
+      {
+        "pmid": "27917293",
+        "title": "Alternative splicing of a cryptic exon embedded in intron 6 of SMN1 and SMN2.",
+        "abstract": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy; mutations in SMN1 cause the disease, and SMN2 modulates its severity. It is established that different alternative splicing of exon 7 occurs for SMN1 and SMN2, and a cryptic exon was recently found in intron 6 of both genes. Here, we characterize this cryptic exon and clarify its alternative splicing pattern in control and spinal muscular atrophy cells.",
+        "pub_date": "2016"
+      },
+      {
+        "pmid": "32721240",
+        "title": "Intelligent Ratio: A New Method for Carrier and Newborn Screening in Spinal Muscular Atrophy.",
+        "abstract": "Aim: Spinal muscular atrophy (SMA) is an inherited, autosomal recessive neuromuscular disease that causes high morbidity and mortality. The prevalence is 1-2/100,000, while the incidence is 1/6000-1/10,000 among live births. Due to the high carrier frequency (1/40-1/60) of SMA-associated alleles, screening can prevent new cases. The aim of the current study was to present the development of a new, quantitative, real-time, polymerase chain reaction (PCR)-based screening test that uses an intelligent ratio (IR) for analyses, as well as a comparison of the results with the gold standard. Materials and Methods: Included in the study were 100 patients with various risk genotypes for survivor motor neuron 1 (SMN1) and SMN2 genes whose genetics had been previously investigated using multiplex ligation probe amplification (MLPA). A combination of the 5' nuclease assay and allele-specific PCR was used to quantify the SMN1 deletion mutation with real-time PCR using the FII gene as a reference. All of the optimized standards were adapted to software that provided automated analyses. The approval number of the institutional ethics committee for the study is 2012-KAEK-15/1497. Results: The resu...",
+        "pub_date": "2020 Sep"
+      },
+      {
+        "pmid": "41542782",
+        "title": "Scoliosis correction in spinal muscular atrophy : the influence of genetic severity, functional level, and disease-modifying agents on postoperative outcomes.",
+        "abstract": "AIMS: Newer disease-modifying agents (DMA) targeting the involved survival motor neurone genes (SMN1 and SMN2) associated with spinal muscular atrophy (SMA) have improved gross motor function, but their impact on postoperative outcomes after scoliosis correction remains unclear. This study aimed to evaluate postoperative outcomes following scoliosis surgery, specifically analyzing the impact of functional level, genetic severity, and DMA use. METHODS: This retrospective cohort study evaluated patients with SMA (all types) who underwent scoliosis correction (growing rods (GR) or posterior spinal fusion (PSF)), with a minimum two-year postoperative follow-up. The primary outcome was 90-day postoperative complications by Clavien-Dindo (CD) grading. Secondary outcomes included age at surgery, SMA type, SMN2 copy number, Hammersmith Functional Motor Scale-Expanded, forced vital capacity, DMA treatment (> one year duration, nusinersen/risdiplam/onosemnogene abeparvovec), intensive care unit (ICU)/hospital length of stay (LOS), days intubated, and curve correction. RESULTS: In total, 87 patients (60% female), SMA types 1 (29, 33%), 2 (47, 54%), and 3 (11, 13%), were included; follow-up du...",
+        "pub_date": "2026 Jan 16"
+      },
+      {
+        "pmid": "35612622",
+        "title": "Revealing diverse alternative splicing variants of the highly homologous SMN1 and SMN2 genes by targeted long-read sequencing.",
+        "abstract": "The survival of motor neuron (SMN) genes, SMN1 and SMN2, are two highly homologous genes related to spinal muscular atrophy (SMA). Different patterns of alternative splicing have been observed in the SMN genes. In this study, the long-read sequencing technique for distinguishing SMN1 and SMN2 without any assembly were developed and applied to reveal multiple alternative splicing patterns and to comprehensively identify transcript variants of the SMN genes. In total, 36 types of transcript variants were identified, with an equal number of variants generated from both SMN1 and SMN2. Of these, 18 were novel SMN transcripts that have never been reported. The structures of SMN transcripts were revealed to be much more complicated and diverse than previously discovered. These novel transcripts were derived from diverse splicing events, including skipping of one or more exons, intron retention, and exon shortening or addition. SMN1 mainly produces FL-SMN1, SMN1Delta7, SMN1Delta5 and SMN1Delta3. The distribution of SMN2 transcripts was significantly different from those of SMN1, with the majority transcripts to be SMN2Delta7, followed by FL-SMN2, SMN2Delta3,5 and SMN2Delta5,7. Targeted lon...",
+        "pub_date": "2022 Jul"
+      },
+      {
+        "pmid": "40565604",
+        "title": "Incidence of Homozygous SMN2 Deletion in Japan: Cross-Reactivity of SMN2 Primers with SMN1 Sequence Causes False Negatives in Real-Time PCR Screening.",
+        "abstract": "Background: SMN1 and SMN2 are causative and modifier genes, respectively, for spinal muscular atrophy (SMA). The incidence of SMN1 homozygous deletion in Japan is 1 in 20,000. However, the incidence of SMN2 homozygous deletion in Japan remains unknown. Methods: To clarify the incidence of homozygous SMN2 deletion in Japan, real-time polymerase chain reaction (PCR) was performed on dried blood spot (DBS) samples collected from newborns nationwide. Samples with positive or ambiguous results were retested using PCR-restriction fragment length polymorphism (PCR-RFLP) and nucleotide sequence analysis. Results: Of the 1000 DBS samples that were screened using real-time PCR, 51 were positive. Retesting using PCR-RFLP analysis identified 10 false results: six false positives and four false negatives. Therefore, there were 49 true positives among the 1000 samples. Notably, nucleotide sequence analysis revealed that the false negatives were caused by the cross-reactivity of SMN2 primers with SMN1 sequences. Conclusions: The incidence of homozygous SMN2 deletion in Japan is approximately 1 in 20 people. This incidence is much higher than that of homozygous SMN1 deletion and may reflect the vu...",
+        "pub_date": "2025 Jun 16"
+      },
+      {
+        "pmid": "39529156",
+        "title": "Comparative meta-analysis of transcriptomic studies in spinal muscular atrophy: comparison between tissues and mouse models.",
+        "abstract": "BACKGROUND: Spinal Muscular Atrophy (SMA), a neuromuscular disorder that leads to weakness in the muscles due to degeneration of motor neurons. Mutations in the survival motor neuron 1 (SMN1) gene leads to the deficiency of SMN protein that causes SMA. The molecular alterations associated with SMA extends across the transcriptome and proteome. Although several studies have examined the transcriptomic profile of SMA, the difference in experimental settings across these studies highlight the need for a comparative meta-analysis to better understand these differences. METHODS AND DATA: We conducted a systematic comparative meta-analysis of publicly available gene expression data from six selected studies to elucidate variations in the transcriptomic landscape across different experimental conditions, including tissue types and mouse models. We used both microarray and RNA-seq datasets, retrieved from Gene Expression Omnibus (GEO) and ArrayExpress (AE). Methods included normalization, differential expression analysis, gene-set enrichment analysis (GSEA), network reconstruction and co-expression analysis. RESULTS: Differential expression analysis revealed varying numbers of differential...",
+        "pub_date": "2024 Nov 12"
+      },
+      {
+        "pmid": "37087898",
+        "title": "Generation of two induced pluripotent stem cell lines from spinal muscular atrophy type 1 patients carrying no functional copies of SMN1 gene.",
+        "abstract": "Spinal muscular atrophy (SMA) is a severe neurodegenerative muscular disease caused by the homozygous loss of survival of motor neuron 1 (SMN1) genes. SMA patients exhibit marked skeletal muscle (SKM) loss, eventually leading to death. Here we generated two iPSC lines from two SMA type I patients with homozygous SMN1 mutations and validated the pluripotency and the ability to differentiate into three germ layers. The iPSC lines can be applied to generate skeletal muscles to model muscle atrophy of SMA that persists after treatment of motor neurons and will serve as a complementary platform for drug screening in vitro.",
+        "pub_date": "2023 Jun"
+      }
+    ],
+    "aligned_triples": [
+      {
+        "source_pmid": "33931501",
+        "entity_1": {
+          "name": "B-Raf",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Both clusters are connected by B-Raf as a major signaling hub",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27917293",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27917293",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "32721240",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "survivor motor neuron 1 (SMN1) and SMN2 genes ... spinal muscular atrophy (SMA)",
+        "llm_confidence": 0.98,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.962,
+        "confidence_components": {
+          "model_or_self_score": 0.98,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "32721240",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "survivor motor neuron 1 (SMN1) and SMN2 genes ... spinal muscular atrophy (SMA)",
+        "llm_confidence": 0.98,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.962,
+        "confidence_components": {
+          "model_or_self_score": 0.98,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41542782",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "survival motor neurone genes (SMN1 and SMN2) associated with spinal muscular atrophy",
+        "llm_confidence": 0.99,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.965,
+        "confidence_components": {
+          "model_or_self_score": 0.99,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "41542782",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "survival motor neurone genes (SMN1 and SMN2) associated with spinal muscular atrophy",
+        "llm_confidence": 0.99,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.965,
+        "confidence_components": {
+          "model_or_self_score": 0.99,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35612622",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2 are two highly homologous genes related to spinal muscular atrophy (SMA)",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35612622",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2 are two highly homologous genes related to spinal muscular atrophy (SMA)",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "40565604",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2 are causative and modifier genes, respectively, for spinal muscular atrophy (SMA).",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "39529156",
+        "entity_1": {
+          "name": "HSPB1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "genes such as Hspb1, St14 and Sult1a1 were among the top ten differentially expressed genes in more than one comparison",
+        "llm_confidence": 0.65,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.836,
+        "confidence_components": {
+          "model_or_self_score": 0.65,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "39529156",
+        "entity_1": {
+          "name": "St14",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "genes such as Hspb1, St14 and Sult1a1 were among the top ten differentially expressed genes in more than one comparison",
+        "llm_confidence": 0.65,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.836,
+        "confidence_components": {
+          "model_or_self_score": 0.65,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "39529156",
+        "entity_1": {
+          "name": "Sult1a1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "genes such as Hspb1, St14 and Sult1a1 were among the top ten differentially expressed genes in more than one comparison",
+        "llm_confidence": 0.65,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.836,
+        "confidence_components": {
+          "model_or_self_score": 0.65,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "37087898",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Spinal muscular atrophy (SMA) is a severe neurodegenerative muscular disease caused by the homozygous loss of survival of motor neuron 1 (SMN1) genes",
+        "llm_confidence": 0.98,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.962,
+        "confidence_components": {
+          "model_or_self_score": 0.98,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "40565604",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2 are causative and modifier genes, respectively, for spinal muscular atrophy (SMA).",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36241230",
+        "entity_1": {
+          "name": "IGHMBP2",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "shared genes associated with spinal muscular atrophy (MORC2, IGHMBP, DNAJB2)",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "29580671",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2, are highly homologous genes which are related to the development or clinical severity of spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "29580671",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2, are highly homologous genes which are related to the development or clinical severity of spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "26055105",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "25-OH D levels",
+          "type": "Phenotype"
+        },
+        "evidence_text": "reduced bone density, low 25OH vitamin D levels, increased bone resorption markers and asymptomatic vertebral fractures also in very young patients - strongly suggest that even young subjects affected by SMA should be considered at risk of osteopenia and even osteoporosis and fractures",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36241230",
+        "entity_1": {
+          "name": "DNAJB2",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "shared genes associated with spinal muscular atrophy (MORC2, IGHMBP, DNAJB2)",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36241230",
+        "entity_1": {
+          "name": "MORC2",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "shared genes associated with spinal muscular atrophy (MORC2, IGHMBP, DNAJB2)",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "28428045",
+        "entity_1": {
+          "name": "COX assembly genes",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Mutations in genes responsible for the assembly of COX are associated with Leigh syndrome, cardiomyopathy, spinal muscular atrophy and other fatal metabolic disorders in humans.",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "36911944",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "spinal muscular atrophy (SMA) is a neuromuscular disorder arising from biallelic non-functional survival motor neuron 1 (SMN1) genes",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "26055105",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "low bone mineral density",
+          "type": "Phenotype"
+        },
+        "evidence_text": "reduced bone density, low 25OH vitamin D levels, increased bone resorption markers and asymptomatic vertebral fractures also in very young patients - strongly suggest that even young subjects affected by SMA should be considered at risk of osteopenia and even osteoporosis and fractures",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      }
+    ],
+    "fused_edges": [
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "top 10 genes",
+          "type": "Gene"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38461796"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.785,
+        "confidence_components": {
+          "base_score": 0.912,
+          "avg_raw_score": 0.912,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "COX assembly genes",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "28428045"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.808,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "large deletions extending into SMN1 and neighboring genes",
+          "type": "Variant"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "32117462"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.762,
+        "confidence_components": {
+          "base_score": 0.874,
+          "avg_raw_score": 0.874,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25080519"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.797,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "spinobulbar muscular atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "39206217"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.797,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "28376816",
+            "28491897",
+            "32781490",
+            "33330280",
+            "34327716",
+            "34501722",
+            "34897574",
+            "36421785",
+            "37793404",
+            "39189230"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 12
+        },
+        "computed_confidence": 0.899,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.906,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 10,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "hypotonia",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25225621",
+            "29761130",
+            "30787777",
+            "31604576",
+            "33329961",
+            "33357592",
+            "33357593",
+            "33619801",
+            "34306789",
+            "34794294",
+            "34824924",
+            "36319109",
+            "36803361",
+            "37621829",
+            "38586164",
+            "39301367",
+            "39844848",
+            "39846593",
+            "40630496",
+            "40825903",
+            "41737973",
+            "42071833"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 22
+        },
+        "computed_confidence": 0.909,
+        "confidence_components": {
+          "base_score": 0.958,
+          "avg_raw_score": 0.941,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 22,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "33995241",
+            "35111124",
+            "37919207",
+            "37945485",
+            "39093767",
+            "39781427",
+            "40659577",
+            "40702928"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 8
+        },
+        "computed_confidence": 0.905,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.938,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 8,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "32946459",
+            "33472673",
+            "37747987",
+            "42081032"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 4
+        },
+        "computed_confidence": 0.858,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.912,
+          "pmid_support_score": 0.81,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 4,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "hypotonia",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "28277555",
+            "29379570",
+            "29858556",
+            "31607747",
+            "37753494",
+            "39457470"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 6
+        },
+        "computed_confidence": 0.904,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 6,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "hypotonia",
+          "type": "Phenotype"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "26509018",
+            "30340076",
+            "38178730",
+            "42137283"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 4
+        },
+        "computed_confidence": 0.86,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.921,
+          "pmid_support_score": 0.81,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 4,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "respiratory function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "28376816",
+            "33357593"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 2
+        },
+        "computed_confidence": 0.818,
+        "confidence_components": {
+          "base_score": 0.931,
+          "avg_raw_score": 0.931,
+          "pmid_support_score": 0.57,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 2,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "respiratory function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "37945485",
+            "40659577"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 2
+        },
+        "computed_confidence": 0.83,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.57,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 2,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "motor dysfunction",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "26900585",
+            "29395660",
+            "33281605",
+            "33530934",
+            "34552528",
+            "37009768",
+            "37218083",
+            "37759179",
+            "38233181",
+            "39308455",
+            "40163566",
+            "41431167",
+            "41701870",
+            "41761113",
+            "42074613"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 15
+        },
+        "computed_confidence": 0.903,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.927,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 15,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor dysfunction",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "27577737",
+            "39752251",
+            "41238319",
+            "41313058"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 4
+        },
+        "computed_confidence": 0.872,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.947,
+          "pmid_support_score": 0.81,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 4,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "hypotonia",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25123529",
+            "38465139",
+            "40754463"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 3
+        },
+        "computed_confidence": 0.849,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.937,
+          "pmid_support_score": 0.69,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 3,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      }
+    ],
+    "conflicts": [
+      {
+        "entity_1": {
+          "name": "ZPR1",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "DECREASES",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Klf15",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "IMPROVES",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "ZPR1",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "IMPROVES",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN expression",
+          "type": "Phenotype"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "CAUSES",
+          "IMPROVES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "entity_2": {
+          "name": "mTOR phosphorylation",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "DECREASES",
+          "INCREASES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "CAUSES",
+          "MODELS",
+          "NO_EFFECT",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "entity_2": {
+          "name": "LC3-II",
+          "type": "Protein"
+        },
+        "relations": [
+          "DECREASES",
+          "INCREASES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "BIOMARKER_FOR",
+          "CAUSES",
+          "HAS_PHENOTYPE",
+          "MODELS",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      }
+    ],
+    "supporting_pmids": [
+      "33931501",
+      "27917293",
+      "32721240",
+      "41542782",
+      "35612622",
+      "40565604",
+      "39529156",
+      "37087898",
+      "36241230",
+      "29580671",
+      "26055105",
+      "28428045",
+      "36911944",
+      "38461796",
+      "32117462",
+      "25080519",
+      "39206217",
+      "28376816",
+      "28491897",
+      "32781490",
+      "33330280",
+      "34327716",
+      "34501722",
+      "34897574",
+      "36421785",
+      "37793404",
+      "39189230",
+      "25225621",
+      "29761130",
+      "30787777",
+      "31604576",
+      "33329961"
+    ],
+    "missing_evidence": [],
+    "limits": {
+      "max_abstracts": 8,
+      "max_aligned_triples": 24,
+      "max_fused_edges": 16,
+      "max_conflicts": 8,
+      "max_abstract_chars": 1200,
+      "max_supporting_pmids": 32
+    },
+    "retrieval": {
+      "mode": "hybrid_tfidf",
+      "tokens": [
+        "which",
+        "genes",
+        "are",
+        "strongly",
+        "connected",
+        "to",
+        "spinal",
+        "muscular",
+        "atrophy"
+      ],
+      "top_k": 8,
+      "aligned_candidates": 13127,
+      "fused_candidates": 11155,
+      "conflict_candidates": 22,
+      "reranker": "local_tfidf_cosine"
+    },
+    "graph_neighborhood": [
+      {
+        "query_entity": "B-Raf",
+        "source_entity": "B-Raf",
+        "source_labels": [
+          "Protein"
+        ],
+        "relation": "DECREASES",
+        "neighbor": "motoneuron survival",
+        "neighbor_labels": [
+          "Phenotype"
+        ],
+        "confidence": 0.797,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "33931501"
+        ]
+      },
+      {
+        "query_entity": "B-Raf",
+        "source_entity": "B-Raf",
+        "source_labels": [
+          "Protein"
+        ],
+        "relation": "REGULATES",
+        "neighbor": "MEK/ERK pathway",
+        "neighbor_labels": [
+          "Protein"
+        ],
+        "confidence": 0.792,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "33931501"
+        ]
+      },
+      {
+        "query_entity": "B-Raf",
+        "source_entity": "B-Raf",
+        "source_labels": [
+          "Protein"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.785,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "33931501"
+        ]
+      },
+      {
+        "query_entity": "Spinal Muscular Atrophy",
+        "source_entity": "Spinal Muscular Atrophy",
+        "source_labels": [
+          "Disease"
+        ],
+        "relation": "TREATS",
+        "neighbor": "Onasemnogene Abeparvovec",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.914,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "20301526",
+          "29091557",
+          "30879249",
+          "31037425",
+          "31270752",
+          "31286145",
+          "31371124",
+          "31500113",
+          "31836454",
+          "32056234",
+          "32117013",
+          "32129749",
+          "32204605",
+          "32409122",
+          "32515646",
+          "32538213",
+          "32638429",
+          "32668756",
+          "32763124",
+          "32843442",
+          "32886442",
+          "33098622",
+          "33130193",
+          "33182994",
+          "33186633",
+          "33242238",
+          "33259859",
+          "33281605",
+          "33309881",
+          "33427694",
+          "33502897",
+          "33677142",
+          "33708361",
+          "33743238",
+          "33768131",
+          "33892848",
+          "33908277",
+          "33999158",
+          "34015517",
+          "34097287",
+          "34136444",
+          "34151905",
+          "34183144",
+          "34196026",
+          "34231920",
+          "34236007",
+          "34239394",
+          "34276047",
+          "34287987",
+          "34388834",
+          "34536405",
+          "34608334",
+          "34611322",
+          "34690692",
+          "34721262",
+          "34753336",
+          "34756190",
+          "34757842",
+          "34884240",
+          "34896114",
+          "34949120",
+          "34980814",
+          "34983696",
+          "35037967",
+          "35120759",
+          "35123543",
+          "35159227",
+          "35170254",
+          "35331006",
+          "35351784",
+          "35352647",
+          "35437095",
+          "35474244",
+          "35605311",
+          "35606491",
+          "35614235",
+          "35715566",
+          "35715567",
+          "35724821",
+          "35734367",
+          "35835557",
+          "35854272",
+          "35924856",
+          "35942665",
+          "35943879",
+          "35960489",
+          "36054863",
+          "36103897",
+          "36136906",
+          "36157294",
+          "36213336",
+          "36278622",
+          "36285446",
+          "36316089",
+          "36319109",
+          "36320416",
+          "36442421",
+          "36520510",
+          "36674643",
+          "36722610",
+          "36736907",
+          "36762938",
+          "36780114",
+          "36855136",
+          "36911944",
+          "36946394",
+          "36947403",
+          "37003633",
+          "37009768",
+          "37065340",
+          "37091744",
+          "37149951",
+          "37177842",
+          "37194521",
+          "37197706",
+          "37211209",
+          "37277563",
+          "37371230",
+          "37376212",
+          "37392188",
+          "37419673",
+          "37563072",
+          "37569314",
+          "37587305",
+          "37598295",
+          "37731145",
+          "37772805",
+          "37776479",
+          "37778092",
+          "37780708",
+          "37822718",
+          "37841286",
+          "37843301",
+          "37907848",
+          "37964159",
+          "38073249",
+          "38107546",
+          "38142474",
+          "38160362",
+          "38169987",
+          "38181723",
+          "38223869",
+          "38233181",
+          "38250783",
+          "38267192",
+          "38306058",
+          "38348442",
+          "38358081",
+          "38413837",
+          "38413838",
+          "38457958",
+          "38462459",
+          "38465810",
+          "38483631",
+          "38581740",
+          "38650097",
+          "38669792",
+          "38676690",
+          "38713659",
+          "38749258",
+          "38790585",
+          "38839888",
+          "38854961",
+          "38878146",
+          "38878702",
+          "38894541",
+          "38896399",
+          "39051410",
+          "39086961",
+          "39087519",
+          "39111255",
+          "39125934",
+          "39140576",
+          "39180957",
+          "39189228",
+          "39189230",
+          "39260228",
+          "39272200",
+          "39311111",
+          "39327607",
+          "39333302",
+          "39341653",
+          "39342433",
+          "39363429",
+          "39370660",
+          "39378752",
+          "39415296",
+          "39420400",
+          "39426797",
+          "39434961",
+          "39505005",
+          "39577865",
+          "39585055",
+          "39604484",
+          "39625559",
+          "39689850",
+          "39794476",
+          "39804575",
+          "39955617",
+          "39982664",
+          "40009418",
+          "40013321",
+          "40017665",
+          "40018025",
+          "40025752",
+          "40104176",
+          "40169808",
+          "40269260",
+          "40289052",
+          "40329332",
+          "40364205",
+          "40365794",
+          "40382143",
+          "40509660",
+          "40533496",
+          "40538117",
+          "40569556",
+          "40622452",
+          "40624473",
+          "40625130",
+          "40630496",
+          "40765022",
+          "40778350",
+          "40805927",
+          "40863714",
+          "40879810",
+          "40956616",
+          "41007120",
+          "41060652",
+          "41109767",
+          "41122612",
+          "41133701",
+          "41149786",
+          "41212681",
+          "41217888",
+          "41235102",
+          "41283841",
+          "41299848",
+          "41350752",
+          "41398093",
+          "41431300",
+          "41524367",
+          "41545588",
+          "41699720",
+          "41718941",
+          "41720432",
+          "41782369",
+          "41795276",
+          "41817636",
+          "41854353",
+          "41964328",
+          "42016922",
+          "42084965",
+          "42095821",
+          "42104248",
+          "42105903",
+          "42137283",
+          "42157963",
+          "42177183",
+          "42203536",
+          "42211742",
+          "42233939",
+          "42240059"
+        ]
+      },
+      {
+        "query_entity": "Spinal Muscular Atrophy",
+        "source_entity": "Spinal Muscular Atrophy",
+        "source_labels": [
+          "Disease"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "SMN1",
+        "neighbor_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "confidence": 0.914,
+        "source": "Literature_NLP",
+        "review_status": "needs_review",
+        "evidence_pmids": [
+          "24892836",
+          "24983518",
+          "25004100",
+          "25014214",
+          "25042492",
+          "25071210",
+          "25088406",
+          "25104390",
+          "25147906",
+          "25191843",
+          "25221469",
+          "25245431",
+          "25264200",
+          "25369768",
+          "25475034",
+          "25483032",
+          "25502182",
+          "25506695",
+          "25514431",
+          "25645699",
+          "25692239",
+          "25727246",
+          "25781985",
+          "25801509",
+          "25838041",
+          "25888055",
+          "25895942",
+          "25911676",
+          "26017350",
+          "26022173",
+          "26114395",
+          "26118191",
+          "26134627",
+          "26173388",
+          "26247043",
+          "26276812",
+          "26311540",
+          "26321202",
+          "26374403",
+          "26381381",
+          "26419278",
+          "26423457",
+          "26438828",
+          "26460027",
+          "26515624",
+          "26548498",
+          "26573968",
+          "26586529",
+          "26683872",
+          "26724723",
+          "26739529",
+          "26758873",
+          "26911699",
+          "26931466",
+          "26953792",
+          "27005422",
+          "27014701",
+          "27111068",
+          "27260405",
+          "27299419",
+          "27401142",
+          "27425821",
+          "27456062",
+          "27460292",
+          "27481219",
+          "27499521",
+          "27510309",
+          "27621445",
+          "27652289",
+          "27698380",
+          "27894243",
+          "27907033",
+          "27939059",
+          "28069797",
+          "28132687",
+          "28152480",
+          "28159932",
+          "28172892",
+          "28173138",
+          "28193854",
+          "28229309",
+          "28258160",
+          "28269795",
+          "28270613",
+          "28289706",
+          "28389270",
+          "28441483",
+          "28522225",
+          "28561813",
+          "28570645",
+          "28598128",
+          "28623256",
+          "28624227",
+          "28637335",
+          "28648462",
+          "28676062",
+          "28684086",
+          "28757001",
+          "28775379",
+          "28929094",
+          "28962115",
+          "28981879",
+          "28983837",
+          "29066780",
+          "29124224",
+          "29160009",
+          "29167380",
+          "29187847",
+          "29209912",
+          "29263925",
+          "29273277",
+          "29292768",
+          "29313812",
+          "29316633",
+          "29380287",
+          "29430530",
+          "29433793",
+          "29434173",
+          "29478602",
+          "29552580",
+          "29598153",
+          "29614695",
+          "29649521",
+          "29742241",
+          "29799103",
+          "29806836",
+          "29902268",
+          "29904179",
+          "29941967",
+          "29961886",
+          "29985170",
+          "30006696",
+          "30065610",
+          "30093179",
+          "30106667",
+          "30171534",
+          "30171558",
+          "30188931",
+          "30221755",
+          "30233310",
+          "30248687",
+          "30304024",
+          "30327977",
+          "30340076",
+          "30407821",
+          "30519476",
+          "30539904",
+          "30563832",
+          "30627660",
+          "30649277",
+          "30660867",
+          "30667343",
+          "30733501",
+          "30788592",
+          "31102025",
+          "31127156",
+          "31127278",
+          "31130987",
+          "31156382",
+          "31183542",
+          "31201046",
+          "31262178",
+          "31323435",
+          "31339938",
+          "31371553",
+          "31476167",
+          "31488953",
+          "31563042",
+          "31583591",
+          "31594243",
+          "31632295",
+          "31707372",
+          "31707373",
+          "31736847",
+          "31811660",
+          "31825542",
+          "31828288",
+          "31844498",
+          "31863335",
+          "31922583",
+          "31956257",
+          "31991812",
+          "31991852",
+          "32004094",
+          "32056234",
+          "32066871",
+          "32076758",
+          "32128742",
+          "32218991",
+          "32285042",
+          "32363199",
+          "32384912",
+          "32392694",
+          "32470325",
+          "32501283",
+          "32538213",
+          "32538864",
+          "32552676",
+          "32553550",
+          "32587237",
+          "32612161",
+          "32644120",
+          "32644125",
+          "32828271",
+          "32843442",
+          "32878721",
+          "32886442",
+          "33057172",
+          "33075805",
+          "33084884",
+          "33130193",
+          "33144430",
+          "33197628",
+          "33265090",
+          "33329961",
+          "33339220",
+          "33357595",
+          "33357600",
+          "33412266",
+          "33415588",
+          "33429824",
+          "33439594",
+          "33440839",
+          "33488772",
+          "33562482",
+          "33575118",
+          "33591660",
+          "33739559",
+          "33768131",
+          "33798739",
+          "33821292",
+          "33823304",
+          "33845129",
+          "33892995",
+          "33919289",
+          "33931501",
+          "34239394",
+          "34360669",
+          "34368854",
+          "34377212",
+          "34425216",
+          "34515035",
+          "34536405",
+          "34573328",
+          "34638572",
+          "34678665",
+          "34734684",
+          "34850360",
+          "34871761",
+          "34888619",
+          "34950009",
+          "34984269",
+          "35037967",
+          "35126465",
+          "35159227",
+          "35248528",
+          "35289093",
+          "35331287",
+          "35409296",
+          "35456491",
+          "35462564",
+          "35551393",
+          "35605311",
+          "35614235",
+          "35643151",
+          "35667685",
+          "35688133",
+          "35724821",
+          "35734367",
+          "35837793",
+          "35847983",
+          "35864358",
+          "35877682",
+          "35927425",
+          "35955418",
+          "36028610",
+          "36142791",
+          "36316089",
+          "36329412",
+          "36408582",
+          "36414255",
+          "36417168",
+          "36460469",
+          "36534265",
+          "36560896",
+          "36603028",
+          "36604149",
+          "36607273",
+          "36669496",
+          "36711797",
+          "36762938",
+          "36846472",
+          "36849544",
+          "36911944",
+          "36930296",
+          "36994015",
+          "36996170",
+          "37023488",
+          "37064776",
+          "37087898",
+          "37146794",
+          "37225410",
+          "37280513",
+          "37289324",
+          "37295266",
+          "37322133",
+          "37376212",
+          "37458045",
+          "37470033",
+          "37542300",
+          "37568462",
+          "37569314",
+          "37578329",
+          "37596438",
+          "37614112",
+          "37620083",
+          "37621829",
+          "37705059",
+          "37799281",
+          "37843301",
+          "37927698",
+          "38002071",
+          "38043977",
+          "38057426",
+          "38073249",
+          "38135619",
+          "38142474",
+          "38180726",
+          "38215341",
+          "38223869",
+          "38384244",
+          "38391004",
+          "38392683",
+          "38396640",
+          "38413837",
+          "38450080",
+          "38465810",
+          "38490302",
+          "38561840",
+          "38709394",
+          "38750052",
+          "38750391",
+          "38806879",
+          "38860968",
+          "38894621",
+          "38915908",
+          "38916214",
+          "38923503",
+          "38969036",
+          "39035824",
+          "39048567",
+          "39088538",
+          "39111255",
+          "39139818",
+          "39183150",
+          "39201486",
+          "39246602",
+          "39264856",
+          "39325116",
+          "39327607",
+          "39343938",
+          "39392101",
+          "39392569",
+          "39398417",
+          "39456991",
+          "39492846",
+          "39587573",
+          "39622884",
+          "39666039",
+          "39689850",
+          "39690549",
+          "39706225",
+          "39720178",
+          "39829133",
+          "39955442",
+          "39962788",
+          "39973467",
+          "39976226",
+          "39984716",
+          "40018937",
+          "40119448",
+          "40137462",
+          "40183438",
+          "40186953",
+          "40193572",
+          "40195114",
+          "40265545",
+          "40282862",
+          "40367190",
+          "40384931",
+          "40490594",
+          "40565604",
+          "40624473",
+          "40640928",
+          "40641403",
+          "40672150",
+          "40720033",
+          "40752627",
+          "40754463",
+          "40775246",
+          "40804727",
+          "40923389",
+          "41103255",
+          "41107965",
+          "41249338",
+          "41369341",
+          "41398093",
+          "41423447",
+          "41447746",
+          "41540943",
+          "41617535",
+          "41660396",
+          "41683702",
+          "41718420",
+          "41737973",
+          "41773285",
+          "41811872",
+          "41817636",
+          "41825231",
+          "41885937",
+          "41886383",
+          "41892024",
+          "41942601",
+          "41958916",
+          "41974892",
+          "41984556",
+          "42023171",
+          "42071833",
+          "42095821",
+          "42105903",
+          "42162012",
+          "42203536",
+          "42218378"
+        ]
+      },
+      {
+        "query_entity": "Spinal Muscular Atrophy",
+        "source_entity": "Spinal Muscular Atrophy",
+        "source_labels": [
+          "Disease"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "SMN1 deletion",
+        "neighbor_labels": [
+          "Gene",
+          "Phenotype",
+          "Variant"
+        ],
+        "confidence": 0.914,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25572663",
+          "26118191",
+          "26724723",
+          "28522225",
+          "30660867",
+          "34719420",
+          "35003227",
+          "41714394"
+        ]
+      },
+      {
+        "query_entity": "Spinal Muscular Atrophy",
+        "source_entity": "Spinal Muscular Atrophy",
+        "source_labels": [
+          "Disease"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "SMN",
+        "neighbor_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "confidence": 0.913,
+        "source": "Literature_NLP",
+        "review_status": "needs_review",
+        "evidence_pmids": [
+          "25151848",
+          "25180019",
+          "25338097",
+          "25516063",
+          "26098872",
+          "26830971",
+          "26908624",
+          "27030765",
+          "27170316",
+          "27402754",
+          "27460344",
+          "27466204",
+          "27557711",
+          "28095296",
+          "28199839",
+          "28635376",
+          "28808928",
+          "28811488",
+          "28916199",
+          "29872871",
+          "30010942",
+          "30116818",
+          "31272106",
+          "32387331",
+          "32553550",
+          "32958857",
+          "33410474",
+          "33488772",
+          "33999256",
+          "34217376",
+          "34236053",
+          "34360794",
+          "34413305",
+          "34445199",
+          "34458251",
+          "35314252",
+          "35440492",
+          "35741415",
+          "35913953",
+          "36099045",
+          "36291733",
+          "36619669",
+          "36863345",
+          "37019880",
+          "37156649",
+          "37658769",
+          "37678880",
+          "37759179",
+          "37780204",
+          "38259504",
+          "38704739",
+          "39594995",
+          "40924492",
+          "40926051",
+          "41377955",
+          "41692783",
+          "41720432",
+          "41764202",
+          "41929160",
+          "42189425"
+        ]
+      },
+      {
+        "query_entity": "Spinal Muscular Atrophy",
+        "source_entity": "Spinal Muscular Atrophy",
+        "source_labels": [
+          "Disease"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "SMN1 deletion",
+        "neighbor_labels": [
+          "Gene",
+          "Phenotype",
+          "Variant"
+        ],
+        "confidence": 0.913,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25716911",
+          "25727246",
+          "25791416",
+          "25848917",
+          "25916779",
+          "26468953",
+          "27042141",
+          "27422779",
+          "27452406",
+          "27577201",
+          "27917293",
+          "28139824",
+          "28634652",
+          "28676237",
+          "28792153",
+          "29327642",
+          "30171559",
+          "30200278",
+          "30352867",
+          "30788592",
+          "31004230",
+          "31363188",
+          "32006461",
+          "32034734",
+          "32117462",
+          "32659294",
+          "32718505",
+          "32761588",
+          "33036822",
+          "33072999",
+          "33281605",
+          "33329961",
+          "33429824",
+          "33777091",
+          "33877896",
+          "34608334",
+          "34620959",
+          "34681015",
+          "35225937",
+          "35241415",
+          "35624569",
+          "35741345",
+          "35885927",
+          "35943879",
+          "36314213",
+          "36375840",
+          "36376972",
+          "36709931",
+          "36864825",
+          "36973114",
+          "37218894",
+          "37510307",
+          "37572575",
+          "37841286",
+          "37851043",
+          "38325644",
+          "38581475",
+          "38781723",
+          "38893532",
+          "39051405",
+          "39051406",
+          "39088538",
+          "40076610",
+          "40094379",
+          "40176376",
+          "40267637",
+          "40412589",
+          "40720034",
+          "40843906",
+          "40869213",
+          "41247685",
+          "41572232",
+          "41691287",
+          "41711502",
+          "42104248",
+          "42128322",
+          "42137283"
+        ]
+      },
+      {
+        "query_entity": "SMN1",
+        "source_entity": "SMN1",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "SMN1 deletion",
+        "neighbor_labels": [
+          "Gene",
+          "Phenotype",
+          "Variant"
+        ],
+        "confidence": 0.915,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "24923693",
+          "24983518",
+          "25103837",
+          "25225621",
+          "25572663",
+          "25888055",
+          "25916779",
+          "26017350",
+          "26022173",
+          "26548498",
+          "27102838",
+          "27345977",
+          "27577201",
+          "28139824",
+          "28456383",
+          "28598128",
+          "28792153",
+          "28981927",
+          "29434179",
+          "29758563",
+          "29858556",
+          "30113157",
+          "30171559",
+          "30200278",
+          "30304024",
+          "30788592",
+          "30907347",
+          "31004230",
+          "31030938",
+          "31183542",
+          "31363188",
+          "31636429",
+          "31825542",
+          "31921298",
+          "31956255",
+          "31956256",
+          "31956257",
+          "32034734",
+          "32117462",
+          "32205292",
+          "32249332",
+          "32337852",
+          "32418989",
+          "32718505",
+          "32761588",
+          "32829585",
+          "32956702",
+          "33051992",
+          "33072980",
+          "33072998",
+          "33072999",
+          "33090613",
+          "33130193",
+          "33283185",
+          "33329961",
+          "33357600",
+          "33429824",
+          "33531827",
+          "33777091",
+          "33877896",
+          "34620959",
+          "34652481",
+          "35120759",
+          "35144320",
+          "35225937",
+          "35331287",
+          "35624569",
+          "35715567",
+          "35885927",
+          "36071912",
+          "36278357",
+          "36417168",
+          "36605788",
+          "36669516",
+          "36709931",
+          "36713073",
+          "36803361",
+          "36828874",
+          "36864825",
+          "36897914",
+          "37087898",
+          "37211998",
+          "37332684",
+          "37376212",
+          "37424474",
+          "37569314",
+          "37572575",
+          "37606479",
+          "37614112",
+          "37621829",
+          "37711122",
+          "37750622",
+          "37799281",
+          "37906147",
+          "37964750",
+          "38057426",
+          "38137033",
+          "38171554",
+          "38379891",
+          "38388850",
+          "38390973",
+          "38391004",
+          "38520993",
+          "38540372",
+          "38581475",
+          "38600653",
+          "38781723",
+          "38817128",
+          "38846202",
+          "39051405",
+          "39051406",
+          "39051407",
+          "39088538",
+          "39321203",
+          "39497486",
+          "39559164",
+          "39905579",
+          "39984716",
+          "40076610",
+          "40099840",
+          "40163981",
+          "40267637",
+          "40569556",
+          "40720034",
+          "40754463",
+          "40762286",
+          "40869213",
+          "41031555",
+          "41091952",
+          "41240977",
+          "41247685",
+          "41572232",
+          "41691287",
+          "41691542",
+          "41811872",
+          "41949145",
+          "41984556",
+          "42005122",
+          "42016922",
+          "42128322",
+          "42135234",
+          "42137283",
+          "42251298",
+          "42255847"
+        ]
+      },
+      {
+        "query_entity": "SMN1",
+        "source_entity": "SMN1",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "C to T change in exon 7",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.914,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "28561813",
+          "28624227",
+          "34425216",
+          "36711797",
+          "37750622",
+          "38586164"
+        ]
+      },
+      {
+        "query_entity": "SMN1",
+        "source_entity": "SMN1",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "ENCODES",
+        "neighbor": "SMN",
+        "neighbor_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "confidence": 0.914,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "24845847",
+          "25514431",
+          "26515624",
+          "26953792",
+          "28132687",
+          "28270613",
+          "28366534",
+          "28460014",
+          "28524214",
+          "29187847",
+          "29292768",
+          "29858094",
+          "30171534",
+          "30188931",
+          "30565205",
+          "30910806",
+          "31909520",
+          "32031328",
+          "32470325",
+          "32553550",
+          "33084884",
+          "33440839",
+          "33823304",
+          "34302176",
+          "34691481",
+          "35409296",
+          "35614235",
+          "35741415",
+          "35885927",
+          "36375840",
+          "36408582",
+          "37225410",
+          "37295266",
+          "38413837",
+          "39201486",
+          "39325116",
+          "39456991",
+          "39707482",
+          "41644485",
+          "42149739"
+        ]
+      },
+      {
+        "query_entity": "SMN1",
+        "source_entity": "SMN1",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.914,
+        "source": "Literature_NLP",
+        "review_status": "needs_review",
+        "evidence_pmids": [
+          "24892836",
+          "24983518",
+          "25004100",
+          "25014214",
+          "25042492",
+          "25071210",
+          "25088406",
+          "25104390",
+          "25147906",
+          "25191843",
+          "25221469",
+          "25245431",
+          "25264200",
+          "25369768",
+          "25475034",
+          "25483032",
+          "25502182",
+          "25506695",
+          "25514431",
+          "25645699",
+          "25692239",
+          "25727246",
+          "25781985",
+          "25801509",
+          "25838041",
+          "25888055",
+          "25895942",
+          "25911676",
+          "26017350",
+          "26022173",
+          "26114395",
+          "26118191",
+          "26134627",
+          "26173388",
+          "26247043",
+          "26276812",
+          "26311540",
+          "26321202",
+          "26374403",
+          "26381381",
+          "26419278",
+          "26423457",
+          "26438828",
+          "26460027",
+          "26515624",
+          "26548498",
+          "26573968",
+          "26586529",
+          "26683872",
+          "26724723",
+          "26739529",
+          "26758873",
+          "26911699",
+          "26931466",
+          "26953792",
+          "27005422",
+          "27014701",
+          "27111068",
+          "27260405",
+          "27299419",
+          "27401142",
+          "27425821",
+          "27456062",
+          "27460292",
+          "27481219",
+          "27499521",
+          "27510309",
+          "27621445",
+          "27652289",
+          "27698380",
+          "27894243",
+          "27907033",
+          "27939059",
+          "28069797",
+          "28132687",
+          "28152480",
+          "28159932",
+          "28172892",
+          "28173138",
+          "28193854",
+          "28229309",
+          "28258160",
+          "28269795",
+          "28270613",
+          "28289706",
+          "28389270",
+          "28441483",
+          "28522225",
+          "28561813",
+          "28570645",
+          "28598128",
+          "28623256",
+          "28624227",
+          "28637335",
+          "28648462",
+          "28676062",
+          "28684086",
+          "28757001",
+          "28775379",
+          "28929094",
+          "28962115",
+          "28981879",
+          "28983837",
+          "29066780",
+          "29124224",
+          "29160009",
+          "29167380",
+          "29187847",
+          "29209912",
+          "29263925",
+          "29273277",
+          "29292768",
+          "29313812",
+          "29316633",
+          "29380287",
+          "29430530",
+          "29433793",
+          "29434173",
+          "29478602",
+          "29552580",
+          "29598153",
+          "29614695",
+          "29649521",
+          "29742241",
+          "29799103",
+          "29806836",
+          "29902268",
+          "29904179",
+          "29941967",
+          "29961886",
+          "29985170",
+          "30006696",
+          "30065610",
+          "30093179",
+          "30106667",
+          "30171534",
+          "30171558",
+          "30188931",
+          "30221755",
+          "30233310",
+          "30248687",
+          "30304024",
+          "30327977",
+          "30340076",
+          "30407821",
+          "30519476",
+          "30539904",
+          "30563832",
+          "30627660",
+          "30649277",
+          "30660867",
+          "30667343",
+          "30733501",
+          "30788592",
+          "31102025",
+          "31127156",
+          "31127278",
+          "31130987",
+          "31156382",
+          "31183542",
+          "31201046",
+          "31262178",
+          "31323435",
+          "31339938",
+          "31371553",
+          "31476167",
+          "31488953",
+          "31563042",
+          "31583591",
+          "31594243",
+          "31632295",
+          "31707372",
+          "31707373",
+          "31736847",
+          "31811660",
+          "31825542",
+          "31828288",
+          "31844498",
+          "31863335",
+          "31922583",
+          "31956257",
+          "31991812",
+          "31991852",
+          "32004094",
+          "32056234",
+          "32066871",
+          "32076758",
+          "32128742",
+          "32218991",
+          "32285042",
+          "32363199",
+          "32384912",
+          "32392694",
+          "32470325",
+          "32501283",
+          "32538213",
+          "32538864",
+          "32552676",
+          "32553550",
+          "32587237",
+          "32612161",
+          "32644120",
+          "32644125",
+          "32828271",
+          "32843442",
+          "32878721",
+          "32886442",
+          "33057172",
+          "33075805",
+          "33084884",
+          "33130193",
+          "33144430",
+          "33197628",
+          "33265090",
+          "33329961",
+          "33339220",
+          "33357595",
+          "33357600",
+          "33412266",
+          "33415588",
+          "33429824",
+          "33439594",
+          "33440839",
+          "33488772",
+          "33562482",
+          "33575118",
+          "33591660",
+          "33739559",
+          "33768131",
+          "33798739",
+          "33821292",
+          "33823304",
+          "33845129",
+          "33892995",
+          "33919289",
+          "33931501",
+          "34239394",
+          "34360669",
+          "34368854",
+          "34377212",
+          "34425216",
+          "34515035",
+          "34536405",
+          "34573328",
+          "34638572",
+          "34678665",
+          "34734684",
+          "34850360",
+          "34871761",
+          "34888619",
+          "34950009",
+          "34984269",
+          "35037967",
+          "35126465",
+          "35159227",
+          "35248528",
+          "35289093",
+          "35331287",
+          "35409296",
+          "35456491",
+          "35462564",
+          "35551393",
+          "35605311",
+          "35614235",
+          "35643151",
+          "35667685",
+          "35688133",
+          "35724821",
+          "35734367",
+          "35837793",
+          "35847983",
+          "35864358",
+          "35877682",
+          "35927425",
+          "35955418",
+          "36028610",
+          "36142791",
+          "36316089",
+          "36329412",
+          "36408582",
+          "36414255",
+          "36417168",
+          "36460469",
+          "36534265",
+          "36560896",
+          "36603028",
+          "36604149",
+          "36607273",
+          "36669496",
+          "36711797",
+          "36762938",
+          "36846472",
+          "36849544",
+          "36911944",
+          "36930296",
+          "36994015",
+          "36996170",
+          "37023488",
+          "37064776",
+          "37087898",
+          "37146794",
+          "37225410",
+          "37280513",
+          "37289324",
+          "37295266",
+          "37322133",
+          "37376212",
+          "37458045",
+          "37470033",
+          "37542300",
+          "37568462",
+          "37569314",
+          "37578329",
+          "37596438",
+          "37614112",
+          "37620083",
+          "37621829",
+          "37705059",
+          "37799281",
+          "37843301",
+          "37927698",
+          "38002071",
+          "38043977",
+          "38057426",
+          "38073249",
+          "38135619",
+          "38142474",
+          "38180726",
+          "38215341",
+          "38223869",
+          "38384244",
+          "38391004",
+          "38392683",
+          "38396640",
+          "38413837",
+          "38450080",
+          "38465810",
+          "38490302",
+          "38561840",
+          "38709394",
+          "38750052",
+          "38750391",
+          "38806879",
+          "38860968",
+          "38894621",
+          "38915908",
+          "38916214",
+          "38923503",
+          "38969036",
+          "39035824",
+          "39048567",
+          "39088538",
+          "39111255",
+          "39139818",
+          "39183150",
+          "39201486",
+          "39246602",
+          "39264856",
+          "39325116",
+          "39327607",
+          "39343938",
+          "39392101",
+          "39392569",
+          "39398417",
+          "39456991",
+          "39492846",
+          "39587573",
+          "39622884",
+          "39666039",
+          "39689850",
+          "39690549",
+          "39706225",
+          "39720178",
+          "39829133",
+          "39955442",
+          "39962788",
+          "39973467",
+          "39976226",
+          "39984716",
+          "40018937",
+          "40119448",
+          "40137462",
+          "40183438",
+          "40186953",
+          "40193572",
+          "40195114",
+          "40265545",
+          "40282862",
+          "40367190",
+          "40384931",
+          "40490594",
+          "40565604",
+          "40624473",
+          "40640928",
+          "40641403",
+          "40672150",
+          "40720033",
+          "40752627",
+          "40754463",
+          "40775246",
+          "40804727",
+          "40923389",
+          "41103255",
+          "41107965",
+          "41249338",
+          "41369341",
+          "41398093",
+          "41423447",
+          "41447746",
+          "41540943",
+          "41617535",
+          "41660396",
+          "41683702",
+          "41718420",
+          "41737973",
+          "41773285",
+          "41811872",
+          "41817636",
+          "41825231",
+          "41885937",
+          "41886383",
+          "41892024",
+          "41942601",
+          "41958916",
+          "41974892",
+          "41984556",
+          "42023171",
+          "42071833",
+          "42095821",
+          "42105903",
+          "42162012",
+          "42203536",
+          "42218378"
+        ]
+      },
+      {
+        "query_entity": "SMN1",
+        "source_entity": "SMN1",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "homozygous deletion",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.914,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25014214",
+          "25346245",
+          "25459970",
+          "27299419",
+          "27730768",
+          "27843464",
+          "28219127",
+          "28400976",
+          "28711173",
+          "28823932",
+          "29462610",
+          "29941967",
+          "30185733",
+          "30233310",
+          "30315070",
+          "30475554",
+          "30480926",
+          "30539904",
+          "30548438",
+          "30582825",
+          "31004230",
+          "31211843",
+          "31262178",
+          "31736847",
+          "31956255",
+          "31956256",
+          "32092542",
+          "32144995",
+          "32505480",
+          "32612161",
+          "32721240",
+          "32878721",
+          "33072980",
+          "33073034",
+          "33357600",
+          "33481221",
+          "33488772",
+          "33724218",
+          "34025568",
+          "34449526",
+          "34608334",
+          "35088120",
+          "35414447",
+          "35643151",
+          "35741345",
+          "35837793",
+          "35943879",
+          "36049072",
+          "36255739",
+          "36421785",
+          "36776076",
+          "37189623",
+          "37238925",
+          "37332684",
+          "37424474",
+          "37479010",
+          "38344354",
+          "38750391",
+          "38894621",
+          "39051410",
+          "39584662",
+          "39810393",
+          "39846593",
+          "39962788",
+          "40137462",
+          "40275389",
+          "40522061",
+          "40956616",
+          "41133709",
+          "41249338",
+          "42071833",
+          "42163975"
+        ]
+      },
+      {
+        "query_entity": "HSPB1",
+        "source_entity": "HSPB1",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "HSPB1 mutation",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.815,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "40583948"
+        ]
+      },
+      {
+        "query_entity": "HSPB1",
+        "source_entity": "HSPB1",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "distal hereditary motor neuropathies",
+        "neighbor_labels": [
+          "Phenotype"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "40583948"
+        ]
+      },
+      {
+        "query_entity": "HSPB1",
+        "source_entity": "HSPB1",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.74,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "39529156"
+        ]
+      },
+      {
+        "query_entity": "St14",
+        "source_entity": "St14",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.74,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "39529156"
+        ]
+      },
+      {
+        "query_entity": "Sult1a1",
+        "source_entity": "Sult1a1",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.74,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "39529156"
+        ]
+      },
+      {
+        "query_entity": "IGHMBP2",
+        "source_entity": "IGHMBP2",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "c.751C>T",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.913,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26922252",
+          "27450922",
+          "28397221",
+          "29653221",
+          "29761130",
+          "30385095",
+          "33847972",
+          "35611426",
+          "38311554",
+          "38415210",
+          "39170411",
+          "39202358",
+          "39705914"
+        ]
+      },
+      {
+        "query_entity": "IGHMBP2",
+        "source_entity": "IGHMBP2",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.912,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26298607",
+          "28202949",
+          "28397221",
+          "29761130",
+          "31604525",
+          "33189025",
+          "33847972",
+          "34785121",
+          "34794294",
+          "36241230",
+          "38046662",
+          "39815358"
+        ]
+      },
+      {
+        "query_entity": "IGHMBP2",
+        "source_entity": "IGHMBP2",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.899,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "27450922",
+          "34553000",
+          "36413117",
+          "38046662",
+          "38311554"
+        ]
+      },
+      {
+        "query_entity": "IGHMBP2",
+        "source_entity": "IGHMBP2",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Charcot-Marie-Tooth disease",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.894,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "28202949",
+          "33189025",
+          "34785121",
+          "38046662",
+          "39128026"
+        ]
+      },
+      {
+        "query_entity": "IGHMBP2",
+        "source_entity": "IGHMBP2",
+        "source_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "IGHMBP2 mutations",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.87,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25248952",
+          "30863264",
+          "34785121",
+          "34794294"
+        ]
+      },
+      {
+        "query_entity": "25-OH D levels",
+        "source_entity": "25-OH D levels",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "PTH",
+        "neighbor_labels": [
+          "Protein"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26055105"
+        ]
+      },
+      {
+        "query_entity": "25-OH D levels",
+        "source_entity": "25-OH D levels",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26055105"
+        ]
+      },
+      {
+        "query_entity": "25-OH D levels",
+        "source_entity": "25-OH D levels",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "INCREASES",
+        "neighbor": "multidisciplinary management",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.792,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "36319146"
+        ]
+      },
+      {
+        "query_entity": "25-OH D levels",
+        "source_entity": "25-OH D levels",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "TREATS",
+        "neighbor": "25-OH vitamin D(3)",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.785,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "31266719"
+        ]
+      },
+      {
+        "query_entity": "25-OH D levels",
+        "source_entity": "25-OH D levels",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "IMPROVES",
+        "neighbor": "nusinersen sodium",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.785,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "39014952"
+        ]
+      },
+      {
+        "query_entity": "DNAJB2",
+        "source_entity": "DNAJB2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.848,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "32298515",
+          "33481221",
+          "36241230"
+        ]
+      },
+      {
+        "query_entity": "DNAJB2",
+        "source_entity": "DNAJB2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "3.8 kb deletion",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "27449489"
+        ]
+      },
+      {
+        "query_entity": "DNAJB2",
+        "source_entity": "DNAJB2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "c.751C>T",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "35652544"
+        ]
+      },
+      {
+        "query_entity": "DNAJB2",
+        "source_entity": "DNAJB2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "spinal muscular atrophy with parkinsonism",
+        "neighbor_labels": [
+          "Phenotype"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "28031292"
+        ]
+      },
+      {
+        "query_entity": "DNAJB2",
+        "source_entity": "DNAJB2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "muscle weakness",
+        "neighbor_labels": [
+          "Disease",
+          "Phenotype"
+        ],
+        "confidence": 0.797,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "35652544"
+        ]
+      },
+      {
+        "query_entity": "MORC2",
+        "source_entity": "MORC2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.894,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "29440755",
+          "32693025",
+          "36241230",
+          "36791574",
+          "38204468"
+        ]
+      },
+      {
+        "query_entity": "MORC2",
+        "source_entity": "MORC2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "p.S87L",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.857,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26497905",
+          "37488868",
+          "41548771"
+        ]
+      },
+      {
+        "query_entity": "MORC2",
+        "source_entity": "MORC2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "spinal muscular atrophy-like phenotype disorder",
+        "neighbor_labels": [
+          "Phenotype"
+        ],
+        "confidence": 0.851,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "35722617",
+          "35904125",
+          "41548771"
+        ]
+      },
+      {
+        "query_entity": "MORC2",
+        "source_entity": "MORC2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "HAS_VARIANT",
+        "neighbor": "p.R316C",
+        "neighbor_labels": [
+          "Variant"
+        ],
+        "confidence": 0.836,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26497905",
+          "41548771"
+        ]
+      },
+      {
+        "query_entity": "MORC2",
+        "source_entity": "MORC2",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "HAS_PHENOTYPE",
+        "neighbor": "spinal muscular atrophy-like phenotype disorder",
+        "neighbor_labels": [
+          "Phenotype"
+        ],
+        "confidence": 0.816,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26497905",
+          "34059105"
+        ]
+      },
+      {
+        "query_entity": "COX assembly genes",
+        "source_entity": "COX assembly genes",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "28428045"
+        ]
+      },
+      {
+        "query_entity": "low bone mineral density",
+        "source_entity": "low bone mineral density",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.905,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26055105",
+          "31266719",
+          "31788718",
+          "37712193",
+          "38073265",
+          "39394064",
+          "41431665"
+        ]
+      },
+      {
+        "query_entity": "low bone mineral density",
+        "source_entity": "low bone mineral density",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "HAS_PHENOTYPE",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.892,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "28258940",
+          "29699728",
+          "30481286",
+          "32644125",
+          "37104756"
+        ]
+      },
+      {
+        "query_entity": "low bone mineral density",
+        "source_entity": "low bone mineral density",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "NO_EFFECT",
+        "neighbor": "SMA drug therapy",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "39970839"
+        ]
+      },
+      {
+        "query_entity": "low bone mineral density",
+        "source_entity": "low bone mineral density",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "TREATS",
+        "neighbor": "intravenous bisphosphonates",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.808,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "31788718"
+        ]
+      },
+      {
+        "query_entity": "low bone mineral density",
+        "source_entity": "low bone mineral density",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "HFMSE score",
+        "neighbor_labels": [
+          "Phenotype"
+        ],
+        "confidence": 0.797,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "31266719"
+        ]
+      },
+      {
+        "query_entity": "top 10 genes",
+        "source_entity": "top 10 genes",
+        "source_labels": [
+          "Gene"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.785,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "38461796"
+        ]
+      },
+      {
+        "query_entity": "large deletions extending into SMN1 and neighboring genes",
+        "source_entity": "large deletions extending into SMN1 and neighboring genes",
+        "source_labels": [
+          "Variant"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.762,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "32117462"
+        ]
+      },
+      {
+        "query_entity": "spinobulbar muscular atrophy",
+        "source_entity": "spinobulbar muscular atrophy",
+        "source_labels": [
+          "Disease"
+        ],
+        "relation": "COMPARED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.797,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "39206217"
+        ]
+      },
+      {
+        "query_entity": "motor function",
+        "source_entity": "motor function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "IMPROVES",
+        "neighbor": "Nusinersen",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.908,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "27939059",
+          "28799578",
+          "28884620",
+          "29091570",
+          "29443664",
+          "29556256",
+          "29689734",
+          "30008228",
+          "30027400",
+          "30158155",
+          "30185733",
+          "30246272",
+          "30284761",
+          "30315070",
+          "30396824",
+          "30414815",
+          "30617569",
+          "30618374",
+          "31019106",
+          "31123861",
+          "31298747",
+          "31388901",
+          "31799720",
+          "31847032",
+          "32006461",
+          "32032473",
+          "32180828",
+          "32199097",
+          "32253736",
+          "32333595",
+          "32333596",
+          "32361837",
+          "32505480",
+          "32515646",
+          "32532349",
+          "32538864",
+          "32632203",
+          "32800069",
+          "33003005",
+          "33029682",
+          "33059774",
+          "33074187",
+          "33106369",
+          "33118682",
+          "33147378",
+          "33184859",
+          "33307321",
+          "33429824",
+          "33459657",
+          "33501671",
+          "33573692",
+          "33608138",
+          "33635773",
+          "33682724",
+          "33688130",
+          "33711791",
+          "33854470",
+          "33899154",
+          "34093395",
+          "34099377",
+          "34287247",
+          "34476123",
+          "34645478",
+          "34745470",
+          "34809526",
+          "34828753",
+          "34850360",
+          "34884240",
+          "34919695",
+          "35140677",
+          "35166467",
+          "35178673",
+          "35337708",
+          "35352647",
+          "35510740",
+          "35522792",
+          "35527201",
+          "35547367",
+          "35606491",
+          "35738181",
+          "35748255",
+          "35768357",
+          "35787224",
+          "35857854",
+          "35871521",
+          "36049072",
+          "36274155",
+          "36278622",
+          "36297509",
+          "36316089",
+          "36329412",
+          "36382221",
+          "36441395",
+          "36457580",
+          "36513962",
+          "36525882",
+          "36565133",
+          "36690929",
+          "36810103",
+          "36854931",
+          "36872785",
+          "36873628",
+          "36880698",
+          "37095427",
+          "37109175",
+          "37393513",
+          "37512056",
+          "37563072",
+          "37568304",
+          "37572575",
+          "37602664",
+          "37657961",
+          "37843301",
+          "37989659",
+          "38073395",
+          "38090542",
+          "38103972",
+          "38111627",
+          "38135619",
+          "38192577",
+          "38233181",
+          "38310720",
+          "38363614",
+          "38532567",
+          "38589769",
+          "38722537",
+          "38831860",
+          "38861761",
+          "38902631",
+          "38905882",
+          "38921951",
+          "38929947",
+          "38929996",
+          "38932995",
+          "38954034",
+          "39030456",
+          "39076847",
+          "39200246",
+          "39222296",
+          "39344612",
+          "39447351",
+          "39505005",
+          "39585055",
+          "39604484",
+          "39675174",
+          "39685824",
+          "39718202",
+          "39744899",
+          "39787994",
+          "39829133",
+          "39832442",
+          "39955912",
+          "39960588",
+          "39969920",
+          "40011938",
+          "40047158",
+          "40085221",
+          "40150095",
+          "40163981",
+          "40180233",
+          "40212617",
+          "40241365",
+          "40270050",
+          "40317045",
+          "40317413",
+          "40320994",
+          "40451126",
+          "40482302",
+          "40553176",
+          "40566025",
+          "40576143",
+          "40576875",
+          "40762286",
+          "40770841",
+          "40879446",
+          "40913965",
+          "40956616",
+          "41060652",
+          "41114807",
+          "41137787",
+          "41299848",
+          "41350238",
+          "41402085",
+          "41607729",
+          "41655361",
+          "41795276",
+          "41806494",
+          "41811872",
+          "41908528"
+        ]
+      },
+      {
+        "query_entity": "motor function",
+        "source_entity": "motor function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "IMPROVES",
+        "neighbor": "Onasemnogene Abeparvovec",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.906,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "29091557",
+          "30879249",
+          "31371124",
+          "32129749",
+          "32515646",
+          "32843442",
+          "33003005",
+          "33677142",
+          "34276047",
+          "34287247",
+          "34608334",
+          "34721262",
+          "34756190",
+          "34884240",
+          "34980814",
+          "35351784",
+          "35352647",
+          "35606491",
+          "35960489",
+          "36049072",
+          "36136906",
+          "36278622",
+          "36316089",
+          "36329412",
+          "36855136",
+          "37149951",
+          "37197706",
+          "37563072",
+          "37598295",
+          "37843301",
+          "37964159",
+          "38162454",
+          "38169987",
+          "38413837",
+          "38450080",
+          "38713659",
+          "38905882",
+          "38929996",
+          "39087519",
+          "39260228",
+          "39272200",
+          "39415296",
+          "39434961",
+          "39505005",
+          "39604484",
+          "39804575",
+          "39955617",
+          "39969920",
+          "40622452",
+          "40630496",
+          "40803915",
+          "41060652",
+          "41122612",
+          "41283841",
+          "41299848",
+          "41360993",
+          "41795276",
+          "41854353"
+        ]
+      },
+      {
+        "query_entity": "motor function",
+        "source_entity": "motor function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.905,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "33995241",
+          "35111124",
+          "37919207",
+          "37945485",
+          "39093767",
+          "39781427",
+          "40659577",
+          "40702928"
+        ]
+      },
+      {
+        "query_entity": "motor function",
+        "source_entity": "motor function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "IMPROVES",
+        "neighbor": "disease-modifying therapies",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.903,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "37401093",
+          "40702928",
+          "41121134",
+          "41148757",
+          "41499282",
+          "41508057",
+          "41851912",
+          "41892024",
+          "41944185",
+          "42135234"
+        ]
+      },
+      {
+        "query_entity": "motor function",
+        "source_entity": "motor function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "IMPROVES",
+        "neighbor": "Risdiplam",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.902,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "33003005",
+          "34320287",
+          "34942136",
+          "35040693",
+          "35284988",
+          "35352647",
+          "35837793",
+          "36244364",
+          "36278622",
+          "36316089",
+          "36329412",
+          "36735057",
+          "36810103",
+          "37095427",
+          "37574770",
+          "37843301",
+          "38073396",
+          "38090542",
+          "38368338",
+          "38733387",
+          "38905882",
+          "38929996",
+          "39093767",
+          "39514601",
+          "39604484",
+          "39722647",
+          "39969920",
+          "40241365",
+          "40482303",
+          "40624473",
+          "40745614",
+          "40770841",
+          "40795449",
+          "40913965",
+          "41181835",
+          "41299848",
+          "41350238",
+          "41354988",
+          "41454272",
+          "41607729",
+          "41613187",
+          "41668709",
+          "41795276",
+          "41877466",
+          "41954146",
+          "42203536"
+        ]
+      },
+      {
+        "query_entity": "hypotonia",
+        "source_entity": "hypotonia",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "HAS_PHENOTYPE",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.909,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25225621",
+          "29761130",
+          "30787777",
+          "31604576",
+          "33329961",
+          "33357592",
+          "33357593",
+          "33619801",
+          "34306789",
+          "34794294",
+          "34824924",
+          "36319109",
+          "36803361",
+          "37621829",
+          "38586164",
+          "39301367",
+          "39844848",
+          "39846593",
+          "40630496",
+          "40825903",
+          "41737973",
+          "42071833"
+        ]
+      },
+      {
+        "query_entity": "hypotonia",
+        "source_entity": "hypotonia",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "HAS_PHENOTYPE",
+        "neighbor": "SMARD1",
+        "neighbor_labels": [
+          "Disease",
+          "Phenotype"
+        ],
+        "confidence": 0.905,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25280635",
+          "26709713",
+          "29653221",
+          "30598237",
+          "34824924",
+          "35611426",
+          "40686563"
+        ]
+      },
+      {
+        "query_entity": "hypotonia",
+        "source_entity": "hypotonia",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.904,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "28277555",
+          "29379570",
+          "29858556",
+          "31607747",
+          "37753494",
+          "39457470"
+        ]
+      },
+      {
+        "query_entity": "hypotonia",
+        "source_entity": "hypotonia",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.86,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26509018",
+          "30340076",
+          "38178730",
+          "42137283"
+        ]
+      },
+      {
+        "query_entity": "hypotonia",
+        "source_entity": "hypotonia",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.849,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25123529",
+          "38465139",
+          "40754463"
+        ]
+      },
+      {
+        "query_entity": "respiratory function",
+        "source_entity": "respiratory function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "IMPROVES",
+        "neighbor": "Nusinersen",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.901,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "32035635",
+          "33147378",
+          "33459657",
+          "34476123",
+          "36310036",
+          "36873628",
+          "37563072",
+          "38090542",
+          "38589769",
+          "38916214",
+          "38932995",
+          "39518446",
+          "40241365"
+        ]
+      },
+      {
+        "query_entity": "respiratory function",
+        "source_entity": "respiratory function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "IMPROVES",
+        "neighbor": "Risdiplam",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.9,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "37574770",
+          "40241365",
+          "40624473",
+          "41613187",
+          "41644600",
+          "41846692",
+          "41964328"
+        ]
+      },
+      {
+        "query_entity": "respiratory function",
+        "source_entity": "respiratory function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "NO_EFFECT",
+        "neighbor": "Nusinersen",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.834,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "36382221",
+          "39447351",
+          "40686700"
+        ]
+      },
+      {
+        "query_entity": "respiratory function",
+        "source_entity": "respiratory function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.83,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "37945485",
+          "40659577"
+        ]
+      },
+      {
+        "query_entity": "respiratory function",
+        "source_entity": "respiratory function",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "NO_EFFECT",
+        "neighbor": "Risdiplam",
+        "neighbor_labels": [
+          "Drug"
+        ],
+        "confidence": 0.827,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "36382958",
+          "39722647"
+        ]
+      },
+      {
+        "query_entity": "motor dysfunction",
+        "source_entity": "motor dysfunction",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "HAS_PHENOTYPE",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.903,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "26900585",
+          "29395660",
+          "33281605",
+          "33530934",
+          "34552528",
+          "37009768",
+          "37218083",
+          "37759179",
+          "38233181",
+          "39308455",
+          "40163566",
+          "41431167",
+          "41701870",
+          "41761113",
+          "42074613"
+        ]
+      },
+      {
+        "query_entity": "motor dysfunction",
+        "source_entity": "motor dysfunction",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "ASSOCIATED_WITH",
+        "neighbor": "Spinal Muscular Atrophy",
+        "neighbor_labels": [
+          "Disease"
+        ],
+        "confidence": 0.872,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "27577737",
+          "39752251",
+          "41238319",
+          "41313058"
+        ]
+      },
+      {
+        "query_entity": "motor dysfunction",
+        "source_entity": "motor dysfunction",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "SMN",
+        "neighbor_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "confidence": 0.828,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "25055867",
+          "38318851"
+        ]
+      },
+      {
+        "query_entity": "motor dysfunction",
+        "source_entity": "motor dysfunction",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "VRK1",
+        "neighbor_labels": [
+          "Gene",
+          "Protein"
+        ],
+        "confidence": 0.826,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "30050127",
+          "37429068"
+        ]
+      },
+      {
+        "query_entity": "motor dysfunction",
+        "source_entity": "motor dysfunction",
+        "source_labels": [
+          "Phenotype"
+        ],
+        "relation": "CAUSES",
+        "neighbor": "Stasimon/Tmem41b",
+        "neighbor_labels": [
+          "Protein"
+        ],
+        "confidence": 0.815,
+        "source": "Literature_NLP",
+        "review_status": "accepted",
+        "evidence_pmids": [
+          "38640735"
+        ]
+      }
+    ],
+    "graph_neighborhood_error": ""
+  }
+}

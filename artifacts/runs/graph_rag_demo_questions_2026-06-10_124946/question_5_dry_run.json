@@ -1,0 +1,2275 @@
+{
+  "question": "Which genes are strongly connected to Spinal Muscular Atrophy?",
+  "answer_status": "dry_run_requires_llm",
+  "answer": "",
+  "supporting_pmids": [
+    "29580671",
+    "42157963",
+    "37080889",
+    "37750622",
+    "27917293",
+    "29434670",
+    "30842449",
+    "35612622",
+    "38972959",
+    "27042141",
+    "27288447",
+    "38383972",
+    "33999256",
+    "35372839",
+    "35866733",
+    "38884441",
+    "25844556",
+    "33412266",
+    "28729373",
+    "38461796",
+    "40200760",
+    "32117462",
+    "38282771",
+    "26468953",
+    "28460889",
+    "30044619",
+    "31296522",
+    "34761360",
+    "39982664",
+    "40624473",
+    "24891907",
+    "25080519"
+  ],
+  "supporting_triples": [
+    {
+      "source_pmid": "29580671",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "SMN1 and SMN2, are highly homologous genes which are related to the development or clinical severity of spinal muscular atrophy",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "29580671",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "SMN1 and SMN2, are highly homologous genes which are related to the development or clinical severity of spinal muscular atrophy",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "42157963",
+      "entity_1": {
+        "name": "AAV9-Ab",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      "evidence_text": "AAV9-Ab immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold and eligible for intravenous onasemnogene abeparvovec treatment",
+      "llm_confidence": 0.9,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.931,
+      "confidence_components": {
+        "model_or_self_score": 0.9,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "42157963",
+      "entity_1": {
+        "name": "AAV9-Ab",
+        "type": "Protein"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "AAV9-Ab immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "37080889",
+      "entity_1": {
+        "name": "AMPK activation",
+        "type": "Phenotype"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "mitochondrial stresses that are common between, as well as unique to, DMD, DM1, and SMA, and which may serve as potential therapeutic targets to mitigate neuromuscular disease",
+      "llm_confidence": 0.7,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.855,
+      "confidence_components": {
+        "model_or_self_score": 0.7,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "37750622",
+      "entity_1": {
+        "name": "NAIP",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Two genes, i.e., survival motor neuron (SMN1) and neuronal apoptosis inhibitory protein (NAIP) are mapped to the SMA vicinity of chromosome 5q13",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "27917293",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    },
+    {
+      "source_pmid": "27917293",
+      "entity_1": {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      }
+    }
+  ],
+  "graph_context": [
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "mitochondrial biogenesis",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "25844556",
+          "33412266"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 2
+      },
+      "computed_confidence": 0.822,
+      "confidence_components": {
+        "base_score": 0.946,
+        "avg_raw_score": 0.919,
+        "pmid_support_score": 0.57,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 2,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "nonperinatal lethal motor phenotype",
+        "type": "Phenotype"
+      },
+      "relation": "COMPARED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence": {
+        "pmid_list": [
+          "28729373"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.808,
+      "confidence_components": {
+        "base_score": 0.95,
+        "avg_raw_score": 0.95,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "top 10 genes",
+        "type": "Gene"
+      },
+      "evidence": {
+        "pmid_list": [
+          "38461796"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.785,
+      "confidence_components": {
+        "base_score": 0.912,
+        "avg_raw_score": 0.912,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "persistence of ketogenesis",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "40200760"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.774,
+      "confidence_components": {
+        "base_score": 0.893,
+        "avg_raw_score": 0.893,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "large deletions extending into SMN1 and neighboring genes",
+        "type": "Variant"
+      },
+      "relation": "ASSOCIATED_WITH",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence": {
+        "pmid_list": [
+          "32117462"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.762,
+      "confidence_components": {
+        "base_score": 0.874,
+        "avg_raw_score": 0.874,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "respiratory care",
+        "type": "Drug"
+      },
+      "relation": "TREATS",
+      "entity_2": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "evidence": {
+        "pmid_list": [
+          "38282771"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 1
+      },
+      "computed_confidence": 0.751,
+      "confidence_components": {
+        "base_score": 0.855,
+        "avg_raw_score": 0.855,
+        "pmid_support_score": 0.45,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 1,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "positive",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "CAUSES",
+      "entity_2": {
+        "name": "loss of motor function",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "26468953",
+          "28460889",
+          "30044619",
+          "31296522",
+          "34761360",
+          "39982664",
+          "40624473"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 7
+      },
+      "computed_confidence": 0.912,
+      "confidence_components": {
+        "base_score": 0.962,
+        "avg_raw_score": 0.949,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 7,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "negative",
+      "review_status": "accepted"
+    },
+    {
+      "entity_1": {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      "relation": "HAS_PHENOTYPE",
+      "entity_2": {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      "evidence": {
+        "pmid_list": [
+          "24891907",
+          "25080519",
+          "25088406",
+          "25413156",
+          "25572663",
+          "25848917",
+          "26200127",
+          "26276812",
+          "26506088",
+          "26515624",
+          "26594138",
+          "26621405",
+          "27042141",
+          "27131421",
+          "27224441",
+          "27557711",
+          "28062667",
+          "28193854",
+          "28229309",
+          "28426667",
+          "28671037",
+          "28755059",
+          "28852871",
+          "28879307",
+          "28977438",
+          "29316633",
+          "29378426",
+          "29380287",
+          "29434172",
+          "29434179",
+          "30061431",
+          "30137324",
+          "30553700",
+          "31004230",
+          "31201046",
+          "31262178",
+          "31339938",
+          "31371553",
+          "31583591",
+          "31734026",
+          "32075715",
+          "32076758",
+          "32161570",
+          "32470325",
+          "32505480",
+          "32659294",
+          "32859833",
+          "33168084",
+          "33219005",
+          "33324516",
+          "33344277",
+          "33357592",
+          "33357595",
+          "33415588",
+          "33743238",
+          "34097287",
+          "34377212",
+          "34602496",
+          "34721262",
+          "34984269",
+          "35076905",
+          "35289093",
+          "35372839",
+          "35832505",
+          "36603028",
+          "36836806",
+          "37146794",
+          "38373977",
+          "38697430",
+          "38846202",
+          "38895692",
+          "38915908",
+          "38969036",
+          "39048567",
+          "39051405",
+          "39070547",
+          "39202360",
+          "39272200",
+          "39313447",
+          "39449271",
+          "39596480",
+          "39907139",
+          "40028690",
+          "40193572",
+          "40217509",
+          "40935015",
+          "41249338",
+          "41278815",
+          "41350752",
+          "41423447",
+          "41716912",
+          "42104555",
+          "42203536",
+          "42232219"
+        ],
+        "extraction_engines": [
+          "LLM_deepseek-ai/DeepSeek-V4-Flash"
+        ],
+        "evidence_count": 94
+      },
+      "computed_confidence": 0.912,
+      "confidence_components": {
+        "base_score": 0.965,
+        "avg_raw_score": 0.943,
+        "pmid_support_score": 1.0,
+        "engine_support_score": 0.55,
+        "schema_score": 1.0,
+        "supporting_pmids": 94,
+        "supporting_engines": 1,
+        "scoring_version": "fused_v1"
+      },
+      "relation_polarity": "neutral",
+      "review_status": "accepted"
+    }
+  ],
+  "limitations": [
+    "dry_run: no LLM answer generated"
+  ],
+  "model": "",
+  "retrieval": {
+    "mode": "lexical_entity",
+    "tokens": [
+      "which",
+      "genes",
+      "are",
+      "strongly",
+      "connected",
+      "to",
+      "spinal",
+      "muscular",
+      "atrophy"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 13127,
+    "fused_candidates": 11155,
+    "conflict_candidates": 22
+  },
+  "evidence_context": {
+    "context_id": "graph-rag-which-genes-are-strongly-connected-to-spinal-muscular-atrophy",
+    "purpose": "graph_rag_answer",
+    "query": "Which genes are strongly connected to Spinal Muscular Atrophy?",
+    "entities": [
+      {
+        "name": "SMN1",
+        "type": "Gene"
+      },
+      {
+        "name": "Spinal Muscular Atrophy",
+        "type": "Disease"
+      },
+      {
+        "name": "AAV9-Ab",
+        "type": "Protein"
+      },
+      {
+        "name": "Onasemnogene Abeparvovec",
+        "type": "Drug"
+      },
+      {
+        "name": "AMPK activation",
+        "type": "Phenotype"
+      },
+      {
+        "name": "NAIP",
+        "type": "Gene"
+      },
+      {
+        "name": "SMN1 deletion",
+        "type": "Variant"
+      },
+      {
+        "name": "SSO",
+        "type": "Drug"
+      },
+      {
+        "name": "genetic mutation",
+        "type": "Variant"
+      },
+      {
+        "name": "mitochondria alterations",
+        "type": "Phenotype"
+      },
+      {
+        "name": "motor neuron degeneration",
+        "type": "Phenotype"
+      },
+      {
+        "name": "muscle weakness",
+        "type": "Phenotype"
+      },
+      {
+        "name": "weakness",
+        "type": "Phenotype"
+      },
+      {
+        "name": "wide phenotypic variability",
+        "type": "Phenotype"
+      },
+      {
+        "name": "mitochondrial biogenesis",
+        "type": "Phenotype"
+      },
+      {
+        "name": "nonperinatal lethal motor phenotype",
+        "type": "Phenotype"
+      },
+      {
+        "name": "top 10 genes",
+        "type": "Gene"
+      },
+      {
+        "name": "persistence of ketogenesis",
+        "type": "Phenotype"
+      },
+      {
+        "name": "large deletions extending into SMN1 and neighboring genes",
+        "type": "Variant"
+      },
+      {
+        "name": "respiratory care",
+        "type": "Drug"
+      },
+      {
+        "name": "loss of motor function",
+        "type": "Phenotype"
+      },
+      {
+        "name": "respiratory failure",
+        "type": "Phenotype"
+      },
+      {
+        "name": "areflexia",
+        "type": "Phenotype"
+      },
+      {
+        "name": "hypotonia",
+        "type": "Phenotype"
+      }
+    ],
+    "abstracts": [
+      {
+        "pmid": "29580671",
+        "title": "Intron-retained transcripts of the spinal muscular atrophy genes, SMN1 and SMN2.",
+        "abstract": "BACKGROUND: The SMN genes, SMN1 and SMN2, are highly homologous genes which are related to the development or clinical severity of spinal muscular atrophy. Some alternative splicing patterns of the SMN genes have been well documented. In 2007, an SMN1 transcript with a full sequence of intron 3 was reported as the first intron-retained SMN transcript. METHODS: Intron-retained SMN transcripts in various cells and tissues were studied using reverse transcription (RT)-PCR. HeLa cells were used for subcellular localization of the transcripts and protein expression analysis with Western blotting. RESULTS: Two intron-retained SMN transcripts were detected, which contain full sequences of intron 2b or intron 3. These transcripts were produced from SMN1 and SMN2, and ubiquitously expressed in human cells and tissues. Western blotting analysis showed no proteins derived from the intron-retained transcripts. Fractionation analysis showed that these intron-retained transcripts were localized mainly in the nucleus. Contrary to our expectation, the intron-retained transcript levels decreased during the treatment of cycloheximide, an inhibitor of nonsense-mediated decay (NMD), suggesting that th...",
+        "pub_date": "2018 Sep"
+      },
+      {
+        "pmid": "42157963",
+        "title": "Global age-related seroprevalence for adeno-associated virus serotype 9 immunoglobulin G.",
+        "abstract": "Adeno-associated virus serotype 9 antibody (AAV9-Ab) immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold and eligible for intravenous onasemnogene abeparvovec treatment. This cross-sectional analysis evaluated AAV9-Ab immunoglobulin G titers by region or country, year, and age in a population of individuals with SMA from a wide range of countries (excluding the United States and Japan). Anonymized serum samples were utilized for total AAV9-Ab immunoglobulin G enzyme-linked immunosorbent assay tests (2020-2025). A total of 4,149 samples from individuals with documented age and first test information from 75 countries were analyzed. AAV9-Ab immunoglobulin G data were similar by region, country, and year, except for a greater proportion of individuals with AAV9-Ab immunoglobulin G titers >/=1:100 from Russia compared with other countries. Individuals in the 0-month age group had greater likelihood of AAV9-Ab immunoglobulin G titers >/=1:100 than those in other age groups. Logistic regression analysis revealed that the predicted AAV9-Ab immunoglobulin G ti...",
+        "pub_date": "2026 Mar 12"
+      },
+      {
+        "pmid": "37080889",
+        "title": "AMPK is mitochondrial medicine for neuromuscular disorders.",
+        "abstract": "Duchenne muscular dystrophy (DMD), myotonic dystrophy type 1 (DM1), and spinal muscular atrophy (SMA) are the most prevalent neuromuscular disorders (NMDs) in children and adults. Central to a healthy neuromuscular system are the processes that govern mitochondrial turnover and dynamics, which are regulated by AMP-activated protein kinase (AMPK). Here, we survey mitochondrial stresses that are common between, as well as unique to, DMD, DM1, and SMA, and which may serve as potential therapeutic targets to mitigate neuromuscular disease. We also highlight recent advances that leverage a mutation-agnostic strategy featuring physiological or pharmacological AMPK activation to enhance mitochondrial health in these conditions, as well as identify outstanding questions and opportunities for future pursuit.",
+        "pub_date": "2023 Jul"
+      },
+      {
+        "pmid": "37750622",
+        "title": "Deletions of SMNI gene exon 7 and NAIP gene exon 5 in spinal muscular atrophy patients in selected population.",
+        "abstract": "OBJECTIVE: Spinal muscular atrophy (SMA) is common among various populations because the genetic makeup is monogamous due to consanguineous marriages. Two genes, i.e., survival motor neuron (SMN1) and neuronal apoptosis inhibitory protein (NAIP) are mapped to the SMA vicinity of chromosome 5q13. The main objective of the study was to develop a solitary advanced genetic tool for the diagnosis of SMA by using SMN1 gene exon 7 and NAIP gene exon 5. PATIENTS AND METHODS: This study involved SMA patients (n=84) belonging to different clinical features and socio-economic status. The identity of the intact NAIP gene is primarily based on the amplification of exon 5 only in those SMA patients that have a deletion of SMN1 gene exon 7. Healthy controls (n=84) were also included in this study. The mutational analysis was observed through the Sanger sequencing method, where chromatograms were observed by using Chromas version 2.6.0. RESULTS: This study showed a higher prevalence of SMA in females than in males. NAIP gene is considered a phenotype modifier as most SMA patients (94.90%) have SMN1 exon 7 deletion along with a deletion in exon 5 of the NAIP gene. Single nucleotide conversion C-T i...",
+        "pub_date": "2023 Sep"
+      },
+      {
+        "pmid": "27917293",
+        "title": "Alternative splicing of a cryptic exon embedded in intron 6 of SMN1 and SMN2.",
+        "abstract": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy; mutations in SMN1 cause the disease, and SMN2 modulates its severity. It is established that different alternative splicing of exon 7 occurs for SMN1 and SMN2, and a cryptic exon was recently found in intron 6 of both genes. Here, we characterize this cryptic exon and clarify its alternative splicing pattern in control and spinal muscular atrophy cells.",
+        "pub_date": "2016"
+      },
+      {
+        "pmid": "29434670",
+        "title": "Advances in spinal muscular atrophy therapeutics.",
+        "abstract": "Spinal muscular atrophy (SMA) is a progressive, recessively inherited neuromuscular disease, characterized by the degeneration of lower motor neurons in the spinal cord and brainstem, which leads to weakness and muscle atrophy. SMA currently represents the most common genetic cause of infant death. SMA is caused by the lack of survival motor neuron (SMN) protein due to mutations, which are often deletions, in the SMN1 gene. In the absence of treatments able to modify the disease course, a considerable burden falls on patients and their families. Greater knowledge of the molecular basis of SMA pathogenesis has fuelled the development of potential therapeutic approaches, which are illustrated here. Nusinersen, a modified antisense oligonucleotide that modulates the splicing of the SMN2 mRNA transcript, is the first approved drug for all types of SMA. Moreover, the first gene therapy clinical trial using adeno-associated virus (AAV) vectors encoding SMN reported positive results in survival and motor milestones achievement. In addition, other strategies are in the pipeline, including modulation of SMN2 transcripts, neuroprotection, and targeting an increasing number of other periphera...",
+        "pub_date": "2018"
+      },
+      {
+        "pmid": "30842449",
+        "title": "Notch Signaling Mediates Astrocyte Abnormality in Spinal Muscular Atrophy Model Systems.",
+        "abstract": "Spinal muscular atrophy (SMA) is an autosomal recessive neuromuscular disorder characterized by the degeneration of spinal motor neurons and muscle atrophy. The disease is mainly caused by low level of the survival motor neuron (SMN) protein, which is coded by two genes, namely SMN1 and SMN2, but leads to selective spinal motor neuron degeneration when SMN1 gene is deleted or mutated. Previous reports have shown that SMN-protein-deficient astrocytes are abnormally abundant in the spinal cords of SMA model mice. However, the mechanism of the SMN- deficient astrocyte abnormality remains unclear. The purpose of this study is to identify the cellular signaling pathways associated with the SMN-deficient astrocyte abnormality and propose a candidate therapy tool that modulates signaling. In the present study, we found that the astrocyte density was increased around the central canal of the spinal cord in a mouse SMA model and we identified the dysregulation of Notch signaling which is a known mechanism that regulates astrocyte differentiation and proliferation, in the spinal cord in both early and late stages of SMA pathogenesis. Moreover, pharmacological inhibition of Notch signaling im...",
+        "pub_date": "2019 Mar 6"
+      },
+      {
+        "pmid": "35612622",
+        "title": "Revealing diverse alternative splicing variants of the highly homologous SMN1 and SMN2 genes by targeted long-read sequencing.",
+        "abstract": "The survival of motor neuron (SMN) genes, SMN1 and SMN2, are two highly homologous genes related to spinal muscular atrophy (SMA). Different patterns of alternative splicing have been observed in the SMN genes. In this study, the long-read sequencing technique for distinguishing SMN1 and SMN2 without any assembly were developed and applied to reveal multiple alternative splicing patterns and to comprehensively identify transcript variants of the SMN genes. In total, 36 types of transcript variants were identified, with an equal number of variants generated from both SMN1 and SMN2. Of these, 18 were novel SMN transcripts that have never been reported. The structures of SMN transcripts were revealed to be much more complicated and diverse than previously discovered. These novel transcripts were derived from diverse splicing events, including skipping of one or more exons, intron retention, and exon shortening or addition. SMN1 mainly produces FL-SMN1, SMN1Delta7, SMN1Delta5 and SMN1Delta3. The distribution of SMN2 transcripts was significantly different from those of SMN1, with the majority transcripts to be SMN2Delta7, followed by FL-SMN2, SMN2Delta3,5 and SMN2Delta5,7. Targeted lon...",
+        "pub_date": "2022 Jul"
+      }
+    ],
+    "aligned_triples": [
+      {
+        "source_pmid": "29580671",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2, are highly homologous genes which are related to the development or clinical severity of spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "29580671",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2, are highly homologous genes which are related to the development or clinical severity of spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "42157963",
+        "entity_1": {
+          "name": "AAV9-Ab",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Onasemnogene Abeparvovec",
+          "type": "Drug"
+        },
+        "evidence_text": "AAV9-Ab immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold and eligible for intravenous onasemnogene abeparvovec treatment",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "42157963",
+        "entity_1": {
+          "name": "AAV9-Ab",
+          "type": "Protein"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "AAV9-Ab immunoglobulin G titers, which may vary according to region or age, are required to be tested to ensure individuals with spinal muscular atrophy (SMA) are within the </=1:50 threshold",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "37080889",
+        "entity_1": {
+          "name": "AMPK activation",
+          "type": "Phenotype"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "mitochondrial stresses that are common between, as well as unique to, DMD, DM1, and SMA, and which may serve as potential therapeutic targets to mitigate neuromuscular disease",
+        "llm_confidence": 0.7,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.855,
+        "confidence_components": {
+          "model_or_self_score": 0.7,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "37750622",
+        "entity_1": {
+          "name": "NAIP",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Two genes, i.e., survival motor neuron (SMN1) and neuronal apoptosis inhibitory protein (NAIP) are mapped to the SMA vicinity of chromosome 5q13",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27917293",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27917293",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Both survival of motor neuron (SMN) genes are associated with spinal muscular atrophy",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "29434670",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMA is caused by the lack of survival motor neuron (SMN) protein due to mutations, which are often deletions, in the SMN1 gene",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30842449",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "the disease is mainly caused by low level of the survival motor neuron (SMN) protein, which is coded by two genes, namely SMN1 and SMN2",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35612622",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2 are two highly homologous genes related to spinal muscular atrophy (SMA)",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35612622",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SMN1 and SMN2 are two highly homologous genes related to spinal muscular atrophy (SMA)",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "37750622",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Two genes, i.e., survival motor neuron (SMN1) and neuronal apoptosis inhibitory protein (NAIP) are mapped to the SMA vicinity of chromosome 5q13",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "38972959",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "Spinal muscular atrophy (SMA) is a rare neuromuscular disease, which is characterized by the degeneration of motor neurons, leading to symmetrical muscle weakness and atrophy",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "30842449",
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "relation": "HAS_VARIANT",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "the disease is mainly caused by low level of the survival motor neuron (SMN) protein, which is coded by two genes, namely SMN1 and SMN2, but leads to selective spinal motor neuron degeneration when SMN1 gene is deleted or mutated",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27042141",
+        "entity_1": {
+          "name": "SMN1 deletion",
+          "type": "Variant"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "mutation of the Survival Motor Neuron 1 (SMN1) gene shifts the load of expression of SMN protein to the SMN2 gene that produces low levels of full-length SMN protein ... which are sufficient for embryonic development and survival but result in SMA",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "27288447",
+        "entity_1": {
+          "name": "SSO",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence_text": "SSOs designed to treat Duchenne muscular dystrophy and spinal muscular atrophy, which are currently being tested in clinical trials",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "38383972",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "genetic mutation",
+          "type": "Variant"
+        },
+        "evidence_text": "disorders which are attributed to genetic mutations often manifest in the form of progressive weakness and atrophy of skeletal and heart muscles",
+        "llm_confidence": 0.85,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "model_or_self_score": 0.85,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "33999256",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "mitochondria alterations",
+          "type": "Phenotype"
+        },
+        "evidence_text": "mitochondrial alterations within distal axons and muscle, which are quantified here through ultrastructural morphometry",
+        "llm_confidence": 0.82,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.901,
+        "confidence_components": {
+          "model_or_self_score": 0.82,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35372839",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence_text": "Spinal Muscular Atrophy (SMA) and Amyotrophic Lateral Sclerosis (ALS) are neurodegenerative diseases which are characterized by the loss of motoneurons",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35866733",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "muscle weakness",
+          "type": "Phenotype"
+        },
+        "evidence_text": "spinal muscular atrophy is a rare genetic neurodegenerative disorder affecting the motor neurons of the anterior horn of the spinal cord, which results in muscle atrophy and weakness",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "38383972",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "muscle weakness",
+          "type": "Phenotype"
+        },
+        "evidence_text": "disorders which are attributed to genetic mutations often manifest in the form of progressive weakness and atrophy of skeletal and heart muscles",
+        "llm_confidence": 0.9,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.931,
+        "confidence_components": {
+          "model_or_self_score": 0.9,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "35866733",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "weakness",
+          "type": "Phenotype"
+        },
+        "evidence_text": "spinal muscular atrophy is a rare genetic neurodegenerative disorder affecting the motor neurons of the anterior horn of the spinal cord, which results in muscle atrophy and weakness",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      },
+      {
+        "source_pmid": "38884441",
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "wide phenotypic variability",
+          "type": "Phenotype"
+        },
+        "evidence_text": "SMA is a rare autosomal recessive neurodegenerative motor neuron disease in which wide phenotypic variability has been described.",
+        "llm_confidence": 0.95,
+        "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+        "computed_confidence": 0.95,
+        "confidence_components": {
+          "model_or_self_score": 0.95,
+          "evidence_score": 1.0,
+          "schema_score": 1.0,
+          "engine_score": 0.78,
+          "scoring_version": "raw_v1"
+        }
+      }
+    ],
+    "fused_edges": [
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "mitochondrial biogenesis",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25844556",
+            "33412266"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 2
+        },
+        "computed_confidence": 0.822,
+        "confidence_components": {
+          "base_score": 0.946,
+          "avg_raw_score": 0.919,
+          "pmid_support_score": 0.57,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 2,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "nonperinatal lethal motor phenotype",
+          "type": "Phenotype"
+        },
+        "relation": "COMPARED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "28729373"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.808,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.95,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "top 10 genes",
+          "type": "Gene"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38461796"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.785,
+        "confidence_components": {
+          "base_score": 0.912,
+          "avg_raw_score": 0.912,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "persistence of ketogenesis",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "40200760"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.774,
+        "confidence_components": {
+          "base_score": 0.893,
+          "avg_raw_score": 0.893,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "large deletions extending into SMN1 and neighboring genes",
+          "type": "Variant"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "32117462"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.762,
+        "confidence_components": {
+          "base_score": 0.874,
+          "avg_raw_score": 0.874,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "respiratory care",
+          "type": "Drug"
+        },
+        "relation": "TREATS",
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "evidence": {
+          "pmid_list": [
+            "38282771"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 1
+        },
+        "computed_confidence": 0.751,
+        "confidence_components": {
+          "base_score": 0.855,
+          "avg_raw_score": 0.855,
+          "pmid_support_score": 0.45,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 1,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "positive",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "loss of motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "26468953",
+            "28460889",
+            "30044619",
+            "31296522",
+            "34761360",
+            "39982664",
+            "40624473"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 7
+        },
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "base_score": 0.962,
+          "avg_raw_score": 0.949,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 7,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "24891907",
+            "25080519",
+            "25088406",
+            "25413156",
+            "25572663",
+            "25848917",
+            "26200127",
+            "26276812",
+            "26506088",
+            "26515624",
+            "26594138",
+            "26621405",
+            "27042141",
+            "27131421",
+            "27224441",
+            "27557711",
+            "28062667",
+            "28193854",
+            "28229309",
+            "28426667",
+            "28671037",
+            "28755059",
+            "28852871",
+            "28879307",
+            "28977438",
+            "29316633",
+            "29378426",
+            "29380287",
+            "29434172",
+            "29434179",
+            "30061431",
+            "30137324",
+            "30553700",
+            "31004230",
+            "31201046",
+            "31262178",
+            "31339938",
+            "31371553",
+            "31583591",
+            "31734026",
+            "32075715",
+            "32076758",
+            "32161570",
+            "32470325",
+            "32505480",
+            "32659294",
+            "32859833",
+            "33168084",
+            "33219005",
+            "33324516",
+            "33344277",
+            "33357592",
+            "33357595",
+            "33415588",
+            "33743238",
+            "34097287",
+            "34377212",
+            "34602496",
+            "34721262",
+            "34984269",
+            "35076905",
+            "35289093",
+            "35372839",
+            "35832505",
+            "36603028",
+            "36836806",
+            "37146794",
+            "38373977",
+            "38697430",
+            "38846202",
+            "38895692",
+            "38915908",
+            "38969036",
+            "39048567",
+            "39051405",
+            "39070547",
+            "39202360",
+            "39272200",
+            "39313447",
+            "39449271",
+            "39596480",
+            "39907139",
+            "40028690",
+            "40193572",
+            "40217509",
+            "40935015",
+            "41249338",
+            "41278815",
+            "41350752",
+            "41423447",
+            "41716912",
+            "42104555",
+            "42203536",
+            "42232219"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 94
+        },
+        "computed_confidence": 0.912,
+        "confidence_components": {
+          "base_score": 0.965,
+          "avg_raw_score": 0.943,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 94,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "respiratory failure",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25822836",
+            "29228533",
+            "31544581",
+            "36039838",
+            "36823666",
+            "37587305",
+            "38529620"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 7
+        },
+        "computed_confidence": 0.909,
+        "confidence_components": {
+          "base_score": 0.958,
+          "avg_raw_score": 0.943,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 7,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "areflexia",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "33329961",
+            "33357592",
+            "35037967",
+            "37545133",
+            "37620083",
+            "38586164"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 6
+        },
+        "computed_confidence": 0.909,
+        "confidence_components": {
+          "base_score": 0.958,
+          "avg_raw_score": 0.945,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 6,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "hypotonia",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25225621",
+            "29761130",
+            "30787777",
+            "31604576",
+            "33329961",
+            "33357592",
+            "33357593",
+            "33619801",
+            "34306789",
+            "34794294",
+            "34824924",
+            "36319109",
+            "36803361",
+            "37621829",
+            "38586164",
+            "39301367",
+            "39844848",
+            "39846593",
+            "40630496",
+            "40825903",
+            "41737973",
+            "42071833"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 22
+        },
+        "computed_confidence": 0.909,
+        "confidence_components": {
+          "base_score": 0.958,
+          "avg_raw_score": 0.941,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 22,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25054590",
+            "25346245",
+            "26576026",
+            "27260405",
+            "27286578",
+            "27349908",
+            "28099929",
+            "28161391",
+            "29858556",
+            "30012555",
+            "30518112",
+            "31031583",
+            "32795928",
+            "33057172",
+            "33997096",
+            "34204831",
+            "34906030",
+            "37125536",
+            "38470509",
+            "39661851",
+            "40269379",
+            "40774447"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 22
+        },
+        "computed_confidence": 0.906,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.943,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 22,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "ASSOCIATED_WITH",
+        "entity_2": {
+          "name": "motor function",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "33995241",
+            "35111124",
+            "37919207",
+            "37945485",
+            "39093767",
+            "39781427",
+            "40659577",
+            "40702928"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 8
+        },
+        "computed_confidence": 0.905,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.938,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 8,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "CAUSES",
+        "entity_2": {
+          "name": "motor neuron degeneration",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25631888",
+            "26247043",
+            "26683872",
+            "26915343",
+            "28561814",
+            "28637335",
+            "29462610",
+            "29982483",
+            "30171535",
+            "30368521",
+            "31707373",
+            "31863335",
+            "31889605",
+            "33059774",
+            "33893753",
+            "34183144",
+            "34287247",
+            "34785121",
+            "35033190",
+            "35037967",
+            "35137581",
+            "37598295",
+            "37620083",
+            "38405995",
+            "38561840",
+            "38713777",
+            "39189228",
+            "39200246",
+            "40328346",
+            "40641403",
+            "41121134",
+            "41212681",
+            "41303705",
+            "41974892",
+            "42068140"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 35
+        },
+        "computed_confidence": 0.905,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.94,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 35,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "negative",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "respiratory distress",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "25225621",
+            "33619801",
+            "33847972",
+            "34794294",
+            "34824924",
+            "38344354",
+            "39584192"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 7
+        },
+        "computed_confidence": 0.905,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.941,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 7,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relation": "HAS_PHENOTYPE",
+        "entity_2": {
+          "name": "respiratory failure",
+          "type": "Phenotype"
+        },
+        "evidence": {
+          "pmid_list": [
+            "29450782",
+            "30396824",
+            "31707373",
+            "32515646",
+            "32925085",
+            "33206041",
+            "33276405",
+            "34306789",
+            "34368972",
+            "38895692",
+            "39449271",
+            "39625559",
+            "41737973",
+            "42203536"
+          ],
+          "extraction_engines": [
+            "LLM_deepseek-ai/DeepSeek-V4-Flash"
+          ],
+          "evidence_count": 14
+        },
+        "computed_confidence": 0.905,
+        "confidence_components": {
+          "base_score": 0.95,
+          "avg_raw_score": 0.94,
+          "pmid_support_score": 1.0,
+          "engine_support_score": 0.55,
+          "schema_score": 1.0,
+          "supporting_pmids": 14,
+          "supporting_engines": 1,
+          "scoring_version": "fused_v1"
+        },
+        "relation_polarity": "neutral",
+        "review_status": "accepted"
+      }
+    ],
+    "conflicts": [
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "entity_2": {
+          "name": "mTOR phosphorylation",
+          "type": "Phenotype"
+        },
+        "relations": [
+          "DECREASES",
+          "INCREASES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Klf15",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "IMPROVES",
+          "WORSENS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "CAUSES",
+          "MODELS",
+          "NO_EFFECT",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "BIOMARKER_FOR",
+          "CAUSES",
+          "HAS_PHENOTYPE",
+          "MODELS",
+          "PREVENTS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN expression",
+          "type": "Phenotype"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "CAUSES",
+          "IMPROVES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN protein",
+          "type": "Protein"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "BIOMARKER_FOR",
+          "CAUSES",
+          "DECREASES",
+          "IMPROVES",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "SMN1",
+          "type": "Gene"
+        },
+        "entity_2": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "relations": [
+          "ASSOCIATED_WITH",
+          "BIOMARKER_FOR",
+          "CAUSES",
+          "DIAGNOSES",
+          "HAS_PHENOTYPE",
+          "HAS_VARIANT",
+          "IMPROVES",
+          "MODELS",
+          "NO_EFFECT",
+          "TARGETS",
+          "TREATS"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      },
+      {
+        "entity_1": {
+          "name": "Spinal Muscular Atrophy",
+          "type": "Disease"
+        },
+        "entity_2": {
+          "name": "LC3-II",
+          "type": "Protein"
+        },
+        "relations": [
+          "DECREASES",
+          "INCREASES"
+        ],
+        "review_status": "needs_review",
+        "reason": "positive_and_negative_relation_polarity"
+      }
+    ],
+    "supporting_pmids": [
+      "29580671",
+      "42157963",
+      "37080889",
+      "37750622",
+      "27917293",
+      "29434670",
+      "30842449",
+      "35612622",
+      "38972959",
+      "27042141",
+      "27288447",
+      "38383972",
+      "33999256",
+      "35372839",
+      "35866733",
+      "38884441",
+      "25844556",
+      "33412266",
+      "28729373",
+      "38461796",
+      "40200760",
+      "32117462",
+      "38282771",
+      "26468953",
+      "28460889",
+      "30044619",
+      "31296522",
+      "34761360",
+      "39982664",
+      "40624473",
+      "24891907",
+      "25080519"
+    ],
+    "missing_evidence": [],
+    "limits": {
+      "max_abstracts": 8,
+      "max_aligned_triples": 24,
+      "max_fused_edges": 16,
+      "max_conflicts": 8,
+      "max_abstract_chars": 1200,
+      "max_supporting_pmids": 32
+    },
+    "retrieval": {
+      "mode": "lexical_entity",
+      "tokens": [
+        "which",
+        "genes",
+        "are",
+        "strongly",
+        "connected",
+        "to",
+        "spinal",
+        "muscular",
+        "atrophy"
+      ],
+      "top_k": 8,
+      "aligned_candidates": 13127,
+      "fused_candidates": 11155,
+      "conflict_candidates": 22
+    }
+  }
+}

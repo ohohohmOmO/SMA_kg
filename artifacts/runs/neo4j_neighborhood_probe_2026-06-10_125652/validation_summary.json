@@ -1,0 +1,7 @@
+{
+  "neo4j_uri_set": true,
+  "neo4j_user_set": true,
+  "neo4j_password_set": true,
+  "connected": true,
+  "error": ""
+}

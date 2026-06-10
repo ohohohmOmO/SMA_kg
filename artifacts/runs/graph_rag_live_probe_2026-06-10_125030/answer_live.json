@@ -1,0 +1,66 @@
+{
+  "answer": "Nusinersen improves motor function in patients with spinal muscular atrophy, as evidenced by improvements in motor scales (e.g., Hammersmith Functional Motor Scale Expanded, Revised Upper Limb Module), achievement of motor milestones, and improvements in hand motor function across various ages and SMA types.",
+  "supporting_pmids": [
+    "37409780",
+    "35833245",
+    "30008228",
+    "30617569",
+    "32632203",
+    "33147378",
+    "33608138",
+    "33682724"
+  ],
+  "supporting_triples": [
+    {
+      "source_pmid": "37409780",
+      "entity_1": "Nusinersen",
+      "relation": "IMPROVES",
+      "entity_2": "Hammersmith Functional Motor Scale Expanded"
+    },
+    {
+      "source_pmid": "35833245",
+      "entity_1": "Nusinersen",
+      "relation": "IMPROVES",
+      "entity_2": "hand motor function"
+    },
+    {
+      "source_pmid": "30008228",
+      "entity_1": "Nusinersen",
+      "relation": "IMPROVES",
+      "entity_2": "motor function"
+    }
+  ],
+  "graph_context": [
+    {
+      "entity_1": "Nusinersen",
+      "relation": "IMPROVES",
+      "entity_2": "motor function",
+      "evidence_count": 189
+    },
+    {
+      "entity_1": "Nusinersen",
+      "relation": "IMPROVES",
+      "entity_2": "Hammersmith Functional Motor Scale Expanded",
+      "evidence_count": 15
+    }
+  ],
+  "limitations": "Some studies report no effect or mixed results in certain subgroups, but the overall evidence from multiple trials and real-world studies consistently shows improvement in motor function.",
+  "confidence": 0.95,
+  "question": "How does Nusinersen affect motor function?",
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "retrieval": {
+    "mode": "lexical_entity",
+    "tokens": [
+      "how",
+      "does",
+      "nusinersen",
+      "affect",
+      "motor",
+      "function"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 6798,
+    "fused_candidates": 11155,
+    "conflict_candidates": 18
+  }
+}

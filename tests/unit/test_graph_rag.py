@@ -5,6 +5,7 @@ from pathlib import Path
 
 from src.evidence.context_builder import EvidenceContextBuilder
 from src.qa.answer import build_dry_run_answer
+from src.qa.neo4j_neighborhood import format_neighbor_record
 from src.qa.retriever import GraphRagRetriever, context_to_prompt
 
 
@@ -48,6 +49,17 @@ class GraphRagTest(unittest.TestCase):
         self.assertEqual(context["supporting_pmids"], ["10"])
         self.assertEqual(context["retrieval"]["mode"], "lexical_entity")
 
+    def test_retriever_supports_hybrid_tfidf_mode(self):
+        context = GraphRagRetriever(builder=self.builder).retrieve(
+            "What causes spinal muscular atrophy?",
+            retrieval_mode="hybrid_tfidf",
+        )
+
+        self.assertEqual(context["purpose"], "graph_rag_answer")
+        self.assertEqual(context["supporting_pmids"], ["10"])
+        self.assertEqual(context["retrieval"]["mode"], "hybrid_tfidf")
+        self.assertEqual(context["retrieval"]["reranker"], "local_tfidf_cosine")
+
     def test_prompt_and_dry_run_answer_are_structured(self):
         context = GraphRagRetriever(builder=self.builder).retrieve("What causes SMA?")
 
@@ -59,6 +71,24 @@ class GraphRagTest(unittest.TestCase):
         self.assertEqual(answer["question"], "What causes SMA?")
         self.assertEqual(answer["supporting_pmids"], ["10"])
         self.assertEqual(answer["answer_status"], "dry_run_requires_llm")
+
+    def test_neo4j_neighbor_record_is_prompt_safe(self):
+        row = {
+            "query_entity": "SMN1",
+            "source_entity": "SMN1",
+            "source_labels": ["Entity", "Gene"],
+            "relation": "CAUSES",
+            "neighbor": "spinal muscular atrophy",
+            "neighbor_labels": ["Entity", "Disease"],
+            "properties": {"confidence": 0.9, "source": "Literature_NLP", "evidence_pmids": ["10"]},
+        }
+
+        record = format_neighbor_record(row)
+
+        self.assertEqual(record["source_labels"], ["Gene"])
+        self.assertEqual(record["neighbor_labels"], ["Disease"])
+        self.assertEqual(record["confidence"], 0.9)
+        self.assertEqual(record["evidence_pmids"], ["10"])
 
 
 if __name__ == "__main__":

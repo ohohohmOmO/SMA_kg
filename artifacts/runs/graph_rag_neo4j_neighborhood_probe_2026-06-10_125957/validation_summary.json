@@ -1,0 +1,26 @@
+{
+  "valid": true,
+  "run_dir": "artifacts\\runs\\graph_rag_neo4j_neighborhood_probe_2026-06-10_125957",
+  "retrieval": {
+    "mode": "hybrid_tfidf",
+    "tokens": [
+      "which",
+      "genes",
+      "are",
+      "strongly",
+      "connected",
+      "to",
+      "spinal",
+      "muscular",
+      "atrophy"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 13127,
+    "fused_candidates": 11155,
+    "conflict_candidates": 22,
+    "reranker": "local_tfidf_cosine"
+  },
+  "graph_neighborhood_records": 67,
+  "graph_neighborhood_error": "",
+  "canonical_graph_mutated": false
+}
