@@ -50,8 +50,10 @@ data/
   processed/      extracted, fused, evaluated, and analyzed outputs
 src/
   crawler/        Open Targets and PubMed acquisition
+  evidence/       local Evidence Context builders for RAG and adjudication
   extraction/     LLM extraction, rule candidates, verification, merge step
   fusion/         dictionary mapping, semantic alignment, triple aggregation
+  qa/             local Graph RAG retrieval and answer generation CLIs
   database/       Neo4j import, NetworkX analytics, PyVis graph export
   evaluation/     baseline evaluation, human/LLM scoring, novelty analysis
 resources/        Biomedical schema and entity dictionary resources
@@ -77,12 +79,16 @@ python src/extraction/verify_rule_candidates.py --input-file data/interim/rule_c
 python src/extraction/build_gold_candidates.py --run-dir artifacts/runs/stage2_gold_candidates_<stamp> --limit 750
 
 python src/fusion/run_stage3_fusion.py --run-dir artifacts/runs/stage3_fusion_<stamp> --promote
+python src/fusion/adjudicate_relation_conflicts.py --dry-run --run-dir artifacts/runs/conflict_adjudication_dry_run_<stamp>
 
 python src/database/run_stage4_graph.py --run-dir artifacts/runs/stage4_graph_database_<stamp>
 
 python src/evaluation/baseline_eval_advanced.py
 python src/evaluation/ablation_study.py
 python src/evaluation/novelty_analysis.py
+
+python src/qa/build_index.py --run-dir artifacts/runs/graph_rag_index_<stamp>
+python src/qa/run_graph_rag.py --question "What evidence links SMN1 to spinal muscular atrophy?" --dry-run --output-file artifacts/runs/graph_rag_answer_probe_<stamp>/answer_dry_run.json
 ```
 
 Optional steps that require external services:
@@ -91,6 +97,8 @@ Optional steps that require external services:
 python src/database/neo4j_importer.py
 python src/evaluation/topology_eval.py
 python src/evaluation/metrics_calculator.py
+python src/fusion/adjudicate_relation_conflicts.py --run-dir artifacts/runs/conflict_adjudication_live_<stamp>
+python src/qa/run_graph_rag.py --question "How does Nusinersen affect motor function?"
 ```
 
 ## Current Outputs
@@ -111,6 +119,8 @@ python src/evaluation/metrics_calculator.py
   requiring review.
 - `data/interim/aggregation_rejected.jsonl`: Stage 3 rejected aggregation
   records.
+- `data/processed/graph_rag_index_manifest.json`: local Graph RAG input
+  manifest with source counts and hashes.
 - `data/processed/analytics_metrics.csv`: PageRank and community metrics.
 - `docs/graph_viewer.html`: generated interactive graph viewer.
 - `artifacts/reports/`: archived historical command outputs and evaluation
@@ -120,6 +130,12 @@ As of 2026-06-09, Stage 1 acquisition/topic clustering, Stage 2 full LLM-only
 extraction, Stage 3 fusion/alignment/conflict detection, and Stage 4 Neo4j plus
 local graph generation have been rerun successfully. Current Stage 3/4 results
 are recorded in `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`.
+
+As of 2026-06-10, Graph RAG retrieval and relation-conflict adjudication v1 are
+implemented as local-retrieval-first CLIs. Local retrieval builds bounded
+Evidence Context packages from canonical JSONL files; LLM calls are optional and
+consume only that evidence. Reproduction details are recorded in
+`docs/reproduction/GRAPH_RAG_CONFLICT_ADJUDICATION_2026-06-10.md`.
 
 Open decisions before changing Stage 1 or Stage 2 inputs:
 

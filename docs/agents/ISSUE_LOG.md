@@ -17,6 +17,23 @@ verification.
 
 ## Resolved issues
 
+### 2026-06-10 - Graph RAG evidence contexts could become oversized
+
+- Symptom: The first Graph RAG dry-run answer package for `SMN1` returned an
+  unbounded supporting PMID list from broad fused disease edges, producing an
+  excessively large evidence package.
+- Cause: `EvidenceContextBuilder` copied all PMIDs from selected fused-edge
+  evidence lists into `supporting_pmids`, even when the selected edge
+  represented a broad disease relationship with hundreds of source PMIDs.
+- Fix: Added a `max_supporting_pmids` Evidence Context limit and preserved PMID
+  order by retrieval evidence so the most relevant local evidence is retained
+  first. Also made run-artifact path display robust for temporary directories
+  outside the repository.
+- Verification: `python -m unittest discover -s tests/unit -v` passed 19 tests;
+  `src/qa/run_graph_rag.py --question 'What evidence links SMN1 to spinal
+  muscular atrophy?' --dry-run` now emits 32 supporting PMIDs, 8 abstracts, 24
+  aligned triples, and 16 fused edges.
+
 ### 2026-06-09 - Neo4j relationship sanitizer allowed schema-external relation tokens
 
 - Symptom: The new unit test for Neo4j dynamic Cypher sanitization failed

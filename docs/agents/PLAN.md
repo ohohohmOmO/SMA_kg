@@ -61,6 +61,29 @@ The Stage 1-4 hardening work requested on 2026-06-09 is complete.
   evaluation reported 6648 nodes, 11208 relationships, average degree
   3.371841155234657, and 0 isolated nodes.
 
+## Current Development Status - 2026-06-10
+
+The Huawei AI application engineer feature plan for Graph RAG and relation
+conflict adjudication v1 is implemented on feature branch
+`feature/huawei-ai应用工程师-ai技术应用/graph-rag-conflict-prd-plan-20260609-225214`.
+
+- Local Evidence Context builders live under `src/evidence/` and read PubMed
+  abstracts, aligned triples, fused edges, and conflict records without Neo4j or
+  LLM dependencies.
+- Relation-conflict adjudication lives at
+  `src/fusion/adjudicate_relation_conflicts.py`. Dry-run mode writes bounded
+  conflict payloads; live mode requires `SILICONFLOW_API_KEY` and writes
+  structured adjudication artifacts without mutating the canonical graph.
+- Graph RAG retrieval and answer CLIs live under `src/qa/`. Retrieval is
+  lexical/entity based for v1 and writes a manifest-only local index at
+  `data/processed/graph_rag_index_manifest.json`.
+- Verified dry-run artifacts:
+  `artifacts/runs/conflict_adjudication_dry_run_2026-06-10_121608/`,
+  `artifacts/runs/graph_rag_index_2026-06-10_121608/`, and
+  `artifacts/runs/graph_rag_answer_probe_2026-06-10_121608/`.
+- Reproduction notes:
+  `docs/reproduction/GRAPH_RAG_CONFLICT_ADJUDICATION_2026-06-10.md`.
+
 ## Primary Reference Documents
 
 Read these when starting, resuming after compaction, or resolving uncertainty:

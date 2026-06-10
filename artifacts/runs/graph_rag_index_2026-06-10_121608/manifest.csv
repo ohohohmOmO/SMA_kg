@@ -1,0 +1,6 @@
+artifact,path,records,bytes,sha256,notes
+input,data/raw/pubmed_sma_abstracts.jsonl,4554,7761733,5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48,Graph RAG retrieval source
+input,data/interim/aligned_triples.jsonl,18288,9914761,65fc3e961e37e5361b47dd46dccef4916575d0e3b71130a8e6c775a18b36e58e,Graph RAG retrieval source
+input,data/processed/fused_triples.jsonl,11155,6748003,1771293aad8258befe717c7c7ca00c349fe5fdb782b84245b1357ad45e332b5a,Graph RAG retrieval source
+input,data/interim/relation_conflicts.jsonl,59,15047,96c8923c9d67776b00936169323ee092979870d40b15c5a932d37a022b2924db,Graph RAG retrieval source
+graph_rag_index_manifest,data\processed\graph_rag_index_manifest.json,,1063,8b90dcc7274703dbe61b62b2b9b91075b1d74dbd43b4838cc4e721412714d1a5,manifest-only lexical/entity index
