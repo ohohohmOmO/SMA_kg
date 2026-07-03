@@ -40,7 +40,17 @@ def score_raw_triple(record, problems=None):
     self_score = parse_self_score(record)
     engine_score = engine_reliability(record.get("extracted_by"))
     schema_score = 1.0 if not problems else max(0.0, 1.0 - 0.25 * len(problems))
-    evidence_score = 1.0 if record.get("evidence_text") else 0.55
+    evidence_alignment = record.get("evidence_alignment")
+    if isinstance(evidence_alignment, dict):
+        evidence_score = (
+            clamp(evidence_alignment.get("score", 0.0))
+            if evidence_alignment.get("valid") is True
+            else 0.0
+        )
+        scoring_version = "raw_v2_evidence_aligned"
+    else:
+        evidence_score = 1.0 if record.get("evidence_text") else 0.55
+        scoring_version = "raw_v1"
     model_score = self_score if self_score is not None else engine_score
     score = (
         0.38 * model_score
@@ -53,7 +63,7 @@ def score_raw_triple(record, problems=None):
         "evidence_score": round(evidence_score, 3),
         "schema_score": round(schema_score, 3),
         "engine_score": round(engine_score, 3),
-        "scoring_version": "raw_v1",
+        "scoring_version": scoring_version,
     }
 
 

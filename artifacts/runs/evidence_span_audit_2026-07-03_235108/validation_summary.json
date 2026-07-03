@@ -1,0 +1,24 @@
+{
+  "valid": true,
+  "input_file": "data\\processed\\extracted_triples.jsonl",
+  "input_sha256": "0d23d5dd162744dd70228905e6367800658e5d0af0b7328df50a6e62bfde76cb",
+  "abstracts_file": "data\\raw\\pubmed_sma_abstracts.jsonl",
+  "abstracts_sha256": "5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48",
+  "min_fuzzy_score": 0.9,
+  "records_total": 18288,
+  "records_aligned": 16214,
+  "records_rejected": 2074,
+  "alignment_rate": 0.886592,
+  "alignment_methods": {
+    "exact": 15844,
+    "fuzzy": 141,
+    "normalized": 229
+  },
+  "rejection_reasons": {
+    "evidence_text_not_aligned_to_abstract": 2074
+  },
+  "bad_json_lines": 0,
+  "output_file": "artifacts\\runs\\evidence_span_audit_2026-07-03_235108\\outputs\\data\\processed\\evidence_aligned_triples.jsonl",
+  "rejected_file": "artifacts\\runs\\evidence_span_audit_2026-07-03_235108\\rejected\\evidence_span_rejected.jsonl",
+  "canonical_mutated": false
+}

@@ -11,6 +11,13 @@ A directed biomedical statement extracted from a source record. It connects one
 entity to another through a relation and carries evidence provenance such as a
 PMID and extraction engine.
 
+## Evidence Span Alignment
+
+A deterministic check that an extracted triple's `evidence_text` can be located
+in its PMID-linked abstract. Accepted alignments record the matching method,
+score, original abstract character offsets, and matched source text. Unaligned
+records are review candidates and do not pass new Stage 2 LLM promotion gates.
+
 ## Extraction Engine
 
 A component that proposes evidence triples from text. In this project, extraction

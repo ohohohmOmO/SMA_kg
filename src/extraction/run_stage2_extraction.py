@@ -22,6 +22,7 @@ except ModuleNotFoundError:
     from src.extraction.local_pipeline import rule_candidate_extraction
     from src.extraction.merge_triples import merge_jsonl
 from src.biomedical.schema import normalize_triple
+from src.biomedical.evidence import DEFAULT_MIN_FUZZY_SCORE
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -76,7 +77,13 @@ def chunk_ranges(total, chunk_size):
         yield start, end
 
 
-def validate_triples(path, rejected_path=None, allow_duplicates=True, require_evidence=True):
+def validate_triples(
+    path,
+    rejected_path=None,
+    allow_duplicates=True,
+    require_evidence=True,
+    require_evidence_alignment=False,
+):
     records, bad_lines = load_jsonl(path)
     invalid = []
     seen = set()
@@ -109,6 +116,16 @@ def validate_triples(path, rejected_path=None, allow_duplicates=True, require_ev
             missing.append("extracted_by")
         _, schema_problems = normalize_triple(record, require_evidence=require_evidence)
         missing.extend(schema_problems)
+        if require_evidence_alignment:
+            alignment = record.get("evidence_alignment")
+            if (
+                not isinstance(alignment, dict)
+                or alignment.get("valid") is not True
+                or alignment.get("method") not in {"exact", "normalized", "fuzzy"}
+                or not isinstance(alignment.get("start_char"), int)
+                or not isinstance(alignment.get("end_char"), int)
+            ):
+                missing.append("evidence_alignment_invalid")
 
         sig = (
             str(record.get("source_pmid", "")),
@@ -139,6 +156,7 @@ def validate_triples(path, rejected_path=None, allow_duplicates=True, require_ev
         "duplicate_stage_signature_count": duplicate_count,
         "duplicates_allowed": allow_duplicates,
         "evidence_required": require_evidence,
+        "evidence_alignment_required": require_evidence_alignment,
         "valid": len(bad_lines) == 0 and len(invalid) == 0 and (allow_duplicates or duplicate_count == 0),
         "source_counts": dict(Counter(record.get("extracted_by", "") for record in records)),
         "unique_pmids": len({str(record.get("source_pmid", "")) for record in records if record.get("source_pmid")}),
@@ -153,7 +171,12 @@ def run_llm_chunk(args, run_dir, start, end):
     log_file = run_dir / "logs" / f"{chunk_name}.log"
 
     if chunk_file.exists():
-        validation = validate_triples(chunk_file, allow_duplicates=True, require_evidence=True)
+        validation = validate_triples(
+            chunk_file,
+            allow_duplicates=True,
+            require_evidence=True,
+            require_evidence_alignment=True,
+        )
         if validation["valid"]:
             logging.info("Skipping existing valid chunk %s", chunk_file)
             return {"chunk": chunk_name, "status": "skipped", **validation}
@@ -174,6 +197,8 @@ def run_llm_chunk(args, run_dir, start, end):
         args.model,
         "--max-tokens",
         str(args.max_tokens),
+        "--evidence-min-fuzzy-score",
+        str(args.evidence_min_fuzzy_score),
         "--min-triples",
         "0",
     ]
@@ -187,6 +212,7 @@ def run_llm_chunk(args, run_dir, start, end):
         rejected_path=run_dir / "rejected" / f"{chunk_name}_invalid.jsonl",
         allow_duplicates=True,
         require_evidence=True,
+        require_evidence_alignment=True,
     )
     status = "completed" if proc.returncode == 0 and validation["valid"] else "failed"
     return {"chunk": chunk_name, "status": status, "exit_code": proc.returncode, **validation}
@@ -279,6 +305,11 @@ def parse_args():
     parser.add_argument("--parallel-workers", type=int, default=1)
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument(
+        "--evidence-min-fuzzy-score",
+        type=float,
+        default=DEFAULT_MIN_FUZZY_SCORE,
+    )
     parser.add_argument("--promote", action="store_true")
     return parser.parse_args()
 
@@ -344,9 +375,21 @@ def main():
     merge_jsonl([str(llm_output)], str(canonical_output))
 
     validations = [
-        validate_triples(llm_output, run_dir / "rejected" / "llm_invalid.jsonl", allow_duplicates=True, require_evidence=True),
+        validate_triples(
+            llm_output,
+            run_dir / "rejected" / "llm_invalid.jsonl",
+            allow_duplicates=True,
+            require_evidence=True,
+            require_evidence_alignment=True,
+        ),
         validate_triples(rule_candidate_output, run_dir / "rejected" / "rule_candidate_invalid.jsonl", allow_duplicates=True, require_evidence=True),
-        validate_triples(canonical_output, run_dir / "rejected" / "canonical_llm_invalid.jsonl", allow_duplicates=False, require_evidence=True),
+        validate_triples(
+            canonical_output,
+            run_dir / "rejected" / "canonical_llm_invalid.jsonl",
+            allow_duplicates=False,
+            require_evidence=True,
+            require_evidence_alignment=True,
+        ),
     ]
     all_valid = all(item["valid"] for item in validations)
     summary = {
@@ -356,6 +399,7 @@ def main():
         "llm_limit_requested": args.llm_limit,
         "llm_limit_effective": effective_llm_limit,
         "parallel_workers": worker_count,
+        "evidence_min_fuzzy_score": args.evidence_min_fuzzy_score,
         "canonical_policy": "LLM-only; rule candidates are auxiliary and not merged into extracted_triples.jsonl",
         "chunk_results": chunk_results,
         "outputs": validations,

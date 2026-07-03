@@ -120,6 +120,25 @@ Graph RAG hard citation validation is implemented on feature branch
 - Reproduction notes:
   `docs/reproduction/GRAPH_RAG_HARD_CITATION_VALIDATION_2026-07-03.md`.
 
+Evidence Span validation is implemented on feature branch
+`feature/huawei-ai应用工程师-ai技术应用/evidence-span-validation-20260703-233431`.
+
+- New LLM triples must align their evidence text to the PMID-linked abstract
+  before Stage 2 chunk and canonical validation can pass.
+- Accepted records carry exact source character offsets, matched source text,
+  alignment method, and alignment score.
+- Fuzzy alignment requires complete evidence-token coverage and a 0.90 local
+  similarity score; partial token coverage is never accepted.
+- Evidence-aligned records use `raw_v2_evidence_aligned` confidence components.
+- The current canonical Stage 2 output was audited read-only: 16214 of 18288
+  records aligned and 2074 were isolated for review.
+- One live DeepSeek probe produced 8 exact-aligned triples and 0 rejected
+  triples.
+- The full unit suite passes 39 tests.
+- Canonical data was not mutated or promoted.
+- Reproduction notes:
+  `docs/reproduction/EVIDENCE_SPAN_VALIDATION_2026-07-03.md`.
+
 ## Primary Reference Documents
 
 Read these when starting, resuming after compaction, or resolving uncertainty:

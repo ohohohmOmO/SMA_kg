@@ -17,6 +17,23 @@ verification.
 
 ## Resolved issues
 
+### 2026-07-03 - Fuzzy evidence alignment accepted partial token coverage
+
+- Symptom: Initial full-corpus evidence-span audit samples showed that a
+  high character-similarity score could align evidence to a nearby sentence
+  where a biomedical term had been replaced, such as `spinal muscular atrophy`
+  versus `muscular dystrophy`.
+- Cause: The first fuzzy matcher did not require complete evidence-token
+  coverage, and an intermediate token-coverage score could be compared against
+  the character-similarity threshold even after the candidate had been skipped.
+- Fix: Require every evidence token, including repeated tokens, to occur in the
+  local candidate window before computing fuzzy similarity. Partial coverage is
+  now diagnostic only and can never produce a valid alignment.
+- Verification: `python -m unittest tests.unit.test_evidence_alignment -v`
+  passed 8 tests, including biomedical-term replacement rejection. The final
+  audit `artifacts/runs/evidence_span_audit_2026-07-03_235108/` aligned 16214
+  of 18288 records, isolated 2074, and completed without canonical mutation.
+
 ### 2026-06-10 - Neo4j neighborhood query used deprecated subquery syntax
 
 - Symptom: The first read-only Graph RAG Neo4j neighborhood probe succeeded but

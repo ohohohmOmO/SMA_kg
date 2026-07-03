@@ -1,0 +1,18 @@
+{
+  "valid": true,
+  "mode": "live",
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "input_abstracts": 1,
+  "source_pmids": [
+    "42260294"
+  ],
+  "triples_extracted": 8,
+  "triples_rejected": 0,
+  "malformed_outputs": 0,
+  "failed_records": 0,
+  "alignment_methods": {
+    "exact": 8
+  },
+  "scoring_version": "raw_v2_evidence_aligned",
+  "canonical_mutated": false
+}

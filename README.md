@@ -75,6 +75,7 @@ python src/crawler/topic_clustering.py
 python src/crawler/topic_balanced_pubmed.py --topic-terms-file <topic_terms.json>
 
 python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --llm-limit -1 --chunk-size 5 --parallel-workers 32 --promote
+python src/extraction/validate_evidence_spans.py --run-dir artifacts/runs/evidence_span_audit_<stamp>
 python src/extraction/verify_rule_candidates.py --input-file data/interim/rule_candidate_triples.jsonl --limit 50
 python src/extraction/build_gold_candidates.py --run-dir artifacts/runs/stage2_gold_candidates_<stamp> --limit 750
 
@@ -148,6 +149,14 @@ IDs, PMID/evidence mismatches are rejected, invalid generations receive bounded
 correction attempts, and exhausted validation returns a safe answer without
 unvalidated claims. Reproduction details are recorded in
 `docs/reproduction/GRAPH_RAG_HARD_CITATION_VALIDATION_2026-07-03.md`.
+
+Also as of 2026-07-03, new Stage 2 LLM triples must align `evidence_text` to
+their PMID-linked abstract before they can pass the promotion gate. Alignment
+uses exact, punctuation/spacing-normalized, and conservative local fuzzy
+matching with source character offsets. A read-only audit of the current 18288
+canonical triples aligned 16214 records and isolated 2074 for review without
+changing canonical data. Reproduction details are recorded in
+`docs/reproduction/EVIDENCE_SPAN_VALIDATION_2026-07-03.md`.
 
 Open decisions before changing Stage 1 or Stage 2 inputs:
 

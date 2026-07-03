@@ -12,6 +12,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.biomedical.confidence import normalize_and_score
+from src.biomedical.evidence import DEFAULT_MIN_FUZZY_SCORE, align_evidence_span
 
 import openai
 
@@ -97,6 +98,7 @@ def parse_args():
     parser.add_argument("--limit", type=int, default=200)
     parser.add_argument("--model", default="deepseek-ai/DeepSeek-V4-Flash")
     parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument("--evidence-min-fuzzy-score", type=float, default=DEFAULT_MIN_FUZZY_SCORE)
     parser.add_argument("--min-triples", type=int, default=1)
     parser.add_argument("--rejected-file", default="")
     return parser.parse_args()
@@ -127,6 +129,7 @@ def main():
     rejected_triples = 0
     malformed_outputs = 0
     failed_records = 0
+    alignment_methods = {}
 
     with open(temp_output_file, 'w', encoding='utf-8') as f, open(rejected_file, 'w', encoding='utf-8') as rejected:
         for idx, row in df.iterrows():
@@ -169,7 +172,15 @@ def main():
                         "llm_confidence": triple.get("confidence"),
                         "extracted_by": f"LLM_{args.model}"
                     }
+                    alignment = align_evidence_span(
+                        raw_triple["evidence_text"],
+                        abstract,
+                        min_fuzzy_score=args.evidence_min_fuzzy_score,
+                    )
+                    raw_triple["evidence_alignment"] = alignment
                     unified_triple, problems = normalize_and_score(raw_triple, require_evidence=True)
+                    if not alignment["valid"]:
+                        problems.append("evidence_text_not_aligned_to_abstract")
                     if problems:
                         rejected.write(json.dumps({
                             "source_pmid": pmid,
@@ -178,6 +189,8 @@ def main():
                         }, ensure_ascii=False) + "\n")
                         rejected_triples += 1
                         continue
+                    method = alignment["method"]
+                    alignment_methods[method] = alignment_methods.get(method, 0) + 1
                     f.write(json.dumps(unified_triple, ensure_ascii=False) + "\n")
                     successful_triples += 1
             except Exception as e:
@@ -202,6 +215,7 @@ def main():
         failed_records,
     )
     logging.info("Rejected %s invalid LLM triples to %s.", rejected_triples, rejected_file)
+    logging.info("Evidence alignment methods: %s", alignment_methods)
     return 0
 
 if __name__ == "__main__":

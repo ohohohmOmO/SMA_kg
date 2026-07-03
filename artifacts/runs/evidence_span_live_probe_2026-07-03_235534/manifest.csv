@@ -1,0 +1,4 @@
+artifact,path,records,bytes,sha256,notes
+extracted,artifacts/runs/evidence_span_live_probe_2026-07-03_235534/extracted.jsonl,8,6080,dbb5f8b37bcf015838f8eb2ecf6a81e43da682f5ebdd907f378b5dd6833b09ce,evidence-aligned live extraction
+rejected,artifacts/runs/evidence_span_live_probe_2026-07-03_235534/rejected.jsonl,0,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,rejected live extraction records
+validation_summary,artifacts/runs/evidence_span_live_probe_2026-07-03_235534/validation_summary.json,1,369,7eeeb30b0f011afef340f8a9d9d136685a6f07c440fa30497d19637c7d593235,live evidence alignment summary
