@@ -1,3 +1,4 @@
+import copy
 import re
 from collections import Counter, defaultdict
 
@@ -93,7 +94,10 @@ class EvidenceContextBuilder:
         pmids = self._select_pmids(self._pmids_from_records(aligned, fused))
         abstracts, missing = self._abstracts_for_pmids(pmids)
         entities = self._entities_from_records(aligned, fused)
-        return {
+        aligned = self._tag_evidence_records(aligned, "T", pmids)
+        fused = self._tag_evidence_records(fused, "F", pmids)
+        conflicts = self._tag_conflict_records(conflicts)
+        context = {
             "context_id": self._slug_id("graph-rag", question),
             "purpose": "graph_rag_answer",
             "query": question,
@@ -107,6 +111,7 @@ class EvidenceContextBuilder:
             "limits": dict(self.limits),
             "retrieval": candidates["retrieval"],
         }
+        return self._add_citation_allowlists(context)
 
     def retrieve_question_evidence(self, question, top_k=8, retrieval_mode="lexical_entity"):
         tokens = tokenize_query(question)
@@ -232,6 +237,44 @@ class EvidenceContextBuilder:
                     entities.append({"name": name, "type": etype})
                     seen.add(sig)
         return entities[:24]
+
+    def _tag_evidence_records(self, records, prefix, allowed_pmids):
+        allowed_pmids = {str(pmid) for pmid in allowed_pmids}
+        tagged = []
+        for index, record in enumerate(records, 1):
+            item = copy.deepcopy(record)
+            item["evidence_id"] = f"{prefix}{index:03d}"
+            if prefix == "F":
+                evidence = item.get("evidence", {})
+                original_pmids = [str(pmid) for pmid in evidence.get("pmid_list", []) if pmid]
+                bounded_pmids = [pmid for pmid in original_pmids if pmid in allowed_pmids]
+                evidence["pmid_list"] = bounded_pmids
+                if len(bounded_pmids) < len(original_pmids):
+                    evidence["pmid_list_truncated"] = True
+                    evidence["original_pmid_count"] = len(original_pmids)
+                item["evidence"] = evidence
+            tagged.append(item)
+        return tagged
+
+    def _tag_conflict_records(self, records):
+        tagged = []
+        for index, record in enumerate(records, 1):
+            item = copy.deepcopy(record)
+            item["conflict_id"] = f"C{index:03d}"
+            tagged.append(item)
+        return tagged
+
+    def _add_citation_allowlists(self, context):
+        allowed_pmids = [str(pmid) for pmid in context.get("supporting_pmids", [])]
+        evidence_ids = []
+        for key in ("aligned_triples", "fused_edges", "graph_neighborhood"):
+            for record in context.get(key, []):
+                evidence_id = str(record.get("evidence_id", "")).strip()
+                if evidence_id:
+                    evidence_ids.append(evidence_id)
+        context["allowed_citation_pmids"] = allowed_pmids
+        context["allowed_evidence_ids"] = list(dict.fromkeys(evidence_ids))
+        return context
 
     def _score_aligned(self, record, tokens):
         haystack = self._aligned_text(record).lower()

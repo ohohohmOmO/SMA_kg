@@ -1,0 +1,3 @@
+artifact,path,records,bytes,sha256,notes
+answer_live,artifacts/runs/graph_rag_hard_citation_probe_2026-07-03_232240/answer_live.json,1,3744,dedbed6e2fbefb079337926320b1537e4647bd4681be568e38227142ea796853,citation-validated live Graph RAG answer
+validation_summary,artifacts/runs/graph_rag_hard_citation_probe_2026-07-03_232240/validation_summary.json,1,398,f496c4fcaf26c2a05ee8d7719ddb75ab596453fa3316d9125e16e4555104c281,hard citation validation summary

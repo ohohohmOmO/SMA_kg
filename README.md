@@ -142,6 +142,13 @@ Conflict adjudication outputs must be converted into human-review proposals
 before any graph promotion. Reproduction details are recorded in
 `docs/reproduction/GRAPH_RAG_CONFLICT_ADJUDICATION_2026-06-10.md`.
 
+As of 2026-07-03, Graph RAG answers use a locally enforced hard-citation
+contract. Claims must reference allowlisted PMIDs and stable Evidence Context
+IDs, PMID/evidence mismatches are rejected, invalid generations receive bounded
+correction attempts, and exhausted validation returns a safe answer without
+unvalidated claims. Reproduction details are recorded in
+`docs/reproduction/GRAPH_RAG_HARD_CITATION_VALIDATION_2026-07-03.md`.
+
 Open decisions before changing Stage 1 or Stage 2 inputs:
 
 - `.scratch/stage3-prep/issues/01-review-topic-balanced-expansion.md`

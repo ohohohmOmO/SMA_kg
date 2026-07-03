@@ -5,7 +5,24 @@ from src.extraction.llm_extractor import load_local_env
 
 def attach_neo4j_neighborhood(context, limit=8):
     try:
-        context["graph_neighborhood"] = fetch_neo4j_neighborhood(context.get("entities", []), limit=limit)
+        records = fetch_neo4j_neighborhood(context.get("entities", []), limit=limit)
+        allowed_pmids = {str(pmid) for pmid in context.get("allowed_citation_pmids", [])}
+        context["graph_neighborhood"] = [
+            {
+                **record,
+                "evidence_id": f"N{index:03d}",
+                "evidence_pmids": [
+                    str(pmid)
+                    for pmid in record.get("evidence_pmids", [])
+                    if str(pmid) in allowed_pmids
+                ],
+            }
+            for index, record in enumerate(records, 1)
+        ]
+        context["allowed_evidence_ids"] = list(dict.fromkeys([
+            *context.get("allowed_evidence_ids", []),
+            *(record["evidence_id"] for record in context["graph_neighborhood"]),
+        ]))
         context["graph_neighborhood_error"] = ""
     except Exception as exc:
         context["graph_neighborhood"] = []

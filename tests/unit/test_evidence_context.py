@@ -137,6 +137,9 @@ class EvidenceContextBuilderTest(unittest.TestCase):
         self.assertEqual(context["retrieval"]["mode"], "lexical_entity")
         self.assertGreaterEqual(context["retrieval"]["aligned_candidates"], 1)
         self.assertEqual(context["supporting_pmids"], ["1", "2"])
+        self.assertEqual(context["allowed_citation_pmids"], ["1", "2"])
+        self.assertEqual(context["aligned_triples"][0]["evidence_id"], "T001")
+        self.assertIn("F001", context["allowed_evidence_ids"])
 
 
 if __name__ == "__main__":

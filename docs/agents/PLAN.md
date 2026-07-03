@@ -102,6 +102,24 @@ conflict adjudication v1 is implemented on feature branch
 - Reproduction notes:
   `docs/reproduction/GRAPH_RAG_CONFLICT_ADJUDICATION_2026-06-10.md`.
 
+## Current Development Status - 2026-07-03
+
+Graph RAG hard citation validation is implemented on feature branch
+`feature/huawei-ai应用工程师-ai技术应用/graph-rag-hard-citation-validation-20260703-231755`.
+
+- Evidence Context records expose stable evidence IDs and explicit PMID and
+  evidence-ID allowlists.
+- Answer claims must bind to both an allowlisted PMID and a matching evidence
+  record.
+- Invalid model output receives bounded correction attempts and then degrades
+  to a zero-confidence answer without unvalidated claims.
+- Final answer text and supporting PMIDs are derived from validated claims.
+- The full unit suite passes 31 tests.
+- A live DeepSeek V4 Flash probe passed validation on its first attempt with
+  three supporting PMIDs and no canonical graph mutation.
+- Reproduction notes:
+  `docs/reproduction/GRAPH_RAG_HARD_CITATION_VALIDATION_2026-07-03.md`.
+
 ## Primary Reference Documents
 
 Read these when starting, resuming after compaction, or resolving uncertainty:

@@ -1,0 +1,130 @@
+{
+  "question": "How does Nusinersen affect motor function?",
+  "answer_status": "validated",
+  "answer": "Nusinersen improves motor function in patients with spinal muscular atrophy. [PMID: 41114807, 41811872, 40150095]",
+  "claims": [
+    {
+      "claim_id": "C001",
+      "text": "Nusinersen improves motor function in patients with spinal muscular atrophy.",
+      "supporting_pmids": [
+        "41114807",
+        "41811872",
+        "40150095"
+      ],
+      "supporting_evidence_ids": [
+        "T006",
+        "T007",
+        "T008"
+      ]
+    }
+  ],
+  "supporting_pmids": [
+    "41114807",
+    "41811872",
+    "40150095"
+  ],
+  "supporting_triples": [
+    {
+      "source_pmid": "41114807",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "While nusinersen improves motor function",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      },
+      "evidence_id": "T006"
+    },
+    {
+      "source_pmid": "41811872",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "nusinersen improves motor function",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      },
+      "evidence_id": "T007"
+    },
+    {
+      "source_pmid": "40150095",
+      "entity_1": {
+        "name": "Nusinersen",
+        "type": "Drug"
+      },
+      "relation": "IMPROVES",
+      "entity_2": {
+        "name": "motor function",
+        "type": "Phenotype"
+      },
+      "evidence_text": "improves motor function",
+      "llm_confidence": 0.95,
+      "extracted_by": "LLM_deepseek-ai/DeepSeek-V4-Flash",
+      "computed_confidence": 0.95,
+      "confidence_components": {
+        "model_or_self_score": 0.95,
+        "evidence_score": 1.0,
+        "schema_score": 1.0,
+        "engine_score": 0.78,
+        "scoring_version": "raw_v1"
+      },
+      "evidence_id": "T008"
+    }
+  ],
+  "graph_context": [],
+  "graph_neighborhood": [],
+  "limitations": [
+    "The evidence is derived from observational studies and retrospective reviews, which may have inherent biases.",
+    "There is a conflicting fused edge (F003) indicating NO_EFFECT of Nusinersen on motor function, but it lacks supporting PMIDs in the allowed set, so it cannot be substantiated.",
+    "The effect may vary by SMA type and age, but the provided evidence does not allow detailed stratification."
+  ],
+  "confidence": 0.9,
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "retrieval": {
+    "mode": "hybrid_tfidf",
+    "tokens": [
+      "how",
+      "does",
+      "nusinersen",
+      "affect",
+      "motor",
+      "function"
+    ],
+    "top_k": 8,
+    "aligned_candidates": 6798,
+    "fused_candidates": 11155,
+    "conflict_candidates": 18,
+    "reranker": "local_tfidf_cosine"
+  },
+  "validation": {
+    "passed": true,
+    "attempts": 1,
+    "violations": []
+  }
+}

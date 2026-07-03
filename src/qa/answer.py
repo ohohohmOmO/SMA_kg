@@ -4,6 +4,11 @@ import os
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 from src.extraction.llm_extractor import build_client, load_local_env
+from src.qa.answer_validation import (
+    build_safe_fallback_answer,
+    build_validated_answer,
+    validate_answer_payload,
+)
 from src.qa.retriever import context_to_prompt
 
 
@@ -15,18 +20,25 @@ Evidence Context. Do not use outside biomedical knowledge.
 
 Return ONLY valid JSON with this shape:
 {
-  "answer": "short answer grounded in the evidence",
-  "supporting_pmids": ["PMID"],
-  "supporting_triples": [],
-  "graph_context": [],
+  "claims": [
+    {
+      "claim_id": "C001",
+      "text": "one short evidence-grounded claim",
+      "supporting_pmids": ["PMID"],
+      "supporting_evidence_ids": ["T001"]
+    }
+  ],
   "limitations": [],
   "confidence": 0.0
 }
 
 Rules:
-1. Cite only PMIDs present in Evidence Context.
-2. If the evidence is insufficient, say so in answer and limitations.
-3. Do not invent mechanisms, treatments, or outcomes outside the context.
+1. Every claim MUST cite at least one PMID from allowed_citation_pmids.
+2. Every claim MUST cite at least one ID from allowed_evidence_ids.
+3. A cited PMID MUST belong to at least one cited evidence ID.
+4. If evidence is insufficient, return an empty claims list and explain why in limitations.
+5. If Evidence Context contains conflicts, disclose the disagreement in limitations.
+6. Do not invent mechanisms, treatments, outcomes, PMIDs, or evidence IDs.
 """
 
 
@@ -35,6 +47,7 @@ def build_dry_run_answer(question, context):
         "question": question,
         "answer_status": "dry_run_requires_llm",
         "answer": "",
+        "claims": [],
         "supporting_pmids": context.get("supporting_pmids", []),
         "supporting_triples": context.get("aligned_triples", [])[:8],
         "graph_context": context.get("fused_edges", [])[:8],
@@ -42,22 +55,45 @@ def build_dry_run_answer(question, context):
         "limitations": ["dry_run: no LLM answer generated"],
         "model": "",
         "retrieval": context.get("retrieval", {}),
+        "validation": {
+            "passed": False,
+            "attempts": 0,
+            "violations": ["dry_run_no_llm_answer"],
+        },
         "evidence_context": context,
     }
 
 
-def generate_answer(question, context, model=DEFAULT_MODEL, max_tokens=1024):
+def generate_answer(question, context, model=DEFAULT_MODEL, max_tokens=1024, validation_attempts=2):
     load_local_env()
     api_key = os.environ.get("SILICONFLOW_API_KEY")
     if not api_key:
         raise RuntimeError("SILICONFLOW_API_KEY is not set; use --dry-run to inspect retrieved evidence.")
     client = build_client(api_key)
-    raw = call_llm(client, question, context, model, max_tokens)
-    data = json.loads(clean_json_text(raw))
-    data["question"] = question
-    data["model"] = model
-    data["retrieval"] = context.get("retrieval", {})
-    return data
+    attempts = max(1, int(validation_attempts))
+    violations = []
+    for attempt in range(1, attempts + 1):
+        try:
+            raw = call_llm(
+                client,
+                question,
+                context,
+                model,
+                max_tokens,
+                validation_errors=violations,
+            )
+        except Exception as exc:
+            violations = [f"llm_call_failed:{type(exc).__name__}"]
+            return build_safe_fallback_answer(question, context, model, attempt, violations)
+        try:
+            data = json.loads(clean_json_text(raw))
+        except json.JSONDecodeError:
+            violations = ["answer_json_invalid"]
+            continue
+        violations = validate_answer_payload(data, context)
+        if not violations:
+            return build_validated_answer(question, data, context, model, attempt)
+    return build_safe_fallback_answer(question, context, model, attempts, violations)
 
 
 @retry(
@@ -65,12 +101,24 @@ def generate_answer(question, context, model=DEFAULT_MODEL, max_tokens=1024):
     stop=stop_after_attempt(4),
     retry=retry_if_exception_type(Exception),
 )
-def call_llm(client, question, context, model, max_tokens):
+def call_llm(client, question, context, model, max_tokens, validation_errors=None):
+    correction = ""
+    if validation_errors:
+        correction = (
+            "\nYour previous answer failed local validation. Regenerate the complete JSON object and fix "
+            f"these violations: {json.dumps(validation_errors, ensure_ascii=False)}"
+        )
     response = client.chat.completions.create(
         model=model,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": f"Question: {question}\nEvidence Context:\n{context_to_prompt(context)}"},
+            {
+                "role": "user",
+                "content": (
+                    f"Question: {question}\nEvidence Context:\n{context_to_prompt(context)}"
+                    f"{correction}"
+                ),
+            },
         ],
         temperature=0.0,
         max_tokens=max_tokens,

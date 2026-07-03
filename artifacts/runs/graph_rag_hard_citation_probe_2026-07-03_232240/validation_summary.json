@@ -1,0 +1,15 @@
+{
+  "valid": true,
+  "mode": "live",
+  "model": "deepseek-ai/DeepSeek-V4-Flash",
+  "question": "How does Nusinersen affect motor function?",
+  "retrieval_mode": "hybrid_tfidf",
+  "answer_status": "validated",
+  "validation_passed": true,
+  "validation_attempts": 1,
+  "claim_count": 1,
+  "supporting_pmid_count": 3,
+  "limitation_count": 3,
+  "violations": [],
+  "canonical_graph_mutated": false
+}

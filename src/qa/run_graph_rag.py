@@ -23,6 +23,7 @@ def parse_args():
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--max-tokens", type=int, default=1024)
+    parser.add_argument("--validation-attempts", type=int, default=2)
     parser.add_argument("--output-file", default="")
     return parser.parse_args()
 
@@ -36,7 +37,13 @@ def main():
     if args.dry_run:
         result = build_dry_run_answer(args.question, context)
     else:
-        result = generate_answer(args.question, context, model=args.model, max_tokens=args.max_tokens)
+        result = generate_answer(
+            args.question,
+            context,
+            model=args.model,
+            max_tokens=args.max_tokens,
+            validation_attempts=args.validation_attempts,
+        )
     if args.output_file:
         write_json(REPO_ROOT / args.output_file, result)
     else:

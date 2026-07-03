@@ -33,6 +33,8 @@ def context_to_prompt(question_or_context, context=None):
         "graph_neighborhood": context.get("graph_neighborhood", []),
         "graph_neighborhood_error": context.get("graph_neighborhood_error", ""),
         "supporting_pmids": context.get("supporting_pmids", []),
+        "allowed_citation_pmids": context.get("allowed_citation_pmids", []),
+        "allowed_evidence_ids": context.get("allowed_evidence_ids", []),
         "missing_evidence": context.get("missing_evidence", []),
     }
     return json.dumps(payload, ensure_ascii=False, indent=2)

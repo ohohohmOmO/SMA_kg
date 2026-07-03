@@ -2,10 +2,11 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from src.evidence.context_builder import EvidenceContextBuilder
 from src.qa.answer import build_dry_run_answer
-from src.qa.neo4j_neighborhood import format_neighbor_record
+from src.qa.neo4j_neighborhood import attach_neo4j_neighborhood, format_neighbor_record
 from src.qa.retriever import GraphRagRetriever, context_to_prompt
 
 
@@ -68,6 +69,8 @@ class GraphRagTest(unittest.TestCase):
         answer = build_dry_run_answer("What causes SMA?", context)
 
         self.assertEqual(parsed["question"], "What causes SMA?")
+        self.assertEqual(parsed["allowed_citation_pmids"], ["10"])
+        self.assertIn("T001", parsed["allowed_evidence_ids"])
         self.assertEqual(answer["question"], "What causes SMA?")
         self.assertEqual(answer["supporting_pmids"], ["10"])
         self.assertEqual(answer["answer_status"], "dry_run_requires_llm")
@@ -89,6 +92,29 @@ class GraphRagTest(unittest.TestCase):
         self.assertEqual(record["neighbor_labels"], ["Disease"])
         self.assertEqual(record["confidence"], 0.9)
         self.assertEqual(record["evidence_pmids"], ["10"])
+
+    @patch("src.qa.neo4j_neighborhood.fetch_neo4j_neighborhood")
+    def test_neo4j_neighbors_receive_ids_and_allowlisted_pmids(self, fetch_neighbors):
+        fetch_neighbors.return_value = [
+            {
+                "query_entity": "SMN1",
+                "source_entity": "SMN1",
+                "relation": "CAUSES",
+                "neighbor": "spinal muscular atrophy",
+                "evidence_pmids": ["10", "999"],
+            }
+        ]
+        context = {
+            "entities": [{"name": "SMN1", "type": "Gene"}],
+            "allowed_citation_pmids": ["10"],
+            "allowed_evidence_ids": ["T001"],
+        }
+
+        attach_neo4j_neighborhood(context)
+
+        self.assertEqual(context["graph_neighborhood"][0]["evidence_id"], "N001")
+        self.assertEqual(context["graph_neighborhood"][0]["evidence_pmids"], ["10"])
+        self.assertEqual(context["allowed_evidence_ids"], ["T001", "N001"])
 
 
 if __name__ == "__main__":
