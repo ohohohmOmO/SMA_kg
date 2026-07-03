@@ -17,6 +17,20 @@ verification.
 
 ## Resolved issues
 
+### 2026-07-04 - Inline PyVis output failed with the Windows system encoding
+
+- Symptom: The repository-structure visualization probe failed with
+  `UnicodeEncodeError` after PyVis resources were changed to inline mode so
+  Stage 4 would not recreate a loose root `lib/` directory.
+- Cause: `pyvis.Network.save_graph()` opened the generated HTML with the
+  Windows system GBK encoding, while the inline JavaScript contained characters
+  that GBK cannot encode.
+- Fix: Generate the HTML string through PyVis, then write it explicitly with
+  `Path.write_text(..., encoding="utf-8")`.
+- Verification: `python src/database/generate_pyvis.py --output-file
+  %TEMP%\kg_sma_repository_structure_viewer_probe.html` generated a non-empty
+  standalone viewer and did not recreate a root `lib/` directory.
+
 ### 2026-07-03 - Fuzzy evidence alignment accepted partial token coverage
 
 - Symptom: Initial full-corpus evidence-span audit samples showed that a
@@ -31,7 +45,7 @@ verification.
   now diagnostic only and can never produce a valid alignment.
 - Verification: `python -m unittest tests.unit.test_evidence_alignment -v`
   passed 8 tests, including biomedical-term replacement rejection. The final
-  audit `artifacts/runs/evidence_span_audit_2026-07-03_235108/` aligned 16214
+  audit `results/runs/evidence_span_audit_2026-07-03_235108/` aligned 16214
   of 18288 records, isolated 2074, and completed without canonical mutation.
 
 ### 2026-06-10 - Neo4j neighborhood query used deprecated subquery syntax
@@ -43,7 +57,7 @@ verification.
   the query read-only and parameterized.
 - Verification: `python -m unittest tests.unit.test_graph_rag -v` passed 4
   tests; the rerun
-  `artifacts/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/`
+  `results/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/`
   returned 67 neighborhood records with no graph mutation.
 
 ### 2026-06-10 - Graph RAG evidence contexts could become oversized
@@ -92,7 +106,7 @@ verification.
   reproduction docs to use full-corpus LLM extraction with
   `--chunk-size 5 --parallel-workers 32`.
 - Verification: `python -m unittest discover -s tests/unit -v` passed 8 tests;
-  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/` completed with
+  `results/runs/stage2_extraction_llm_all_32w_2026-06-09/` completed with
   `llm_limit_effective=4554`, `parallel_workers=32`, 18347 validated raw LLM
   triples, 18288 canonical LLM-only triples, 0 bad JSON lines, and 0 invalid
   triples.
@@ -111,7 +125,7 @@ verification.
   point to include only LLM plus explicitly verified rule files.
 - Verification: `python -m py_compile` passed for the updated Stage 2 scripts;
   `python -m unittest discover -s tests/unit -v` passed 7 tests; the
-  `artifacts/runs/stage2_rule_candidate_policy_probe_2026-06-09/` dry run
+  `results/runs/stage2_rule_candidate_policy_probe_2026-06-09/` dry run
   produced 5 rule candidates and verifier dry-run coverage with 0 missing
   source abstracts.
 
@@ -166,7 +180,7 @@ verification.
   community IDs from unordered community/node iteration.
 - Fix: Added a fixed community seed, sorted communities and community members by
   node name, and sorted analytics output by `PageRank` then `Entity`.
-- Verification: `artifacts/runs/stage4_graph_database_2026-06-09/` contains two
+- Verification: `results/runs/stage4_graph_database_2026-06-09/` contains two
   fixed-seed reruns with identical hashes:
   `analytics_metrics_fixed_first.csv` and `analytics_metrics_fixed_second.csv`
   both hash to
@@ -185,7 +199,7 @@ verification.
   been rerun after the Stage 2 promotion.
 - Fix: Reran the Stage 3 scripts, captured pre-run snapshots, logs, output
   snapshots, a manifest, and validation statistics under
-  `artifacts/runs/stage3_fusion_2026-06-09/`.
+  `results/runs/stage3_fusion_2026-06-09/`.
 - Verification: Stage 3 now reports 5738 mapped triples, 5738 aligned triples,
   and 554 fused unique edges. A Stage 4 dry-read of
   `data/processed/fused_triples.jsonl` loaded all 554 records with 0 missing core
@@ -203,7 +217,7 @@ verification.
   Stage 2 split, run DeepSeek V4 Flash in 20-PMID chunks, resume valid chunks,
   validate LLM/Regex/merged JSONL outputs, write run artifacts, and promote only
   after validation passes.
-- Verification: `python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_full_2026-06-08_2335 --llm-limit 200 --chunk-size 20 --model deepseek-ai/DeepSeek-V4-Flash --max-tokens 2048 --promote` completed successfully. Validation reports 638 LLM triples, 5101 Regex triples, and 5738 merged triples with 0 bad JSON lines and 0 invalid triples; a Stage 3 dictionary-mapper dry-read loaded all 5738 merged triples without code changes.
+- Verification: `python src/extraction/run_stage2_extraction.py --run-dir results/runs/stage2_extraction_full_2026-06-08_2335 --llm-limit 200 --chunk-size 20 --model deepseek-ai/DeepSeek-V4-Flash --max-tokens 2048 --promote` completed successfully. Validation reports 638 LLM triples, 5101 Regex triples, and 5738 merged triples with 0 bad JSON lines and 0 invalid triples; a Stage 3 dictionary-mapper dry-read loaded all 5738 merged triples without code changes.
 
 ### 2026-06-08 - Stage 2 LLM extraction could not be faithfully rerun
 
@@ -216,9 +230,9 @@ verification.
   or alternate-output mode. Running it without a key would trigger repeated
   failures and risk overwriting the historical LLM output.
 - Fix: Preserved pre-run stage-2 outputs under
-  `artifacts/runs/stage2_extraction_2026-06-08/pre_run_outputs/`, reran only
+  `results/runs/stage2_extraction_2026-06-08/pre_run_outputs/`, reran only
   the reproducible local regex and merge steps, wrote logs and a manifest under
-  `artifacts/runs/stage2_extraction_2026-06-08/`, and documented the partial
+  `results/runs/stage2_extraction_2026-06-08/`, and documented the partial
   reproduction boundary.
 - Verification: `manifest.csv` reports 674 historical LLM triples, 5101 rerun
   regex triples, and 5775 merged triples, each with 0 invalid JSON lines.
@@ -232,9 +246,9 @@ verification.
   metadata. Historical loose outputs made it hard to tell which artifacts came
   from which run.
 - Fix: Reran the stage with logs captured under
-  `artifacts/runs/stage1_data_acquisition_2026-06-08/`, copied the reproduced
+  `results/runs/stage1_data_acquisition_2026-06-08/`, copied the reproduced
   outputs into that dated run directory, generated `manifest.csv`, and documented
-  the convention in `artifacts/README.md`.
+  the convention in `results/README.md`.
 - Verification: `manifest.csv` reports 164 valid Open Targets JSONL rows and
   4555 valid PubMed JSONL rows with 0 invalid JSON lines.
 

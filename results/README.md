@@ -1,7 +1,7 @@
-# Artifacts
+# Results
 
-This directory stores historical run outputs that were previously loose in the
-repository root.
+This directory stores generated outputs that are useful for review,
+reproducibility, or presentation but are not canonical pipeline inputs.
 
 ## reports
 
@@ -21,4 +21,13 @@ make clear which downstream artifacts are historical versus newly reproduced.
 
 Ad hoc API test outputs, including Open Targets GraphQL test responses.
 
+## visualizations
+
+Generated presentation outputs, including the canonical interactive graph
+viewer and its local browser dependencies.
+
 Pipeline data products that are consumed by source code remain under `data/`.
+
+Historical manifests under `runs/` preserve the paths recorded when those runs
+were created. A manifest may therefore mention the former `results/` location;
+the run directory itself now lives under `results/runs/`.

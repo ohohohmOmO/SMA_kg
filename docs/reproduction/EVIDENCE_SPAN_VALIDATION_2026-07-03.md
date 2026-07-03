@@ -53,8 +53,8 @@ entities.
 ```powershell
 python -m py_compile src/biomedical/evidence.py src/biomedical/confidence.py src/extraction/llm_extractor.py src/extraction/run_stage2_extraction.py src/extraction/validate_evidence_spans.py tests/unit/test_evidence_alignment.py
 python -m unittest discover -s tests/unit -v
-python src/extraction/validate_evidence_spans.py --run-dir artifacts/runs/evidence_span_audit_2026-07-03_235108 --min-fuzzy-score 0.9
-python src/extraction/llm_extractor.py --offset 0 --limit 1 --min-triples 0 --output-file artifacts/runs/evidence_span_live_probe_2026-07-03_235534/extracted.jsonl --rejected-file artifacts/runs/evidence_span_live_probe_2026-07-03_235534/rejected.jsonl
+python src/extraction/validate_evidence_spans.py --run-dir results/runs/evidence_span_audit_2026-07-03_235108 --min-fuzzy-score 0.9
+python src/extraction/llm_extractor.py --offset 0 --limit 1 --min-triples 0 --output-file results/runs/evidence_span_live_probe_2026-07-03_235534/extracted.jsonl --rejected-file results/runs/evidence_span_live_probe_2026-07-03_235534/rejected.jsonl
 ```
 
 Results:

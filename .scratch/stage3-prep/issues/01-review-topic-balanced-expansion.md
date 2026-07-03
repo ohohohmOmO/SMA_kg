@@ -17,9 +17,9 @@ promoted into the canonical PubMed input.
 - Canonical PubMed count: 4554 records
 - Topic clustering output: `data/processed/clustered_abstracts.jsonl`
 - Topic-balanced run:
-  `artifacts/runs/stage1_topic_balanced_pubmed_full_2026-06-09/`
+  `results/runs/stage1_topic_balanced_pubmed_full_2026-06-09/`
 - Candidate output:
-  `artifacts/runs/stage1_topic_balanced_pubmed_full_2026-06-09/outputs/data/raw/topic_balanced_pubmed_sma_abstracts.jsonl`
+  `results/runs/stage1_topic_balanced_pubmed_full_2026-06-09/outputs/data/raw/topic_balanced_pubmed_sma_abstracts.jsonl`
 - New candidate records: 27
 
 ## Decision Needed

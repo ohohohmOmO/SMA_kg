@@ -321,7 +321,7 @@ def main():
         run_dir = (REPO_ROOT / args.run_dir).resolve()
     else:
         stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-        run_dir = REPO_ROOT / "artifacts" / "runs" / f"stage2_extraction_full_{stamp}"
+        run_dir = REPO_ROOT / "results" / "runs" / f"stage2_extraction_full_{stamp}"
 
     run_dir.mkdir(parents=True, exist_ok=True)
     for subdir in ("chunks", "logs", "outputs/data/processed", "rejected"):

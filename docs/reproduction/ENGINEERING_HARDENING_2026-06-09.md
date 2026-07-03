@@ -6,29 +6,29 @@ after reading `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`.
 ## Reference Documents
 
 - `AGENTS.md`
-- `CONTEXT.md`
-- `docs/agents/PLAN.md`
-- `docs/agents/ISSUE_LOG.md`
+- `docs/start-here/CONTEXT.md`
+- `docs/start-here/PLAN.md`
+- `docs/start-here/ISSUE_LOG.md`
 - `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`
 - `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
 - `docs/reproduction/STAGE3_PREP_2026-06-09.md`
 - `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`
 - `.scratch/stage3-prep/PRD.md`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
+- `results/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
 ## Pre-Improvement Baseline
 
 Before changing pipeline code, the current canonical outputs were archived to:
 
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/baseline_summary.json`
+- `results/runs/pre_improvement_baseline_2026-06-09/`
+- `results/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
+- `results/runs/pre_improvement_baseline_2026-06-09/baseline_summary.json`
 
 Use that manifest to compare old canonical outputs with new hardened outputs.
 
 ## Requirements Locked
 
-The current plan is in `docs/agents/PLAN.md`. The main decisions are:
+The current plan is in `docs/start-here/PLAN.md`. The main decisions are:
 
 - Add a shared biomedical schema and validator rather than letting each stage
   invent entity types, relations, and confidence semantics.
@@ -132,7 +132,7 @@ Tests:
 
 Glossary:
 
-- Updated `CONTEXT.md` with Biomedical Schema, Topic-Balanced Retrieval, Gold
+- Updated `docs/start-here/CONTEXT.md` with Biomedical Schema, Topic-Balanced Retrieval, Gold
   Standard Candidate, and Relation Conflict.
 
 ## Probe Results
@@ -147,14 +147,14 @@ Result: 5 tests passed.
 
 Stage 2 local rule probe:
 
-- Run directory: `artifacts/runs/stage2_local_rule_probe_2026-06-09/`
+- Run directory: `results/runs/stage2_local_rule_probe_2026-06-09/`
 - Input slice: 200 abstracts after offset 200
 - Output triples: 138
 - Rejected triples: 0
 
 Stage 2 LLM hardened probe:
 
-- Run directory: `artifacts/runs/stage2_llm_hardened_probe_2026-06-09/`
+- Run directory: `results/runs/stage2_llm_hardened_probe_2026-06-09/`
 - Input slice: first 5 abstracts
 - Output triples: 18
 - Rejected triples: 0
@@ -167,15 +167,15 @@ window.
 
 Stage 2 gold-candidate probe:
 
-- Run directory: `artifacts/runs/stage2_gold_candidates_probe_2026-06-09/`
+- Run directory: `results/runs/stage2_gold_candidates_probe_2026-06-09/`
 - Candidate count: 50
 - Purpose: validate the gold-standard candidate generator before creating the
   target 500-1000 item review set.
 
 Stage 3 fusion probe:
 
-- Run directory: `artifacts/runs/stage3_fusion_probe_2026-06-09/`
-- Input: `artifacts/runs/stage2_local_rule_probe_2026-06-09/spacy_extracted_triples.jsonl`
+- Run directory: `results/runs/stage3_fusion_probe_2026-06-09/`
+- Input: `results/runs/stage2_local_rule_probe_2026-06-09/spacy_extracted_triples.jsonl`
 - Mapped triples: 138
 - Aligned triples: 138
 - Fused triples: 11
@@ -184,7 +184,7 @@ Stage 3 fusion probe:
 
 Stage 4 runner probe:
 
-- Run directory: `artifacts/runs/stage4_runner_probe_2026-06-09/`
+- Run directory: `results/runs/stage4_runner_probe_2026-06-09/`
 - Neo4j skipped for this probe.
 - Local graph analytics and graph viewer snapshot succeeded.
 
@@ -211,7 +211,7 @@ The full Stage 2 LLM-only rerun completed on 2026-06-09 with 32 workers. It
 covered all 4554 current PubMed abstracts and promoted the validated LLM-only
 canonical output:
 
-- Run directory: `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/`
+- Run directory: `results/runs/stage2_extraction_llm_all_32w_2026-06-09/`
 - Detailed report:
   `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
 - LLM raw triples: 18347
@@ -227,7 +227,7 @@ extraction, promote only the validated LLM file to
 output. The command shape is:
 
 ```powershell
-python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --llm-limit -1 --chunk-size 5 --parallel-workers 32 --promote
+python src/extraction/run_stage2_extraction.py --run-dir results/runs/stage2_extraction_<stamp> --llm-limit -1 --chunk-size 5 --parallel-workers 32 --promote
 ```
 
 Next recommended execution:

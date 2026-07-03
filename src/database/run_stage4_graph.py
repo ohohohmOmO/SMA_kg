@@ -136,7 +136,7 @@ def main():
     args = parse_args()
     load_local_env()
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"stage4_graph_database_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"stage4_graph_database_{stamp}"
     outputs_dir = run_dir / "outputs"
     logs_dir = run_dir / "logs"
     outputs_dir.mkdir(parents=True, exist_ok=True)
@@ -152,7 +152,7 @@ def main():
     neo4j_import_summary = outputs_dir / "database" / "neo4j_import_summary.json"
     topology_metrics = outputs_dir / "evaluation" / "topology_metrics.json"
     snapshot_analytics = outputs_dir / "data" / "processed" / "analytics_metrics.csv"
-    snapshot_viewer = outputs_dir / "docs" / "graph_viewer.html"
+    snapshot_viewer = outputs_dir / "results" / "visualizations" / "graph_viewer.html"
     for path in (neo4j_import_summary, topology_metrics, snapshot_analytics, snapshot_viewer):
         path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -268,7 +268,10 @@ def main():
     if args.promote and all_valid:
         promote_pairs = [
             (snapshot_analytics, REPO_ROOT / "data" / "processed" / "analytics_metrics.csv"),
-            (snapshot_viewer, REPO_ROOT / "docs" / "graph_viewer.html"),
+            (
+                snapshot_viewer,
+                REPO_ROOT / "results" / "visualizations" / "graph_viewer.html",
+            ),
         ]
         for source, dest in promote_pairs:
             if source.exists():

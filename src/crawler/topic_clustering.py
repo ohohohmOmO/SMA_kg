@@ -64,7 +64,7 @@ def main():
         return 1
 
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"stage1_topic_clustering_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"stage1_topic_clustering_{stamp}"
     output_file = Path(args.output_file) if args.output_file else run_dir / "outputs" / "data" / "processed" / "clustered_abstracts.jsonl"
     summary_file = Path(args.summary_file) if args.summary_file else run_dir / "topic_summary.csv"
     topic_terms_file = Path(args.topic_terms_file) if args.topic_terms_file else run_dir / "topic_terms.json"

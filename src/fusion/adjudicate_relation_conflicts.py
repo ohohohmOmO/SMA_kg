@@ -75,7 +75,7 @@ def main():
     args = parse_args()
     load_local_env()
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"conflict_adjudication_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"conflict_adjudication_{stamp}"
     run_dir.mkdir(parents=True, exist_ok=True)
 
     conflicts, bad_lines = load_jsonl(REPO_ROOT / args.conflicts_file)

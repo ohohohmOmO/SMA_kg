@@ -28,7 +28,7 @@ def parse_args():
 def main():
     args = parse_args()
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"conflict_adjudication_review_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"conflict_adjudication_review_{stamp}"
     run_dir.mkdir(parents=True, exist_ok=True)
     output_file = (REPO_ROOT / args.output_file).resolve() if args.output_file else run_dir / "adjudication_review_proposals.jsonl"
 

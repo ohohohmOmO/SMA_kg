@@ -13,8 +13,8 @@
 - 仓库：`D:\kg_sma_0420`
 - Conda 环境：`KG_SMA_env`
 - Python：`C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe`
-- 运行前已阅读：`docs/agents/PLAN.md`
-- 诊断前已阅读：`docs/agents/ISSUE_LOG.md`
+- 运行前已阅读：`docs/start-here/PLAN.md`
+- 诊断前已阅读：`docs/start-here/ISSUE_LOG.md`
 
 ## Output Convention
 
@@ -25,14 +25,14 @@
 
 本次复现的运行证据放在 dated run 目录：
 
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/`
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/manifest.csv`
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/opentargets_api_fetcher.log`
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/pubmed_crawler.log`
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/outputs/data/external/sma_gda_baseline.jsonl`
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/outputs/data/raw/pubmed_sma_abstracts.jsonl`
+- `results/runs/stage1_data_acquisition_2026-06-08/`
+- `results/runs/stage1_data_acquisition_2026-06-08/manifest.csv`
+- `results/runs/stage1_data_acquisition_2026-06-08/opentargets_api_fetcher.log`
+- `results/runs/stage1_data_acquisition_2026-06-08/pubmed_crawler.log`
+- `results/runs/stage1_data_acquisition_2026-06-08/outputs/data/external/sma_gda_baseline.jsonl`
+- `results/runs/stage1_data_acquisition_2026-06-08/outputs/data/raw/pubmed_sma_abstracts.jsonl`
 
-这样处理后，`data/` 仍是下游代码读取的规范位置，`artifacts/runs/` 则保存某次复现的日志、manifest 和快照，避免历史上 loose output 或 ad hoc output 难以追踪的问题。
+这样处理后，`data/` 仍是下游代码读取的规范位置，`results/runs/` 则保存某次复现的日志、manifest 和快照，避免历史上 loose output 或 ad hoc output 难以追踪的问题。
 
 ## Commands Run
 
@@ -43,8 +43,8 @@
 
 日志分别捕获到：
 
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/opentargets_api_fetcher.log`
-- `artifacts/runs/stage1_data_acquisition_2026-06-08/pubmed_crawler.log`
+- `results/runs/stage1_data_acquisition_2026-06-08/opentargets_api_fetcher.log`
+- `results/runs/stage1_data_acquisition_2026-06-08/pubmed_crawler.log`
 
 ## Reproduction Results
 
@@ -157,8 +157,8 @@ PubMed:
 - 仓库：`D:\kg_sma_0420`
 - Conda 环境：`KG_SMA_env`
 - Python：`C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe`
-- 运行前已阅读：`docs/agents/PLAN.md`
-- 诊断前已阅读：`docs/agents/ISSUE_LOG.md`
+- 运行前已阅读：`docs/start-here/PLAN.md`
+- 诊断前已阅读：`docs/start-here/ISSUE_LOG.md`
 - 输入数据：`data/raw/pubmed_sma_abstracts.jsonl`，当前为 4555 条 PubMed 摘要
 
 ## Stage 2 Output Convention
@@ -171,15 +171,15 @@ PubMed:
 
 本次复现的运行证据放在 dated run 目录：
 
-- `artifacts/runs/stage2_extraction_2026-06-08/`
-- `artifacts/runs/stage2_extraction_2026-06-08/README.md`
-- `artifacts/runs/stage2_extraction_2026-06-08/llm_extractor_blocked.log`
-- `artifacts/runs/stage2_extraction_2026-06-08/local_pipeline.log`
-- `artifacts/runs/stage2_extraction_2026-06-08/merge_triples.log`
-- `artifacts/runs/stage2_extraction_2026-06-08/manifest.csv`
-- `artifacts/runs/stage2_extraction_2026-06-08/field_summary.txt`
-- `artifacts/runs/stage2_extraction_2026-06-08/pre_run_outputs/`
-- `artifacts/runs/stage2_extraction_2026-06-08/outputs/`
+- `results/runs/stage2_extraction_2026-06-08/`
+- `results/runs/stage2_extraction_2026-06-08/README.md`
+- `results/runs/stage2_extraction_2026-06-08/llm_extractor_blocked.log`
+- `results/runs/stage2_extraction_2026-06-08/local_pipeline.log`
+- `results/runs/stage2_extraction_2026-06-08/merge_triples.log`
+- `results/runs/stage2_extraction_2026-06-08/manifest.csv`
+- `results/runs/stage2_extraction_2026-06-08/field_summary.txt`
+- `results/runs/stage2_extraction_2026-06-08/pre_run_outputs/`
+- `results/runs/stage2_extraction_2026-06-08/outputs/`
 
 其中 `pre_run_outputs/` 保存重跑前的历史产物，`outputs/` 保存本次重跑后的当前产物快照。
 
@@ -188,7 +188,7 @@ PubMed:
 LLM extractor 没有完整运行，因为本地环境和 `.env` 中均没有真实 `SILICONFLOW_API_KEY`。如果直接运行，脚本会对前 200 篇摘要逐条触发多次失败重试，并可能把历史 LLM 产物覆盖成空或失败产物。因此本次只记录了阻塞原因：
 
 ```text
-artifacts/runs/stage2_extraction_2026-06-08/llm_extractor_blocked.log
+results/runs/stage2_extraction_2026-06-08/llm_extractor_blocked.log
 ```
 
 实际重跑命令：
@@ -329,8 +329,8 @@ Merge:
 - 仓库：`D:\kg_sma_0420`
 - Conda 环境：`KG_SMA_env`
 - Python：`C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe`
-- 运行前已阅读：`docs/agents/PLAN.md`
-- 诊断前已阅读：`docs/agents/ISSUE_LOG.md`
+- 运行前已阅读：`docs/start-here/PLAN.md`
+- 诊断前已阅读：`docs/start-here/ISSUE_LOG.md`
 
 ## Stage 3 Output Convention
 
@@ -342,16 +342,16 @@ Merge:
 
 本次复现证据放在 dated run 目录：
 
-- `artifacts/runs/stage3_fusion_2026-06-09/`
-- `artifacts/runs/stage3_fusion_2026-06-09/pre_run_outputs/`
-- `artifacts/runs/stage3_fusion_2026-06-09/outputs/`
-- `artifacts/runs/stage3_fusion_2026-06-09/manifest.csv`
-- `artifacts/runs/stage3_fusion_2026-06-09/validation_summary.json`
-- `artifacts/runs/stage3_fusion_2026-06-09/dictionary_mapper.log`
-- `artifacts/runs/stage3_fusion_2026-06-09/semantic_aligner.log`
-- `artifacts/runs/stage3_fusion_2026-06-09/triples_aggregator.log`
+- `results/runs/stage3_fusion_2026-06-09/`
+- `results/runs/stage3_fusion_2026-06-09/pre_run_outputs/`
+- `results/runs/stage3_fusion_2026-06-09/outputs/`
+- `results/runs/stage3_fusion_2026-06-09/manifest.csv`
+- `results/runs/stage3_fusion_2026-06-09/validation_summary.json`
+- `results/runs/stage3_fusion_2026-06-09/dictionary_mapper.log`
+- `results/runs/stage3_fusion_2026-06-09/semantic_aligner.log`
+- `results/runs/stage3_fusion_2026-06-09/triples_aggregator.log`
 
-这样处理后，后续 Stage 4 仍读取原来的 canonical 文件；复现日志、快照和统计则归档到 `artifacts/runs/`。
+这样处理后，后续 Stage 4 仍读取原来的 canonical 文件；复现日志、快照和统计则归档到 `results/runs/`。
 
 ## Stage 3 Commands Run
 
@@ -490,27 +490,27 @@ continuation run on 2026-06-09, the Neo4j credentials were stored in the ignored
 local `.env` file, but connectivity still failed because no local Neo4j service
 was listening on `bolt://localhost:7687`. The blocked database boundary is
 recorded in
-`artifacts/runs/stage4_graph_database_2026-06-09/neo4j_import_status.log`.
+`results/runs/stage4_graph_database_2026-06-09/neo4j_import_status.log`.
 
 ## Stage 4 Output Convention
 
 Canonical outputs remain in the paths expected by later code:
 
 - `data/processed/analytics_metrics.csv`
-- `docs/graph_viewer.html`
+- `results/visualizations/graph_viewer.html`
 
 This reproduction also stores dated, auditable snapshots and logs under:
 
-- `artifacts/runs/stage4_graph_database_2026-06-09/`
-- `artifacts/runs/stage4_graph_database_2026-06-09/pre_run_existing_outputs/`
-- `artifacts/runs/stage4_graph_database_2026-06-09/manifest.csv`
-- `artifacts/runs/stage4_graph_database_2026-06-09/validation_summary.json`
-- `artifacts/runs/stage4_graph_database_2026-06-09/graph_analytics_fixed_first.log`
-- `artifacts/runs/stage4_graph_database_2026-06-09/generate_pyvis_fixed_first.log`
-- `artifacts/runs/stage4_graph_database_2026-06-09/graph_analytics_fixed_second.log`
-- `artifacts/runs/stage4_graph_database_2026-06-09/generate_pyvis_fixed_second.log`
-- `artifacts/runs/stage4_graph_database_2026-06-09/analytics_metrics.csv`
-- `artifacts/runs/stage4_graph_database_2026-06-09/graph_viewer.html`
+- `results/runs/stage4_graph_database_2026-06-09/`
+- `results/runs/stage4_graph_database_2026-06-09/pre_run_existing_outputs/`
+- `results/runs/stage4_graph_database_2026-06-09/manifest.csv`
+- `results/runs/stage4_graph_database_2026-06-09/validation_summary.json`
+- `results/runs/stage4_graph_database_2026-06-09/graph_analytics_fixed_first.log`
+- `results/runs/stage4_graph_database_2026-06-09/generate_pyvis_fixed_first.log`
+- `results/runs/stage4_graph_database_2026-06-09/graph_analytics_fixed_second.log`
+- `results/runs/stage4_graph_database_2026-06-09/generate_pyvis_fixed_second.log`
+- `results/runs/stage4_graph_database_2026-06-09/analytics_metrics.csv`
+- `results/runs/stage4_graph_database_2026-06-09/graph_viewer.html`
 
 The old pre-run `analytics_metrics.csv` and `graph_viewer.html` were copied to
 `pre_run_existing_outputs/` before canonical files were regenerated.
@@ -532,7 +532,7 @@ used only to verify that the same inputs produce identical output hashes.
 | `data/processed/fused_triples.jsonl` | 554 | `b2dcab4262139ea5e4cfa6d6bd770d3720604b588b7d74486e7a9e2b682ce4b9` | Stage 4 fused input; 0 bad JSON lines, 0 missing core triples |
 | `data/external/sma_gda_baseline.jsonl` | 164 | `f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb` | Open Targets baseline input; 0 bad JSON lines |
 | `data/processed/analytics_metrics.csv` | 607 | `3e3f8c1653a19cd5adcc303664b4a528b37e20dbf798f19a3a5cd668b9ce3116` | Canonical analytics output; 56 communities |
-| `docs/graph_viewer.html` | n/a | `fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0` | Canonical interactive PyVis output |
+| `results/visualizations/graph_viewer.html` | n/a | `fe93189804ef2a982bb6c16147c8266e139fe3bc1a90407c6734284bd1d050d0` | Canonical interactive PyVis output |
 
 Additional checks:
 

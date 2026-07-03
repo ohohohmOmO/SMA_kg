@@ -48,23 +48,23 @@ The dry-runs used the current canonical and interim graph artifacts:
 ```powershell
 & 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' -m unittest discover -s tests/unit -v
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --dry-run --run-dir artifacts/runs/conflict_adjudication_dry_run_2026-06-10_121608
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --dry-run --run-dir results/runs/conflict_adjudication_dry_run_2026-06-10_121608
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/build_index.py --run-dir artifacts/runs/graph_rag_index_2026-06-10_121608
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/build_index.py --run-dir results/runs/graph_rag_index_2026-06-10_121608
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'What evidence links SMN1 to spinal muscular atrophy?' --dry-run --output-file artifacts/runs/graph_rag_answer_probe_2026-06-10_121608/answer_dry_run.json
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'What evidence links SMN1 to spinal muscular atrophy?' --dry-run --output-file results/runs/graph_rag_answer_probe_2026-06-10_121608/answer_dry_run.json
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'How does Nusinersen affect motor function?' --output-file artifacts/runs/graph_rag_live_probe_2026-06-10_125030/answer_live.json
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'How does Nusinersen affect motor function?' --output-file results/runs/graph_rag_live_probe_2026-06-10_125030/answer_live.json
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --limit 1 --run-dir artifacts/runs/conflict_adjudication_live_probe_2026-06-10_125030
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --limit 1 --run-dir results/runs/conflict_adjudication_live_probe_2026-06-10_125030
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/build_index.py --retrieval-mode hybrid_tfidf --run-dir artifacts/runs/graph_rag_hybrid_index_2026-06-10_125652
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/build_index.py --retrieval-mode hybrid_tfidf --run-dir results/runs/graph_rag_hybrid_index_2026-06-10_125652
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'How does Nusinersen affect motor function?' --retrieval-mode hybrid_tfidf --dry-run --output-file artifacts/runs/graph_rag_hybrid_probe_2026-06-10_125652/answer_dry_run.json
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'How does Nusinersen affect motor function?' --retrieval-mode hybrid_tfidf --dry-run --output-file results/runs/graph_rag_hybrid_probe_2026-06-10_125652/answer_dry_run.json
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/prepare_conflict_adjudication_review.py --adjudications-file artifacts/runs/conflict_adjudication_live_probe_2026-06-10_125030/adjudications.jsonl --run-dir artifacts/runs/conflict_adjudication_review_2026-06-10_125652
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/prepare_conflict_adjudication_review.py --adjudications-file results/runs/conflict_adjudication_live_probe_2026-06-10_125030/adjudications.jsonl --run-dir results/runs/conflict_adjudication_review_2026-06-10_125652
 
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'Which genes are strongly connected to Spinal Muscular Atrophy?' --retrieval-mode hybrid_tfidf --include-neo4j-neighborhood --neo4j-neighbor-limit 5 --dry-run --output-file artifacts/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/answer_dry_run.json
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/run_graph_rag.py --question 'Which genes are strongly connected to Spinal Muscular Atrophy?' --retrieval-mode hybrid_tfidf --include-neo4j-neighborhood --neo4j-neighbor-limit 5 --dry-run --output-file results/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/answer_dry_run.json
 ```
 
 ## Results
@@ -72,17 +72,17 @@ The dry-runs used the current canonical and interim graph artifacts:
 - Unit tests: 22 passed.
 - Conflict adjudication dry-run:
   - Run directory:
-    `artifacts/runs/conflict_adjudication_dry_run_2026-06-10_121608/`
+    `results/runs/conflict_adjudication_dry_run_2026-06-10_121608/`
   - Input conflicts: 59.
   - Payloads written: 59.
   - Canonical graph mutated: false.
 - Graph RAG index:
-  - Run directory: `artifacts/runs/graph_rag_index_2026-06-10_121608/`
+  - Run directory: `results/runs/graph_rag_index_2026-06-10_121608/`
   - Manifest written to `data/processed/graph_rag_index_manifest.json`.
   - Retrieval mode: `lexical_entity`.
 - Graph RAG answer dry-run:
   - Run directory:
-    `artifacts/runs/graph_rag_answer_probe_2026-06-10_121608/`
+    `results/runs/graph_rag_answer_probe_2026-06-10_121608/`
   - Status: `dry_run_requires_llm`.
   - Supporting PMIDs: 32.
   - Abstracts in Evidence Context: 8.
@@ -91,34 +91,34 @@ The dry-runs used the current canonical and interim graph artifacts:
   - Conflict records in Evidence Context: 8.
 - Five-question Graph RAG demo dry-run:
   - Run directory:
-    `artifacts/runs/graph_rag_demo_questions_2026-06-10_124946/`
+    `results/runs/graph_rag_demo_questions_2026-06-10_124946/`
   - All five planned questions produced bounded dry-run evidence packages.
 - Live Graph RAG answer:
-  - Run directory: `artifacts/runs/graph_rag_live_probe_2026-06-10_125030/`
+  - Run directory: `results/runs/graph_rag_live_probe_2026-06-10_125030/`
   - Model: `deepseek-ai/DeepSeek-V4-Flash`.
   - Output schema included answer, supporting PMIDs, supporting triples,
     graph context, limitations, confidence, model, question, and retrieval.
   - Supporting PMIDs: 8.
 - Live conflict adjudication:
   - Run directory:
-    `artifacts/runs/conflict_adjudication_live_probe_2026-06-10_125030/`
+    `results/runs/conflict_adjudication_live_probe_2026-06-10_125030/`
   - Selected conflicts: 1.
   - Adjudication records: 1.
   - Failed records: 0.
   - Canonical graph mutated: false.
 - Hybrid retrieval:
-  - Run directory: `artifacts/runs/graph_rag_hybrid_probe_2026-06-10_125652/`
+  - Run directory: `results/runs/graph_rag_hybrid_probe_2026-06-10_125652/`
   - Retrieval mode: `hybrid_tfidf`.
   - Reranker: `local_tfidf_cosine`.
 - Neo4j neighborhood expansion:
   - Run directory:
-    `artifacts/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/`
+    `results/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/`
   - Retrieval mode: `hybrid_tfidf`.
   - Neighborhood records: 67.
   - Canonical graph mutated: false.
 - Conflict adjudication review proposal:
   - Run directory:
-    `artifacts/runs/conflict_adjudication_review_2026-06-10_125652/`
+    `results/runs/conflict_adjudication_review_2026-06-10_125652/`
   - Proposal records: 1.
   - Promotion action: `propose_relation_updates`.
   - Human approval required: true.
@@ -127,7 +127,7 @@ The dry-runs used the current canonical and interim graph artifacts:
 
 Live conflict adjudication and live answer generation were executed only as
 small probes. They require `SILICONFLOW_API_KEY` from the ignored local
-environment and should write dated artifacts under `artifacts/runs/`. V1 live
+environment and should write dated artifacts under `results/runs/`. V1 live
 runs do not mutate the canonical graph automatically.
 
 ## Acceptance Status
@@ -142,5 +142,5 @@ runs do not mutate the canonical graph automatically.
   implemented.
 - Adjudication results are converted into human-review proposals before graph
   promotion.
-- New artifacts are written under `artifacts/runs/`.
+- New artifacts are written under `results/runs/`.
 - Unit tests cover the new core logic.

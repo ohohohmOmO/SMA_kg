@@ -97,7 +97,7 @@ def main():
     triples_file = (REPO_ROOT / args.triples_file).resolve()
     abstracts_file = (REPO_ROOT / args.abstracts_file).resolve()
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"stage2_gold_candidates_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"stage2_gold_candidates_{stamp}"
     output_file = run_dir / "gold_candidates.jsonl"
     csv_file = run_dir / "gold_candidates.csv"
     run_dir.mkdir(parents=True, exist_ok=True)

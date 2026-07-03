@@ -4,7 +4,7 @@ This file is the first checkpoint before running commands, tests, scripts, or
 pipeline steps in this repository.
 
 For the current dated snapshot of the implementation state, see
-`docs/PROJECT_HANDOFF_2026-06-09.md`. It is reference material, not a mandatory
+`docs/start-here/PROJECT_HANDOFF_2026-06-09.md`. It is reference material, not a mandatory
 preflight document.
 
 ## Current Operating Rules
@@ -12,9 +12,9 @@ preflight document.
 - Use conda environment `KG_SMA_env`.
 - Run Python commands from the repository root unless a script documents another
   working directory.
-- Check `docs/agents/ISSUE_LOG.md` before diagnosing any failure.
+- Check `docs/start-here/ISSUE_LOG.md` before diagnosing any failure.
 - After a successful fix, append the symptom, cause, fix, and verification to
-  `docs/agents/ISSUE_LOG.md`.
+  `docs/start-here/ISSUE_LOG.md`.
 - When context is compacted, memory is uncertain, or the current development
   state is unclear, reread the reference documents listed below before acting.
 
@@ -23,21 +23,21 @@ preflight document.
 Read these when starting, resuming after compaction, or resolving uncertainty:
 
 - `AGENTS.md`
-- `docs/agents/PLAN.md`
-- `docs/agents/ISSUE_LOG.md`
-- `CONTEXT.md`
+- `docs/start-here/PLAN.md`
+- `docs/start-here/ISSUE_LOG.md`
+- `docs/start-here/CONTEXT.md`
 - `docs/reproduction/STAGE1_DATA_ACQUISITION_REPRO_2026-06-08.md`
 - `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
 - `docs/reproduction/STAGE3_PREP_2026-06-09.md`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
+- `results/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
 The pre-improvement baseline archive was created before the 2026-06-09 hardening
 work:
 
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/README.md`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/baseline_summary.json`
+- `results/runs/pre_improvement_baseline_2026-06-09/`
+- `results/runs/pre_improvement_baseline_2026-06-09/README.md`
+- `results/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
+- `results/runs/pre_improvement_baseline_2026-06-09/baseline_summary.json`
 
 ## Runtime Requirements
 
@@ -64,14 +64,14 @@ or generated examples.
 
 ## Output Naming And Promotion Rules
 
-- Canonical outputs stay under `data/` and `docs/graph_viewer.html` only after
+- Canonical outputs stay under `data/` and `results/visualizations/graph_viewer.html` only after
   validation passes.
-- Every rerun writes dated artifacts under `artifacts/runs/<stage>_<date-or-stamp>/`.
+- Every rerun writes dated artifacts under `results/runs/<stage>_<date-or-stamp>/`.
 - Every run directory should contain at least `manifest.csv`,
   `validation_summary.json` or equivalent, logs, and output snapshots.
 - Current canonical outputs must be archived before broad pipeline changes.
   The current baseline is
-  `artifacts/runs/pre_improvement_baseline_2026-06-09/`.
+  `results/runs/pre_improvement_baseline_2026-06-09/`.
 - New experimental outputs must be named by stage and purpose, for example
   `topic_balanced_pubmed_sma_abstracts.jsonl`, not loose ad hoc filenames.
 - Promotion from run artifacts to canonical paths must be explicit and must only
@@ -183,7 +183,7 @@ requirements from 2026-06-09.
 ## Execution Order
 
 1. Archive current canonical outputs. Completed:
-   `artifacts/runs/pre_improvement_baseline_2026-06-09/`.
+   `results/runs/pre_improvement_baseline_2026-06-09/`.
 2. Update this plan and `AGENTS.md` with the fixed requirements and recovery
    rules.
 3. Add shared schema, confidence scoring, and validation modules plus resource

@@ -25,24 +25,24 @@ LLM-only canonical extraction over all current PubMed abstracts.
 - PubMed input: `data/raw/pubmed_sma_abstracts.jsonl`
 - Input abstracts: 4554
 - Input source run:
-  `artifacts/runs/stage1_data_acquisition_full_2026-06-09/`
+  `results/runs/stage1_data_acquisition_full_2026-06-09/`
 - Input SHA-256:
   `5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48`
 
 ## Run Artifacts
 
 - Run directory:
-  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/`
+  `results/runs/stage2_extraction_llm_all_32w_2026-06-09/`
 - Split file:
-  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/stage2_input_split.json`
+  `results/runs/stage2_extraction_llm_all_32w_2026-06-09/stage2_input_split.json`
 - Validation summary:
-  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/validation_summary.json`
+  `results/runs/stage2_extraction_llm_all_32w_2026-06-09/validation_summary.json`
 - Manifest:
-  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/manifest.csv`
+  `results/runs/stage2_extraction_llm_all_32w_2026-06-09/manifest.csv`
 - Logs:
-  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/logs/`
+  `results/runs/stage2_extraction_llm_all_32w_2026-06-09/logs/`
 - Chunks:
-  `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/chunks/`
+  `results/runs/stage2_extraction_llm_all_32w_2026-06-09/chunks/`
 
 ## Results
 

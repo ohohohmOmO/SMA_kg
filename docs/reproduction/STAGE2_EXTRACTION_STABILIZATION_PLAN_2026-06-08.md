@@ -130,7 +130,7 @@ Stage 3 只读取：
 每次完整 Stage 2 运行输出到：
 
 ```text
-artifacts/runs/stage2_extraction_full_YYYY-MM-DD_HHMM/
+results/runs/stage2_extraction_full_YYYY-MM-DD_HHMM/
   README.md
   stage2_input_split.json
   manifest.csv
@@ -302,14 +302,14 @@ python src/fusion/dictionary_mapper.py
 运行目录：
 
 ```text
-artifacts/runs/stage2_extraction_full_2026-06-08_2335/
+results/runs/stage2_extraction_full_2026-06-08_2335/
 ```
 
 执行命令：
 
 ```powershell
 python src/extraction/run_stage2_extraction.py `
-  --run-dir artifacts/runs/stage2_extraction_full_2026-06-08_2335 `
+  --run-dir results/runs/stage2_extraction_full_2026-06-08_2335 `
   --llm-limit 200 `
   --chunk-size 20 `
   --model deepseek-ai/DeepSeek-V4-Flash `

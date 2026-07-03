@@ -77,7 +77,7 @@ def main():
         return 1
 
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"stage1_topic_balanced_pubmed_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"stage1_topic_balanced_pubmed_{stamp}"
     output_file = run_dir / "outputs" / "data" / "raw" / "topic_balanced_pubmed_sma_abstracts.jsonl"
     query_file = run_dir / "topic_queries.json"
     output_file.parent.mkdir(parents=True, exist_ok=True)

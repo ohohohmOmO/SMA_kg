@@ -182,7 +182,7 @@ def main():
     run_dir = (
         (REPO_ROOT / args.run_dir).resolve()
         if args.run_dir
-        else REPO_ROOT / "artifacts" / "runs" / f"evidence_span_audit_{stamp}"
+        else REPO_ROOT / "results" / "runs" / f"evidence_span_audit_{stamp}"
     )
     if not input_file.exists() or not abstracts_file.exists():
         print("Input triples or abstracts file is missing.", file=sys.stderr)

@@ -33,7 +33,7 @@ def main():
     args = parse_args()
     retrieval_mode = args.retrieval_mode or args.mode
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"graph_rag_index_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"graph_rag_index_{stamp}"
     run_dir.mkdir(parents=True, exist_ok=True)
     manifest_file = REPO_ROOT / args.manifest_file
     inputs = []

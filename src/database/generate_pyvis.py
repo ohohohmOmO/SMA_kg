@@ -28,7 +28,10 @@ def parse_args():
     parser.add_argument("--input-file", default="data/processed/fused_triples.jsonl")
     parser.add_argument("--metrics-file", default="data/processed/analytics_metrics.csv")
     parser.add_argument("--opentargets-file", default="data/external/sma_gda_baseline.jsonl")
-    parser.add_argument("--output-file", default="docs/graph_viewer.html")
+    parser.add_argument(
+        "--output-file",
+        default="results/visualizations/graph_viewer.html",
+    )
     return parser.parse_args()
 
 def main():
@@ -50,7 +53,14 @@ def main():
             }
 
     logging.info("Initializing cleanly encapsulated standalone PyVis interactive HTML bounds...")
-    net = Network(height="900px", width="100%", bgcolor="#ffffff", font_color="#333333", directed=True)
+    net = Network(
+        height="900px",
+        width="100%",
+        bgcolor="#ffffff",
+        font_color="#333333",
+        directed=True,
+        cdn_resources="in_line",
+    )
     net.force_atlas_2based()
     
     added_nodes = set()
@@ -98,7 +108,7 @@ def main():
     out_html = Path(args.output_file)
     out_html.parent.mkdir(parents=True, exist_ok=True)
     
-    net.save_graph(str(out_html))
+    out_html.write_text(net.generate_html(), encoding="utf-8")
     strip_trailing_whitespace(out_html)
     logging.info(f"Topological interactive network visualization universally packaged down successfully out to {out_html}.")
     return 0

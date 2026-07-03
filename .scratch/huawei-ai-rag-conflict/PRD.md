@@ -51,7 +51,7 @@ The current repository state provides enough material for both features:
 - Conflict Adjudication: a structured decision about a relation conflict without
   silently rewriting canonical graph outputs.
 
-These terms are also recorded in `CONTEXT.md`.
+These terms are also recorded in `docs/start-here/CONTEXT.md`.
 
 ## Feature A: SMA Graph RAG Intelligent QA
 
@@ -182,7 +182,7 @@ Adjudication should write JSONL records shaped like:
 - Missing abstracts or missing supporting triples are reported, not ignored.
 - Live LLM mode writes accepted and rejected records separately.
 - The output includes a validation summary and manifest under
-  `artifacts/runs/conflict_adjudication_<timestamp>/`.
+  `results/runs/conflict_adjudication_<timestamp>/`.
 - Unit tests cover payload assembly, class validation, and missing evidence
   handling.
 

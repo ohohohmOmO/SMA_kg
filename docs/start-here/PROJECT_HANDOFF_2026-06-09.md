@@ -1,4 +1,4 @@
-﻿# KG SMA Project Handoff - 2026-06-09
+# KG SMA Project Handoff - 2026-06-09
 
 ## Purpose
 
@@ -29,9 +29,9 @@ Important current facts:
 Read these first:
 
 - `AGENTS.md`: operating rules, secrets policy, conda environment, commit policy.
-- `docs/agents/PLAN.md`: current status, runtime checklist, open decisions.
+- `docs/start-here/PLAN.md`: current status, runtime checklist, open decisions.
 - `README.md`: repository layout, pipeline commands, current outputs.
-- `docs/agents/ISSUE_LOG.md`: resolved failures and fixes.
+- `docs/start-here/ISSUE_LOG.md`: resolved failures and fixes.
 - `docs/reproduction/ENGINEERING_HARDENING_2026-06-09.md`: implementation summary for the hardening work.
 - `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`: full Stage 2 LLM extraction report.
 - `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`: full Stage 3/4 rerun report.
@@ -39,7 +39,7 @@ Read these first:
 Historical reference only:
 
 - `docs/agents/archive/PLAN_COMPLETED_2026-06-09.md`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
+- `results/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
 ## Environment
 
@@ -71,7 +71,7 @@ Main directories:
 - `src/evaluation/`: topology evaluation, metrics, ablation, novelty analysis.
 - `resources/`: biomedical schema and entity dictionary resources.
 - `data/`: current canonical and intermediate outputs.
-- `artifacts/runs/`: dated run artifacts, logs, manifests, validation summaries, and output snapshots.
+- `results/runs/`: dated run artifacts, logs, manifests, validation summaries, and output snapshots.
 - `docs/reproduction/`: reproduction and hardening reports.
 - `.scratch/`: local markdown issue tracker.
 
@@ -100,20 +100,20 @@ Stage 3:
 Stage 4:
 
 - `data/processed/analytics_metrics.csv`
-- `docs/graph_viewer.html`
+- `results/visualizations/graph_viewer.html`
 
 ## Current Run Artifacts
 
 Most important completed run directories:
 
-- `artifacts/runs/stage1_data_acquisition_full_2026-06-09/`
-- `artifacts/runs/stage1_topic_clustering_full_2026-06-09/`
-- `artifacts/runs/stage1_topic_balanced_pubmed_full_2026-06-09/`
-- `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/`
-- `artifacts/runs/stage3_fusion_full_2026-06-09/`
-- `artifacts/runs/stage4_graph_full_2026-06-09/`
+- `results/runs/stage1_data_acquisition_full_2026-06-09/`
+- `results/runs/stage1_topic_clustering_full_2026-06-09/`
+- `results/runs/stage1_topic_balanced_pubmed_full_2026-06-09/`
+- `results/runs/stage2_extraction_llm_all_32w_2026-06-09/`
+- `results/runs/stage3_fusion_full_2026-06-09/`
+- `results/runs/stage4_graph_full_2026-06-09/`
 
-Canonical outputs and run artifact snapshots may intentionally contain identical bytes. This is expected after promotion: canonical paths are the current working outputs, while `artifacts/runs/.../outputs/` are reproducibility snapshots tied to manifests and logs. Do not delete those duplicates unless the user explicitly starts an artifact retention cleanup.
+Canonical outputs and run artifact snapshots may intentionally contain identical bytes. This is expected after promotion: canonical paths are the current working outputs, while `results/runs/.../outputs/` are reproducibility snapshots tied to manifests and logs. Do not delete those duplicates unless the user explicitly starts an artifact retention cleanup.
 
 ## Pipeline Commands
 
@@ -131,19 +131,19 @@ python src/crawler/topic_balanced_pubmed.py --topic-terms-file <topic_terms.json
 Stage 2 canonical full run:
 
 ```powershell
-python src/extraction/run_stage2_extraction.py --run-dir artifacts/runs/stage2_extraction_<stamp> --llm-limit -1 --chunk-size 5 --parallel-workers 32 --promote
+python src/extraction/run_stage2_extraction.py --run-dir results/runs/stage2_extraction_<stamp> --llm-limit -1 --chunk-size 5 --parallel-workers 32 --promote
 ```
 
 Stage 3 canonical full run:
 
 ```powershell
-python src/fusion/run_stage3_fusion.py --run-dir artifacts/runs/stage3_fusion_<stamp> --alignment-model NeuML/pubmedbert-base-embeddings --promote
+python src/fusion/run_stage3_fusion.py --run-dir results/runs/stage3_fusion_<stamp> --alignment-model NeuML/pubmedbert-base-embeddings --promote
 ```
 
 Stage 4 canonical full run:
 
 ```powershell
-python src/database/run_stage4_graph.py --run-dir artifacts/runs/stage4_graph_<stamp> --input-file data/processed/fused_triples.jsonl --opentargets-file data/external/sma_gda_baseline.jsonl --promote
+python src/database/run_stage4_graph.py --run-dir results/runs/stage4_graph_<stamp> --input-file data/processed/fused_triples.jsonl --opentargets-file data/external/sma_gda_baseline.jsonl --promote
 ```
 
 Verification:
@@ -171,10 +171,10 @@ These are tracked as local markdown issues and remain unresolved:
 
 ## Cautions
 
-- Always read `docs/agents/PLAN.md` before running commands.
-- Read `docs/agents/ISSUE_LOG.md` before diagnosing failures.
+- Always read `docs/start-here/PLAN.md` before running commands.
+- Read `docs/start-here/ISSUE_LOG.md` before diagnosing failures.
 - Do not commit `.env`, `.env.local`, real API keys, or Neo4j passwords.
-- Do not assume old files under `artifacts/runs/` are current canonical outputs; use `data/` and `docs/graph_viewer.html` for current promoted outputs.
+- Do not assume old files under `results/runs/` are current canonical outputs; use `data/` and `results/visualizations/graph_viewer.html` for current promoted outputs.
 - Do not merge rule candidates into Stage 2 canonical output unless they have explicit LLM or human verification.
 - Do not promote topic-balanced PubMed candidates into Stage 1 canonical input without a review decision.
 - After changing files, stage and commit before final response unless the user explicitly asks not to.

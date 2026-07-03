@@ -24,7 +24,7 @@ Stage 3 has produced a reviewable conflict set.
 - Stage 3/4 reproduction report:
   `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`
 - Stage 3 run directory:
-  `artifacts/runs/stage3_fusion_full_2026-06-09/`
+  `results/runs/stage3_fusion_full_2026-06-09/`
 
 ## Decision Needed
 

@@ -184,14 +184,14 @@ Evidence Context 最小结构：
 
 输出：
 
-- `artifacts/runs/conflict_adjudication_<timestamp>/payloads.jsonl`
-- `artifacts/runs/conflict_adjudication_<timestamp>/manifest.csv`
-- `artifacts/runs/conflict_adjudication_<timestamp>/validation_summary.json`
+- `results/runs/conflict_adjudication_<timestamp>/payloads.jsonl`
+- `results/runs/conflict_adjudication_<timestamp>/manifest.csv`
+- `results/runs/conflict_adjudication_<timestamp>/validation_summary.json`
 
 验证：
 
 ```powershell
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --dry-run --run-dir artifacts/runs/conflict_adjudication_probe_<timestamp>
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --dry-run --run-dir results/runs/conflict_adjudication_probe_<timestamp>
 & 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' -m unittest discover -s tests/unit -v
 ```
 
@@ -235,7 +235,7 @@ Evidence Context 最小结构：
 验证：
 
 ```powershell
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --limit 3 --run-dir artifacts/runs/conflict_adjudication_live_probe_<timestamp>
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/fusion/adjudicate_relation_conflicts.py --limit 3 --run-dir results/runs/conflict_adjudication_live_probe_<timestamp>
 ```
 
 退出标准：
@@ -274,7 +274,7 @@ Evidence Context 最小结构：
 验证：
 
 ```powershell
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/build_index.py --run-dir artifacts/runs/graph_rag_index_probe_<timestamp>
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/qa/build_index.py --run-dir results/runs/graph_rag_index_probe_<timestamp>
 & 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' -m unittest discover -s tests/unit -v
 ```
 
@@ -369,7 +369,7 @@ Evidence Context 最小结构：
 - 没有大模型调用时，仍能演示 evidence retrieval 和 conflict payload。
 - Graph RAG answer 必须带 PMID 或明确证据不足。
 - Conflict adjudication 必须输出结构化裁决结果或 unresolved 原因。
-- 所有新运行产物写入 `artifacts/runs/`。
+- 所有新运行产物写入 `results/runs/`。
 - canonical graph 不被自动修改。
 - 单元测试覆盖新增核心逻辑。
 

@@ -68,7 +68,7 @@
 
 - 扩展 `src/extraction/build_gold_candidates.py`。
 - 新增 `src/evaluation/gold_review_metrics.py`。
-- 输出到 `artifacts/runs/stage2_gold_candidates_<timestamp>/`，保留 manifest 和统计摘要。
+- 输出到 `results/runs/stage2_gold_candidates_<timestamp>/`，保留 manifest 和统计摘要。
 
 简历表达：
 
@@ -162,7 +162,7 @@ LLM 辅助裁决流程，提升知识图谱质量。
 
 ## Feature 6：交互式图谱探索与证据审查 UI
 
-目标：把当前 `docs/graph_viewer.html` 从“全图展示产物”升级为可交互的图谱审查工具。
+目标：把当前 `results/visualizations/graph_viewer.html` 从“全图展示产物”升级为可交互的图谱审查工具。
 
 核心能力：
 

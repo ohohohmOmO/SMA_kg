@@ -32,7 +32,7 @@ Commands used the repository `KG_SMA_env` Python:
 ```powershell
 python -m py_compile src/evidence/context_builder.py src/qa/retriever.py src/qa/neo4j_neighborhood.py src/qa/answer_validation.py src/qa/answer.py src/qa/run_graph_rag.py tests/unit/test_answer_validation.py tests/unit/test_evidence_context.py tests/unit/test_graph_rag.py
 python -m unittest discover -s tests/unit -v
-python src/qa/run_graph_rag.py --question "How does Nusinersen affect motor function?" --retrieval-mode hybrid_tfidf --validation-attempts 2 --output-file artifacts/runs/graph_rag_hard_citation_probe_2026-07-03_232240/answer_live.json
+python src/qa/run_graph_rag.py --question "How does Nusinersen affect motor function?" --retrieval-mode hybrid_tfidf --validation-attempts 2 --output-file results/runs/graph_rag_hard_citation_probe_2026-07-03_232240/answer_live.json
 ```
 
 Results:

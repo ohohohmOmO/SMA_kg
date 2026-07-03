@@ -2,8 +2,8 @@
 
 This is an archived overview. It is retained for historical context only.
 For the current repository handoff, see
-`docs/PROJECT_HANDOFF_2026-06-09.md`. For current onboarding, start with
-`README.md`, `AGENTS.md`, and `docs/agents/PLAN.md`.
+`docs/start-here/PROJECT_HANDOFF_2026-06-09.md`. For current onboarding, start with
+`README.md`, `AGENTS.md`, and `docs/start-here/PLAN.md`.
 
 ## 1. Project Goal & Scope
 This project aims to construct a high-density, high-quality Knowledge Graph (KG) for **Spinal Muscular Atrophy (SMA)**. It systematically integrates data regarding SMA-associated genes (e.g., SMN1, SMN2), pathogenic mechanisms, clinical phenotypes, and drug treatments. This KG serves as the core logic engine and data foundation for an SMA Digital Twin system.

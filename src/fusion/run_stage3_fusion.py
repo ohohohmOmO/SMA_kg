@@ -111,7 +111,7 @@ def parse_args():
 def main():
     args = parse_args()
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
-    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"stage3_fusion_{stamp}"
+    run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "results" / "runs" / f"stage3_fusion_{stamp}"
     outputs = run_dir / "outputs"
     logs = run_dir / "logs"
     mapped = outputs / "data" / "interim" / "mapped_triples.jsonl"

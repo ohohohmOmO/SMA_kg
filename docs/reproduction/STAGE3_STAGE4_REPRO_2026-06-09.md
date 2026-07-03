@@ -48,7 +48,7 @@ Additional Stage 3 facts:
 - 59 entity pairs have relation polarity conflicts.
 - Stage 3 promotion succeeded.
 - Run directory:
-  `artifacts/runs/stage3_fusion_full_2026-06-09/`
+  `results/runs/stage3_fusion_full_2026-06-09/`
 
 ## Stage 4 Command
 
@@ -76,7 +76,7 @@ Additional Stage 3 facts:
 ## Stage 4 Results
 
 - Run directory:
-  `artifacts/runs/stage4_graph_full_2026-06-09/`
+  `results/runs/stage4_graph_full_2026-06-09/`
 - Neo4j status: `ok`
 - Neo4j TCP check: `localhost:7687`
 - Cleared managed relationships: 11208
@@ -94,14 +94,14 @@ Additional Stage 3 facts:
 Promoted canonical outputs:
 
 - `data/processed/analytics_metrics.csv`
-- `docs/graph_viewer.html`
+- `results/visualizations/graph_viewer.html`
 
 Archived Stage 4 outputs:
 
-- `artifacts/runs/stage4_graph_full_2026-06-09/outputs/data/processed/analytics_metrics.csv`
-- `artifacts/runs/stage4_graph_full_2026-06-09/outputs/docs/graph_viewer.html`
-- `artifacts/runs/stage4_graph_full_2026-06-09/outputs/database/neo4j_import_summary.json`
-- `artifacts/runs/stage4_graph_full_2026-06-09/outputs/evaluation/topology_metrics.json`
+- `results/runs/stage4_graph_full_2026-06-09/outputs/data/processed/analytics_metrics.csv`
+- `results/runs/stage4_graph_full_2026-06-09/outputs/results/visualizations/graph_viewer.html`
+- `results/runs/stage4_graph_full_2026-06-09/outputs/database/neo4j_import_summary.json`
+- `results/runs/stage4_graph_full_2026-06-09/outputs/evaluation/topology_metrics.json`
 
 ## Verification
 

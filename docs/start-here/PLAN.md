@@ -12,9 +12,9 @@ The 2026-06-09 engineering hardening plan has been completed and archived at:
 - Use conda environment `KG_SMA_env`.
 - Run Python commands from the repository root unless a script documents another
   working directory.
-- Check `docs/agents/ISSUE_LOG.md` before diagnosing any failure.
+- Check `docs/start-here/ISSUE_LOG.md` before diagnosing any failure.
 - After a successful fix, append the symptom, cause, fix, and verification to
-  `docs/agents/ISSUE_LOG.md`.
+  `docs/start-here/ISSUE_LOG.md`.
 - When context is compacted, memory is uncertain, or the current development
   state is unclear, reread the reference documents listed below before acting.
 - When completing a task that changes files, stage and commit the changes before
@@ -89,16 +89,16 @@ conflict adjudication v1 is implemented on feature branch
   `src/fusion/prepare_conflict_adjudication_review.py` and require human
   approval before promotion.
 - Verified dry-run artifacts:
-  `artifacts/runs/conflict_adjudication_dry_run_2026-06-10_121608/`,
-  `artifacts/runs/graph_rag_index_2026-06-10_121608/`, and
-  `artifacts/runs/graph_rag_answer_probe_2026-06-10_121608/`.
+  `results/runs/conflict_adjudication_dry_run_2026-06-10_121608/`,
+  `results/runs/graph_rag_index_2026-06-10_121608/`, and
+  `results/runs/graph_rag_answer_probe_2026-06-10_121608/`.
 - Additional verification artifacts:
-  `artifacts/runs/graph_rag_demo_questions_2026-06-10_124946/`,
-  `artifacts/runs/graph_rag_live_probe_2026-06-10_125030/`,
-  `artifacts/runs/conflict_adjudication_live_probe_2026-06-10_125030/`,
-  `artifacts/runs/graph_rag_hybrid_probe_2026-06-10_125652/`,
-  `artifacts/runs/conflict_adjudication_review_2026-06-10_125652/`, and
-  `artifacts/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/`.
+  `results/runs/graph_rag_demo_questions_2026-06-10_124946/`,
+  `results/runs/graph_rag_live_probe_2026-06-10_125030/`,
+  `results/runs/conflict_adjudication_live_probe_2026-06-10_125030/`,
+  `results/runs/graph_rag_hybrid_probe_2026-06-10_125652/`,
+  `results/runs/conflict_adjudication_review_2026-06-10_125652/`, and
+  `results/runs/graph_rag_neo4j_neighborhood_probe_2026-06-10_125957/`.
 - Reproduction notes:
   `docs/reproduction/GRAPH_RAG_CONFLICT_ADJUDICATION_2026-06-10.md`.
 
@@ -139,20 +139,38 @@ Evidence Span validation is implemented on feature branch
 - Reproduction notes:
   `docs/reproduction/EVIDENCE_SPAN_VALIDATION_2026-07-03.md`.
 
+## Current Development Status - 2026-07-04
+
+The repository structure has been normalized on feature branch
+`feature/huawei-ai应用工程师-ai技术应用/repository-structure-20260704-002450`.
+
+- Required current documentation is consolidated under `docs/start-here/`.
+- Production code remains under the stable `src` package and is indexed by
+  Stage and function in `src/README.md`.
+- Canonical pipeline data remains under `data/`; its lifecycle is documented in
+  `data/README.md`.
+- Generated runs, reports, smoke outputs, and visualizations now live under
+  `results/`.
+- Historical run manifests retain their original recorded paths; new runs use
+  `results/runs/`.
+- Reproduction notes:
+  `docs/reproduction/REPOSITORY_STRUCTURE_2026-07-04.md`.
+
 ## Primary Reference Documents
 
 Read these when starting, resuming after compaction, or resolving uncertainty:
 
-- `AGENTS.md`
-- `README.md`
-- `docs/agents/PLAN.md`
-- `docs/agents/ISSUE_LOG.md`
-- `CONTEXT.md`
-- `docs/PROJECT_HANDOFF_2026-06-09.md`
+- `docs/start-here/README.md`
+- `docs/start-here/PLAN.md`
+- `docs/start-here/AGENT_GUIDE.md`
+- `docs/start-here/PROJECT_OVERVIEW.md`
+- `docs/start-here/ISSUE_LOG.md`
+- `docs/start-here/CONTEXT.md`
+- `docs/start-here/PROJECT_HANDOFF_2026-06-09.md`
 - `docs/reproduction/ENGINEERING_HARDENING_2026-06-09.md`
 - `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
 - `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`
-- `artifacts/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
+- `results/runs/pre_improvement_baseline_2026-06-09/manifest.csv`
 
 Historical or archived context:
 
@@ -170,9 +188,9 @@ Historical or archived context:
 
 ## Output Naming And Promotion Rules
 
-- Canonical outputs stay under `data/` and `docs/graph_viewer.html` only after
-  validation passes.
-- Every rerun writes dated artifacts under `artifacts/runs/<stage>_<date-or-stamp>/`.
+- Canonical outputs stay under `data/` and
+  `results/visualizations/graph_viewer.html` only after validation passes.
+- Every rerun writes dated artifacts under `results/runs/<stage>_<date-or-stamp>/`.
 - Every run directory should contain at least `manifest.csv`,
   `validation_summary.json` or equivalent, logs, and output snapshots.
 - Canonical outputs and run artifact snapshots may intentionally contain the
