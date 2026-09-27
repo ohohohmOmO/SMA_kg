@@ -9,6 +9,8 @@ from src.qa.answer_validation import (
     build_validated_answer,
     validate_answer_payload,
 )
+from src.qa.claim_evidence_validation import validate_answer_semantics
+from src.qa.entailment_judge import LLMEntailmentJudge
 from src.qa.retriever import context_to_prompt
 
 
@@ -23,6 +25,7 @@ Return ONLY valid JSON with this shape:
   "claims": [
     {
       "claim_id": "C001",
+      "claim_type": "diagnosis|treatment|dosage|contraindication|safety|prognosis|mechanism|association|other",
       "text": "one short evidence-grounded claim",
       "supporting_pmids": ["PMID"],
       "supporting_evidence_ids": ["T001"]
@@ -39,6 +42,7 @@ Rules:
 4. If evidence is insufficient, return an empty claims list and explain why in limitations.
 5. If Evidence Context contains conflicts, disclose the disagreement in limitations.
 6. Do not invent mechanisms, treatments, outcomes, PMIDs, or evidence IDs.
+7. Keep every claim atomic: one subject, one relation, and one outcome.
 """
 
 
@@ -64,14 +68,31 @@ def build_dry_run_answer(question, context):
     }
 
 
-def generate_answer(question, context, model=DEFAULT_MODEL, max_tokens=1024, validation_attempts=2):
+def generate_answer(
+    question,
+    context,
+    model=DEFAULT_MODEL,
+    max_tokens=1024,
+    validation_attempts=2,
+    semantic_validation_mode="enforce",
+    entailment_judge=None,
+    entailment_attempts=3,
+):
     load_local_env()
     api_key = os.environ.get("SILICONFLOW_API_KEY")
     if not api_key:
         raise RuntimeError("SILICONFLOW_API_KEY is not set; use --dry-run to inspect retrieved evidence.")
     client = build_client(api_key)
+    semantic_judge = entailment_judge
+    if semantic_judge is None and semantic_validation_mode != "off":
+        semantic_judge = LLMEntailmentJudge(
+            client,
+            model=model,
+            attempts=entailment_attempts,
+        )
     attempts = max(1, int(validation_attempts))
     violations = []
+    semantic_validation = None
     for attempt in range(1, attempts + 1):
         try:
             raw = call_llm(
@@ -92,8 +113,34 @@ def generate_answer(question, context, model=DEFAULT_MODEL, max_tokens=1024, val
             continue
         violations = validate_answer_payload(data, context)
         if not violations:
-            return build_validated_answer(question, data, context, model, attempt)
-    return build_safe_fallback_answer(question, context, model, attempts, violations)
+            semantic_validation = validate_answer_semantics(
+                data,
+                context,
+                judge=semantic_judge,
+                mode=semantic_validation_mode,
+            )
+            violations = (
+                []
+                if semantic_validation["passed"]
+                else list(semantic_validation["violations"])
+            )
+        if not violations:
+            return build_validated_answer(
+                question,
+                data,
+                context,
+                model,
+                attempt,
+                semantic_validation=semantic_validation,
+            )
+    return build_safe_fallback_answer(
+        question,
+        context,
+        model,
+        attempts,
+        violations,
+        semantic_validation=semantic_validation,
+    )
 
 
 @retry(

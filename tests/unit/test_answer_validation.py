@@ -20,6 +20,7 @@ def build_context(with_conflict=False):
                 "entity_1": {"name": "Nusinersen", "type": "Drug"},
                 "relation": "IMPROVES",
                 "entity_2": {"name": "motor function", "type": "Phenotype"},
+                "evidence_text": "Nusinersen improved motor function.",
             }
         ],
         "fused_edges": [
@@ -138,6 +139,50 @@ class AnswerValidationTest(unittest.TestCase):
         self.assertEqual(answer["claims"], [])
         self.assertEqual(answer["supporting_pmids"], [])
         self.assertEqual(answer["supporting_triples"], [])
+
+    @patch("src.qa.answer.build_client", return_value=object())
+    @patch("src.qa.answer.call_llm")
+    def test_semantically_unsupported_critical_claim_falls_back(self, call_llm, _build_client):
+        payload = valid_payload()
+        payload["claims"][0]["claim_type"] = "contraindication"
+        payload["claims"][0]["text"] = "Nusinersen is contraindicated in adults."
+        call_llm.return_value = json.dumps(payload)
+
+        with patch.dict(os.environ, {"SILICONFLOW_API_KEY": "test"}, clear=False):
+            answer = generate_answer(
+                "question",
+                build_context(),
+                model="test-model",
+                validation_attempts=2,
+            )
+
+        self.assertEqual(answer["answer_status"], "insufficient_or_invalid_evidence")
+        self.assertFalse(answer["validation"]["passed"])
+        self.assertTrue(
+            any(
+                item.startswith("critical_claim_not_entailed")
+                for item in answer["validation"]["violations"]
+            )
+        )
+
+    @patch("src.qa.answer.build_client", return_value=object())
+    @patch("src.qa.answer.call_llm")
+    def test_audit_mode_reports_semantic_failure_without_blocking(self, call_llm, _build_client):
+        payload = valid_payload()
+        payload["claims"][0]["claim_type"] = "contraindication"
+        payload["claims"][0]["text"] = "Nusinersen is contraindicated in adults."
+        call_llm.return_value = json.dumps(payload)
+
+        with patch.dict(os.environ, {"SILICONFLOW_API_KEY": "test"}, clear=False):
+            answer = generate_answer(
+                "question",
+                build_context(),
+                model="test-model",
+                semantic_validation_mode="audit",
+            )
+
+        self.assertEqual(answer["answer_status"], "validated")
+        self.assertFalse(answer["validation"]["semantic"]["semantic_passed"])
 
 
 if __name__ == "__main__":

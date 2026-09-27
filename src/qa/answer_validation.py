@@ -127,7 +127,14 @@ def validate_answer_payload(payload, context):
     return list(dict.fromkeys(problems))
 
 
-def build_validated_answer(question, payload, context, model, attempts):
+def build_validated_answer(
+    question,
+    payload,
+    context,
+    model,
+    attempts,
+    semantic_validation=None,
+):
     _, records_by_id = build_evidence_catalog(context)
     claims = []
     supporting_pmids = []
@@ -137,6 +144,7 @@ def build_validated_answer(question, payload, context, model, attempts):
         evidence_ids = list(dict.fromkeys(str(item) for item in claim["supporting_evidence_ids"]))
         claims.append({
             "claim_id": str(claim["claim_id"]),
+            "claim_type": str(claim.get("claim_type", "other")).strip() or "other",
             "text": str(claim["text"]).strip(),
             "supporting_pmids": claim_pmids,
             "supporting_evidence_ids": evidence_ids,
@@ -180,11 +188,24 @@ def build_validated_answer(question, payload, context, model, attempts):
             "passed": True,
             "attempts": attempts,
             "violations": [],
+            "semantic": semantic_validation or {
+                "mode": "not_run",
+                "semantic_passed": False,
+                "claim_results": [],
+                "violations": [],
+            },
         },
     }
 
 
-def build_safe_fallback_answer(question, context, model, attempts, violations):
+def build_safe_fallback_answer(
+    question,
+    context,
+    model,
+    attempts,
+    violations,
+    semantic_validation=None,
+):
     return {
         "question": question,
         "answer_status": "insufficient_or_invalid_evidence",
@@ -202,5 +223,11 @@ def build_safe_fallback_answer(question, context, model, attempts, violations):
             "passed": False,
             "attempts": attempts,
             "violations": list(violations),
+            "semantic": semantic_validation or {
+                "mode": "not_run",
+                "semantic_passed": False,
+                "claim_results": [],
+                "violations": [],
+            },
         },
     }

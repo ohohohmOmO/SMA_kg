@@ -24,6 +24,12 @@ def parse_args():
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--max-tokens", type=int, default=1024)
     parser.add_argument("--validation-attempts", type=int, default=2)
+    parser.add_argument(
+        "--semantic-validation-mode",
+        choices=["off", "audit", "enforce"],
+        default="enforce",
+    )
+    parser.add_argument("--entailment-attempts", type=int, default=3)
     parser.add_argument("--output-file", default="")
     return parser.parse_args()
 
@@ -43,6 +49,8 @@ def main():
             model=args.model,
             max_tokens=args.max_tokens,
             validation_attempts=args.validation_attempts,
+            semantic_validation_mode=args.semantic_validation_mode,
+            entailment_attempts=args.entailment_attempts,
         )
     if args.output_file:
         write_json(REPO_ROOT / args.output_file, result)
