@@ -17,6 +17,22 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-01 - Legacy FYP form templates lacked built-in Word styles
+
+- Symptom: The FYP submission-pack generator stopped with `KeyError: no style
+  with name 'Title'`, then with the same error for `List Bullet`, while editing
+  the supplied risk and logbook templates.
+- Cause: The legacy university Word templates contain a restricted custom style
+  set and do not include every built-in style expected by a new blank DOCX.
+- Fix: Made heading styles conditional and generated bullets/numbering with
+  explicit paragraph formatting instead of assuming built-in list styles.
+  Preserved the original form layouts and compacted gateway-answer cells to
+  prevent pagination drift.
+- Verification: Microsoft Word rendered the final pack successfully as 5, 4,
+  2, 3 and 8 pages respectively; every rendered page was visually inspected,
+  and the preliminary report meets its eight-page limit with four pages of
+  technical background.
+
 ### 2026-06-09 - Neo4j relationship sanitizer allowed schema-external relation tokens
 
 - Symptom: The new unit test for Neo4j dynamic Cypher sanitization failed
