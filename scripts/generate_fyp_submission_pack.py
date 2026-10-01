@@ -17,7 +17,10 @@ from docx.shared import Cm, Inches, Pt, RGBColor
 ROOT = Path(r"D:\kg_sma_0704")
 FYP = Path(r"C:\Users\jon15\Desktop\大四上\FYP")
 TEMP = ROOT / "tmp" / "fyp_documents_2026-10-01" / "authoring"
-OUT = ROOT / "outputs" / "fyp_submission_pack_2026-10-01"
+OVERVIEW_OUT = FYP / "00_总览_要求与时间线"
+FIRST_SUBMISSION = FYP / "01_首轮提交_2026-10-30"
+OUT = FIRST_SUBMISSION / "01_交付稿"
+FIRST_REQUIREMENTS = FIRST_SUBMISSION / "02_模板与要求"
 
 PROJECT_TITLE = "Evidence-Grounded Construction of a Knowledge Graph for Spinal Muscular Atrophy"
 STUDENT = "贾欧妮 [insert official English name]"
@@ -380,10 +383,10 @@ def make_roadmap() -> Path:
         "Student Handbook FYP 2026-27.pdf",
         "Project writing and plagiarism printing 2017.pdf",
         "FYP_timeline.png",
-        "毕设总体结构-贾欧妮.pdf 与 D:\\kg_sma_0704 的代码、run artifacts 和复现文档",
+        "D:\\kg_sma_0704\\docs\\fyp\\project_reference\\毕设总体结构-贾欧妮.pdf 与项目代码、运行产物和复现文档",
     ], size=9.5)
 
-    path = OUT / "01_FYP_Roadmap_and_Submission_Guide.docx"
+    path = OVERVIEW_OUT / "01_FYP_Roadmap_and_Submission_Guide.docx"
     doc.save(path)
     return path
 
@@ -413,7 +416,7 @@ def collapse_bordered_paragraph(paragraph) -> None:
 
 
 def make_risk() -> Path:
-    src = FYP / "Project Risk Assessment Form (CDHN10.30).docx"
+    src = FIRST_REQUIREMENTS / "02_Risk_and_Ethics" / "Project Risk Assessment Form (CDHN10.30).docx"
     doc = Document(src)
     t0 = doc.tables[0]
     _replace_cell(t0.cell(0, 1), STUDENT, 9.0)
@@ -485,7 +488,7 @@ def make_risk() -> Path:
 
 
 def make_ethics() -> Path:
-    src = FYP / "Ethical Consideration Form10.30.docx"
+    src = FIRST_REQUIREMENTS / "02_Risk_and_Ethics" / "Ethical Consideration Form10.30.docx"
     doc = Document(src)
     t0 = doc.tables[0]
     _replace_cell(t0.cell(0, 1), PROJECT_TITLE, 8.5)
@@ -512,7 +515,7 @@ def make_ethics() -> Path:
 
 
 def make_logbook() -> Path:
-    src = FYP / "Logbook Cover Sheet.docx"
+    src = FIRST_REQUIREMENTS / "03_First_Logbook" / "Logbook Cover Sheet.docx"
     doc = Document(src)
     configure_a4(doc, margins=(1.5, 1.5, 1.4, 1.4))
     set_doc_defaults(doc, font="Arial", size=9.5, line=1.0)
@@ -803,6 +806,7 @@ def make_preliminary() -> Path:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+    OVERVIEW_OUT.mkdir(parents=True, exist_ok=True)
     outputs = [make_roadmap(), make_risk(), make_ethics(), make_logbook(), make_preliminary()]
     for p in outputs:
         print(f"{p.name}\t{p.stat().st_size}")

@@ -5,7 +5,7 @@ Date reviewed: 2026-10-01
 ## Purpose
 
 This note records how the handwritten overall project structure in
-`C:\Users\jon15\Desktop\大四上\FYP\毕设总体结构-贾欧妮.pdf` maps to the
+`docs/fyp/project_reference/毕设总体结构-贾欧妮.pdf` maps to the
 current repository. It is the reporting checkpoint for later preliminary,
 interim, and final dissertation writing.
 
