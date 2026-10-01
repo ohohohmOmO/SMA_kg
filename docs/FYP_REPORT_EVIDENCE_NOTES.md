@@ -1,0 +1,121 @@
+# FYP Report Evidence And Innovation Notes
+
+Date reviewed: 2026-10-01
+
+## Purpose
+
+This note records how the handwritten overall project structure in
+`C:\Users\jon15\Desktop\大四上\FYP\毕设总体结构-贾欧妮.pdf` maps to the
+current repository. It is the reporting checkpoint for later preliminary,
+interim, and final dissertation writing.
+
+## Verified Pipeline Status
+
+The following parts of the diagram are implemented and supported by current
+code plus dated run artifacts:
+
+- PubMed acquisition: 4,554 abstracts.
+- Open Targets acquisition: 164 relationships used in the graph run.
+- BERTopic plus PubMedBERT topic analysis: 67 topics.
+- Full-corpus DeepSeek V4 Flash extraction: 18,347 raw LLM triples and 18,288
+  canonical de-duplicated triples covering 3,656 PMIDs.
+- Biomedical schema validation and confidence scoring.
+- Dictionary mapping and PubMedBERT semantic entity alignment.
+- Triple aggregation: 11,155 fused literature edges.
+- Relation conflict detection: 59 conflicting entity pairs and 164 fused
+  records marked `needs_review`.
+- Neo4j graph construction: 6,648 nodes, 11,208 total relationships, and no
+  isolated nodes in the recorded full run.
+
+Primary evidence documents:
+
+- `docs/reproduction/STAGE2_FULL_LLM_EXTRACTION_2026-06-09.md`
+- `docs/reproduction/STAGE3_STAGE4_REPRO_2026-06-09.md`
+- `artifacts/runs/stage2_extraction_llm_all_32w_2026-06-09/`
+- `artifacts/runs/stage3_fusion_full_2026-06-09/`
+- `artifacts/runs/stage4_graph_full_2026-06-09/`
+
+## Red Markings To Treat As Innovation Work
+
+The red markings in the source PDF define four innovation modules for later
+reports. They must be grouped under an `Innovation` or `Original Contribution`
+section, but their completion status must remain explicit.
+
+| Innovation | Intended contribution | Current verified status | Reporting rule |
+| --- | --- | --- | --- |
+| 1. Evidence validation | Align each generated evidence span back to its PubMed title/abstract, accept strong matches, and route uncertain paraphrases or cross-sentence evidence for review. | Not implemented in tracked source. Current `evidence_score` only checks whether `evidence_text` is non-empty; it does not calculate the PDF's proposed fuzzy similarity threshold. | Describe as a proposed innovation until code, tests, and evaluation artifacts exist. |
+| 2. GraphRAG | Retrieve Neo4j neighbourhoods and PMID-backed evidence, construct structured context, and generate evidence-grounded answers with a safe fallback. | Not implemented in tracked source. The Neo4j graph is implemented and can serve as its foundation. | Describe the graph as implemented; describe GraphRAG as planned until an end-to-end runner and QA evaluation exist. |
+| 3. Citation validation | Validate that answer citations refer to real retrieved PMID/evidence identifiers. | Not implemented in tracked source. | Do not claim citation correctness until invalid, missing, and mismatched citations are tested. |
+| 4. Claim-evidence validation | Decompose an answer into claims and verify whether retrieved evidence entails each claim. | Not implemented in tracked source. | Describe as planned until claim-level labels and measured validation results exist. |
+
+When a module becomes complete, its report status may move from `proposed
+innovation` to `implemented innovation` only after the repository contains the
+source, focused tests, a reproducible run artifact, and measured results.
+
+## Human Annotation Decision
+
+A reviewed annotation set is needed for a defensible final-year project,
+although the FYP handbook does not prescribe a fixed number of annotated
+records. The handbook requires quantifiable critical assessment of technical
+outcomes and makes the final report a major assessed component. Without an
+independent reviewed set, the project can report pipeline counts and graph
+topology but cannot credibly report extraction factuality.
+
+The 400-item workbook uses this design:
+
+- 300 reproducible random candidates for the main factuality/precision result.
+- 100 challenge candidates that over-sample lower confidence, non-exact
+  evidence, and rare relation cases for error analysis only.
+- 80 candidates flagged for independent second review, enabling inter-annotator
+  agreement reporting.
+- Four support labels: `2` directly supported, `1` partially or implicitly
+  supported, `0` unsupported or contradicted, and `U` unclear.
+- Separate checks for entity correctness, entity type, relation, direction,
+  evidence span, error type, and corrected triple.
+
+Main metrics must use only the 300 `primary_random` candidates. Challenge-set
+results must be reported separately. Because the workbook begins from predicted
+triples, it estimates factual correctness or precision. It does not establish
+recall. A recall claim requires exhaustive relation annotation over a separate
+sample of complete abstracts.
+
+The generated run is:
+
+- `artifacts/runs/stage2_gold_candidates_400_2026-10-01/`
+- `outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条.xlsx`
+
+All 400 records remain pending human review. AI-assisted suggestions may be used
+as a convenience, but they must not be reported as human gold labels. The
+student should confirm every record, and a supervisor or second reviewer should
+independently label the 80 flagged records.
+
+## FYP Folder Requirements Relevant To Reporting
+
+- The Project Specification and Preliminary Report template has an eight-page
+  maximum. Its required headings are Project Description, Measurable Outcomes,
+  Technical Background, References, and Work Plan.
+- The Interim Report template has a twelve-page maximum. Its required headings
+  are Project Outline, Work Done So Far, Conclusions From Initial Work,
+  Challenges and Solutions, Work To Be Done, Revised Gantt Chart, and
+  References.
+- The handbook assigns 40% to the final dissertation/report, 25% to the final
+  poster-based oral assessment, 15% to the interim report and oral assessment,
+  10% to the preliminary report, and 10% to professional conduct.
+- The handbook requires risk and ethical documentation and three logbook
+  submissions. Logbook entries must be contemporaneous and must not be
+  fabricated or backfilled as evidence of work that was not done.
+- The handbook permits Generative AI only under the applicable assessment
+  brief. Permitted use must be acknowledged, checked, and defensible by the
+  student. AI must not fabricate project activity, data, results, references,
+  decisions, or logbook records.
+- The public-PubMed annotation task does not itself recruit patients, collect
+  private medical data, or perform an intervention. The ethical declaration
+  should still be completed with the supervisor. If another person provides
+  labels, record only an agreed reviewer identifier and do not collect
+  unnecessary personal information.
+
+There is a deadline conflict inside the supplied folder: the 2026-27 handbook
+lists the final report deadline as 30 April 2027 at 23:59 CST, while
+`FYP_timeline.png` lists 28 April 2027 at 23:59 CST. The Moodle/FYP System and
+the current assessment brief should be treated as authoritative before the
+deadline is written into a report plan or logbook.

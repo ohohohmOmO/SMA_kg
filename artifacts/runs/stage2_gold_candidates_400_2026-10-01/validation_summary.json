@@ -1,0 +1,13 @@
+{
+  "triples_file": "data\\processed\\extracted_triples.jsonl",
+  "abstracts_file": "data\\raw\\pubmed_sma_abstracts.jsonl",
+  "candidate_count": 400,
+  "sampling_strategy": "evaluation_challenge",
+  "random_seed": 42,
+  "primary_random_count": 300,
+  "challenge_count": 100,
+  "second_review_count": 80,
+  "target_use": "manual gold standard before BioBERT/UIE-med fine-tuning",
+  "reporting_note": "Report primary_random metrics separately from challenge-set error analysis.",
+  "fine_tuning_recommendation": "Do not fine-tune until this candidate set is reviewed and baseline errors justify model training."
+}

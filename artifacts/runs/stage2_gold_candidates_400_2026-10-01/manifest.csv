@@ -1,0 +1,3 @@
+artifact,path,records,bytes,sha256,notes
+gold_candidates_jsonl,artifacts\runs\stage2_gold_candidates_400_2026-10-01\gold_candidates.jsonl,400,1085850,8ce93652ec985727e278d708d87437be8658e9096abc9b9c4bc803e6f157c979,pending manual review
+gold_candidates_csv,artifacts\runs\stage2_gold_candidates_400_2026-10-01\gold_candidates.csv,400,805014,261553d19f52f4eb140eb9beffb10587acb9f44b8c481d37ec2e3ba4fa9b8370,pending manual review

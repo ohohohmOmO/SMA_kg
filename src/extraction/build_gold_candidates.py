@@ -2,8 +2,9 @@ import argparse
 import csv
 import hashlib
 import json
+import random
 import sys
-from collections import defaultdict, deque
+from collections import Counter, defaultdict, deque
 from datetime import datetime
 from pathlib import Path
 
@@ -46,12 +47,42 @@ def load_abstracts(path):
     return abstracts
 
 
-def stratified_candidates(triples, limit):
-    buckets = defaultdict(list)
+def triple_signature(item):
+    return (
+        str(item.get("source_pmid", "")),
+        item["entity_1"]["name"].lower(),
+        item["relation"],
+        item["entity_2"]["name"].lower(),
+    )
+
+
+def normalized_unique_candidates(triples):
+    candidates = []
+    seen = set()
     for triple in triples:
         normalized, problems = normalize_triple(triple, require_evidence=False)
         if problems:
             continue
+        sig = triple_signature(normalized)
+        if sig in seen:
+            continue
+        seen.add(sig)
+        candidates.append(normalized)
+    return candidates
+
+
+def evidence_exact_match(item, abstracts):
+    evidence = str(item.get("evidence_text", "")).strip()
+    if not evidence:
+        return False
+    source = abstracts.get(str(item.get("source_pmid", "")), {})
+    source_text = f"{source.get('title', '')} {source.get('abstract', '')}".casefold()
+    return evidence.casefold() in source_text
+
+
+def stratified_candidates(triples, limit):
+    buckets = defaultdict(list)
+    for normalized in normalized_unique_candidates(triples):
         key = (normalized.get("relation", ""), normalized.get("extracted_by", "UNKNOWN"))
         buckets[key].append(normalized)
     for key in buckets:
@@ -66,15 +97,10 @@ def stratified_candidates(triples, limit):
             if not queue:
                 continue
             item = queue.popleft()
-            sig = (
-                item.get("source_pmid", ""),
-                item["entity_1"]["name"].lower(),
-                item["relation"],
-                item["entity_2"]["name"].lower(),
-            )
+            sig = triple_signature(item)
             if sig not in seen:
                 seen.add(sig)
-                selected.append(item)
+                selected.append({**item, "sample_group": "balanced_relation"})
                 if len(selected) >= limit:
                     break
             if queue:
@@ -83,12 +109,88 @@ def stratified_candidates(triples, limit):
     return selected
 
 
+def evaluation_challenge_candidates(triples, abstracts, limit, primary_count, seed):
+    """Build a representative primary sample plus a separate diagnostic challenge set.
+
+    The primary sample supports an unbiased overall precision estimate. The challenge
+    set deliberately over-samples low-confidence, non-exact-evidence, and rare-relation
+    cases and must be reported separately from the primary result.
+    """
+    candidates = normalized_unique_candidates(triples)
+    if limit > len(candidates):
+        limit = len(candidates)
+    primary_count = max(0, min(primary_count, limit))
+
+    rng = random.Random(seed)
+    shuffled = list(candidates)
+    rng.shuffle(shuffled)
+    primary = [{**item, "sample_group": "primary_random"} for item in shuffled[:primary_count]]
+    primary_signatures = {triple_signature(item) for item in primary}
+
+    relation_counts = Counter(item["relation"] for item in candidates)
+    challenge_buckets = defaultdict(list)
+    for item in candidates:
+        if triple_signature(item) in primary_signatures:
+            continue
+        confidence = float(item.get("computed_confidence", 0.0) or 0.0)
+        exact = evidence_exact_match(item, abstracts)
+        challenge_buckets[item["relation"]].append((
+            0 if confidence < 0.9 else 1,
+            0 if not exact else 1,
+            confidence,
+            rng.random(),
+            item,
+        ))
+
+    for relation in challenge_buckets:
+        challenge_buckets[relation].sort(key=lambda entry: entry[:4])
+
+    queues = [
+        deque(entry[-1] for entry in challenge_buckets[relation])
+        for relation in sorted(challenge_buckets, key=lambda name: (relation_counts[name], name))
+    ]
+    challenge = []
+    challenge_target = limit - primary_count
+    while queues and len(challenge) < challenge_target:
+        next_queues = []
+        for queue in queues:
+            if not queue:
+                continue
+            challenge.append({**queue.popleft(), "sample_group": "challenge"})
+            if len(challenge) >= challenge_target:
+                break
+            if queue:
+                next_queues.append(queue)
+        queues = next_queues
+
+    selected = primary + challenge
+    review_count = min(len(selected), round(len(selected) * 0.20))
+    review_rng = random.Random(seed + 1)
+    second_review_indexes = set(review_rng.sample(range(len(selected)), review_count))
+    return [
+        {**item, "requires_second_review": index in second_review_indexes}
+        for index, item in enumerate(selected)
+    ]
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Build review-ready gold-standard candidates for RE fine-tuning.")
     parser.add_argument("--triples-file", default="data/processed/extracted_triples.jsonl")
     parser.add_argument("--abstracts-file", default="data/raw/pubmed_sma_abstracts.jsonl")
     parser.add_argument("--run-dir", default="")
     parser.add_argument("--limit", type=int, default=750)
+    parser.add_argument(
+        "--sampling-strategy",
+        choices=("balanced_relation", "evaluation_challenge"),
+        default="balanced_relation",
+    )
+    parser.add_argument(
+        "--primary-count",
+        type=int,
+        default=-1,
+        help="Representative random sample size for evaluation_challenge; defaults to 75%% of limit.",
+    )
+    parser.add_argument("--seed", type=int, default=42)
     return parser.parse_args()
 
 
@@ -104,7 +206,17 @@ def main():
 
     triples = load_jsonl(triples_file)
     abstracts = load_abstracts(abstracts_file)
-    selected = stratified_candidates(triples, args.limit)
+    primary_count = args.primary_count if args.primary_count >= 0 else round(args.limit * 0.75)
+    if args.sampling_strategy == "evaluation_challenge":
+        selected = evaluation_challenge_candidates(
+            triples,
+            abstracts,
+            args.limit,
+            primary_count,
+            args.seed,
+        )
+    else:
+        selected = stratified_candidates(triples, args.limit)
 
     review_rows = []
     for idx, triple in enumerate(selected, 1):
@@ -112,6 +224,8 @@ def main():
         source = abstracts.get(pmid, {})
         row = {
             "candidate_id": f"SMA-RE-{idx:04d}",
+            "sample_group": triple.get("sample_group", args.sampling_strategy),
+            "requires_second_review": "yes" if triple.get("requires_second_review", False) else "no",
             "source_pmid": pmid,
             "title": source.get("title", ""),
             "abstract": source.get("abstract", ""),
@@ -121,11 +235,27 @@ def main():
             "entity_2_name": triple["entity_2"]["name"],
             "entity_2_type": triple["entity_2"]["type"],
             "evidence_text": triple.get("evidence_text", ""),
+            "evidence_exact_match": "yes" if evidence_exact_match(triple, abstracts) else "no",
             "computed_confidence": triple.get("computed_confidence", ""),
             "extracted_by": triple.get("extracted_by", ""),
             "review_status": "pending_review",
-            "gold_label": "",
+            "support_label": "",
+            "entity_1_correct": "",
+            "entity_2_correct": "",
+            "relation_correct": "",
+            "direction_correct": "",
+            "evidence_span_correct": "",
+            "error_type": "",
+            "corrected_triple": "",
+            "reviewer_id": "",
+            "review_date": "",
             "review_notes": "",
+            "second_reviewer_id": "",
+            "second_support_label": "",
+            "second_review_date": "",
+            "second_review_notes": "",
+            "adjudicated_label": "",
+            "adjudication_notes": "",
         }
         review_rows.append(row)
 
@@ -142,7 +272,13 @@ def main():
         "triples_file": str(triples_file.relative_to(REPO_ROOT)),
         "abstracts_file": str(abstracts_file.relative_to(REPO_ROOT)),
         "candidate_count": len(review_rows),
+        "sampling_strategy": args.sampling_strategy,
+        "random_seed": args.seed,
+        "primary_random_count": sum(row["sample_group"] == "primary_random" for row in review_rows),
+        "challenge_count": sum(row["sample_group"] == "challenge" for row in review_rows),
+        "second_review_count": sum(row["requires_second_review"] == "yes" for row in review_rows),
         "target_use": "manual gold standard before BioBERT/UIE-med fine-tuning",
+        "reporting_note": "Report primary_random metrics separately from challenge-set error analysis.",
         "fine_tuning_recommendation": "Do not fine-tune until this candidate set is reviewed and baseline errors justify model training.",
     }
     (run_dir / "validation_summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

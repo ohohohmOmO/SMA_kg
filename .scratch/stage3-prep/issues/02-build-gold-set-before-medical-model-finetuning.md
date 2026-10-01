@@ -47,3 +47,10 @@ review protocol should be used before considering BioBERT/UIE-med fine tuning.
 
 - This issue should not block Stage 3 fusion unless the user explicitly decides
   to rebuild Stage 2 from a newly promoted or reviewed dataset first.
+- 2026-10-01: generated a 400-item review workbook and reproducible candidate
+  run at `artifacts/runs/stage2_gold_candidates_400_2026-10-01/`. The design
+  separates 300 representative random candidates for main factuality metrics
+  from 100 challenge candidates for error analysis, and flags 80 items for
+  independent second review. All labels remain pending human review, so the
+  issue stays open. Four hundred items are suitable for the FYP evaluation;
+  expand toward the original 500-1000 target before supervised fine-tuning.

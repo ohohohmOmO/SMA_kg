@@ -3,3 +3,6 @@
 .env
 .env.local
 .env.*.local
+tmp/
+outputs/**/*.inspect.ndjson
+outputs/**/*_preview.png
