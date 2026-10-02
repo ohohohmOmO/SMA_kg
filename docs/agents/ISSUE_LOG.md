@@ -17,6 +17,20 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - Bundled DOCX renderer could not find LibreOffice
+
+- Symptom: The packaged `render_docx.py` stopped before rendering the updated
+  FYP Roadmap because `soffice.exe` was not available on the bundled runtime
+  PATH.
+- Cause: The installed Codex primary-runtime bundle includes the document
+  renderer and Poppler but no LibreOffice executable.
+- Fix: Used Microsoft Word's installed COM export in headless mode to create a
+  temporary PDF, then rasterized it with the bundled Poppler for the required
+  page-by-page visual review.
+- Verification: The updated five-page Roadmap rendered successfully; all five
+  page images were inspected with no clipping, overlap, missing glyphs, broken
+  tables, or page-number defects.
+
 ### 2026-10-02 - Current human-review workbook had no compatible offline report
 
 - Symptom: The current 400-item workbook could not be evaluated through the

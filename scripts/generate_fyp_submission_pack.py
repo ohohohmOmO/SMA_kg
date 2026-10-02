@@ -241,7 +241,7 @@ def make_roadmap() -> Path:
     style_run(p.add_run(PROJECT_TITLE), 12, True, (47, 84, 117), "Arial")
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    style_run(p.add_run("编制日期：2026-10-01｜计划起点：2026-10-01｜学年：2026/27"), 9.5, False, (80, 80, 80), "Microsoft YaHei")
+    style_run(p.add_run("更新日期：2026-10-02｜计划起点：2026-10-01｜学年：2026/27"), 9.5, False, (80, 80, 80), "Microsoft YaHei")
     add_banner(doc, "真实性原则：本计划从现在开始安排未来工作；不把现有成果伪造成过去逐周完成的 logbook 记录。")
 
     doc.add_heading("1. 已确认的提交节点", level=1)
@@ -249,11 +249,11 @@ def make_roadmap() -> Path:
         doc,
         ["提交/考核", "权重", "截止时间（CST）", "交付内容与渠道"],
         [
-            ["Specification & Preliminary Report", "10%", "2026-10-30 23:59", "Preliminary Report + 第1本 Logbook + Risk Assessment；GC-UESTC FYP System"],
-            ["Interim Report + Oral + 第2本 Logbook", "15%", "报告：2027-01-08 23:59\n口试：2027-01-11—22", "FYP System；报告、演示与问答综合考核"],
+            ["Specification & Preliminary Report", "5%", "2026-10-30 23:59", "Preliminary Report + 第1本 Logbook + Risk Assessment；GC-UESTC FYP System"],
+            ["Interim Report + 第2本 Logbook", "15%", "报告：2027-01-08 23:59\n口试：2027-01-11—22", "FYP System；按课程安排参加演示与问答"],
             ["Poster submission", "—", "2027-04-16 12:00", "FYP System"],
-            ["Poster oral presentation", "25%", "2027-04-19—21", "海报讲解与现场问答"],
-            ["Final Report + 第3本 Logbook", "40%", "时间存在冲突，见下方警告", "纸质提交 + Moodle + FYP System"],
+            ["Oral Presentation", "20%", "2027-04-19—21", "海报讲解与现场问答；海报未单列独立权重"],
+            ["Final Report + 第3本 Logbook", "50%", "时间存在冲突，见下方警告", "纸质提交 + Moodle + FYP System"],
             ["Student Performance Evaluation", "10%", "2027-04-28", "导师通过 FYP System 评价"],
             ["Software/code/prototype", "—", "时间存在冲突，见下方警告", "软件代码与相关材料归档提交"],
         ],
@@ -383,6 +383,7 @@ def make_roadmap() -> Path:
         "Student Handbook FYP 2026-27.pdf",
         "Project writing and plagiarism printing 2017.pdf",
         "FYP_timeline.png",
+        "各阶段 Assessment Overview 评分表（5% + 15% + 10% + 20% + 50%）",
         "D:\\kg_sma_0704\\docs\\fyp\\project_reference\\毕设总体结构-贾欧妮.pdf 与项目代码、运行产物和复现文档",
     ], size=9.5)
 

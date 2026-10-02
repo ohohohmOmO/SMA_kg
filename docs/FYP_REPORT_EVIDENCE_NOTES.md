@@ -98,9 +98,13 @@ independently label the 80 flagged records.
   are Project Outline, Work Done So Far, Conclusions From Initial Work,
   Challenges and Solutions, Work To Be Done, Revised Gantt Chart, and
   References.
-- The handbook assigns 40% to the final dissertation/report, 25% to the final
-  poster-based oral assessment, 15% to the interim report and oral assessment,
-  10% to the preliminary report, and 10% to professional conduct.
+- The Assessment Overview sheets supplied on 2026-10-02 assign 50% to the
+  final report, 20% to the oral presentation, 15% to the interim report, 5% to
+  the Project Specifications and Preliminary Report, and 10% to continuous
+  student performance. These sheets total 100% and are used as the current
+  working allocation. They differ from the earlier handbook summary, so the
+  latest Moodle/FYP System assessment brief must still be checked before each
+  submission.
 - The handbook requires risk and ethical documentation and three logbook
   submissions. Logbook entries must be contemporaneous and must not be
   fabricated or backfilled as evidence of work that was not done.

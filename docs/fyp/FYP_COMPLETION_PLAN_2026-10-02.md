@@ -29,9 +29,11 @@
 | 海报口试 | 2027-04-19—04-21 | 海报说明与技术问答，必要时提供演示或录屏 |
 | 最终报告、第三本 Logbook 与代码 | 时间线图片为 2027-04-28 23:59；Handbook 为 2027-04-30 23:59 | 以 4 月 28 日为内部完成日期，正式日期由 Moodle/FYP System 最新说明确认 |
 
-Handbook 中 Final Report 占 40%，Poster-based Oral Assessment 占 25%，中期书面报告 5% 与独立面板考核 10%，Preliminary Report 10%，Professional Conduct 10%。海报考核通常约 20 分钟，海报质量与口头解释/问答通常按 30%/70% 分配。项目应安排技术理解、评价与答辩准备，不能只安排界面开发。
+2026-10-02 新增的五份 Assessment Overview 评分表给出的完整权重为：Project Specifications and Preliminary Report 5%、Interim Report 15%、Quality of Technical Work and Continuous Performance 10%、Oral Presentation 20%、Final Report 50%，合计 100%。这与 Handbook 中较早的 10%/5%+10%/25%/40% 表述不同，因此当前计划按新评分表安排，并在提交前以 Moodle/FYP System 最新 assessment brief 再确认。新评分表没有单列 Poster 权重，现阶段把海报视为 Oral Presentation 的展示材料。
 
-Handbook 第 10—12 页要求可测量任务、用户交互说明、实验和 Gantt；工作计划须与导师讨论。主任务可以整合为下文四个工作包。报告使用提供的模板：Preliminary Report 总计不超过 8 页，Interim Report 不超过 12 页。当前材料中的详细评分 rubric 和实时系统通知仍须在提交前核对。
+评分细则进一步表明：Oral Presentation 的 Technical Content 和 Response to Questions 各为双倍权重；Final Report 的 Technical Content & Quality of Analysis 为三倍权重；持续表现中的 Technical Quality 为双倍权重。项目应优先安排技术理解、可复现评价、证据链、独立问题解决和答辩准备，不能只安排界面开发。
+
+Handbook 第 10—12 页要求可测量任务、用户交互说明、实验和 Gantt；工作计划须与导师讨论。主任务可以整合为下文四个工作包。报告使用提供的模板：Preliminary Report 总计不超过 8 页，Interim Report 不超过 12 页。Preliminary 评分表还明确检查项目描述、主要任务和目标、SMART objectives、基本技术背景与 Gantt chart。实时系统通知仍须在提交前核对。
 
 ## 当前基础与实际缺口
 
