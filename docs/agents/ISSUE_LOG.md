@@ -17,6 +17,18 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - Inline GraphRAG audit indexed a source-sentence generator
+
+- Symptom: Read-only audit stopped with TypeError after snapshot/live retrieval
+  had already matched; citation/control-flow checks had not run.
+- Cause: The audit harness used list indexing on source_sentences, which yields
+  a generator. No product-code defect was established.
+- Fix: Used next(source_sentences(...)) in the explicitly synthetic fixture.
+  Product modules, canonical inputs and database were not changed.
+- Verification: Eight synthetic citation/answer-routing checks passed without
+  model API calls. Real snapshot and Neo4j retrieval matched the active repaired
+  graph. Boundaries and module hashes recorded in GRAPHRAG_MODULE_AUDIT_2026-10-02.
+
 ### 2026-10-02 - FYP notes treated conflicting assessment sources as a confirmed replacement
 
 - Symptom: Central assessment notes called 5/15/10/20/50 confirmed and inferred
