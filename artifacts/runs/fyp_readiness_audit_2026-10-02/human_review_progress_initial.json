@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-02T03:18:55.431946+00:00",
+  "groups": {
+    "primary_random": {
+      "sample_count": 300,
+      "final_review_count": 0,
+      "final_label_counts": {},
+      "ready_for_report": false,
+      "metrics": null
+    },
+    "challenge": {
+      "sample_count": 100,
+      "final_review_count": 0,
+      "final_label_counts": {},
+      "ready_for_report": false,
+      "metrics": null
+    }
+  },
+  "agreement_before_adjudication": {
+    "independent_review_pairs_entered": 0,
+    "raw_agreement": null,
+    "cohen_kappa_nominal": null
+  },
+  "validation_issues": [],
+  "limits": [
+    "No API calls or invented labels; workbook is read-only.",
+    "No population quality rates for incomplete groups.",
+    "Agreement is based on entered labels; reviewer independence must be documented.",
+    "Support rate does not measure recall, fused-edge correctness or answer quality."
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-02T03:11:28.478172+00:00",
+  "structural_issue_count": 0,
+  "checks": {
+    "abstracts": {
+      "records": 4554,
+      "parse_errors": 0,
+      "duplicate_pmids": 0
+    },
+    "raw": {
+      "records": 18288,
+      "parse_errors": 0,
+      "schema_invalid": 0,
+      "missing_sources": 0
+    },
+    "mapped": {
+      "records": 18288,
+      "parse_errors": 0,
+      "schema_invalid": 0,
+      "missing_sources": 0
+    },
+    "aligned": {
+      "records": 18288,
+      "parse_errors": 0,
+      "schema_invalid": 0,
+      "missing_sources": 0
+    },
+    "fused": {
+      "records": 11155,
+      "parse_errors": 0,
+      "provenance_or_count_errors": 0,
+      "missing_aligned_groups": 0,
+      "review_status": {
+        "accepted": 10991,
+        "needs_review": 164
+      }
+    },
+    "conflicts": {
+      "records": 59,
+      "parse_errors": 0,
+      "missing_relation_sources": 0
+    },
+    "candidates": {
+      "records": 400,
+      "parse_errors": 0,
+      "source_or_signature_errors": 0,
+      "duplicate_ids": 0,
+      "groups": {
+        "primary_random": 300,
+        "challenge": 100
+      }
+    },
+    "evidence_location": {
+      "not_located": 2419,
+      "exact": 15733,
+      "case_whitespace_match": 136
+    },
+    "alignment": {
+      "changed_name_mappings": 2584,
+      "unexpected_field_changes": 0
+    },
+    "workbook": {
+      "records": 400,
+      "protected_input_errors": 0,
+      "support_labels_entered": 0,
+      "review_status": {
+        "pending_review": 400
+      },
+      "required_second_reviews": 80
+    }
+  },
+  "issues": [],
+  "limits": [
+    "No human labels are assigned or interpreted as final metrics.",
+    "Text matching is not semantic support validation.",
+    "No database connection, API call, or canonical-output write is performed."
+  ]
+}

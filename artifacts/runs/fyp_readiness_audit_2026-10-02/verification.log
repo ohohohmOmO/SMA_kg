@@ -1,0 +1,11 @@
+test_correct_relation_can_have_inadequate_extracted_evidence (test_fyp_review.FypReviewTests.test_correct_relation_can_have_inadequate_extracted_evidence) ... ok
+test_disagreement_blocks_final_rates_until_adjudicated (test_fyp_review.FypReviewTests.test_disagreement_blocks_final_rates_until_adjudicated) ... ok
+test_empty_review_is_pending_not_zero_accuracy (test_fyp_review.FypReviewTests.test_empty_review_is_pending_not_zero_accuracy) ... ok
+test_missing_identity_or_self_second_review_blocks_metrics (test_fyp_review.FypReviewTests.test_missing_identity_or_self_second_review_blocks_metrics) ... ok
+test_span_match_is_only_text_location (test_fyp_review.FypReviewTests.test_span_match_is_only_text_location) ... ok
+test_unknowns_and_challenge_are_not_silently_pooled (test_fyp_review.FypReviewTests.test_unknowns_and_challenge_are_not_silently_pooled) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

@@ -116,6 +116,28 @@ Historical or archived context:
   `data/interim/relation_conflicts.jsonl` if the graph needs conflict
   adjudication rather than `needs_review` marking.
 
+## FYP Completion Work - 2026-10-02
+
+- The proposed schedule is in `docs/fyp/FYP_COMPLETION_PLAN_2026-10-02.md`.
+- Review instructions and verification boundaries are in
+  `docs/fyp/HUMAN_REVIEW_AND_VALIDATION_GUIDE_2026-10-02.md`.
+- `src/evaluation/audit_fyp_inputs.py` performs offline, read-only input and
+  provenance checks, writing to a new dated run directory. The completed run
+  is `artifacts/runs/fyp_readiness_audit_2026-10-02/`; it found no issues in
+  the implemented structural/provenance checks. It does not establish
+  biomedical correctness or semantic evidence support.
+- The evidence-location diagnostic found 15733 exact matches, 136
+  case/whitespace matches, and 2419 non-located evidence texts. It also
+  generated alignment-change and conflict-evidence review queues.
+- All 400 annotation candidates remain pending human review. Use
+  `src/evaluation/summarize_gold_review.py` to validate entries and report
+  progress without API scoring. Incomplete groups do not receive final
+  population quality rates.
+- Next: fix the annotation protocol with an independent pilot, arrange the
+  80 independent second reviews, and start formal annotation while building
+  the graph evidence interface. The planned GraphRAG and semantic
+  claim-validation modules remain incomplete.
+
 ## Before Each Run
 
 - Confirm `conda activate KG_SMA_env` or use

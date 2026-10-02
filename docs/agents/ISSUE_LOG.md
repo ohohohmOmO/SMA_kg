@@ -17,6 +17,21 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - Current human-review workbook had no compatible offline report
+
+- Symptom: The current 400-item workbook could not be evaluated through the
+  historical `metrics_calculator.py`, which expects a different scored CSV
+  and uses a fixed LLM fallback score when its API key is absent.
+- Cause: The historical scorer predates the primary/challenge sampling,
+  independent human reviews, unknown labels and adjudication fields.
+- Fix: Added a separate read-only offline reporting entrypoint for the current
+  workbook with sample-identity checks, separate groups, explicit unknown
+  denominators and pre-adjudication human agreement. The legacy scorer is
+  explicitly excluded from this workflow; its code is not changed.
+- Verification: The initial 400-pending workbook reports null quality metrics
+  and zero final reviews without API calls; all 18 unit tests passed,
+  including incomplete-review, unknown-label and adjudication cases.
+
 ### 2026-10-02 - FYP document inspection used incompatible console encoding
 
 - Symptom: A read-only OOXML inspection printed garbled Chinese and stopped
