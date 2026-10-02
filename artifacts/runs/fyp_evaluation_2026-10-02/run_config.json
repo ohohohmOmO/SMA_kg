@@ -1,0 +1,6 @@
+{
+  "workbook": "outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx",
+  "run_dir": "artifacts/runs/fyp_evaluation_2026-10-02",
+  "label_provenance": "ai_assisted_unconfirmed",
+  "provenance_note": "Human confirmation scope requested; not yet established."
+}

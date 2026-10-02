@@ -127,3 +127,37 @@ Open decisions before changing Stage 1 or Stage 2 inputs:
 - `.scratch/stage3-prep/issues/02-build-gold-set-before-medical-model-finetuning.md`
 
 See `docs/PROJECT_HANDOFF_2026-06-09.md` for the current project handoff.
+
+## FYP evaluation and evidence inspection — 2026-10-02
+
+The completion protocol and current status are in
+`docs/fyp/FYP_EVALUATION_PROTOCOL_2026-10-02.md` and
+`docs/fyp/FYP_COMPLETION_STATUS_2026-10-02.md`. The completed offline experiment
+package is `artifacts/runs/fyp_evaluation_2026-10-02/`: open
+`evidence_explorer.html` in a browser, read `summary_zh.md` and
+`results_and_discussion.md`, and inspect the hash manifest and row-level outputs.
+
+Reproduce into a NEW directory using `KG_SMA_env`:
+
+```powershell
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/run_fyp_evaluation.py --workbook 'outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx' --run-dir 'artifacts/runs/fyp_evaluation_new_run' --label-provenance ai_assisted_unconfirmed
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/build_fyp_report.py --run-dir 'artifacts/runs/fyp_evaluation_new_run'
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/build_fyp_graph_explorer.py --run-dir 'artifacts/runs/fyp_evaluation_new_run'
+```
+
+The runner never modifies the workbook, canonical data or Neo4j. The source
+workbook records AI-assisted labels; their actual human-confirmation scope has
+not been established. Do not select `human_confirmed_all` without the actual
+user confirmation and its recorded `--provenance-note`. Fusion correctness
+requires the separate 30-unit review; the browser exports these judgments as
+JSON, validated by `src/evaluation/summarize_fusion_review.py`.
+
+Source traceability, evidence adequacy, relation support and entity identity are
+different measures. The evidence module is conservative lexical triage, not
+semantic entailment. GraphRAG and claim-level validation remain future work.
+
+Open `graph_explorer.html` for the complete frozen graph with bounded directed
+neighbourhoods and full source joins. External associations retain their source
+identifiers in a separate namespace. `USAGE_AND_ACCEPTANCE_zh.md` records actual
+interface checks; these are agent-performed functional checks, not independent
+user-study results or student activity logbooks.

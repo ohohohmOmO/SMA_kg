@@ -129,14 +129,40 @@ Historical or archived context:
 - The evidence-location diagnostic found 15733 exact matches, 136
   case/whitespace matches, and 2419 non-located evidence texts. It also
   generated alignment-change and conflict-evidence review queues.
-- All 400 annotation candidates remain pending human review. Use
-  `src/evaluation/summarize_gold_review.py` to validate entries and report
-  progress without API scoring. Incomplete groups do not receive final
-  population quality rates.
-- Next: fix the annotation protocol with an independent pilot, arrange the
-  80 independent second reviews, and start formal annotation while building
-  the graph evidence interface. The planned GraphRAG and semantic
-  claim-validation modules remain incomplete.
+- The original blank workbook remains pending. The user subsequently supplied
+  `outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx`
+  with 400 integrated support/span labels. Its source reviewer metadata is
+  `ChatGPT-GPT-5.6-Sol`; actual human confirmation scope is requested and not
+  established. Independent second-review fields are empty. Do not turn these
+  labels into independent human gold without the actual confirmation record.
+- The compact-label adapter and offline evaluation are implemented in
+  `src/evaluation/fyp_dataset.py` and `run_fyp_evaluation.py`. Original labels,
+  identities and source fields are preserved; blank component fields are not
+  imputed. Keep the older detailed-workbook reporter for its original protocol.
+- Completed automated run: `artifacts/runs/fyp_evaluation_2026-10-02/`.
+  Controlled raw/dictionary/semantic aggregation has 13697/13080/11155 unique
+  relation edges, preserves all 18288 evidence records and reproduces canonical
+  semantic aggregation byte-for-byte. Mapping correctness awaits a separate
+  fixed 30-unit review, not the extraction workbook.
+- `src/biomedical/evidence_validation.py` implements source-offset location,
+  typography normalization, ordered fragments and conservative lexical triage.
+  It leaves 1152 spans unlocated, offers fuzzy suggestions for review only,
+  and does not establish semantic entailment. Internal PMID-disjoint test
+  results are against the supplied reference labels, with provenance limits.
+- Generated deliverables: offline `evidence_explorer.html`, scientific figures,
+  `results_and_discussion.md`, `summary_zh.md`, JSON/CSV diagnostics and manifests
+  inside the run. Reporting checkpoints are in
+  `docs/fyp/FYP_EVALUATION_PROTOCOL_2026-10-02.md` and
+  `docs/fyp/FYP_COMPLETION_STATUS_2026-10-02.md`.
+- `build_fyp_graph_explorer.py` also builds `graph_explorer.html`: complete
+  literature-edge/original-record/abstract joins, bounded directed neighbours,
+  filters, potential conflicts and separately identified Open Targets records.
+  Ten real browser functional checks are recorded in
+  `USAGE_AND_ACCEPTANCE_zh.md`; these are not independent human user testing.
+- Next human-dependent work: establish actual confirmation scope and enter the
+  30 mapping judgments using the offline explorer. Independent agreement stays
+  unavailable until independent reviewers provide labels. GraphRAG and
+  semantic claim-validation modules remain incomplete and outside this run.
 
 ## Before Each Run
 

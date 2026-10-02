@@ -17,6 +17,50 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - Generated SVG path whitespace failed staged diff checks
+
+- Symptom: `git diff --cached --check` reported trailing whitespace in the
+  three generated scientific SVG figures.
+- Cause: Matplotlib serializes multiline SVG path coordinates with trailing
+  spaces; they are harmless to rendering but fail the repository diff check.
+- Fix: The figure builder removes end-of-line whitespace after SVG export,
+  retaining newline separators and all path coordinates. Regenerated figures
+  and updated their verification hashes.
+- Verification: XML parsing succeeds and staged diff whitespace checks pass.
+
+### 2026-10-02 - Compact final-review workbook needed a provenance-preserving adapter
+
+- Symptom: The supplied final workbook uses integrated support labels and Chinese
+  span labels, while the detailed original protocol expects component checks and
+  independent reviewer/adjudication fields. Optional OOXML metadata inspection
+  also raised `KeyError` for absent `docProps/core.xml`.
+- Cause: The revised workbook has a different review protocol and does not
+  require optional package metadata. Empty component fields and AI reviewer
+  metadata cannot be interpreted as completed independent human reviews.
+- Fix: Added a separate compact-label adapter with protected candidate/source
+  checks; normalized span labels without inventing component judgments. Treated
+  OOXML package metadata as optional during inspection. Preserved the source
+  workbook and recorded pending human confirmation explicitly.
+- Verification: All 400 protected candidates match; integrated labels parse;
+  original workbook SHA-256 remains unchanged. Regression tests cover label
+  normalization, tampered identities and missing human provenance.
+
+### 2026-10-02 - Browser download completion could not be verified for review export
+
+- Symptom: The in-app browser automation timed out while waiting for a blob JSON
+  download completion event. The actual download completion was not established.
+- Cause: The current browser-tool event capture did not provide a completed
+  download result for this local export; no claim is made that browser downloads
+  themselves are broken.
+- Fix: Added a visible, selectable JSON text export alongside the download
+  button, using the same export schema and queue hash. This provides a copy/save
+  route independent of download-event capture.
+- Verification: A clearly marked synthetic queue in a separate storage namespace
+  retained its one synthetic review after reload. The text export parsed as
+  `sma_fusion_review_v1` with the expected synthetic queue hash, protected mapping
+  and judgment. No real fusion judgments were created. Temporary fixture and
+  browser tabs were removed after verification.
+
 ### 2026-10-02 - Bundled DOCX renderer could not find LibreOffice
 
 - Symptom: The packaged `render_docx.py` stopped before rendering the updated

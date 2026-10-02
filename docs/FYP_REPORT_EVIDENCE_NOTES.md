@@ -1,6 +1,6 @@
 # FYP Report Evidence And Innovation Notes
 
-Date reviewed: 2026-10-01
+Date reviewed: 2026-10-02
 
 ## Purpose
 
@@ -43,7 +43,7 @@ section, but their completion status must remain explicit.
 
 | Innovation | Intended contribution | Current verified status | Reporting rule |
 | --- | --- | --- | --- |
-| 1. Evidence validation | Align each generated evidence span back to its PubMed title/abstract, accept strong matches, and route uncertain paraphrases or cross-sentence evidence for review. | Not implemented in tracked source. Current `evidence_score` only checks whether `evidence_text` is non-empty; it does not calculate the PDF's proposed fuzzy similarity threshold. | Describe as a proposed innovation until code, tests, and evaluation artifacts exist. |
+| 1. Evidence validation | Align generated spans to source and route potentially inadequate evidence for review. | Source-offset locator and conservative lexical triage implemented in `src/biomedical/evidence_validation.py`, with regression tests and full-corpus/internal reference-label evaluation in `artifacts/runs/fyp_evaluation_2026-10-02/`. Fuzzy suggestions never auto-accept. The original confidence `evidence_score` remains the historical nonempty heuristic. | Claim implemented traceability/triage; do not claim semantic entailment, calibrated accuracy, clinical verification or independent human evaluation before provenance is confirmed. |
 | 2. GraphRAG | Retrieve Neo4j neighbourhoods and PMID-backed evidence, construct structured context, and generate evidence-grounded answers with a safe fallback. | Not implemented in tracked source. The Neo4j graph is implemented and can serve as its foundation. | Describe the graph as implemented; describe GraphRAG as planned until an end-to-end runner and QA evaluation exist. |
 | 3. Citation validation | Validate that answer citations refer to real retrieved PMID/evidence identifiers. | Not implemented in tracked source. | Do not claim citation correctness until invalid, missing, and mismatched citations are tested. |
 | 4. Claim-evidence validation | Decompose an answer into claims and verify whether retrieved evidence entails each claim. | Not implemented in tracked source. | Describe as planned until claim-level labels and measured validation results exist. |
@@ -84,10 +84,21 @@ The generated run is:
 - `artifacts/runs/stage2_gold_candidates_400_2026-10-01/`
 - `outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条.xlsx`
 
-All 400 records remain pending human review. AI-assisted suggestions may be used
-as a convenience, but they must not be reported as human gold labels. The
-student should confirm every record, and a supervisor or second reviewer should
-independently label the 80 flagged records.
+The original workbook remains blank. A supplied final-review variant contains
+all 400 integrated support/span judgments and was matched to the frozen source.
+Its reviewer metadata identifies ChatGPT and its notes describe multi-round
+AI-assisted review; actual user verification scope is still awaiting confirmation.
+Do not label it independent human gold. The new compact adapter preserves empty
+component fields and reports reference statistics separately from human-confirmed
+statistics. Second-review agreement remains unavailable because those fields are
+empty. No new request to re-annotate all 400 records is made.
+
+The automated completion run is `artifacts/runs/fyp_evaluation_2026-10-02/`.
+It includes raw/dictionary/semantic controls, source preservation checks, a
+30-unit changed-mapping queue, evidence sidecars, an offline explorer and a
+results/discussion draft. Fusion semantic correctness still requires its own
+judgments. See `docs/fyp/FYP_COMPLETION_STATUS_2026-10-02.md` before claiming
+completion or copying metrics into a submission.
 
 ## FYP Folder Requirements Relevant To Reporting
 

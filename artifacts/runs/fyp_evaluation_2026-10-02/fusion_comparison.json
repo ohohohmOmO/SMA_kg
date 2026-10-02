@@ -1,0 +1,59 @@
+{
+  "conditions": {
+    "raw": {
+      "input_records": 18288,
+      "unique_relation_edges": 13697,
+      "typed_nodes": 9256,
+      "unique_directed_pairs": 13064,
+      "average_total_degree_projected": 2.8228176318063958,
+      "weak_components": 334,
+      "largest_component_nodes": 8374,
+      "outside_largest_component_fraction": 0.0952895419187554,
+      "degree_zero_nodes": 0,
+      "self_loop_relation_edges": 0,
+      "conflict_pairs": 32,
+      "preserved_evidence_records": 18288,
+      "compression_vs_raw_unique_edges": 0.0
+    },
+    "dictionary": {
+      "input_records": 18288,
+      "unique_relation_edges": 13080,
+      "typed_nodes": 9225,
+      "unique_directed_pairs": 12445,
+      "average_total_degree_projected": 2.6981029810298103,
+      "weak_components": 333,
+      "largest_component_nodes": 8345,
+      "outside_largest_component_fraction": 0.0953929539295393,
+      "degree_zero_nodes": 0,
+      "self_loop_relation_edges": 2,
+      "conflict_pairs": 35,
+      "preserved_evidence_records": 18288,
+      "compression_vs_raw_unique_edges": 0.045046360516901474
+    },
+    "semantic": {
+      "input_records": 18288,
+      "unique_relation_edges": 11155,
+      "typed_nodes": 6684,
+      "unique_directed_pairs": 10361,
+      "average_total_degree_projected": 3.100239377618193,
+      "weak_components": 171,
+      "largest_component_nodes": 6274,
+      "outside_largest_component_fraction": 0.06134051466187911,
+      "degree_zero_nodes": 0,
+      "self_loop_relation_edges": 13,
+      "conflict_pairs": 59,
+      "preserved_evidence_records": 18288,
+      "compression_vs_raw_unique_edges": 0.18558808498211288
+    }
+  },
+  "checks": {
+    "dictionary_replay_errors": 0,
+    "stable_field_errors": 0,
+    "fused_provenance_errors": 0,
+    "semantic_aggregation_reproduces_canonical_bytes": true
+  },
+  "changed_mapping_units": 2584,
+  "semantic_mapping_correctness": null,
+  "human_review_status": "30 units prepared; no mapping judgments supplied",
+  "sampling": "uniform random mapping-change units; seed 20261002; n=30"
+}

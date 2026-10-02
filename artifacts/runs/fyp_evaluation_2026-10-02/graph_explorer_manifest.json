@@ -1,0 +1,41 @@
+{
+  "builder_sha256": "e141bc48fbf46d6b6a62bbeca75d70f8a5e30deb8bf92cb94b8edcd7bed0c0c6",
+  "template_sha256": "c24b7c2ea30226018bedb8438c7e0790e946ddbcc5d6828061b58c821eaddf0e",
+  "inputs": {
+    "raw": {
+      "path": "D:\\kg_sma_0704\\data\\processed\\extracted_triples.jsonl",
+      "sha256": "0d23d5dd162744dd70228905e6367800658e5d0af0b7328df50a6e62bfde76cb"
+    },
+    "aligned": {
+      "path": "D:\\kg_sma_0704\\data\\interim\\aligned_triples.jsonl",
+      "sha256": "65fc3e961e37e5361b47dd46dccef4916575d0e3b71130a8e6c775a18b36e58e"
+    },
+    "fused": {
+      "path": "D:\\kg_sma_0704\\data\\processed\\fused_triples.jsonl",
+      "sha256": "1771293aad8258befe717c7c7ca00c349fe5fdb782b84245b1357ad45e332b5a"
+    },
+    "sources": {
+      "path": "D:\\kg_sma_0704\\data\\raw\\pubmed_sma_abstracts.jsonl",
+      "sha256": "5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48"
+    },
+    "validations": {
+      "path": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_evaluation_2026-10-02\\evidence_validation_full.jsonl",
+      "sha256": "137bf36df8ab913a4eb613ea96c91f8c655d9f581531bfe1ca4d746d1027c2bb"
+    },
+    "external": {
+      "path": "D:\\kg_sma_0704\\data\\external\\sma_gda_baseline.jsonl",
+      "sha256": "f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb"
+    }
+  },
+  "output_sha256": "e1409ff47ceafc08e475a40d3ed6ef0def8b372113a6706bfbc8f05f7343a525",
+  "nodes_by_namespace": {
+    "literature": 6684,
+    "opentargets": 165
+  },
+  "literature_edges": 11155,
+  "external_edges": 164,
+  "original_evidence_records_joined": 18288,
+  "identity_policy": "Literature name+type; external source identifiers in separate namespace. No inferred cross-source entity merge.",
+  "database_access": false,
+  "external_resources_required": false
+}

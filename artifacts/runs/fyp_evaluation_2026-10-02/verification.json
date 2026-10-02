@@ -1,0 +1,172 @@
+{
+  "verified_utc": "2026-10-02T09:24:26.698412+00:00",
+  "python_executable": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests/unit -v",
+    "exit_code": 0,
+    "tests_passed": 40,
+    "log": "unit_tests.log"
+  },
+  "manifest_checks": [
+    {
+      "role": "workbook",
+      "path": "D:\\kg_sma_0704\\outputs\\fyp_gold_annotation_2026-10-01\\SMA人工标注集_400条_最终全表复核版.xlsx",
+      "bytes": "422025",
+      "sha256": "8316aee46846b70b1863d8884f2c75b12e832965dfed2ddcc0014e70b0eba697",
+      "unchanged": true
+    },
+    {
+      "role": "candidates",
+      "path": "D:\\kg_sma_0704\\artifacts\\runs\\stage2_gold_candidates_400_2026-10-01\\gold_candidates.jsonl",
+      "bytes": "1085850",
+      "sha256": "8ce93652ec985727e278d708d87437be8658e9096abc9b9c4bc803e6f157c979",
+      "unchanged": true
+    },
+    {
+      "role": "abstracts",
+      "path": "D:\\kg_sma_0704\\data\\raw\\pubmed_sma_abstracts.jsonl",
+      "bytes": "7761733",
+      "sha256": "5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48",
+      "unchanged": true
+    },
+    {
+      "role": "raw",
+      "path": "D:\\kg_sma_0704\\data\\processed\\extracted_triples.jsonl",
+      "bytes": "9911733",
+      "sha256": "0d23d5dd162744dd70228905e6367800658e5d0af0b7328df50a6e62bfde76cb",
+      "unchanged": true
+    },
+    {
+      "role": "dictionary",
+      "path": "D:\\kg_sma_0704\\data\\interim\\mapped_triples.jsonl",
+      "bytes": "9943391",
+      "sha256": "7f10841e68bcd54aeb58658562e1147b20c5a4502b8ef5928ef08c7637b9e4f8",
+      "unchanged": true
+    },
+    {
+      "role": "semantic",
+      "path": "D:\\kg_sma_0704\\data\\interim\\aligned_triples.jsonl",
+      "bytes": "9914761",
+      "sha256": "65fc3e961e37e5361b47dd46dccef4916575d0e3b71130a8e6c775a18b36e58e",
+      "unchanged": true
+    },
+    {
+      "role": "fused",
+      "path": "D:\\kg_sma_0704\\data\\processed\\fused_triples.jsonl",
+      "bytes": "6748003",
+      "sha256": "1771293aad8258befe717c7c7ca00c349fe5fdb782b84245b1357ad45e332b5a",
+      "unchanged": true
+    },
+    {
+      "role": "entity_dictionary",
+      "path": "D:\\kg_sma_0704\\resources\\entity_dictionary.json",
+      "bytes": "1292",
+      "sha256": "8263195a745324ed5ee9b76d9977ccc2d598d892c75e042c1c20d449468ca1ea",
+      "unchanged": true
+    },
+    {
+      "role": "schema",
+      "path": "D:\\kg_sma_0704\\resources\\biomedical_schema.json",
+      "bytes": "4503",
+      "sha256": "118b32bd8c60031b8121fdd95266e4e0a7e557c672e733dc4eeaf5d83cf5ae8e",
+      "unchanged": true
+    },
+    {
+      "role": "evidence_code",
+      "path": "D:\\kg_sma_0704\\src\\biomedical\\evidence_validation.py",
+      "bytes": "8320",
+      "sha256": "52afae4dabefeae5730924a473ef5522ad6c02f0702e7f24fa18f9ec77a47531",
+      "unchanged": true
+    },
+    {
+      "role": "dataset_code",
+      "path": "D:\\kg_sma_0704\\src\\evaluation\\fyp_dataset.py",
+      "bytes": "7292",
+      "sha256": "85aa412ff05c1763482d8974e04a2823ea790fec8b36ca968d86846d8190ada3",
+      "unchanged": true
+    },
+    {
+      "role": "runner_code",
+      "path": "D:\\kg_sma_0704\\src\\evaluation\\run_fyp_evaluation.py",
+      "bytes": "16150",
+      "sha256": "1c593ec8bceb6088a8f0e1c9467e9d197ea57bbaab8f2aaa4ccf7322620402b4",
+      "unchanged": true
+    },
+    {
+      "role": "aggregation_code",
+      "path": "D:\\kg_sma_0704\\src\\fusion\\triples_aggregator.py",
+      "bytes": "6197",
+      "sha256": "2efc9f6bc6aec32894016d61d1ecb3f9a5ed13c09725009bac28de1cb63f09d4",
+      "unchanged": true
+    }
+  ],
+  "presentation_hash_checks": {
+    "results_and_discussion.md": true,
+    "summary_zh.md": true,
+    "evidence_explorer.html": true,
+    "builder": true,
+    "template": true
+  },
+  "record_counts": {
+    "evidence_validation_full.jsonl": 18288,
+    "review_labels_normalized.jsonl": 400,
+    "fusion_review_30.jsonl": 30
+  },
+  "figure_hashes": {
+    "figures\\evidence_tradeoff.png": "06648ed65e44e5d092b70d2327329b652a67f6bdb58816e881c39c015971f29e",
+    "figures\\evidence_tradeoff.svg": "600e3f436146fab1ea2b22af8bdcd865c857c14c97a30f2d2fa57f5ea800cf7b",
+    "figures\\fusion_ablation.png": "9541bb6cb76a82c16be2a233d57509635cb82bf6f6255ff980387f1bd6839287",
+    "figures\\fusion_ablation.svg": "539ba54a02c16789c01b636c040c3036130e9efe8410a0c1886676045838a321",
+    "figures\\reference_support.png": "cec2ddd0373a51da622592ee4d38cdda159059867bec4745800b1e68f3f078b6",
+    "figures\\reference_support.svg": "07cdf60ec71d7adb7cc73f359ebb9665d955230e46516f666af46c6b8d19a326"
+  },
+  "figures_visually_inspected": true,
+  "browser_checks": [
+    "Overview counts match experiment JSON",
+    "Candidate ID search returns one source record; PMID and ordered-fragment highlights checked",
+    "No-match query presents empty state",
+    "Challenge plus unsupported filters return 45; unlocated narrows to 12",
+    "Incomplete or empty fusion-review export does not invent labels",
+    "Synthetic queue uses a distinct queue hash and storage namespace",
+    "Synthetic one-record review persists after reload",
+    "Selectable JSON fallback export parses and preserves schema, hash, protected mapping and judgment",
+    "Production queue remains 0/30 reviewed",
+    "Final production overview visually inspected and screenshot saved",
+    "Temporary browser tabs, fixture and localhost server cleaned up"
+  ],
+  "download_event_capture": "Completion not verified; selectable text export verified as fallback.",
+  "screenshot_sha256": "e1fa7a889f0d693a1674390c82909815511f012b62416c28e406c59d0a2d3c0a",
+  "human_review_provenance": "ai_assisted_unconfirmed",
+  "real_fusion_judgments_created_by_agent": 0,
+  "api_or_database_calls": 0,
+  "canonical_data_or_workbook_mutations": 0,
+  "additional_code_hashes": {
+    "src\\evaluation\\summarize_fusion_review.py": "f7d431b92ab8fb810c47974d29cf4e693f43c652d18ebd8edf95d627c1c9082e",
+    "src\\evaluation\\build_fyp_report.py": "a631d0ac2a6ba962d2a8be8319aecf8d6a5bfa42289a1721a9edde0805364526",
+    "src\\evaluation\\fyp_explorer_template.html": "9dc63d52042ced366e87b150d24fe4d499fd4705a0af48c208855670696fe89e",
+    "src\\evaluation\\build_fyp_graph_explorer.py": "e141bc48fbf46d6b6a62bbeca75d70f8a5e30deb8bf92cb94b8edcd7bed0c0c6",
+    "src\\evaluation\\fyp_graph_template.html": "c24b7c2ea30226018bedb8438c7e0790e946ddbcc5d6828061b58c821eaddf0e",
+    "src/evaluation/build_fyp_report.py": "4901beb6fad5a64e5229b4d9baa42b3ca45ce05b349862a4324dacd8a942328a"
+  },
+  "runtime_packages": {
+    "networkx": "3.4.2",
+    "matplotlib": "3.10.0",
+    "numpy": "2.1.3"
+  },
+  "graph_source_joins": {
+    "original_records": 18288,
+    "literature_edges": 11155,
+    "external_edges": 164,
+    "input_and_builder_hashes_verified": true
+  },
+  "external_automatic_html_resources": {
+    "graph_explorer.html": [],
+    "evidence_explorer.html": []
+  },
+  "offline_verification_scope": "All data/styles/scripts embedded and no external automatic resources; functional checks performed over loopback HTTP. No disconnected-network user study.",
+  "graph_functional_checks": "10 actual tasks in USAGE_AND_ACCEPTANCE_zh.md, including source traces, types, directions, pagination, conflicts, external IDs, empty results and unlocated spans.",
+  "graph_screenshot_sha256": "7cc273049e9a4aa07e58e83a0b7fce5db7a252bc618b78b9b5c482e0f4d61912",
+  "graph_preview_sha256": "d9d6a3d93ef9bc423b085a84e79f75b3dfc8599bac7784a882b1f5a5f1fac791",
+  "svg_xml_parses": true,
+  "svg_whitespace_fix_preserves_png_bytes": true
+}
