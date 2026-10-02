@@ -17,6 +17,30 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - FYP notes treated conflicting assessment sources as a confirmed replacement
+
+- Symptom: Central assessment notes called 5/15/10/20/50 confirmed and inferred
+  no assessed poster percentage, whereas the 2026–27 handbook states
+  10/5+10/10/25/40 with a 30/70 poster/oral split.
+- Cause: Separate-sheet filenames and receipt order were taken as evidence of
+  applicable version without reconciling handbook pages 5–6, 11–13, 24 and 27.
+- Fix: Corrected central notes to show both schemes and retain the unresolved
+  official-version decision; added the crosscheck and PLAN pointer. External
+  drafts still need harmonisation after confirmation; no approval is inferred.
+- Verification: Read original handbook/all five sheets and viewed timeline and
+  preliminary plan page. Also found the schedule-table/Gantt gap; revalidated
+  frozen 400 labels, full fusion and expected database identities offline;
+  all 56 tests passed. Artifacts: fyp_requirements_crosscheck_2026-10-02.
+
+### 2026-10-02 - Audit document patch repeated one target in an atomic patch
+
+- Symptom: Initial document patch was rejected before changing tracked files.
+- Cause: A delete and add operation named the same assessment file in one patch.
+- Fix: Added the new report separately and used a single Update operation for
+  the existing assessment note.
+- Verification: Initial git status showed only the new audit artifact directory;
+  corrected operations succeeded. Final diff checks verify the authored files.
+
 ### 2026-10-02 - Similarity alignment merged distinct identities and overwritten types
 
 - Symptom: Gene SMN2 was converted to SMN1 at982 endpoints/618 PMIDs;

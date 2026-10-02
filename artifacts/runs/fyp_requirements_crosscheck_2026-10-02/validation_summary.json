@@ -1,0 +1,237 @@
+{
+  "reviewed_at_cst": "2026-10-02T21:16:44.454303+08:00",
+  "operation": "read-only requirements/evidence assessment; no API calls or database connection",
+  "source_scope": {
+    "school_files": 45,
+    "project_source_python_files": 42,
+    "test_python_files": 10,
+    "project_markdown_docs": 28,
+    "inventory_policy": "all non-secret file metadata except .git and Python bytecode; tmp/vendor are inventoried, not individually read as project evidence",
+    "manual_reading_policy": "school requirements/templates/drafts and substantive pipeline/evaluation code; examples for structure; logs via manifests and dated summaries; no claim every dependency or repeated row was manually read",
+    "nested_rar": "not expanded; legacy LaTeX package, not used as current requirement authority"
+  },
+  "initial_inventory_top_level": {
+    ".env.example": 1,
+    ".gitignore": 1,
+    "AGENTS.md": 1,
+    "CONTEXT.md": 1,
+    "README.md": 1,
+    "requirements.txt": 1,
+    "artifacts": 3184,
+    "docs": 30,
+    "notebooks": 3,
+    "resources": 2,
+    "scripts": 1,
+    "tmp": 8075,
+    "tests": 10,
+    "src": 44,
+    "outputs": 7,
+    "lib": 5,
+    "data": 16,
+    ".scratch": 8
+  },
+  "current_data_counts": {
+    "raw": 18288,
+    "mapped": 18288,
+    "aligned": 18288,
+    "fused": 13001,
+    "abstracts": 4554,
+    "external": 164,
+    "conflicts": 36
+  },
+  "typed_literature_nodes": 9053,
+  "fusion_revalidation": {
+    "dictionary_replay_errors": 0,
+    "stable_field_errors": 0,
+    "fused_provenance_errors": 0
+  },
+  "mapping_change_units": 204,
+  "workbook_revalidation": {
+    "identity_check": "passed",
+    "source_fields_check": "passed",
+    "integrated_labels_check": "passed",
+    "warnings": [],
+    "reviewer_ids": {
+      "ChatGPT-GPT-5.6-Sol": 400
+    },
+    "empty_component_fields": {
+      "entity_1_correct": 400,
+      "entity_2_correct": 400,
+      "relation_correct": 400,
+      "direction_correct": 400
+    },
+    "independent_second_reviews": 0
+  },
+  "primary_support_recomputed": {
+    "n": 300,
+    "unique_pmids": 290,
+    "labels": {
+      "2": 79,
+      "1": 141,
+      "0": 80,
+      "U": 0
+    },
+    "span_labels": {
+      "no": 149,
+      "yes": 151
+    },
+    "strict_support": 0.2633333333333333,
+    "lenient_support": 0.7333333333333333,
+    "unknown_fraction": 0.0,
+    "strict_all_sample_bounds": [
+      0.2633333333333333,
+      0.2633333333333333
+    ],
+    "wilson_95_strict": [
+      0.21671150294236005,
+      0.3159395034372583
+    ],
+    "pmid_cluster_bootstrap_95_strict": [
+      0.21333333333333335,
+      0.31125827814569534
+    ],
+    "bootstrap_seed": 20261002,
+    "bootstrap_replications": 2000,
+    "errors": {
+      "证据片段问题": 22,
+      "部分支持/条件或强度问题": 62,
+      "部分支持 + 证据问题": 79,
+      "实体类型错误": 27,
+      "not_recorded": 57,
+      "实体类型错误 + 证据问题": 20,
+      "关系或实体不支持": 19,
+      "实体类型错误 + 关系主体泛化": 4,
+      "实体类型错误 + 关系/证据问题": 7,
+      "关系不支持 + 证据问题": 1,
+      "关系/方向错误 + 证据问题": 1,
+      "实体类型错误 + 关系过度概括": 1
+    }
+  },
+  "primary_internal_test_gates_recomputed": {
+    "all_predictions": {
+      "n": 202,
+      "known_span_labels": 202,
+      "unknown_span_labels": 0,
+      "tp": 103,
+      "fp": 99,
+      "tn": 0,
+      "fn": 0,
+      "span_positive_predictive_value": 0.5099009900990099,
+      "adequate_span_sensitivity": 1.0,
+      "inadequate_span_specificity": 0.0,
+      "retained": 202,
+      "retention": 1.0,
+      "strict_support_among_retained": 0.2722772277227723,
+      "strict_supported_candidates_retained": 55,
+      "strict_supported_candidates_total": 55,
+      "unknown_support_retained": 0
+    },
+    "previous_evidence_triage": {
+      "n": 202,
+      "known_span_labels": 202,
+      "unknown_span_labels": 0,
+      "tp": 48,
+      "fp": 11,
+      "tn": 88,
+      "fn": 55,
+      "span_positive_predictive_value": 0.8135593220338984,
+      "adequate_span_sensitivity": 0.46601941747572817,
+      "inadequate_span_specificity": 0.8888888888888888,
+      "retained": 59,
+      "retention": 0.29207920792079206,
+      "strict_support_among_retained": 0.4067796610169492,
+      "strict_supported_candidates_retained": 24,
+      "strict_supported_candidates_total": 55,
+      "unknown_support_retained": 0
+    },
+    "context_type_screen": {
+      "n": 202,
+      "known_span_labels": 202,
+      "unknown_span_labels": 0,
+      "tp": 13,
+      "fp": 4,
+      "tn": 95,
+      "fn": 90,
+      "span_positive_predictive_value": 0.7647058823529411,
+      "adequate_span_sensitivity": 0.1262135922330097,
+      "inadequate_span_specificity": 0.9595959595959596,
+      "retained": 17,
+      "retention": 0.08415841584158416,
+      "strict_support_among_retained": 0.35294117647058826,
+      "strict_supported_candidates_retained": 6,
+      "strict_supported_candidates_total": 55,
+      "unknown_support_retained": 0
+    },
+    "model_direct_screen": {
+      "n": 202,
+      "known_span_labels": 202,
+      "unknown_span_labels": 0,
+      "tp": 53,
+      "fp": 35,
+      "tn": 64,
+      "fn": 50,
+      "span_positive_predictive_value": 0.6022727272727273,
+      "adequate_span_sensitivity": 0.5145631067961165,
+      "inadequate_span_specificity": 0.6464646464646465,
+      "retained": 88,
+      "retention": 0.43564356435643564,
+      "strict_support_among_retained": 0.3522727272727273,
+      "strict_supported_candidates_retained": 31,
+      "strict_supported_candidates_total": 55,
+      "unknown_support_retained": 0
+    },
+    "combined_screen": {
+      "n": 202,
+      "known_span_labels": 202,
+      "unknown_span_labels": 0,
+      "tp": 26,
+      "fp": 4,
+      "tn": 95,
+      "fn": 77,
+      "span_positive_predictive_value": 0.8666666666666667,
+      "adequate_span_sensitivity": 0.2524271844660194,
+      "inadequate_span_specificity": 0.9595959595959596,
+      "retained": 30,
+      "retention": 0.1485148514851485,
+      "strict_support_among_retained": 0.4666666666666667,
+      "strict_supported_candidates_retained": 14,
+      "strict_supported_candidates_total": 55,
+      "unknown_support_retained": 0
+    }
+  },
+  "offline_database_import_reconstruction": {
+    "nodes": 9218,
+    "relationships": 13165,
+    "recorded_version": "typed-v2-8a4dbccd4fdc22ca",
+    "live_connection_this_review": false,
+    "interpretation": "reconstructed expected identities/counts; earlier live acceptance is separately preserved"
+  },
+  "source_code_hashes_match_previous_acceptance": true,
+  "label_blind_request_payloads_checked": 400,
+  "tests": {
+    "command": "C:\\Users\\jon15\\anaconda3\\envs\\KG_SMA_env\\python.exe -m unittest discover -s tests/unit -v",
+    "result": "56 passed in this review"
+  },
+  "protected_inputs_unchanged": true,
+  "school_inputs_unchanged": true,
+  "open_requirement_conflicts": [
+    "assessment weights and criteria",
+    "poster 30/70 split versus separate oral sheet",
+    "April 28/30 final deadline",
+    "supervisor name on electronic cover",
+    "layout/template version"
+  ],
+  "specific_draft_gap": "preliminary work plan page 8 is a schedule table, not an actual Gantt chart",
+  "supervisor_scope_approval_established": false,
+  "manifest_scope": "Pre-authoring source snapshot. Central assessment notes, PLAN and ISSUE_LOG were intentionally updated after source validation; raw data, code, workbook and school files remain unchanged.",
+  "assessment_review_outputs": [
+    "docs/fyp/FYP_REQUIREMENTS_CROSSCHECK_2026-10-02.md",
+    "docs/fyp/ASSESSMENT_OVERVIEW_2026-10-02.md",
+    "docs/agents/PLAN.md",
+    "docs/agents/ISSUE_LOG.md"
+  ],
+  "final_protected_source_hash_checks": {
+    "checked": 116,
+    "all_match": true
+  }
+}

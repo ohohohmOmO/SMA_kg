@@ -153,6 +153,16 @@ is `docs/fyp/FYP_FOUR_REPAIRS_STATUS_2026-10-02.md`; commands and boundaries are
 
 ## Before Each Run
 
+### FYP requirements crosscheck 2026-10-02
+
+Read `docs/fyp/FYP_REQUIREMENTS_CROSSCHECK_2026-10-02.md` for the latest
+assessment-specific review. Supplied marking sheets and the 2026–27 handbook
+conflict on weights, poster and final-report criteria; neither scheme is
+confirmed by file receipt order. Official brief and supervisor scope approval
+remain unverified. The preliminary schedule table needs a true Gantt chart.
+Core data/human metrics were revalidated offline and 56 unit tests passed;
+no school drafts, canonical data or database were changed.
+
 - Confirm `conda activate KG_SMA_env` or use
   `C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe` directly.
 - Confirm any required external service or API key for the script being run.
