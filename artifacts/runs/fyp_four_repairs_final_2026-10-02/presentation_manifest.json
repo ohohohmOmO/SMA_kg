@@ -1,0 +1,17 @@
+{
+  "builder_sha256": "49695bff39e2df13412371f6d0f36c03d74563d478edd9affddbb45e84aa8e4c",
+  "template_sha256": "cd4499e26b425804b0ec1e7fcd70761e4baefe9a70591122f042856579ef4685",
+  "quality_summary_sha256": "ce7768f85c91e1834165e03d66bae113f14838bcbe8fc29af7865fbb58de8e11",
+  "artifacts": {
+    "results_and_discussion.md": "1cb880cf4f44abe3e2c728af570f0a5f8cd2be9a9746d7331a22b66253c47e31",
+    "summary_zh.md": "9852774899386b9d5a06fbb15789f513312898ff046a67dc45d630e08d45ae5b",
+    "evidence_explorer.html": "074996ae218e824628a7768277c248c3783c97914fffe02d6c3d4a1de6bc3866",
+    "screening_error_cases.jsonl": "42ae1ee23bde56e217829ee8b49b0de219c8dbc2b12a76312a4f2ee7b92a94cc",
+    "figures\\evidence_tradeoff.png": "06648ed65e44e5d092b70d2327329b652a67f6bdb58816e881c39c015971f29e",
+    "figures\\evidence_tradeoff.svg": "1a85c1a7d4ca0e4026ea310a145821882f357a9a81b6d0ee828ec0a2fd112de3",
+    "figures\\fusion_ablation.png": "c6bf648e296929e28e0cd94138993e23a36ff1cd5800d71a48eb08c11c774253",
+    "figures\\fusion_ablation.svg": "56e2e6584aa3051b5f8854747a23441c63766f0f839cfcb1b2467a388d78d66b",
+    "figures\\reference_support.png": "cec2ddd0373a51da622592ee4d38cdda159059867bec4745800b1e68f3f078b6",
+    "figures\\reference_support.svg": "7ad5c6c7df8031b824b83e71f4bf16f4d73f631492f3007398ef556a9181085e"
+  }
+}

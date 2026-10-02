@@ -1,0 +1,45 @@
+{
+  "builder_sha256": "3889cff209e21093594cfc6cab00e0122bf7010c38edaff0def0b947614ad09f",
+  "template_sha256": "e37ac7b9ce0b1ebd4df27994c88e7b210bf0dc0a191d9ce3f903d4409b074baa",
+  "inputs": {
+    "raw": {
+      "path": "D:\\kg_sma_0704\\data\\processed\\extracted_triples.jsonl",
+      "sha256": "0d23d5dd162744dd70228905e6367800658e5d0af0b7328df50a6e62bfde76cb"
+    },
+    "aligned": {
+      "path": "D:\\kg_sma_0704\\data\\interim\\aligned_triples.jsonl",
+      "sha256": "8bcb0a1863b36419160b7ac4072c0887a7d26aef552ee6fbf2caec68db854d5f"
+    },
+    "fused": {
+      "path": "D:\\kg_sma_0704\\data\\processed\\fused_triples.jsonl",
+      "sha256": "ecdd5e68a308309f423b5ade455d14131152f67dcf978579c9f254c9d7de0e5d"
+    },
+    "sources": {
+      "path": "D:\\kg_sma_0704\\data\\raw\\pubmed_sma_abstracts.jsonl",
+      "sha256": "5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48"
+    },
+    "validations": {
+      "path": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_four_repairs_final_2026-10-02\\evidence_validation_full.jsonl",
+      "sha256": "74ad303b32d595df63bac53347cbf8b288f594459e7a0b4d35648a498c0072cf"
+    },
+    "external": {
+      "path": "D:\\kg_sma_0704\\data\\external\\sma_gda_baseline.jsonl",
+      "sha256": "f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb"
+    }
+  },
+  "output_sha256": "5418f37878ac28e675d715180cea9363bbf4ad779aedfd33eafffb508cc73635",
+  "nodes_by_namespace": {
+    "literature": 9053,
+    "opentargets": 165
+  },
+  "literature_edges": 13001,
+  "external_edges": 164,
+  "original_evidence_records_joined": 18288,
+  "identity_policy": "Literature name+type; external source identifiers in separate namespace. No inferred cross-source entity merge.",
+  "database_access": false,
+  "external_resources_required": false,
+  "assertion_quality_sidecar": {
+    "path": "D:\\kg_sma_0704\\artifacts\\runs\\assertion_quality_context_fixed_2026-10-02\\assertion_quality_full.jsonl",
+    "sha256": "55da7b64941a3ebfc95280ab57a1e9f5b301d51952686b84675d5158492cdf44"
+  }
+}

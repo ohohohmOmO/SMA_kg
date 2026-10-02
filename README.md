@@ -6,6 +6,21 @@ PubMed, extracts relation triples from literature, fuses synonymous entities,
 computes graph metrics, generates an HTML graph viewer, and evaluates extraction
 quality.
 
+## Current FYP repair delivery 2026-10-02
+
+Read `docs/fyp/FYP_FOUR_REPAIRS_STATUS_2026-10-02.md` and
+`docs/reproduction/FYP_FOUR_REPAIRS_2026-10-02.md` first. Canonical graph now
+uses conservative typed identity:13,001 literature edges with all18,288 source
+records. `docs/graph_viewer.html` is the full offline source explorer.
+Current results/evidence UI: `artifacts/runs/fyp_four_repairs_final_2026-10-02/`.
+Neo4j queries must scope `SMAGraphMetadata.name='active'` to version
+`typed-v2-8a4dbccd4fdc22ca`;9,218 typed/source-scoped nodes,13,165 edges;
+historical Entity graph retained. No automatic clear or semantic identity merge.
+Main human strict support26.3%; screening has substantial coverage loss and does
+not establish sufficient extraction quality. Report scope now matches the core;
+GraphRAG/answer citation/claim validation remain future work. Historical pipeline
+counts and older commands below describe their dated runs, not current acceptance.
+
 ## Start Here
 
 - Agent and contributor rules: `AGENTS.md`

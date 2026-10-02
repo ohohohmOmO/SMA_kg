@@ -1,0 +1,15 @@
+2026-10-02 20:10:19,505 - INFO - Initializing cleanly encapsulated standalone PyVis interactive HTML bounds...
+Traceback (most recent call last):
+  File "D:\kg_sma_0704\src\database\generate_pyvis.py", line 116, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "D:\kg_sma_0704\src\database\generate_pyvis.py", line 110, in main
+    net.save_graph(str(out_html))
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\jon15\anaconda3\envs\KG_SMA_env\Lib\site-packages\pyvis\network.py", line 438, in save_graph
+    self.write_html(name)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\jon15\anaconda3\envs\KG_SMA_env\Lib\site-packages\pyvis\network.py", line 530, in write_html
+    out.write(self.html)
+    ~~~~~~~~~^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\xa9' in position 230710: illegal multibyte sequence

@@ -1,0 +1,66 @@
+{
+  "scope": "Construction, conservative identity, evidence/assertion screening and analysis; answer-generation validation is future work",
+  "supervisor_approval_claimed": false,
+  "signatures_or_meetings_fabricated": false,
+  "historical_log_entry_preserved": true,
+  "documents": [
+    {
+      "source": "C:\\Users\\jon15\\Desktop\\大四上\\FYP\\00_总览_要求与时间线\\01_FYP_Roadmap_and_Submission_Guide.docx",
+      "original_snapshot": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\originals\\01_FYP_Roadmap_and_Submission_Guide.docx",
+      "revised": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\revised\\01_FYP_Roadmap_and_Submission_Guide.docx",
+      "before_sha256": "f3a1e22cb593a034747aedd25b434babfb8f190947653dba2a0fdd0a62771819",
+      "after_sha256": "f15b3cfefcd04b6dd148184cc752675c863e4fb0752a391858a108b613b54d6a",
+      "promoted_to_fyp": true,
+      "visual_qa_pages": 5,
+      "all_pages_visually_inspected": true
+    },
+    {
+      "source": "C:\\Users\\jon15\\Desktop\\大四上\\FYP\\01_首轮提交_2026-10-30\\01_交付稿\\02_Project_Risk_Assessment_Draft.docx",
+      "original_snapshot": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\originals\\02_Project_Risk_Assessment_Draft.docx",
+      "revised": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\revised\\02_Project_Risk_Assessment_Draft.docx",
+      "before_sha256": "99967bfa2cb0dbcfa12eddebb7b2b8a603084174ea176da624512ddaddc99b13",
+      "after_sha256": "548977676d246f5dba504d9276a4c394d1f779ca5e8c6014781f5a8a1f6aa2eb",
+      "promoted_to_fyp": true,
+      "visual_qa_pages": 4,
+      "all_pages_visually_inspected": true
+    },
+    {
+      "source": "C:\\Users\\jon15\\Desktop\\大四上\\FYP\\01_首轮提交_2026-10-30\\01_交付稿\\03_Ethical_Consideration_Declaration_Draft.docx",
+      "original_snapshot": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\originals\\03_Ethical_Consideration_Declaration_Draft.docx",
+      "revised": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\revised\\03_Ethical_Consideration_Declaration_Draft.docx",
+      "before_sha256": "ae970c74ecefe80ec9c75133d98827c72d1755206abf18b6f7a518c52e41fb50",
+      "after_sha256": "6ff55df10c9b2e6314d06a360c7600ad68b0abcadea3ac479c027c5b79bc68d3",
+      "promoted_to_fyp": true,
+      "visual_qa_pages": 2,
+      "all_pages_visually_inspected": true
+    },
+    {
+      "source": "C:\\Users\\jon15\\Desktop\\大四上\\FYP\\01_首轮提交_2026-10-30\\01_交付稿\\04_First_Logbook_Starter_October_2026.docx",
+      "original_snapshot": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\originals\\04_First_Logbook_Starter_October_2026.docx",
+      "revised": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\revised\\04_First_Logbook_Starter_October_2026.docx",
+      "before_sha256": "3d8d3ea1299248bbc19437c7d15f7f6c134d983229754608938eb686136cd2ab",
+      "after_sha256": "e20a40ed0b9c65dda758d34d9e57cfdb5722d9f2bee40db85f82160c6ac6cc07",
+      "promoted_to_fyp": true,
+      "visual_qa_pages": 4,
+      "all_pages_visually_inspected": true
+    },
+    {
+      "source": "C:\\Users\\jon15\\Desktop\\大四上\\FYP\\01_首轮提交_2026-10-30\\01_交付稿\\05_GCU_Specification_and_Preliminary_Report_Draft.docx",
+      "original_snapshot": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\originals\\05_GCU_Specification_and_Preliminary_Report_Draft.docx",
+      "revised": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_scope_revision_2026-10-02\\revised\\05_GCU_Specification_and_Preliminary_Report_Draft.docx",
+      "before_sha256": "1d6b53e1644d01c7895145981f82215801f810b1e1de34ea68850c72ccb3de40",
+      "after_sha256": "262b3e9833ca3bd3e0b69fc5c5107a76938b7666d9b462b5d10a57ba2b343fad",
+      "promoted_to_fyp": true,
+      "visual_qa_pages": 8,
+      "all_pages_visually_inspected": true
+    }
+  ],
+  "qa": {
+    "renderer": "Hidden installed Word COM PDF export and bundled Poppler after packaged renderer failure",
+    "all_final_pages": 23,
+    "preliminary_total_pages": 8,
+    "technical_background_pages": 4,
+    "work_plan_pages": 1,
+    "layout_passed": true
+  }
+}

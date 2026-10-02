@@ -104,15 +104,15 @@ def validate_stages(raw, mapped, aligned, fused, dictionary):
     return checks, [{**unit, "source_pmids": sorted(unit["source_pmids"])} for _, unit in sorted(changes.items())]
 
 
-def fusion_comparison(out, datasets, dictionary, abstracts):
+def fusion_comparison(out, datasets, dictionary, abstracts, inputs=None):
     checks, mappings = validate_stages(datasets["raw"], datasets["dictionary"], datasets["semantic"], datasets["fused"], dictionary)
     metrics = {}
     for condition in ("raw", "dictionary", "semantic"):
         condition_dir = out / "fusion" / condition
         condition_dir.mkdir(parents=True)
-        input_path = {"raw": ROOT / "data/processed/extracted_triples.jsonl",
+        input_path = (inputs or {"raw": ROOT / "data/processed/extracted_triples.jsonl",
                       "dictionary": ROOT / "data/interim/mapped_triples.jsonl",
-                      "semantic": ROOT / "data/interim/aligned_triples.jsonl"}[condition]
+                      "semantic": ROOT / "data/interim/aligned_triples.jsonl"})[condition]
         command = [sys.executable, str(ROOT / "src/fusion/triples_aggregator.py"),
                    "--input-file", str(input_path), "--output-file", str(condition_dir / "fused.jsonl"),
                    "--conflict-file", str(condition_dir / "conflicts.jsonl"),
@@ -132,7 +132,7 @@ def fusion_comparison(out, datasets, dictionary, abstracts):
         metrics[condition] = {**graph_metrics(datasets[condition]), "conflict_pairs": len(conflicts),
                               "preserved_evidence_records": source_count,
                               "compression_vs_raw_unique_edges": 1 - len(fused) / len({signature(r) for r in datasets["raw"]})}
-    checks["semantic_aggregation_reproduces_canonical_bytes"] = sha256(out / "fusion/semantic/fused.jsonl") == sha256(ROOT / "data/processed/fused_triples.jsonl")
+    checks["semantic_aggregation_reproduces_canonical_bytes"] = sha256(out / "fusion/semantic/fused.jsonl") == sha256((inputs or {}).get("fused", ROOT / "data/processed/fused_triples.jsonl"))
     if not checks["semantic_aggregation_reproduces_canonical_bytes"]:
         raise ValueError("Semantic aggregation did not reproduce the canonical fused snapshot.")
     jsonl(out / "fusion_mapping_changes.jsonl", mappings)
@@ -195,6 +195,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workbook", required=True)
     parser.add_argument("--run-dir", required=True)
+    parser.add_argument("--mapped-file", default="data/interim/mapped_triples.jsonl")
+    parser.add_argument("--aligned-file", default="data/interim/aligned_triples.jsonl")
+    parser.add_argument("--fused-file", default="data/processed/fused_triples.jsonl")
+    parser.add_argument("--alignment-policy", default="historical_semantic_threshold_0.88")
     parser.add_argument("--label-provenance", choices=("ai_assisted_unconfirmed", "human_confirmed_all"), default="ai_assisted_unconfirmed")
     parser.add_argument("--provenance-note", default="Human confirmation scope requested; not yet established.")
     args = parser.parse_args()
@@ -203,9 +207,9 @@ def main():
     inputs = {"workbook": workbook, "candidates": ROOT / DEFAULT_CANDIDATES,
               "abstracts": ROOT / "data/raw/pubmed_sma_abstracts.jsonl",
               "raw": ROOT / "data/processed/extracted_triples.jsonl",
-              "dictionary": ROOT / "data/interim/mapped_triples.jsonl",
-              "semantic": ROOT / "data/interim/aligned_triples.jsonl",
-              "fused": ROOT / "data/processed/fused_triples.jsonl",
+              "dictionary": ROOT / args.mapped_file,
+              "semantic": ROOT / args.aligned_file,
+              "fused": ROOT / args.fused_file,
               "entity_dictionary": ROOT / "resources/entity_dictionary.json",
               "schema": ROOT / "resources/biomedical_schema.json",
               "evidence_code": ROOT / "src/biomedical/evidence_validation.py",
@@ -238,7 +242,8 @@ def main():
                      "component_accuracy": None, "extraction_recall": None, "extraction_f1": None}
     dump(out / "review_report.json", review_report)
     jsonl(out / "review_labels_normalized.jsonl", rows)
-    fusion, queue = fusion_comparison(out, datasets, dictionary, abstracts)
+    fusion, queue = fusion_comparison(out, datasets, dictionary, abstracts, inputs)
+    fusion["alignment_policy"] = args.alignment_policy
     dump(out / "fusion_comparison.json", fusion)
     evidence, evaluations = evidence_comparison(out, rows, datasets["raw"], abstracts, dictionary)
     dump(out / "evidence_comparison.json", evidence)

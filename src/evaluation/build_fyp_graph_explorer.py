@@ -1,6 +1,7 @@
 """Build an offline, bounded graph with complete source evidence, without Neo4j."""
 
 import argparse
+import csv
 import json
 import sys
 from collections import defaultdict
@@ -39,7 +40,8 @@ def assemble(raw, aligned, fused, sources, validations, external):
             raise ValueError("Missing abstract snapshot")
         groups[signature(normalized)].append({"raw_record_number": index, "pmid": pmid,
             "original_entity_1": original["entity_1"], "original_entity_2": original["entity_2"],
-            "span": original["evidence_text"], "validation": validation["validation"]})
+            "span": original["evidence_text"], "validation": validation["validation"],
+            "assertion_quality": validation.get("assertion_quality")})
     seen = set()
     for row in fused:
         key = signature(row)
@@ -70,6 +72,7 @@ def assemble(raw, aligned, fused, sources, validations, external):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run-dir", required=True)
+    parser.add_argument("--quality-run-dir", default="")
     args = parser.parse_args()
     out = (ROOT / args.run_dir).resolve()
     paths = {"raw": ROOT / "data/processed/extracted_triples.jsonl",
@@ -78,6 +81,10 @@ def main():
              "sources": ROOT / "data/raw/pubmed_sma_abstracts.jsonl",
              "validations": out / "evidence_validation_full.jsonl",
              "external": ROOT / "data/external/sma_gda_baseline.jsonl"}
+    with (out / "manifest.csv").open(encoding="utf-8-sig", newline="") as stream:
+        inputs = {row["role"]: Path(row["path"]) for row in csv.DictReader(stream)}
+    for role, manifest_role in (("raw", "raw"), ("aligned", "semantic"), ("fused", "fused"), ("sources", "abstracts")):
+        paths[role] = inputs[manifest_role]
     hashes = {name: sha256(path) for name, path in paths.items()}
     values = {}
     for name, path in paths.items():
@@ -86,6 +93,16 @@ def main():
             raise ValueError(f"Invalid JSONL: {name}")
     values["sources"] = {str(row["pmid"]): {key: row.get(key, "") for key in ("title", "abstract")}
                          for row in values["sources"]}
+    if args.quality_run_dir:
+        quality_path = ROOT / args.quality_run_dir / "assertion_quality_full.jsonl"
+        quality_hash = sha256(quality_path)
+        quality, errors = load_jsonl(quality_path)
+        if errors or len(quality) != len(values["raw"]):
+            raise ValueError("Quality sidecar is incomplete")
+        for i, (row, original, validation) in enumerate(zip(quality, values["raw"], values["validations"]), 1):
+            if row["raw_record_number"] != i or row["original_assertion"] != original:
+                raise ValueError("Quality sidecar identity differs")
+            validation["assertion_quality"] = row["quality"]
     data = assemble(**values)
     data["run"] = out.name
     template = Path(__file__).with_name("fyp_graph_template.html")
@@ -102,6 +119,10 @@ def main():
                 "original_evidence_records_joined": len(values["raw"]),
                 "identity_policy": "Literature name+type; external source identifiers in separate namespace. No inferred cross-source entity merge.",
                 "database_access": False, "external_resources_required": False}
+    if args.quality_run_dir:
+        if sha256(quality_path) != quality_hash:
+            raise ValueError("Quality input changed")
+        manifest["assertion_quality_sidecar"] = {"path": str(quality_path), "sha256": quality_hash}
     (out / "graph_explorer_manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"output": str(target), "literature_edges": manifest["literature_edges"],
                       "external_edges": manifest["external_edges"], "joined_records": len(values["raw"])}, ensure_ascii=False))

@@ -1,0 +1,6 @@
+artifact,path,records,bytes,sha256,notes
+validation_summary,artifacts\runs\stage4_typed_identity_repair_verified_2026-10-02\validation_summary.json,,2198,18d2edfeaecc3f958008121f3149bb3f1aa5b564f2b0ac135b3bcdac738b06a6,neo4j_status=skipped
+analytics_metrics,artifacts\runs\stage4_typed_identity_repair_verified_2026-10-02\outputs\data\processed\analytics_metrics.csv,9218,1231133,7d4c81005f78ad2177fbedfe0412758e65b837144b3fb15ca94943e97806522e,stage4 run snapshot
+graph_viewer,artifacts\runs\stage4_typed_identity_repair_verified_2026-10-02\outputs\docs\graph_viewer.html,,8182679,c8e52c2a936b6ad04dfc1bb330a9510ffd0c7d0f6162be77e3c60651e60fe837,stage4 run snapshot
+neo4j_import_summary,D:\kg_sma_0704\artifacts\runs\stage4_typed_identity_repair_verified_2026-10-02\outputs\database\neo4j_import_summary.json,,,,stage4 Neo4j import counts
+topology_metrics,D:\kg_sma_0704\artifacts\runs\stage4_typed_identity_repair_verified_2026-10-02\outputs\evaluation\topology_metrics.json,,,,stage4 Neo4j topology metrics

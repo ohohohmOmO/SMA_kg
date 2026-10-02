@@ -1,6 +1,6 @@
 # Prevent incompatible names and cross-type overwrites in alignment
 
-Status: open
+Status: closed
 
 Audit: `artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/completion_audit.json`.
 The dictionary→semantic snapshot transforms Gene SMN2 into SMN1 in 982 endpoint
@@ -21,3 +21,9 @@ Run a versioned controlled comparison, evaluate frozen changed mappings,
 preserve source fields/counts, and present quality/coverage trade-offs. Do not
 overwrite existing canonical graph data before validation. No model calls or
 alignment changes were made by this audit.
+
+## Resolution 2026-10-02
+
+Typed map and frequency accounting, authority/subtype guards and review-only similarity implemented. Full18,288 source rows retained,982 erroneous SMN2 endpoints/618PMIDs restored. Repaired condition rerun/promoted after validation. Known defects closed; optional30-unit queue remains unjudged, so no universal mapping-correctness claim.
+
+Evidence: `docs/reproduction/FYP_FOUR_REPAIRS_2026-10-02.md`.

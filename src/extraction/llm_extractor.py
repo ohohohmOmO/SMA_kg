@@ -12,6 +12,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.biomedical.confidence import normalize_and_score
+from src.biomedical.assertion_quality import screen_assertion
 
 import openai
 
@@ -46,10 +47,19 @@ CRITICAL RULES:
    DECREASES, INCREASES, REGULATES, TARGETS, PREVENTS, HAS_VARIANT,
    HAS_PHENOTYPE, BIOMARKER_FOR, DIAGNOSES, EXPRESSED_IN, ADMINISTERED_BY,
    ENCODES, MODELS, CO_OCCURS_WITH, COMPARED_WITH, USED_IN, NO_EFFECT.
-7. evidence_text MUST be a short exact quote or close span from the abstract
-   supporting the triple.
-8. confidence MUST be a calibrated self-score from 0.0 to 1.0 based on explicit
-   textual evidence, not general biomedical plausibility.
+7. evidence_text MUST quote complete contiguous original sentences verbatim,
+   retaining both entities, the predicate, negation and necessary conditions.
+   Never paraphrase, splice ellipsis fragments or supply a close/guessed span.
+8. confidence is an uncalibrated model self-score from 0.0 to 1.0; it is not
+   measured accuracy. Do not use general biomedical plausibility as evidence.
+9. Distinguish genes from proteins and genes from deletions, variants, exons,
+   copy-number changes and hybrid alleles. SMN1 and SMN2 are separate genes.
+10. Do not turn deletion/deficiency of a gene into the bare gene CAUSES disease.
+    Preserve species/model, population, clinical subtype, age/stage, dosage/time,
+    comparators, uncertainty and negation. If the allowed triple schema cannot
+    preserve a material condition, omit that assertion instead of generalizing.
+11. Also return assertion_context with verbatim source quotations describing any
+    necessary conditions. An empty object is allowed for unqualified assertions.
 """
 
 def load_local_env():
@@ -166,6 +176,7 @@ def main():
                         "relation": triple.get("relation", ""),
                         "entity_2": triple.get("entity_2", {}),
                         "evidence_text": triple.get("evidence_text", ""),
+                        "assertion_context": triple.get("assertion_context", {}),
                         "llm_confidence": triple.get("confidence"),
                         "extracted_by": f"LLM_{args.model}"
                     }
@@ -178,6 +189,9 @@ def main():
                         }, ensure_ascii=False) + "\n")
                         rejected_triples += 1
                         continue
+                    unified_triple["assertion_quality"] = screen_assertion(unified_triple, {"abstract": abstract})
+                    # Preserve candidates for review; never relabel them as human-verified.
+                    unified_triple["review_status"] = unified_triple["assertion_quality"]["review_status"]
                     f.write(json.dumps(unified_triple, ensure_ascii=False) + "\n")
                     successful_triples += 1
             except Exception as e:

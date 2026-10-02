@@ -1,5 +1,29 @@
 # FYP Report Evidence And Innovation Notes
 
+## Current scope amendment after four repairs
+
+Current evidence is `artifacts/runs/fyp_four_repairs_final_2026-10-02/` and
+`docs/fyp/FYP_FOUR_REPAIRS_STATUS_2026-10-02.md`. Older figures and semantic
+alignment descriptions below document the preceding baseline. Current fusion
+uses typed orthographic identity (13,001 edges/9,053 literature nodes); embedding
+similarity is review-only. Active Neo4j has9,218 typed/source-scoped nodes,
+13,001 literature+164 external edges, verified online with original evidence.
+Five preliminary submission drafts now match RQ1 extraction support/errors,
+RQ2 conservative identity/fusion, RQ3 evidence/context/type screening trade-offs.
+GraphRAG/generated-answer citation/atomic claim validation are future work.
+
+The unchanged human400 dataset supplies main strict26.3%, partial47.0%; 73.3%
+is lenient support. Rules/prompt were frozen before original calls; corrected
+sentence boundaries replayed preserved decisions without new calls/label changes.
+This is a previously-inspected retrospective PMID-disjoint paired comparison,
+not an independent prospective benchmark. Combined retained30/202, strict14/55,
+PPV46.7% with substantial loss and overlapping intervals. All predictions remain;
+no labels transfer to rewrites, no independent agreement or recall/F1 is inferred.
+Current30-unit mapping review is optional for a mapping-quality-rate claim.
+Old baseline metrics/protocol do not establish current correctness.
+
+## Historical baseline material
+
 Date reviewed: 2026-10-02
 
 ## Purpose

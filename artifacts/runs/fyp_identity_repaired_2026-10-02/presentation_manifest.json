@@ -1,0 +1,16 @@
+{
+  "builder_sha256": "37c96e728fe3fdb6866fbb6fbfaa0381291308f213bbd24e6b8cea24347871b8",
+  "template_sha256": "89091df8d261b9299e774195022d3e2eceee6725a5febb75c223c903e2f9d9dc",
+  "quality_summary_sha256": "3e0045a438a0ed9b324c984ab3c2108233cd3358ad55595f59d55d8976b0c429",
+  "artifacts": {
+    "results_and_discussion.md": "722de1d0ba6a24a9b9e1ef76e9cbce1c9bedf60211d67ee2cbbee306e4213b3c",
+    "summary_zh.md": "d508ccca7b92f2215c0b71f33ee6ba1c9a79ce5590426424ac56ae8edde95fca",
+    "evidence_explorer.html": "42829b68a53a7f668375a04b09308728dc58562da15badbac938bac774f21954",
+    "figures\\evidence_tradeoff.png": "06648ed65e44e5d092b70d2327329b652a67f6bdb58816e881c39c015971f29e",
+    "figures\\evidence_tradeoff.svg": "f61f3a291ce4ae15b192eda90fd3434375414f92ea402408b1a5bdb9b23dc442",
+    "figures\\fusion_ablation.png": "c6bf648e296929e28e0cd94138993e23a36ff1cd5800d71a48eb08c11c774253",
+    "figures\\fusion_ablation.svg": "2ec64c97ba55593acf512e26960927480ec5217fa9b7d28e7b2773dd15cd16d6",
+    "figures\\reference_support.png": "cec2ddd0373a51da622592ee4d38cdda159059867bec4745800b1e68f3f078b6",
+    "figures\\reference_support.svg": "85e66238d2b92659e0409f0c33e996a0989f51451a06c62aca1a129b7bfebcbc"
+  }
+}

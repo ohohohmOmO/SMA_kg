@@ -1,0 +1,1043 @@
+{
+  "policy": "typed_orthographic_identity_v2_semantic_review_only",
+  "records": 18288,
+  "changes": [
+    {
+      "type": "Disease",
+      "original_name": "5q-Spinal muscular atrophy",
+      "canonical_name": "5q-spinal muscular atrophy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Amyotrophic Lateral Sclerosis",
+      "canonical_name": "amyotrophic lateral sclerosis",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Duchenne Muscular Dystrophy",
+      "canonical_name": "Duchenne muscular dystrophy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Hirayama Disease",
+      "canonical_name": "Hirayama disease",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Pontocerebellar hypoplasia type 1B",
+      "canonical_name": "pontocerebellar hypoplasia type 1B",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "SMA Type 2",
+      "canonical_name": "SMA type 2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "SMA Type 3",
+      "canonical_name": "SMA type 3",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy (SMA)",
+      "canonical_name": "spinal muscular atrophy (SMA)",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy Jokela type",
+      "canonical_name": "spinal muscular atrophy Jokela type",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy Type 1",
+      "canonical_name": "spinal muscular atrophy type 1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy type 1",
+      "canonical_name": "spinal muscular atrophy type 1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy type 2",
+      "canonical_name": "spinal muscular atrophy type 2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy type 3",
+      "canonical_name": "spinal muscular atrophy type 3",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy type I",
+      "canonical_name": "spinal muscular atrophy type I",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy with Lower Extremity Predominance",
+      "canonical_name": "spinal muscular atrophy with lower extremity predominance",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal Muscular Atrophy with Respiratory Distress type 1",
+      "canonical_name": "spinal muscular atrophy with respiratory distress type 1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal and Bulbar Muscular Atrophy",
+      "canonical_name": "spinal and bulbar muscular atrophy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy (SMA)",
+      "canonical_name": "spinal muscular atrophy (SMA)",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy 5q",
+      "canonical_name": "spinal muscular atrophy 5q",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy type 0",
+      "canonical_name": "spinal muscular atrophy type 0",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy type 1",
+      "canonical_name": "spinal muscular atrophy type 1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy type 2",
+      "canonical_name": "spinal muscular atrophy type 2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy with congenital bone fractures 2",
+      "canonical_name": "spinal muscular atrophy with congenital bone fractures 2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy with respiratory distress type 1",
+      "canonical_name": "spinal muscular atrophy with respiratory distress type 1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Spinal muscular atrophy, Jokela type",
+      "canonical_name": "spinal muscular atrophy, Jokela type",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Type 0 SMA",
+      "canonical_name": "type 0 SMA",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Type 1 spinal muscular atrophy",
+      "canonical_name": "type 1 spinal muscular atrophy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Type 2 SMA",
+      "canonical_name": "type 2 SMA",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Type 3 SMA",
+      "canonical_name": "type 3 SMA",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "Type I SMA",
+      "canonical_name": "type I SMA",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "spinal muscular atrophy (SMA) Type II",
+      "canonical_name": "Spinal Muscular Atrophy (SMA) type II",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "spinal muscular atrophy Type I",
+      "canonical_name": "spinal muscular atrophy type I",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "spinal muscular atrophy type i",
+      "canonical_name": "spinal muscular atrophy type I",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Disease",
+      "original_name": "spinal muscular atrophy type ii",
+      "canonical_name": "spinal muscular atrophy type II",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Antisense oligonucleotides",
+      "canonical_name": "antisense oligonucleotides",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Apitegromab",
+      "canonical_name": "apitegromab",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Branaplam",
+      "canonical_name": "branaplam",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Cycloheximide",
+      "canonical_name": "cycloheximide",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Disease-modifying therapies",
+      "canonical_name": "disease-modifying therapies",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Disease-modifying treatments",
+      "canonical_name": "disease-modifying treatments",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "ExspeU1",
+      "canonical_name": "ExSpeU1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Gene therapy",
+      "canonical_name": "gene therapy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Noninvasive ventilation",
+      "canonical_name": "noninvasive ventilation",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Nusinersen Sodium",
+      "canonical_name": "nusinersen sodium",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Nusinersen sodium",
+      "canonical_name": "nusinersen sodium",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Olesoxime",
+      "canonical_name": "olesoxime",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Onasemnogene-abeparvovec",
+      "canonical_name": "onasemnogene-abeparvovec",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Prednisolone",
+      "canonical_name": "prednisolone",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Riluzole",
+      "canonical_name": "riluzole",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Rituximab",
+      "canonical_name": "rituximab",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Salbutamol",
+      "canonical_name": "salbutamol",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Valproic Acid",
+      "canonical_name": "valproic acid",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "Valproic acid",
+      "canonical_name": "valproic acid",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "antisense oligonucleotide (ASO) therapeutics",
+      "canonical_name": "Antisense oligonucleotide (ASO) therapeutics",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "compound 2",
+      "canonical_name": "Compound 2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "disease modifying therapy",
+      "canonical_name": "Disease Modifying Therapy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "disease-modifying agents",
+      "canonical_name": "Disease-modifying agents",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "nursinersen",
+      "canonical_name": "Nursinersen",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "securinine",
+      "canonical_name": "Securinine",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Drug",
+      "original_name": "trichostatin A",
+      "canonical_name": "Trichostatin A",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Agrn",
+      "canonical_name": "AGRN",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Atp7a",
+      "canonical_name": "ATP7A",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "BicD2",
+      "canonical_name": "BICD2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "C1ORF194",
+      "canonical_name": "C1orf194",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Crabp1",
+      "canonical_name": "CRABP1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "DcpS",
+      "canonical_name": "DCPS",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Gemin3",
+      "canonical_name": "gemin3",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "HOXa5",
+      "canonical_name": "HoxA5",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Hspb1",
+      "canonical_name": "HSPB1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Ighmbp2",
+      "canonical_name": "IGHMBP2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "KLF15",
+      "canonical_name": "Klf15",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Nrxn2",
+      "canonical_name": "NRXN2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "P53",
+      "canonical_name": "p53",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Pgk1",
+      "canonical_name": "PGK1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "RhoA",
+      "canonical_name": "RHOA",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "SMN-1",
+      "canonical_name": "smn-1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "SYT13",
+      "canonical_name": "Syt13",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "SmnDelta7",
+      "canonical_name": "SMNDelta7",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Survival Motor Neuron 1",
+      "canonical_name": "survival motor neuron 1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Survival Motor Neuron 1 gene",
+      "canonical_name": "survival motor neuron 1 gene",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Survival Motor Neuron 2",
+      "canonical_name": "survival motor neuron 2",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Survival of Motor Neuron 1",
+      "canonical_name": "survival of motor neuron 1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "TGS1",
+      "canonical_name": "Tgs1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Tbce",
+      "canonical_name": "TBCE",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Tia1",
+      "canonical_name": "TIA1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Trp53",
+      "canonical_name": "TRP53",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Uba1",
+      "canonical_name": "UBA1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Vrk1",
+      "canonical_name": "VRK1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "Zpr1",
+      "canonical_name": "ZPR1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "asah1",
+      "canonical_name": "ASAH1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "chodl",
+      "canonical_name": "Chodl",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "exosc9",
+      "canonical_name": "EXOSC9",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "gemin5",
+      "canonical_name": "GEMIN5",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "rbm7",
+      "canonical_name": "RBM7",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Gene",
+      "original_name": "vrk1",
+      "canonical_name": "VRK1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "6-Minute Walk Test",
+      "canonical_name": "6-minute walk test",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Acute respiratory failure",
+      "canonical_name": "acute respiratory failure",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Akt phosphorylation",
+      "canonical_name": "AKT phosphorylation",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Arthrogryposis Multiplex Congenita",
+      "canonical_name": "arthrogryposis multiplex congenita",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "CHOP Intend score",
+      "canonical_name": "CHOP INTEND score",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "CHOP-Intend score",
+      "canonical_name": "CHOP-INTEND score",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "CMAP(MAX)",
+      "canonical_name": "CMAP(max)",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Exon 7 inclusion",
+      "canonical_name": "exon 7 inclusion",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Fatigability",
+      "canonical_name": "fatigability",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Fatigue",
+      "canonical_name": "fatigue",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Forced Vital Capacity",
+      "canonical_name": "forced vital capacity",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "HRQoL",
+      "canonical_name": "HRQOL",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Hammersmith Functional motor scale",
+      "canonical_name": "Hammersmith Functional Motor Scale",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Hammersmith functional motor scale",
+      "canonical_name": "Hammersmith Functional Motor Scale",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Hammersmith functional motor scale expanded scores",
+      "canonical_name": "Hammersmith Functional Motor Scale Expanded scores",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Hepatotoxicity",
+      "canonical_name": "hepatotoxicity",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Insulin resistance",
+      "canonical_name": "insulin resistance",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Lower motor neuron disease",
+      "canonical_name": "lower motor neuron disease",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Lung function",
+      "canonical_name": "lung function",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Motor neuron degeneration",
+      "canonical_name": "motor neuron degeneration",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Motor neurons",
+      "canonical_name": "motor neurons",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Muscular atrophy",
+      "canonical_name": "muscular atrophy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Non-Invasive Ventilation",
+      "canonical_name": "non-invasive ventilation",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "PI3K-Akt pathway",
+      "canonical_name": "PI3K-AKT pathway",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Pain",
+      "canonical_name": "pain",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "SMA Type I",
+      "canonical_name": "SMA type I",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "SMA Type II",
+      "canonical_name": "SMA type II",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "SMA functional rating scale",
+      "canonical_name": "SMA Functional Rating Scale",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Skeletal muscle atrophy",
+      "canonical_name": "skeletal muscle atrophy",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Spinal deformity",
+      "canonical_name": "spinal deformity",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "Type 2 SMA",
+      "canonical_name": "type 2 SMA",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "apnea hypopnea index",
+      "canonical_name": "Apnea hypopnea index",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "apnea-hypopnea index",
+      "canonical_name": "Apnea-Hypopnea Index",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "daily activities",
+      "canonical_name": "Daily Activities",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "hypoxia",
+      "canonical_name": "Hypoxia",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "motor function measure",
+      "canonical_name": "Motor Function Measure",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "perceived fatigue",
+      "canonical_name": "Perceived fatigue",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "respiratory muscle fatigability",
+      "canonical_name": "Respiratory Muscle Fatigability",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "revised upper limb module",
+      "canonical_name": "Revised Upper Limb Module",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Phenotype",
+      "original_name": "revised upper limb module (RULM)",
+      "canonical_name": "Revised Upper Limb Module (RULM)",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Acid ceramidase",
+      "canonical_name": "acid ceramidase",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Akt",
+      "canonical_name": "AKT",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Coilin",
+      "canonical_name": "coilin",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Dpp4",
+      "canonical_name": "DPP4",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "GEMIN5",
+      "canonical_name": "Gemin5",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Hb9",
+      "canonical_name": "HB9",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Lamin A/C",
+      "canonical_name": "lamin A/C",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Leptin",
+      "canonical_name": "leptin",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Myostatin",
+      "canonical_name": "myostatin",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "NFL",
+      "canonical_name": "NfL",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "P53",
+      "canonical_name": "p53",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "SAM68",
+      "canonical_name": "Sam68",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "SMN-GEMINs complex",
+      "canonical_name": "SMN-Gemins complex",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "SMN-fl",
+      "canonical_name": "SMN-FL",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Smn",
+      "canonical_name": "SMN",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Smn complex",
+      "canonical_name": "SMN complex",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Survival Motor Neuron (SMN) protein",
+      "canonical_name": "survival motor neuron (SMN) protein",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Survival Motor Neuron (SMN) protein complex",
+      "canonical_name": "Survival motor neuron (SMN) protein complex",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Tau",
+      "canonical_name": "tau",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Traf6",
+      "canonical_name": "TRAF6",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "Uba1",
+      "canonical_name": "UBA1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "agrin",
+      "canonical_name": "Agrin",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "caveolin-1",
+      "canonical_name": "Caveolin-1",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "cleaved Caspase-3",
+      "canonical_name": "cleaved caspase-3",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "mTor",
+      "canonical_name": "mTOR",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "neurofilament proteins",
+      "canonical_name": "Neurofilament proteins",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "p21",
+      "canonical_name": "P21",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "pNFH",
+      "canonical_name": "pNfH",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "pNf-H",
+      "canonical_name": "pNF-H",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "senataxin",
+      "canonical_name": "Senataxin",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "survival motor neuron protein (Smn)",
+      "canonical_name": "survival motor neuron protein (SMN)",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "survival of motor neuron (SMN) protein",
+      "canonical_name": "Survival of Motor Neuron (SMN) protein",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "survival of motor neuron protein",
+      "canonical_name": "Survival of Motor Neuron protein",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Protein",
+      "original_name": "t-tau",
+      "canonical_name": "T-Tau",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Variant",
+      "original_name": "Exon 7 deletion",
+      "canonical_name": "exon 7 deletion",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Variant",
+      "original_name": "Loss-of-function mutations",
+      "canonical_name": "loss-of-function mutations",
+      "reason": "same_typed_orthographic_form"
+    },
+    {
+      "type": "Variant",
+      "original_name": "Smn mutation",
+      "canonical_name": "SMN mutation",
+      "reason": "same_typed_orthographic_form"
+    }
+  ],
+  "semantic_model": "NeuML/pubmedbert-base-embeddings",
+  "semantic_threshold": 0.88,
+  "semantic_status": "not_requested",
+  "automatic_semantic_merges": 0,
+  "proposals": []
+}

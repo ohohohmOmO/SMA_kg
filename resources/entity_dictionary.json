@@ -5,7 +5,6 @@
     "risdiplam": "Risdiplam",
     "evrysdi": "Risdiplam",
     "zolgensma": "Onasemnogene Abeparvovec",
-    "oa": "Onasemnogene Abeparvovec",
     "onasemnogene": "Onasemnogene Abeparvovec",
     "onasemnogene abeparvovec": "Onasemnogene Abeparvovec",
     "onasemnogene abeparvovec-xioi": "Onasemnogene Abeparvovec"
@@ -22,8 +21,7 @@
     "smn1": "SMN1",
     "smn2": "SMN2",
     "smn": "SMN",
-    "survival motor neuron": "SMN",
-    "exon 7": "SMN2 (Exon 7)"
+    "survival motor neuron": "SMN"
   },
   "protein": {
     "smn protein": "SMN protein",

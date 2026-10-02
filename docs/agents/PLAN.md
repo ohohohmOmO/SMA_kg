@@ -33,7 +33,7 @@ Real secrets must stay in the ignored local `.env` file. Do not write real API
 keys or passwords to source code, committed docs, test fixtures, logs,
 manifests, or generated examples.
 
-## Current Development Status - 2026-06-09
+## Historical Development Status - 2026-06-09
 
 The Stage 1-4 hardening work requested on 2026-06-09 is complete.
 
@@ -116,67 +116,40 @@ Historical or archived context:
   `data/interim/relation_conflicts.jsonl` if the graph needs conflict
   adjudication rather than `needs_review` marking.
 
-## FYP Completion Work - 2026-10-02
+## Current FYP Repairs - 2026-10-02
 
-- The proposed schedule is in `docs/fyp/FYP_COMPLETION_PLAN_2026-10-02.md`.
-- Review instructions and verification boundaries are in
-  `docs/fyp/HUMAN_REVIEW_AND_VALIDATION_GUIDE_2026-10-02.md`.
-- `src/evaluation/audit_fyp_inputs.py` performs offline, read-only input and
-  provenance checks, writing to a new dated run directory. The completed run
-  is `artifacts/runs/fyp_readiness_audit_2026-10-02/`; it found no issues in
-  the implemented structural/provenance checks. It does not establish
-  biomedical correctness or semantic evidence support.
-- The evidence-location diagnostic found 15733 exact matches, 136
-  case/whitespace matches, and 2419 non-located evidence texts. It also
-  generated alignment-change and conflict-evidence review queues.
-- The original blank workbook remains pending. The user subsequently supplied
-  `outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx`
-  with 400 integrated support/span labels. Its source reviewer metadata is
-  `ChatGPT-GPT-5.6-Sol`. The user clarified on 2026-10-02 that all 400 labels
-  were assigned by humans and ChatGPT only assembled the workbook. Record this
-  attestation separately; original metadata stays unchanged. The source question
-  is closed. Independent second-review fields are empty and agreement is absent.
-- The compact-label adapter and offline evaluation are implemented in
-  `src/evaluation/fyp_dataset.py` and `run_fyp_evaluation.py`. Original labels,
-  identities and source fields are preserved; blank component fields are not
-  imputed. Keep the older detailed-workbook reporter for its original protocol.
-- Completed automated run: `artifacts/runs/fyp_evaluation_2026-10-02/`.
-  Controlled raw/dictionary/semantic aggregation has 13697/13080/11155 unique
-  relation edges, preserves all 18288 evidence records and reproduces canonical
-  semantic aggregation byte-for-byte. Mapping correctness awaits a separate
-  fixed 30-unit review, not the extraction workbook.
-- Latest human-confirmed run:
-  `artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/`.
-  The attestation is in its run config/review provenance. Numerical results
-  and the fixed mapping queue are unchanged; earlier run artifacts remain
-  historical snapshots and may still display the former unconfirmed status.
-- `src/biomedical/evidence_validation.py` implements source-offset location,
-  typography normalization, ordered fragments and conservative lexical triage.
-  It leaves 1152 spans unlocated, offers fuzzy suggestions for review only,
-  and does not establish semantic entailment. Internal PMID-disjoint test
-  results are against the supplied reference labels, with provenance limits.
-- Generated deliverables: offline `evidence_explorer.html`, scientific figures,
-  `results_and_discussion.md`, `summary_zh.md`, JSON/CSV diagnostics and manifests
-  inside the run. Reporting checkpoints are in
-  `docs/fyp/FYP_EVALUATION_PROTOCOL_2026-10-02.md` and
-  `docs/fyp/FYP_COMPLETION_STATUS_2026-10-02.md`.
-- `build_fyp_graph_explorer.py` also builds `graph_explorer.html`: complete
-  literature-edge/original-record/abstract joins, bounded directed neighbours,
-  filters, potential conflicts and separately identified Open Targets records.
-  Ten real browser functional checks are recorded in
-  `USAGE_AND_ACCEPTANCE_zh.md`; these are not independent human user testing.
-- Next human-dependent work: enter the 30 mapping judgments for a frozen
-  mapping condition using the offline explorer. Independent agreement stays
-  unavailable until independent reviewers provide labels. GraphRAG and
-  semantic claim-validation modules remain incomplete and outside this run.
-- Completion audit found incompatible SMN2→SMN1 and subtype transformations,
-  reproduced a name-only alignment-map cross-type overwrite, and recorded the
-  name-only Neo4j identity limitation. A current read-only DB connection was
-  attempted but not established (`ServiceUnavailable`); no graph was modified.
-  See `docs/fyp/FYP_READINESS_REVIEW_2026-10-02.md` and
-  `.scratch/fyp-evaluation/issues/04-prevent-incompatible-alignment.md`.
-  Core prototype/evaluation is delivered; final quality and draft-scope gates
-  remain open. The preliminary DOCX still promises the three unbuilt modules.
+Four requested repairs have implementation and acceptance evidence. Current status
+is `docs/fyp/FYP_FOUR_REPAIRS_STATUS_2026-10-02.md`; commands and boundaries are
+`docs/reproduction/FYP_FOUR_REPAIRS_2026-10-02.md`.
+
+- Canonical raw: 18,288 unchanged LLM predictions; supplied400 labels human-assigned,
+  ChatGPT formatted only, workbook untouched. No independent second review.
+- Canonical fusion: 13,001 literature edges, 9,053 typed nodes, 36 potential
+  conflict pairs, two self-loops; fused SHA-256
+  `ecdd5e68a308309f423b5ade455d14131152f67dcf978579c9f254c9d7de0e5d`.
+  All982 SMN2→SMN1 erroneous endpoints/618 PMIDs restored. Typed orthographic
+  identity only; semantic proposals require review. Prior canonical backed up.
+- Final evaluation: `artifacts/runs/fyp_four_repairs_final_2026-10-02/`.
+  Same-input raw/dictionary/repaired edges13,697/13,080/13,001. 30-unit new
+  mapping queue remains optional and unjudged; no mapping correctness rate.
+- Context/type/label-blind model experiment preserved in
+  `assertion_quality_repair_2026-10-02`; documented decimal-boundary correction
+  in `assertion_quality_context_fixed_2026-10-02` replays same400 responses,
+  no additional calls. Full sidecar keeps16,724 needs_review/1,564 candidates.
+  Main strict26.3%; combined internal test46.7% among30/202 retained, only14/55
+  strict positives. Intervals overlap; rules alone worsen strict precision.
+  No adequate extraction quality, significant gain, recall/F1 or clinical claim.
+- Active Neo4j version `typed-v2-8a4dbccd4fdc22ca`: 9,218 nodes and13,165
+  source-specific edges; every property/provenance reconciled, legacy6,648/
+  11,208 retained. Never clear the graph. Defaultqueries scope active version.
+- Current `docs/graph_viewer.html` is full offline source explorer; typed
+  MultiDiGraph analytics promoted with backups. Old PyVis/history retained.
+- Five external FYP drafts revised, backed up and checked page-by-page. Scope:
+  extraction support, typed fusion, evidence/assertion screening and source
+  inspection. GraphRAG/answer citation/atomic claim validation future work.
+  Final university dissertation, true learning/logbooks and signatures remain.
+- 56 focused unit tests and actual browser checks pass. Full reconciliation is
+  engineering acceptance; all biomedical mappings/assertions remain unadjudicated.
 
 ## Before Each Run
 

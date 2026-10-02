@@ -10,6 +10,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.biomedical.schema import normalize_entity_type, normalize_relation
+from src.biomedical.entity_identity import identity_conflict
 
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -28,6 +29,8 @@ def map_entity(entity, dictionary):
     etype = normalize_entity_type(entity.get("type")) or str(entity.get("type", "")).strip()
     lower_name = name.lower()
     mapped_name = dictionary.get(etype.lower(), {}).get(lower_name)
+    if mapped_name and identity_conflict(etype, name, mapped_name):
+        mapped_name = None
     entity["name"] = mapped_name or name
     entity["type"] = etype
     return entity

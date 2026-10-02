@@ -1,0 +1,5 @@
+2026-10-02 19:48:00,287 - INFO - Aggregating aligned triples...
+2026-10-02 19:48:01,550 - INFO - Aggregated 18288 raw triples into 13001 fused unique edges.
+2026-10-02 19:48:01,550 - INFO - Rejected 0 invalid aligned triples to D:\kg_sma_0704\artifacts\runs\stage3_identity_repair_2026-10-02\outputs\data\interim\aggregation_rejected.jsonl.
+2026-10-02 19:48:01,550 - INFO - Flagged 36 conflicting entity pairs to D:\kg_sma_0704\artifacts\runs\stage3_identity_repair_2026-10-02\outputs\data\interim\relation_conflicts.jsonl.
+2026-10-02 19:48:01,550 - INFO - Saved fused triples to D:\kg_sma_0704\artifacts\runs\stage3_identity_repair_2026-10-02\outputs\data\processed\fused_triples.jsonl.

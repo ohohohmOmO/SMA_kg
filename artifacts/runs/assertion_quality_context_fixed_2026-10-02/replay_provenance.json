@@ -1,0 +1,7 @@
+{
+  "reason": "Correct decimal punctuation truncating original source sentence context; no prompt, model response, label or threshold changes",
+  "source_run": "D:\\kg_sma_0704\\artifacts\\runs\\assertion_quality_repair_2026-10-02",
+  "source_decisions_sha256": "177df98500d77dea25033b9e5782e48b433a4cb93e802ec0bbb054a6f104dcc0",
+  "new_api_calls": 0,
+  "sentence_code_sha256": "a82d03fd7a7da11ee8814f3c115cc798132b495d1362863446cdb7c3bfe52ceb"
+}

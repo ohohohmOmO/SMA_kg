@@ -1,0 +1,31 @@
+{
+  "promoted": true,
+  "validation": "identity_validation.json and validation_summary.json; preserved all 18288 source records; no semantic identity merges",
+  "files": [
+    {
+      "canonical": "data/interim/mapped_triples.jsonl",
+      "before_sha256": "7f10841e68bcd54aeb58658562e1147b20c5a4502b8ef5928ef08c7637b9e4f8",
+      "after_sha256": "7f10841e68bcd54aeb58658562e1147b20c5a4502b8ef5928ef08c7637b9e4f8"
+    },
+    {
+      "canonical": "data/interim/aligned_triples.jsonl",
+      "before_sha256": "65fc3e961e37e5361b47dd46dccef4916575d0e3b71130a8e6c775a18b36e58e",
+      "after_sha256": "8bcb0a1863b36419160b7ac4072c0887a7d26aef552ee6fbf2caec68db854d5f"
+    },
+    {
+      "canonical": "data/processed/fused_triples.jsonl",
+      "before_sha256": "1771293aad8258befe717c7c7ca00c349fe5fdb782b84245b1357ad45e332b5a",
+      "after_sha256": "ecdd5e68a308309f423b5ade455d14131152f67dcf978579c9f254c9d7de0e5d"
+    },
+    {
+      "canonical": "data/interim/relation_conflicts.jsonl",
+      "before_sha256": "96c8923c9d67776b00936169323ee092979870d40b15c5a932d37a022b2924db",
+      "after_sha256": "1a39be9c5a60dd5517829cdfffce4fe825a7edd62745aed20b3b1e5d01cdea78"
+    },
+    {
+      "canonical": "data/interim/aggregation_rejected.jsonl",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

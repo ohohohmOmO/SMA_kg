@@ -1,0 +1,20 @@
+{
+  "checks_passed": [
+    "full corrected decimal sentence and offsets",
+    "human/model labels separate",
+    "empty search clears detail",
+    "0 of30 mapping judgments retained",
+    "new graph13,001/18,288/164 totals",
+    "SMN1 and SMN2 separate",
+    "same-name Gene/Protein distinct",
+    "OT source identifier namespace",
+    "SMN2 TARGETS filter",
+    "Nusinersen SMN2 all37 PMID records",
+    "context flags shown",
+    "paired precision retention losses shown",
+    "both explorers no console errors"
+  ],
+  "independent_human_usability_test": false,
+  "human_labels_created": 0,
+  "proof_screenshot": "graph_ui_acceptance.png"
+}

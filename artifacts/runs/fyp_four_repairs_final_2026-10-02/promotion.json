@@ -1,0 +1,20 @@
+{
+  "validated": true,
+  "kind": "full offline graph viewer and typed MultiDiGraph analytics",
+  "items": [
+    {
+      "source": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_four_repairs_final_2026-10-02\\graph_explorer.html",
+      "destination": "D:\\kg_sma_0704\\docs\\graph_viewer.html",
+      "before_sha256": "ddb1dc0c48cc1522e1211282a856847bcf577b59891052903795f3ff8d6b861f",
+      "after_sha256": "5418f37878ac28e675d715180cea9363bbf4ad779aedfd33eafffb508cc73635",
+      "backup": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_four_repairs_final_2026-10-02\\pre_promotion\\graph_viewer.html"
+    },
+    {
+      "source": "D:\\kg_sma_0704\\artifacts\\runs\\stage4_typed_identity_repair_verified_2026-10-02\\outputs\\data\\processed\\analytics_metrics.csv",
+      "destination": "D:\\kg_sma_0704\\data\\processed\\analytics_metrics.csv",
+      "before_sha256": "fd7703dd2bab7751ea7ca7542042105d1b6274b7b714ab69b0eb83dae829684e",
+      "after_sha256": "7d4c81005f78ad2177fbedfe0412758e65b837144b3fb15ca94943e97806522e",
+      "backup": "D:\\kg_sma_0704\\artifacts\\runs\\fyp_four_repairs_final_2026-10-02\\pre_promotion\\analytics_metrics.csv"
+    }
+  ]
+}

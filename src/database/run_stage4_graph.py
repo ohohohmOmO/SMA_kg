@@ -170,8 +170,8 @@ def main():
                     "--summary-file",
                     str(neo4j_import_summary),
                 ]
-                if not args.preserve_neo4j:
-                    import_cmd.append("--clear-managed-graph")
+                # Versioned typed import preserves historical graphs by default.
+                # --preserve-neo4j is retained for CLI compatibility only.
                 import_result = run_command(
                     "neo4j_import",
                     import_cmd,
@@ -244,7 +244,8 @@ def main():
         "opentargets_file": args.opentargets_file,
         "opentargets_sha256": sha256_file(REPO_ROOT / args.opentargets_file) if (REPO_ROOT / args.opentargets_file).exists() else "",
         "promoted": bool(args.promote and all_valid),
-        "preserve_neo4j": bool(args.preserve_neo4j),
+        "preserve_neo4j": True,
+        "database_identity_policy": "versioned_typed_source_namespace",
         "commands": commands,
         "outputs": {
             "analytics_metrics": str(snapshot_analytics.relative_to(REPO_ROOT)) if snapshot_analytics.exists() else "",

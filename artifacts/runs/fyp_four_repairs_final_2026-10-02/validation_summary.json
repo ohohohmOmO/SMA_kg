@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-02T12:30:37.441808+00:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "input_mutations": 0,
+  "source_dataset_checks": {
+    "identity_check": "passed",
+    "source_fields_check": "passed",
+    "integrated_labels_check": "passed",
+    "warnings": [],
+    "reviewer_ids": {
+      "ChatGPT-GPT-5.6-Sol": 400
+    },
+    "empty_component_fields": {
+      "entity_1_correct": 400,
+      "entity_2_correct": 400,
+      "relation_correct": 400,
+      "direction_correct": 400
+    },
+    "independent_second_reviews": 0
+  },
+  "fusion_checks": {
+    "dictionary_replay_errors": 0,
+    "stable_field_errors": 0,
+    "fused_provenance_errors": 0,
+    "semantic_aggregation_reproduces_canonical_bytes": true
+  },
+  "split_pmid_overlap": 0,
+  "human_quality_established": true,
+  "pending": [
+    "fusion mapping judgments",
+    "independent second review if agreement is claimed"
+  ],
+  "limits": [
+    "Traceability and endpoint coverage do not establish semantic entailment.",
+    "Compression does not establish correct fusion.",
+    "No clinical efficacy or novel target claim."
+  ]
+}

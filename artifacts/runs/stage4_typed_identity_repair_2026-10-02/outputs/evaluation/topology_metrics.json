@@ -1,0 +1,9 @@
+{
+  "graph_version": "typed-v2-fe93797a156149f5",
+  "identity_scope": "active typed SMAEntity graph; source namespaces separate; legacy graphs excluded",
+  "total_nodes": 9218,
+  "total_relationships": 13165,
+  "average_node_degree": 2.856367975699718,
+  "isolated_nodes": 0,
+  "isolated_nodes_ratio": 0.0
+}

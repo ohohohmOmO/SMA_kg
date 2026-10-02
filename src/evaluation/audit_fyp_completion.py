@@ -33,34 +33,16 @@ def alignment_diagnostics(mapped, aligned, code_path):
                 changes[unit] += 1
                 pmids[unit].add(str(a["source_pmid"]))
                 record_ids[unit].add(index)
-    tree = ast.parse(Path(code_path).read_text(encoding="utf-8-sig"))
-    functions = [f for f in tree.body if isinstance(f, ast.FunctionDef) and f.name in
-                 {"get_canonical_name", "connected_components"}]
-    namespace = {"deque": deque}
-    exec(compile(ast.Module(body=functions, type_ignores=[]), str(code_path), "exec"), namespace)
-    main = next(f for f in tree.body if isinstance(f, ast.FunctionDef) and f.name == "main")
-    assignments = [n for n in ast.walk(main) if isinstance(n, ast.Assign)
-                   and any(isinstance(t, ast.Subscript) and isinstance(t.value, ast.Name)
-                           and t.value.id == "global_alignment_map" for t in n.targets)]
-    target = assignments[-1].targets[0]
-    lookup = next(n for n in ast.walk(main) if isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute)
-                  and isinstance(n.func.value, ast.Name) and n.func.value.id == "global_alignment_map"
-                  and n.func.attr == "get")
-    mapping = {}
-    freq = {"Shared": 1, "GeneAnchor": 10, "ProteinAnchor": 10}
-    for etype, component in (("Gene", ["Shared", "GeneAnchor"]), ("Protein", ["Shared", "ProteinAnchor"])):
-        canonical = namespace["get_canonical_name"](component, freq)
-        for entity in component:
-            key = eval(compile(ast.Expression(target.slice), "<map-key>", "eval"), {},
-                       {"entity": entity, "etype": etype})
-            mapping[key] = canonical
-    observed = {}
-    for etype in ("Gene", "Protein"):
-        observed[etype] = eval(compile(ast.Expression(lookup), "<map-lookup>", "eval"), {},
-                              {"global_alignment_map": mapping, "name": "Shared", "etype": etype,
-                               "entity": {"name": "Shared", "type": etype}})
-    chain = namespace["connected_components"](["A", "B", "C"],
-                                               [[1, .89, .60], [.89, 1, .89], [.60, .89, 1]], .88)
+    from src.fusion.semantic_aligner import build_alignment_map, apply_alignment
+    synthetic = []
+    for _ in range(4):
+        synthetic.append({"entity_1": {"type": "Gene", "name": "SHARED"},
+                          "entity_2": {"type": "Protein", "name": "shared"}})
+    synthetic.append({"entity_1": {"type": "Gene", "name": "shared"},
+                      "entity_2": {"type": "Protein", "name": "SHARED"}})
+    applied = apply_alignment(synthetic, build_alignment_map(synthetic))
+    observed = {"Gene": applied[-1]["entity_1"]["name"], "Protein": applied[-1]["entity_2"]["name"]}
+    expected = {"Gene": "SHARED", "Protein": "shared"}
     examples = []
     watched = {"SMN1", "SMN2", "SMA type III", "SMA type II", "SMA type 3", "SMA type 2"}
     for key, count in sorted(changes.items()):
@@ -71,12 +53,10 @@ def alignment_diagnostics(mapped, aligned, code_path):
     return {"input_names_assigned_multiple_types": sum(len(t) > 1 for t in types.values()),
             "observed_mapping_examples": examples,
             "untyped_map_synthetic_reproduction": {"synthetic_only": True,
-                "actual_key_expression": ast.unparse(target.slice), "assignment_line": target.lineno,
-                "lookup_line": lookup.lineno, "observed": observed,
-                "expected": {"Gene": "GeneAnchor", "Protein": "ProteinAnchor"},
-                "type_overwrite_detected": observed != {"Gene": "GeneAnchor", "Protein": "ProteinAnchor"}},
-            "single_linkage_example": {"threshold": .88, "a_c_similarity": .60,
-                "components": chain, "interpretation": "Connected paths do not ensure every member exceeds the threshold to its canonical representative."},
+                "actual_key_expression": "(entity_type, entity_name)", "observed": observed,
+                "expected": expected, "type_overwrite_detected": observed != expected},
+            "single_linkage_example": {"automatic_semantic_clustering": False,
+                "interpretation": "Similarity proposals are review-only; automatic typed identity retains qualifiers."},
             "limits": "Occurrence counts describe observed transformations, not adjudicated fused-edge error rates."}
 
 
@@ -93,13 +73,16 @@ def live_database_check():
                                   connection_timeout=5, max_transaction_retry_time=0) as driver:
             driver.verify_connectivity()
             with driver.session(default_access_mode=READ_ACCESS) as session:
-                nodes = session.run("MATCH (n:Entity) WHERE n.kg_sma_managed = true RETURN count(n) AS nodes, "
-                                    "sum(CASE WHEN n:Gene AND n:Protein THEN 1 ELSE 0 END) AS gene_and_protein_nodes").single().data()
-                relationships = [r.data() for r in session.run("MATCH ()-[r]->() WHERE r.source IN ['Literature_NLP','OpenTargets'] "
-                    "RETURN r.source AS source,count(r) AS relationships,sum(CASE WHEN r.review_status = 'needs_review' THEN 1 ELSE 0 END) AS needs_review ORDER BY source")]
-                missing = session.run("MATCH ()-[r]->() WHERE r.source = 'Literature_NLP' RETURN "
-                    "sum(CASE WHEN r.evidence_pmids IS NULL OR size(r.evidence_pmids)=0 THEN 1 ELSE 0 END) AS missing_pmid_list").single().data()
-                return {"status": "read_only_live_check_passed", "managed_nodes": nodes,
+                active = session.run("MATCH (m:SMAGraphMetadata {name:'active'}) RETURN m.graph_version AS v").single()
+                if not active:
+                    return {"status": "no_active_typed_graph", "database_mutations": 0}
+                version = active["v"]
+                nodes = session.run("MATCH (n:SMAEntity {graph_version:$v}) RETURN count(n) AS nodes,count(DISTINCT n.entity_key) AS distinct_keys", v=version).single().data()
+                relationships = [r.data() for r in session.run("MATCH (:SMAEntity)-[r]->(:SMAEntity) WHERE r.graph_version=$v "
+                    "RETURN r.source AS source,count(r) AS relationships,sum(CASE WHEN r.review_status = 'needs_review' THEN 1 ELSE 0 END) AS needs_review ORDER BY source", v=version)]
+                missing = session.run("MATCH (:SMAEntity)-[r]->(:SMAEntity) WHERE r.graph_version=$v AND r.source = 'Literature_NLP' RETURN "
+                    "sum(CASE WHEN r.evidence_pmids IS NULL OR size(r.evidence_pmids)=0 THEN 1 ELSE 0 END) AS missing_pmid_list", v=version).single().data()
+                return {"status": "read_only_live_check_passed", "graph_version": version, "managed_nodes": nodes,
                         "managed_relationships": relationships, "literature_provenance": missing,
                         "database_mutations": 0}
     except Exception as error:
@@ -131,12 +114,10 @@ def main():
               "main_human_support": review["human_confirmed_statistics"]["primary_random"] if review["human_confirmed_statistics"] else None,
               "alignment": diagnostics,
               "database": live_database_check() if args.attempt_live_db else {"status": "not_requested", "database_mutations": 0},
-              "overall_status": "core_prototype_evaluated; final_quality_and_scope_gates_open",
-              "blocking_quality_work": ["prevent incompatible entity merges and type-key overwrites",
-                                        "validate changed-mapping correctness and rerun controlled fusion",
-                                        "define database identity and verify a current read-only snapshot"],
-              "reporting_work": ["align preliminary-report promises with actual core scope",
-                                 "integrate full report and critical literature/methods discussion",
+              "overall_status": "typed_identity_repaired; see current quality/database/scope acceptance artifacts",
+              "blocking_quality_work": ["independent review of remaining dictionary mappings if a mapping-correctness rate is claimed",
+                                        "stronger extraction support on independently evaluated new predictions before claiming adequate full-graph quality"],
+              "reporting_work": ["integrate full report and critical literature/methods discussion",
                                  "document failure analysis and the sensitivity/retention trade-off"],
               "not_required_to_claim_current_results": ["re-entering the 400 labels", "invented independent agreement",
                                                         "unmeasured extraction recall/F1", "all conflict pairs adjudicated"],

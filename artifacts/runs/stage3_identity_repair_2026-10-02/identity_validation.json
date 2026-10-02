@@ -1,0 +1,12 @@
+{
+  "records": 18288,
+  "fused_edges": 13001,
+  "typed_nodes": 9053,
+  "smn2_to_smn1_corrected_endpoints": 982,
+  "affected_pmids": 618,
+  "unsafe_automatic_identity_changes": 0,
+  "preserved_evidence_records": 18288,
+  "prior_vs_fixed_endpoint_changes": 6587,
+  "automatic_semantic_merges": 0,
+  "policy": "typed orthographic normalization; semantic similarity does not merge identities"
+}

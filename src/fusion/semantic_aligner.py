@@ -1,149 +1,117 @@
+"""Typed identity normalization; embedding similarity produces review proposals only."""
 import argparse
+import copy
 import json
 import logging
 import os
-import shutil
-from collections import defaultdict, deque
+import sys
+from collections import Counter, defaultdict
 from pathlib import Path
 
-os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-from sklearn.metrics.pairwise import cosine_similarity
-
-try:
-    from sentence_transformers import SentenceTransformer
-except ImportError:
-    SentenceTransformer = None
-
-
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+from src.biomedical.entity_identity import identity_form, compatible_identity
 
 DEFAULT_MODEL = "NeuML/pubmedbert-base-embeddings"
+POLICY = "typed_orthographic_identity_v2_semantic_review_only"
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 def get_canonical_name(cluster, freq_map):
-    return sorted(cluster, key=lambda name: (-freq_map[name], len(name), name.lower()))[0]
+    return min(cluster, key=lambda name: (-freq_map[name], len(name), name.casefold(), name))
 
 
-def connected_components(entity_list, sim_matrix, threshold):
-    adjacency = {i: set() for i in range(len(entity_list))}
-    for i in range(len(entity_list)):
-        for j in range(i + 1, len(entity_list)):
-            if sim_matrix[i][j] >= threshold:
-                adjacency[i].add(j)
-                adjacency[j].add(i)
+def build_alignment_map(triples):
+    frequencies = Counter((e["type"], e["name"]) for r in triples
+                          for e in (r["entity_1"], r["entity_2"]))
+    groups = defaultdict(list)
+    for etype, name in frequencies:
+        groups[(etype, identity_form(name))].append(name)
+    mapping = {}
+    for (etype, _), names in sorted(groups.items()):
+        typed_frequency = {name: frequencies[(etype, name)] for name in names}
+        canonical = get_canonical_name(names, typed_frequency)
+        for name in names:
+            mapping[(etype, name)] = canonical if compatible_identity(etype, name, canonical) else name
+    return mapping
 
-    visited = set()
-    components = []
-    for i in range(len(entity_list)):
-        if i in visited:
+
+def apply_alignment(triples, mapping):
+    result = copy.deepcopy(triples)
+    for row in result:
+        for key in ("entity_1", "entity_2"):
+            entity = row[key]
+            entity["name"] = mapping.get((entity["type"], entity["name"]), entity["name"])
+    return result
+
+
+def semantic_proposals(mapping, model_name, threshold, batch_size):
+    os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+    from sentence_transformers import SentenceTransformer
+    from sklearn.metrics.pairwise import cosine_similarity
+    model = SentenceTransformer(model_name)
+    by_type = defaultdict(set)
+    for etype, name in mapping:
+        by_type[etype].add(mapping[(etype, name)])
+    proposals = []
+    for etype, names in sorted(by_type.items()):
+        names = sorted(names)
+        if len(names) < 2:
             continue
-        queue = deque([i])
-        visited.add(i)
-        component = []
-        while queue:
-            current = queue.popleft()
-            component.append(entity_list[current])
-            for neighbor in sorted(adjacency[current]):
-                if neighbor not in visited:
-                    visited.add(neighbor)
-                    queue.append(neighbor)
-        components.append(sorted(component, key=str.lower))
-    return sorted(components, key=lambda comp: comp[0].lower())
+        logging.info("Embedding %s %s names for review only", len(names), etype)
+        vectors = model.encode(names, batch_size=batch_size, show_progress_bar=False)
+        similarities = cosine_similarity(vectors)
+        seen = set()
+        for i, name in enumerate(names):
+            similarities[i, i] = -1
+            j = int(similarities[i].argmax())
+            score = float(similarities[i, j])
+            pair = tuple(sorted((i, j)))
+            if score >= threshold and pair not in seen:
+                seen.add(pair)
+                proposals.append({"entity_type": etype, "name": name, "candidate": names[j],
+                                  "similarity": round(score, 6), "automatic_merge": False,
+                                  "identity_compatible": compatible_identity(etype, name, names[j]),
+                                  "judgment": "", "reviewer_id": ""})
+    return proposals
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Medically aligned deterministic entity semantic normalization.")
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-file", default="data/interim/mapped_triples.jsonl")
     parser.add_argument("--output-file", default="data/interim/aligned_triples.jsonl")
     parser.add_argument("--model", default=os.environ.get("STAGE3_ALIGNMENT_MODEL", DEFAULT_MODEL))
     parser.add_argument("--threshold", type=float, default=0.88)
     parser.add_argument("--hf-endpoint", default=os.environ.get("HF_ENDPOINT", "https://hf-mirror.com"))
-    return parser.parse_args()
-
-
-def main():
-    args = parse_args()
-    input_file = Path(args.input_file)
-    output_file = Path(args.output_file)
-    output_file.parent.mkdir(parents=True, exist_ok=True)
-
-    if not input_file.exists():
-        logging.error("Input file %s not found.", input_file)
-        return 1
-
-    logging.info("Loading triples for semantic alignment...")
-    triples = []
-    entity_freq = defaultdict(int)
-    type_to_entities = defaultdict(set)
-
-    with input_file.open("r", encoding="utf-8") as f:
-        for line in f:
-            if not line.strip():
-                continue
-            data = json.loads(line)
-            triples.append(data)
-
-            for entity_key in ("entity_1", "entity_2"):
-                entity = data.get(entity_key, {})
-                name = str(entity.get("name", "")).strip()
-                etype = str(entity.get("type", "")).strip()
-                if not name or not etype:
-                    continue
-                entity_freq[name] += 1
-                type_to_entities[etype].add(name)
-
-    if SentenceTransformer is None:
-        logging.warning("sentence-transformers is unavailable. Copying dictionary-mapped input unchanged.")
-        shutil.copy(input_file, output_file)
-        return 0
-
-    if args.hf_endpoint:
-        os.environ.setdefault("HF_ENDPOINT", args.hf_endpoint)
-    logging.info("Loading biomedical SentenceTransformer model: %s", args.model)
-
-    try:
-        model = SentenceTransformer(args.model)
-    except Exception as exc:
-        logging.warning("Biomedical semantic model failed to load: %s", exc)
-        logging.warning("Bypassing fuzzy semantic alignment. Proceeding with dictionary-mapped alignments.")
-        shutil.copy(input_file, output_file)
-        return 0
-
-    global_alignment_map = {}
-
-    for etype in sorted(type_to_entities):
-        entities = type_to_entities[etype]
-        if len(entities) <= 1:
-            for entity in entities:
-                global_alignment_map[entity] = entity
-            continue
-
-        entity_list = sorted(entities, key=str.lower)
-        logging.info("Computing embeddings for %s entities of type '%s'.", len(entity_list), etype)
-        embeddings = model.encode(entity_list, show_progress_bar=False)
-        sim_matrix = cosine_similarity(embeddings)
-        components = connected_components(entity_list, sim_matrix, args.threshold)
-
-        for component in components:
-            canonical = get_canonical_name(component, entity_freq)
-            for entity in component:
-                global_alignment_map[entity] = canonical
-
-    logging.info("Applying canonical alignments over dataset...")
-    aligned_count = 0
-    with output_file.open("w", encoding="utf-8") as f:
-        for data in triples:
-            for entity_key in ("entity_1", "entity_2"):
-                entity = data.get(entity_key, {})
-                name = entity.get("name", "")
-                if name:
-                    entity["name"] = global_alignment_map.get(name, name)
-            f.write(json.dumps(data, ensure_ascii=False) + "\n")
-            aligned_count += 1
-
-    logging.info("Alignment complete. Wrote %s triples to %s.", aligned_count, output_file)
-    return 0
+    parser.add_argument("--propose-semantic", action="store_true")
+    parser.add_argument("--batch-size", type=int, default=64)
+    args = parser.parse_args()
+    output = Path(args.output_file)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    triples = [json.loads(line) for line in Path(args.input_file).read_text(encoding="utf-8").splitlines() if line.strip()]
+    mapping = build_alignment_map(triples)
+    aligned = apply_alignment(triples, mapping)
+    output.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in aligned), encoding="utf-8")
+    changes = [{"type": t, "original_name": n, "canonical_name": c,
+                "reason": "same_typed_orthographic_form"} for (t, n), c in sorted(mapping.items()) if n != c]
+    status = "not_requested"
+    proposals = []
+    if args.propose_semantic:
+        os.environ["HF_ENDPOINT"] = args.hf_endpoint
+        try:
+            proposals = semantic_proposals(mapping, args.model, args.threshold, args.batch_size)
+            status = "completed_review_only"
+        except Exception as exc:
+            status = "failed_" + type(exc).__name__
+            logging.error("Semantic proposal generation failed (%s)", type(exc).__name__)
+    output.with_suffix(".alignment_audit.json").write_text(json.dumps({"policy": POLICY,
+        "records": len(aligned), "changes": changes, "semantic_model": args.model,
+        "semantic_threshold": args.threshold, "semantic_status": status,
+        "automatic_semantic_merges": 0, "proposals": proposals}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    logging.info("Aligned %s records; %s orthographic mapping units; no automatic semantic merges", len(aligned), len(changes))
+    return 1 if status.startswith("failed_") else 0
 
 
 if __name__ == "__main__":

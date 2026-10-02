@@ -13,6 +13,8 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.biomedical.schema import normalize_triple
+from src.biomedical.entity_identity import compatible_identity
+from src.fusion.semantic_aligner import POLICY
 
 
 
@@ -104,6 +106,7 @@ def parse_args():
     parser.add_argument("--input-file", default="data/processed/extracted_triples.jsonl")
     parser.add_argument("--run-dir", default="")
     parser.add_argument("--alignment-model", default="NeuML/pubmedbert-base-embeddings")
+    parser.add_argument("--propose-semantic", action="store_true", help="Generate review-only embedding proposals; never automatically merge.")
     parser.add_argument("--promote", action="store_true")
     return parser.parse_args()
 
@@ -112,6 +115,8 @@ def main():
     args = parse_args()
     stamp = datetime.now().strftime("%Y-%m-%d_%H%M")
     run_dir = (REPO_ROOT / args.run_dir).resolve() if args.run_dir else REPO_ROOT / "artifacts" / "runs" / f"stage3_fusion_{stamp}"
+    run_dir.mkdir(parents=True, exist_ok=False)
+    initial_input_hash = sha256_file(REPO_ROOT / args.input_file)
     outputs = run_dir / "outputs"
     logs = run_dir / "logs"
     mapped = outputs / "data" / "interim" / "mapped_triples.jsonl"
@@ -151,7 +156,7 @@ def main():
                     str(aligned),
                     "--model",
                     args.alignment_model,
-                ],
+                ] + (["--propose-semantic"] if args.propose_semantic else []),
                 logs / "semantic_aligner.log",
             )
         )
@@ -183,11 +188,26 @@ def main():
         validate_jsonl(rejected, require_core=False),
     ]
     all_valid = all(command["exit_code"] == 0 for command in commands) and all(item["valid"] for item in validations[:3])
+    identity_errors = 0
+    if all_valid:
+        mapped_rows = [json.loads(line) for line in mapped.read_text(encoding="utf-8").splitlines() if line.strip()]
+        aligned_rows = [json.loads(line) for line in aligned.read_text(encoding="utf-8").splitlines() if line.strip()]
+        if len(mapped_rows) != len(aligned_rows):
+            identity_errors += 1
+        for a, b in zip(mapped_rows, aligned_rows):
+            for field in ("source_pmid", "relation", "evidence_text"):
+                identity_errors += a.get(field) != b.get(field)
+            for key in ("entity_1", "entity_2"):
+                identity_errors += a[key]["type"] != b[key]["type"] or not compatible_identity(a[key]["type"], a[key]["name"], b[key]["name"])
+    all_valid = all_valid and not identity_errors and sha256_file(REPO_ROOT / args.input_file) == initial_input_hash
     summary = {
         "valid": all_valid,
         "input_file": args.input_file,
         "input_sha256": sha256_file(REPO_ROOT / args.input_file),
         "alignment_model": args.alignment_model,
+        "alignment_policy": POLICY,
+        "semantic_proposals_requested": args.propose_semantic,
+        "identity_or_source_errors": identity_errors,
         "commands": commands,
         "outputs": validations,
         "promoted": bool(args.promote and all_valid),

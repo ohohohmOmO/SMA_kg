@@ -59,7 +59,8 @@ def figures(out, review, fusion, evidence):
     conditions = ["raw", "dictionary", "semantic"]
     for ax, key, title in zip(axes, ("typed_nodes", "unique_relation_edges"), ("Typed nodes", "Relation-specific edges")):
         values = [fusion["conditions"][c][key] for c in conditions]
-        ax.bar(["Raw", "Dictionary", "+ Semantic"], values, color=["#9cb7c2", "#4b8798", "#176b59"])
+        final_label = "Typed identity" if fusion.get("alignment_policy", "").startswith("typed_") else "+ Semantic"
+        ax.bar(["Raw", "Dictionary", final_label], values, color=["#9cb7c2", "#4b8798", "#176b59"])
         ax.set_ylim(0, max(values) * 1.18)
         for i, value in enumerate(values): ax.text(i, value + max(values)*.03, f"{value:,}", ha="center")
         ax.set_title(title); ax.set_ylabel("Count")

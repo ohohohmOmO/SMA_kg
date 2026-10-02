@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "graph_version": "typed-v2-8a4dbccd4fdc22ca",
+  "input_sha256": {
+    "fused": "ecdd5e68a308309f423b5ade455d14131152f67dcf978579c9f254c9d7de0e5d",
+    "aligned": "8bcb0a1863b36419160b7ac4072c0887a7d26aef552ee6fbf2caec68db854d5f",
+    "quality": "55da7b64941a3ebfc95280ab57a1e9f5b301d51952686b84675d5158492cdf44",
+    "opentargets": "f02cb91fb0e6e75debcd549b615aadb6d7a50965cd9ea3bff3eebb13444b76cb"
+  },
+  "created_utc": "2026-10-02T12:29:51.722152+00:00",
+  "importer_code_sha256": "7d22b5e205ef56f51baaa0e665b947dc6e646bf104def3367c10ec68214809fb",
+  "input_paths": {
+    "fused": "D:\\kg_sma_0704\\data\\processed\\fused_triples.jsonl",
+    "aligned": "D:\\kg_sma_0704\\data\\interim\\aligned_triples.jsonl",
+    "quality": "D:\\kg_sma_0704\\artifacts\\runs\\assertion_quality_context_fixed_2026-10-02\\assertion_quality_full.jsonl",
+    "opentargets": "D:\\kg_sma_0704\\data\\external\\sma_gda_baseline.jsonl"
+  },
+  "database_policy": "Separate SMAEntity label and source namespaces; legacy Entity nodes/constraints untouched",
+  "automatic_delete": false,
+  "checks": {
+    "exact_node_properties_match": true,
+    "exact_relationship_properties_match": true,
+    "no_duplicate_nodes": true,
+    "no_duplicate_edges": true,
+    "typed_constraint_present": true,
+    "all_original_evidence_records_preserved": true,
+    "smn1_smn2_separate_authoritative_ids": true,
+    "legacy_graph_counts_unchanged": true
+  },
+  "typed_nodes": 9218,
+  "nodes_by_namespace": {
+    "literature": 9053,
+    "opentargets": 165
+  },
+  "relationship_counts_by_source": {
+    "Literature_NLP": 13001,
+    "OpenTargets": 164
+  },
+  "preserved_evidence_records": 18288,
+  "legacy_entity_nodes_retained": 6648,
+  "constraints": [
+    {
+      "name": "entity_name_unique",
+      "labelsOrTypes": [
+        "Entity"
+      ],
+      "properties": [
+        "name"
+      ]
+    },
+    {
+      "name": "sma_entity_key_unique",
+      "labelsOrTypes": [
+        "SMAEntity"
+      ],
+      "properties": [
+        "entity_key"
+      ]
+    },
+    {
+      "name": "sma_graph_metadata_unique",
+      "labelsOrTypes": [
+        "SMAGraphMetadata"
+      ],
+      "properties": [
+        "name"
+      ]
+    }
+  ],
+  "smn_gene_ids": {
+    "SMN1": "6606",
+    "SMN2": "6607"
+  },
+  "acceptance_kind": "live full property/identity/provenance reconciliation; not biomedical correctness",
+  "legacy_relationships_retained": 11208,
+  "input_hashes_unchanged": true,
+  "previous_active_version": "typed-v2-fe93797a156149f5",
+  "activated": true
+}

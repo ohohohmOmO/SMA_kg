@@ -1,0 +1,10 @@
+{
+  "workbook": "outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx",
+  "run_dir": "artifacts/runs/fyp_four_repairs_final_2026-10-02",
+  "mapped_file": "data/interim/mapped_triples.jsonl",
+  "aligned_file": "data/interim/aligned_triples.jsonl",
+  "fused_file": "data/processed/fused_triples.jsonl",
+  "alignment_policy": "typed_orthographic_identity_v2_semantic_review_only",
+  "label_provenance": "human_confirmed_all",
+  "provenance_note": "用户确认全部400条人工标记，ChatGPT仅整理表格"
+}

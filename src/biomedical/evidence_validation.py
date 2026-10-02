@@ -49,10 +49,19 @@ def normalized_text(value):
 
 
 def source_sentences(text):
-    # Preserve punctuation and offsets; this heuristic is not a biomedical parser.
-    for match in re.finditer(r"[^.!?\n]+(?:[.!?]+|$)", text):
-        if match.group().strip():
-            yield match.start(), match.end(), match.group()
+    # Boundaries require whitespace (or a newline); decimal points, gene variant
+    # notation and punctuation inside a token must never truncate source context.
+    # This remains a conservative heuristic, not a biomedical sentence parser.
+    start = 0
+    for boundary in re.finditer(r'(?<=[.!?])(?:["\x27)\]]*)\s+(?=[A-Z])|\n+', text):
+        end = boundary.start()
+        while end < boundary.end() and not text[end].isspace():
+            end += 1
+        if text[start:end].strip():
+            yield start, end, text[start:end]
+        start = boundary.end()
+    if text[start:].strip():
+        yield start, len(text), text[start:]
 
 
 def locate_span(span, source, suggest_fuzzy=True):

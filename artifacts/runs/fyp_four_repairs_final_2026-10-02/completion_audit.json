@@ -1,0 +1,125 @@
+{
+  "created_utc": "2026-10-02T12:33:47.694300+00:00",
+  "human_annotation_status": {
+    "mode": "human_confirmed_all",
+    "statement": "用户确认全部400条人工标记，ChatGPT仅整理表格",
+    "source_reviewer_ids_preserved": {
+      "ChatGPT-GPT-5.6-Sol": 400
+    },
+    "label_origin": "human_confirmed_by_user",
+    "source_metadata_overwritten": false,
+    "independent_human_agreement": null
+  },
+  "main_human_support": {
+    "n": 300,
+    "unique_pmids": 290,
+    "labels": {
+      "2": 79,
+      "1": 141,
+      "0": 80,
+      "U": 0
+    },
+    "span_labels": {
+      "no": 149,
+      "yes": 151
+    },
+    "strict_support": 0.2633333333333333,
+    "lenient_support": 0.7333333333333333,
+    "unknown_fraction": 0.0,
+    "strict_all_sample_bounds": [
+      0.2633333333333333,
+      0.2633333333333333
+    ],
+    "wilson_95_strict": [
+      0.21671150294236005,
+      0.3159395034372583
+    ],
+    "pmid_cluster_bootstrap_95_strict": [
+      0.21333333333333335,
+      0.31125827814569534
+    ],
+    "bootstrap_seed": 20261002,
+    "bootstrap_replications": 2000,
+    "errors": {
+      "证据片段问题": 22,
+      "部分支持/条件或强度问题": 62,
+      "部分支持 + 证据问题": 79,
+      "实体类型错误": 27,
+      "not_recorded": 57,
+      "实体类型错误 + 证据问题": 20,
+      "关系或实体不支持": 19,
+      "实体类型错误 + 关系主体泛化": 4,
+      "实体类型错误 + 关系/证据问题": 7,
+      "关系不支持 + 证据问题": 1,
+      "关系/方向错误 + 证据问题": 1,
+      "实体类型错误 + 关系过度概括": 1
+    }
+  },
+  "alignment": {
+    "input_names_assigned_multiple_types": 195,
+    "observed_mapping_examples": [],
+    "untyped_map_synthetic_reproduction": {
+      "synthetic_only": true,
+      "actual_key_expression": "(entity_type, entity_name)",
+      "observed": {
+        "Gene": "SHARED",
+        "Protein": "shared"
+      },
+      "expected": {
+        "Gene": "SHARED",
+        "Protein": "shared"
+      },
+      "type_overwrite_detected": false
+    },
+    "single_linkage_example": {
+      "automatic_semantic_clustering": false,
+      "interpretation": "Similarity proposals are review-only; automatic typed identity retains qualifiers."
+    },
+    "limits": "Occurrence counts describe observed transformations, not adjudicated fused-edge error rates."
+  },
+  "database": {
+    "status": "read_only_live_check_passed",
+    "graph_version": "typed-v2-8a4dbccd4fdc22ca",
+    "managed_nodes": {
+      "nodes": 9218,
+      "distinct_keys": 9218
+    },
+    "managed_relationships": [
+      {
+        "source": "Literature_NLP",
+        "relationships": 13001,
+        "needs_review": 11998
+      },
+      {
+        "source": "OpenTargets",
+        "relationships": 164,
+        "needs_review": 0
+      }
+    ],
+    "literature_provenance": {
+      "missing_pmid_list": 0
+    },
+    "database_mutations": 0
+  },
+  "overall_status": "typed_identity_repaired; see current quality/database/scope acceptance artifacts",
+  "blocking_quality_work": [
+    "independent review of remaining dictionary mappings if a mapping-correctness rate is claimed",
+    "stronger extraction support on independently evaluated new predictions before claiming adequate full-graph quality"
+  ],
+  "reporting_work": [
+    "integrate full report and critical literature/methods discussion",
+    "document failure analysis and the sensitivity/retention trade-off"
+  ],
+  "not_required_to_claim_current_results": [
+    "re-entering the 400 labels",
+    "invented independent agreement",
+    "unmeasured extraction recall/F1",
+    "all conflict pairs adjudicated"
+  ],
+  "read_only_inputs_verified": true,
+  "source_code_sha256": {
+    "src/evaluation/audit_fyp_completion.py": "ef6c884446764e0910b8592724e6c04a2c642d368215a38e431fe584dbb8ade9",
+    "src/fusion/semantic_aligner.py": "efa42204ea9477815105c4fac4c4b2e6d4eccaf749635fdb1ab3cd2221c11562",
+    "src/database/neo4j_importer.py": "7d22b5e205ef56f51baaa0e665b947dc6e646bf104def3367c10ec68214809fb"
+  }
+}

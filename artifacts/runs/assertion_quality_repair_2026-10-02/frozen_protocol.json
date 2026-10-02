@@ -1,0 +1,43 @@
+{
+  "version": "assertion_context_type_v1",
+  "created_utc": "2026-10-02T11:54:40.648405+00:00",
+  "args": {
+    "workbook": "outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx",
+    "run_dir": "artifacts/runs/assertion_quality_repair_2026-10-02",
+    "with_llm": true,
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "workers": 8
+  },
+  "input_sha256": {
+    "workbook": "8316aee46846b70b1863d8884f2c75b12e832965dfed2ddcc0014e70b0eba697",
+    "raw": "0d23d5dd162744dd70228905e6367800658e5d0af0b7328df50a6e62bfde76cb",
+    "abstracts": "5cfe801ab22312fa0cad317da994ff55ba96913df12a79c9464f472d2a622a48",
+    "candidates": "8ce93652ec985727e278d708d87437be8658e9096abc9b9c4bc803e6f157c979",
+    "dictionary": "8f6ab91594e7aa276eb6b96c0fc224139f5bb949c14bc846c3b9d3ee45843cf1",
+    "screen_code": "d5d9c140bb412b78e2d2e4221cb3c7eefc4e124ff662062b871919c741785df1",
+    "runner_code": "edf90d69521c33dddb3881dd95bdb7073b615bd55ead430444f456fce681a4cd"
+  },
+  "verifier_prompt": "Evaluate the ORIGINAL directed biomedical assertion using ONLY the provided title/abstract. No world knowledge or inferred therapeutic plausibility. Do not rewrite the assertion.\nReturn JSON with support ('direct','partial','unsupported','unclear'), entity_types_correct (boolean), direction_correct (boolean), conditions_preserved (boolean), evidence_quote (one or more complete contiguous original sentences, verbatim), source_field ('title' or 'abstract'), missing_conditions (list of strings), reason (string).\nDirect means BOTH typed endpoints AND the directed relation are explicitly supported with their original scope. A correct relation with a wrong entity type is NOT direct. Gene and protein are distinct. Gene deletion/deficiency/mutation causing disease does NOT justify the bare gene CAUSES disease. A generic gene symbol used for protein requires local disambiguation. Association does NOT imply causation. Splicing, expression, copy number, and mutant alleles are NOT automatically equivalent to the bare gene. Compare populations, clinical subtype, age/stage, dosage/time, comparator, experimental species/model, negation and uncertainty. If the unqualified assertion drops a material condition or upgrades possibility/comparison to unconditional fact, set conditions_preserved=false and support=partial or unsupported.\nEvidence must retain the predicate, both entities or source-resolved references, and necessary conditions. Quote only existing text; never fabricate/repair a quote. If no full supporting quote exists, use evidence_quote='' and support=unsupported or unclear. Preserve ambiguity rather than guessing. Return only JSON.",
+  "verifier_prompt_sha256": "ae5e6fe17d1db55279bff8212cdff40b75671ad315ccc2909818f436af6db256",
+  "evaluation_design": "retrospective internal paired screening, previously inspected labels; no independent prospective test",
+  "primary_endpoint": "strict support among retained ORIGINAL predictions; retention and strict-positive loss reported",
+  "human_label_transfer_to_rewrites": false,
+  "automatic_rewrite_or_delete": false,
+  "api_receives_human_labels_or_notes": false,
+  "dataset_checks": {
+    "identity_check": "passed",
+    "source_fields_check": "passed",
+    "integrated_labels_check": "passed",
+    "warnings": [],
+    "reviewer_ids": {
+      "ChatGPT-GPT-5.6-Sol": 400
+    },
+    "empty_component_fields": {
+      "entity_1_correct": 400,
+      "entity_2_correct": 400,
+      "relation_correct": 400,
+      "direction_correct": 400
+    },
+    "independent_second_reviews": 0
+  }
+}

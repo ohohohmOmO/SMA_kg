@@ -17,6 +17,67 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - Similarity alignment merged distinct identities and overwritten types
+
+- Symptom: Gene SMN2 was converted to SMN1 at982 endpoints/618 PMIDs;
+  SMA subtypes changed and a shared Gene/Protein name overwrote typed mappings.
+- Cause: Embedding similarity/connected components were treated as identity;
+  map and frequency keys used names without types.
+- Fix: Type/name keys and frequencies, authority/subtype dictionary guards,
+  conservative orthographic identity; semantic proposals review-only. Removed
+  context-free OA/exon7 mappings. Validated then promoted new fusion with backups.
+- Verification: Full18,288 source rows preserved; all982 endpoints restored;
+  13,001 edges/9,053 typed nodes; identity_validation.json and five identity tests.
+
+### 2026-10-02 - Name-only database identity and shared-source relationships lost distinctions
+
+- Symptom: Legacy Entity.name merge disagreed with typed graph evaluation,
+  and shared relationships allowed external data to overwrite literature evidence.
+- Cause: Name-only node constraint and source-independent relation identity.
+- Fix: Versioned SMAEntity keys with type/source namespace, source-specific
+  edge keys and complete original assertion records; activate after full online
+  acceptance. Historical Entity nodes/constraints preserved; clear disabled.
+- Verification: Current typed-v2-8a4dbccd4fdc22ca9,218 nodes/13,165 edges,
+  full property reconciliation and18,288 evidence records; legacy6,648/11,208
+  unchanged. Source/typed regression tests pass. Read-only current audit passes;
+  prior repaired-version repeat import also reconciles idempotently.
+
+### 2026-10-02 - Source sentence heuristic truncated statistics at decimal points
+
+- Symptom: Browser showed '01), and a decreased heart rate ( P < .' as context.
+- Cause: Sentence regex split at every dot, including .05/.01 and variant notation.
+- Fix: Boundaries now require whitespace/newline and retain exact source offsets;
+  corrected frozen experiment replays identical400 model responses, no new calls,
+  prompt/threshold/label changes. New graph sidecar version fully reconciled online.
+- Verification: Decimal-context regression and56 total tests pass; browser shows
+  complete RESULTS sentence at abstract[523,705). Replay provenance preserved;
+  combined result30/202 with14/55 strict positives unchanged. Original run retained.
+
+### 2026-10-02 - PyVis platform-default encoding failed on Windows
+
+- Symptom: Full Stage4 local export raised UnicodeEncodeError for © under GBK
+  after database acceptance and analytics had succeeded.
+- Cause: PyVis write_html used platform default encoding.
+- Fix: Generate HTML then explicitly write UTF-8; stage runner metadata now
+  reports actual historical-preservation policy regardless of legacy CLI flag.
+- Verification: Failed run retained; focused verified Stage4 local rerun succeeded,
+  typed MultiDiGraph metrics and UTF-8 PyVis snapshot produced with valid=true.
+
+### 2026-10-02 - Report draft promises and Word pagination diverged from core scope
+
+- Symptom: Five supplied drafts still promised unbuilt answer-generation modules;
+  expanded ethics text moved signatures onto an otherwise empty third page.
+  Packaged renderer lacked pdf2image in KG_SMA_env/LibreOffice in runtime.
+- Cause: Original proposal scope exceeded measured core; preserved form had a
+  limited page budget and packaged render dependencies were unavailable.
+- Fix: Align goals/RQs/plan to extraction, identity and assertion screening;
+  keep three answer modules future work and historical logbook entry. Compact
+  ethics prose; hidden installed Word COM PDF export and bundled Poppler fallback.
+- Verification: All23 final pages inspected (5/4/2/4/8), including both ethics
+  signature rows; preliminary8 pages/technical4/workplan1. Original drafts backed
+  up, source/revised hashes checked before five FYP promotions. No approval,
+  signatures, independent labels or student personal activity fabricated.
+
 ### 2026-10-02 - Human annotation origin was mistaken for workbook formatter metadata
 
 - Symptom: The first evaluation conservatively labelled the 400 supplied labels
