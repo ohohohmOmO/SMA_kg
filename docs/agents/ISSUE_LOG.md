@@ -17,6 +17,17 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - Git push preflight decoded Unicode paths as GBK
+
+- Symptom: The read-only preflight stopped with UnicodeDecodeError while
+  decoding Git output containing Chinese paths. No push had run.
+- Cause: Python subprocess text mode used the Windows GBK default for Git's
+  UTF-8 output; PYTHONIOENCODING alone does not set subprocess decoding.
+- Fix: Set encoding="utf-8" explicitly on Git subprocess calls and disable
+  quoted paths when inspecting changed filenames.
+- Verification: Preflight completed for 317 changed files; no .env/.env.local
+  or src/graphrag source files in the diff, and no new blobs over 90 MiB.
+
 ### 2026-10-02 - Inline GraphRAG audit indexed a source-sentence generator
 
 - Symptom: Read-only audit stopped with TypeError after snapshot/live retrieval
