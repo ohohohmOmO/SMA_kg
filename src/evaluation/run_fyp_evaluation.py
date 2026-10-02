@@ -225,6 +225,8 @@ def main():
     dictionary = load_dictionary(inputs["entity_dictionary"])
     provenance = {"mode": args.label_provenance, "statement": args.provenance_note,
                   "source_reviewer_ids_preserved": dataset_validation["reviewer_ids"],
+                  "label_origin": "human_confirmed_by_user" if args.label_provenance == "human_confirmed_all" else "unconfirmed",
+                  "source_metadata_overwritten": False,
                   "independent_human_agreement": None}
     if args.label_provenance == "human_confirmed_all" and args.provenance_note.startswith("Human confirmation scope requested"):
         raise ValueError("Human-confirmed attribution requires the actual user confirmation statement.")

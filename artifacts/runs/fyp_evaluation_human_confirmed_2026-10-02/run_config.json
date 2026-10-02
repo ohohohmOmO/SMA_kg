@@ -1,0 +1,6 @@
+{
+  "workbook": "outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx",
+  "run_dir": "artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02",
+  "label_provenance": "human_confirmed_all",
+  "provenance_note": "用户在2026-10-02说明：这400条均为人工标记，最后给到ChatGPT完成表格的而已。"
+}

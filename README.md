@@ -133,22 +133,25 @@ See `docs/PROJECT_HANDOFF_2026-06-09.md` for the current project handoff.
 The completion protocol and current status are in
 `docs/fyp/FYP_EVALUATION_PROTOCOL_2026-10-02.md` and
 `docs/fyp/FYP_COMPLETION_STATUS_2026-10-02.md`. The completed offline experiment
-package is `artifacts/runs/fyp_evaluation_2026-10-02/`: open
+package is now `artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/`: open
 `evidence_explorer.html` in a browser, read `summary_zh.md` and
 `results_and_discussion.md`, and inspect the hash manifest and row-level outputs.
 
 Reproduce into a NEW directory using `KG_SMA_env`:
 
 ```powershell
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/run_fyp_evaluation.py --workbook 'outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx' --run-dir 'artifacts/runs/fyp_evaluation_new_run' --label-provenance ai_assisted_unconfirmed
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/run_fyp_evaluation.py --workbook 'outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx' --run-dir 'artifacts/runs/fyp_evaluation_new_run' --label-provenance human_confirmed_all --provenance-note '用户在2026-10-02说明：这400条均为人工标记，最后给到ChatGPT完成表格的而已。'
 & 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/build_fyp_report.py --run-dir 'artifacts/runs/fyp_evaluation_new_run'
 & 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/build_fyp_graph_explorer.py --run-dir 'artifacts/runs/fyp_evaluation_new_run'
 ```
 
-The runner never modifies the workbook, canonical data or Neo4j. The source
-workbook records AI-assisted labels; their actual human-confirmation scope has
-not been established. Do not select `human_confirmed_all` without the actual
-user confirmation and its recorded `--provenance-note`. Fusion correctness
+The runner never modifies the workbook, canonical data or Neo4j. The user
+confirmed all 400 labels were assigned by humans and ChatGPT only assembled the
+table. This statement is recorded in the latest run config and provenance; the
+original workbook is unchanged. Use `--label-provenance human_confirmed_all`
+with that actual `--provenance-note` to reproduce the confirmed attribution.
+For a different unconfirmed source, retain `ai_assisted_unconfirmed`.
+Fusion correctness
 requires the separate 30-unit review; the browser exports these judgments as
 JSON, validated by `src/evaluation/summarize_fusion_review.py`.
 
@@ -161,3 +164,10 @@ neighbourhoods and full source joins. External associations retain their source
 identifiers in a separate namespace. `USAGE_AND_ACCEPTANCE_zh.md` records actual
 interface checks; these are agent-performed functional checks, not independent
 user-study results or student activity logbooks.
+
+Current readiness review: `docs/fyp/FYP_READINESS_REVIEW_2026-10-02.md`.
+`audit_fyp_completion.py --run-dir <new-evaluation-run>` checks alignment
+transformations and reproduces the typed-key overwrite; add `--attempt-live-db`
+for read-only database checks. The current audit did not establish a live
+connection. The core prototype is evaluated, but quality and draft-scope gates
+remain open; no canonical graph was corrected or reimported by this audit.

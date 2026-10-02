@@ -1,0 +1,11 @@
+{
+  "recorded_date": "2026-10-02",
+  "user_statement": "这400条均为人工标记，最后给到ChatGPT完成表格的而已",
+  "human_annotation_count": 400,
+  "label_origin": "human",
+  "formatter_as_reported": "ChatGPT",
+  "source_workbook_sha256": "8316aee46846b70b1863d8884f2c75b12e832965dfed2ddcc0014e70b0eba697",
+  "source_cells_and_metadata_preserved": true,
+  "independent_second_review_established": false,
+  "annotator_identities_inferred": false
+}

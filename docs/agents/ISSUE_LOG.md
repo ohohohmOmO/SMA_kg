@@ -17,6 +17,33 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - Human annotation origin was mistaken for workbook formatter metadata
+
+- Symptom: The first evaluation conservatively labelled the 400 supplied labels
+  unconfirmed/AI-assisted because every source reviewer ID named ChatGPT.
+- Cause: That metadata alone did not establish who assigned the labels. The user
+  subsequently clarified that all 400 are human-assigned and ChatGPT assembled
+  the table only.
+- Fix: Recorded the actual user attestation without changing the source XLSX;
+  generated a new human-confirmed run and updated active reporting/status docs.
+  Original artifacts remain historical; independent second review is not inferred.
+- Verification: New report exposes human-confirmed statistics, preserves source
+  fields and workbook bytes, removes the pending origin request, and reproduces
+  previous numerical results and the same 30-unit fusion queue.
+
+### 2026-10-02 - Supplementary verification code paths had duplicate slash aliases
+
+- Symptom: The older verification JSON contained two builder entries using
+  backslashes and forward slashes, with different hashes after figure formatting.
+- Cause: An incremental verification update inserted a new slash-style key
+  without replacing its older alias.
+- Fix: The new human-confirmed run records supplemental code paths using one
+  normalized slash convention and verifies each recorded hash before delivery.
+  The old dated snapshot is preserved; its presentation manifest is the
+  authoritative builder/report record for that historical run.
+- Verification: Normalized keys are unique and match current files in the new
+  verification JSON; inputs, measured outputs and source workbook are unchanged.
+
 ### 2026-10-02 - Generated SVG path whitespace failed staged diff checks
 
 - Symptom: `git diff --cached --check` reported trailing whitespace in the

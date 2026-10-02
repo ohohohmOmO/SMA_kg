@@ -109,9 +109,11 @@ def main():
     figures(out, review, fusion, evidence)
     main_stats, challenge = review["reference_statistics"]["primary_random"], review["reference_statistics"]["challenge"]
     human = review["provenance"]["mode"] == "human_confirmed_all"
-    provenance_text = ("The user confirmed source-based human verification of all 400 supplied labels. Original AI reviewer metadata was retained. "
+    provenance_text = ("The user confirmed that all 400 labels were assigned by humans and ChatGPT only assembled the workbook. Original workbook reviewer metadata was retained as a source record, not interpreted as the identity of the human annotator. "
                        if human else "The source workbook identifies ChatGPT-GPT-5.6-Sol as the reviewer and describes iterative AI-assisted review. Actual human confirmation scope has not been established. ")
     provenance_text += "No independent second-review labels were supplied. All quality numbers below are statistics against the supplied reference labels; independence and specialist medical expertise are not assumed."
+    if human:
+        provenance_text += "\n\nUser provenance statement: " + review["provenance"]["statement"]
     support_table = markdown_table(["Sample", "n", "Direct (2)", "Partial (1)", "Unsupported (0)", "Strict", "Lenient", "Adequate spans"],
         [[name, s["n"], s["labels"]["2"], s["labels"]["1"], s["labels"]["0"], percent(s["strict_support"]), percent(s["lenient_support"]), s["span_labels"].get("yes", 0)]
          for name, s in (("Random main", main_stats), ("Challenge", challenge))])
@@ -277,8 +279,7 @@ The offline explorer provides keyword, PMID, sample-group, reference-support and
 triage filters; each candidate opens its complete saved abstract, original span,
 source highlights, review reasons and PubMed link. Mapping review records can be
 entered and exported without altering the supplied workbook. Empty searches have
-an explicit state. Labels shown in the browser remain reference labels until
-their human provenance is established.
+an explicit state. {'Labels are human annotations according to the user confirmation; independent second-review agreement remains unavailable.' if human else 'Labels shown in the browser remain reference labels until their human provenance is established.'}
 
 The companion `graph_explorer.html` exposes the complete frozen literature
 graph, a bounded directed neighbourhood, entity and relation filters, potential
@@ -363,7 +364,7 @@ data or database was changed by this evaluation.
 
 ## 标签口径
 
-{'用户已确认全部400条对照摘要的人工核验。原AI评审记录保留。' if human else '原表评审者全部为 ChatGPT-GPT-5.6-Sol；人工核验范围待确认，当前指标只能称为AI辅助参考标签统计。'}
+{'用户已确认400条均为人工标记，ChatGPT仅整理表格。原工作簿元数据保留，不再将其中的ChatGPT名称解释为人工标记者身份。' if human else '原表评审者全部为 ChatGPT-GPT-5.6-Sol；人工核验范围待确认，当前指标只能称为AI辅助参考标签统计。'}
 独立第二评审为空，不能报告人际一致性或把多轮AI自查称为独立人工复核。
 中文合格/不合格已规范化；原始表及空白细分字段未修改。
 
@@ -398,7 +399,7 @@ data or database was changed by this evaluation.
 - 三张科学图：`figures/`，提供PNG与SVG。
 - 融合30项：界面中选择同一实体/不同实体/无法判断，导出JSON。
 - 审核导入：`python src/evaluation/summarize_fusion_review.py --queue <run>/fusion_review_30.jsonl --reviews <export.json> --output <new_report.json>`。
-- 不需要重审400条；先确认真实人工核验范围。融合正确性还需要这30项新判断。
+- {'400条人工标记来源已由用户确认，不需要重审或重填；融合正确性仍需这30项新判断。' if human else '不需要重审400条；先确认真实人工核验范围。融合正确性还需要这30项新判断。'}
 
 所有未取得的标签指标保持缺失，不用自动分数代替。本文不能代替完整学校最终报告；
 目标、方法、文献综述、风险/伦理、真实日志、口试材料仍按课程要求整合。

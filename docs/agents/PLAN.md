@@ -132,9 +132,10 @@ Historical or archived context:
 - The original blank workbook remains pending. The user subsequently supplied
   `outputs/fyp_gold_annotation_2026-10-01/SMA人工标注集_400条_最终全表复核版.xlsx`
   with 400 integrated support/span labels. Its source reviewer metadata is
-  `ChatGPT-GPT-5.6-Sol`; actual human confirmation scope is requested and not
-  established. Independent second-review fields are empty. Do not turn these
-  labels into independent human gold without the actual confirmation record.
+  `ChatGPT-GPT-5.6-Sol`. The user clarified on 2026-10-02 that all 400 labels
+  were assigned by humans and ChatGPT only assembled the workbook. Record this
+  attestation separately; original metadata stays unchanged. The source question
+  is closed. Independent second-review fields are empty and agreement is absent.
 - The compact-label adapter and offline evaluation are implemented in
   `src/evaluation/fyp_dataset.py` and `run_fyp_evaluation.py`. Original labels,
   identities and source fields are preserved; blank component fields are not
@@ -144,6 +145,11 @@ Historical or archived context:
   relation edges, preserves all 18288 evidence records and reproduces canonical
   semantic aggregation byte-for-byte. Mapping correctness awaits a separate
   fixed 30-unit review, not the extraction workbook.
+- Latest human-confirmed run:
+  `artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/`.
+  The attestation is in its run config/review provenance. Numerical results
+  and the fixed mapping queue are unchanged; earlier run artifacts remain
+  historical snapshots and may still display the former unconfirmed status.
 - `src/biomedical/evidence_validation.py` implements source-offset location,
   typography normalization, ordered fragments and conservative lexical triage.
   It leaves 1152 spans unlocated, offers fuzzy suggestions for review only,
@@ -159,10 +165,18 @@ Historical or archived context:
   filters, potential conflicts and separately identified Open Targets records.
   Ten real browser functional checks are recorded in
   `USAGE_AND_ACCEPTANCE_zh.md`; these are not independent human user testing.
-- Next human-dependent work: establish actual confirmation scope and enter the
-  30 mapping judgments using the offline explorer. Independent agreement stays
+- Next human-dependent work: enter the 30 mapping judgments for a frozen
+  mapping condition using the offline explorer. Independent agreement stays
   unavailable until independent reviewers provide labels. GraphRAG and
   semantic claim-validation modules remain incomplete and outside this run.
+- Completion audit found incompatible SMN2→SMN1 and subtype transformations,
+  reproduced a name-only alignment-map cross-type overwrite, and recorded the
+  name-only Neo4j identity limitation. A current read-only DB connection was
+  attempted but not established (`ServiceUnavailable`); no graph was modified.
+  See `docs/fyp/FYP_READINESS_REVIEW_2026-10-02.md` and
+  `.scratch/fyp-evaluation/issues/04-prevent-incompatible-alignment.md`.
+  Core prototype/evaluation is delivered; final quality and draft-scope gates
+  remain open. The preliminary DOCX still promises the three unbuilt modules.
 
 ## Before Each Run
 

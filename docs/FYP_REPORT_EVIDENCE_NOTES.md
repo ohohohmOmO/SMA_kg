@@ -43,7 +43,7 @@ section, but their completion status must remain explicit.
 
 | Innovation | Intended contribution | Current verified status | Reporting rule |
 | --- | --- | --- | --- |
-| 1. Evidence validation | Align generated spans to source and route potentially inadequate evidence for review. | Source-offset locator and conservative lexical triage implemented in `src/biomedical/evidence_validation.py`, with regression tests and full-corpus/internal reference-label evaluation in `artifacts/runs/fyp_evaluation_2026-10-02/`. Fuzzy suggestions never auto-accept. The original confidence `evidence_score` remains the historical nonempty heuristic. | Claim implemented traceability/triage; do not claim semantic entailment, calibrated accuracy, clinical verification or independent human evaluation before provenance is confirmed. |
+| 1. Evidence validation | Align generated spans to source and route potentially inadequate evidence for review. | Source-offset locator and conservative lexical triage implemented in `src/biomedical/evidence_validation.py`, with regression tests and full-corpus/internal human-label evaluation in `artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/`. Fuzzy suggestions never auto-accept. The original confidence `evidence_score` remains the historical nonempty heuristic. | Claim implemented traceability/triage; do not claim semantic entailment, calibrated accuracy, clinical verification or independent double-review agreement. Human annotation origin is confirmed by the user. |
 | 2. GraphRAG | Retrieve Neo4j neighbourhoods and PMID-backed evidence, construct structured context, and generate evidence-grounded answers with a safe fallback. | Not implemented in tracked source. The Neo4j graph is implemented and can serve as its foundation. | Describe the graph as implemented; describe GraphRAG as planned until an end-to-end runner and QA evaluation exist. |
 | 3. Citation validation | Validate that answer citations refer to real retrieved PMID/evidence identifiers. | Not implemented in tracked source. | Do not claim citation correctness until invalid, missing, and mismatched citations are tested. |
 | 4. Claim-evidence validation | Decompose an answer into claims and verify whether retrieved evidence entails each claim. | Not implemented in tracked source. | Describe as planned until claim-level labels and measured validation results exist. |
@@ -86,14 +86,17 @@ The generated run is:
 
 The original workbook remains blank. A supplied final-review variant contains
 all 400 integrated support/span judgments and was matched to the frozen source.
-Its reviewer metadata identifies ChatGPT and its notes describe multi-round
-AI-assisted review; actual user verification scope is still awaiting confirmation.
-Do not label it independent human gold. The new compact adapter preserves empty
+Its reviewer metadata identifies ChatGPT. The user clarified on 2026-10-02 that
+all 400 labels were assigned by humans and ChatGPT only assembled the table.
+The clarification is authoritative for annotation origin and is recorded separately
+from the unchanged source metadata. It does not establish independent double review.
+The new compact adapter preserves empty
 component fields and reports reference statistics separately from human-confirmed
 statistics. Second-review agreement remains unavailable because those fields are
 empty. No new request to re-annotate all 400 records is made.
 
-The automated completion run is `artifacts/runs/fyp_evaluation_2026-10-02/`.
+The latest run is `artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/`;
+the earlier unconfirmed run is preserved as a historical snapshot.
 It includes raw/dictionary/semantic controls, source preservation checks, a
 30-unit changed-mapping queue, evidence sidecars, an offline explorer and a
 results/discussion draft. Fusion semantic correctness still requires its own

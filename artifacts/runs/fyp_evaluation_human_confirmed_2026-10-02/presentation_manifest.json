@@ -1,0 +1,9 @@
+{
+  "builder_sha256": "017d3fd19bbd5fd7616986edf9e51f88d93f4715597923360141df8ab313e5fa",
+  "template_sha256": "9f4db2745e932a5dcc6f176d24ae5bcc2873ca70b59746bab1b58f5f19424c27",
+  "artifacts": {
+    "results_and_discussion.md": "39214c871a4ba603144b4312aa6b379748237bc8037cbf55705d0059f446fc2e",
+    "summary_zh.md": "804d0639ef3faff672eb4efd2f0a2b31bcd021cb25f4ec30434cd4f764648824",
+    "evidence_explorer.html": "8f8c3bd3177ec39e4f3a713c48b29a550061fc73c2d9d4024c8ebdf6d9d489ca"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "verified_utc": "2026-10-02T11:33:04.446179+00:00",
+  "unit_tests": {
+    "passed": 40,
+    "exit_code": 0,
+    "log": "unit_tests.log"
+  },
+  "all_manifest_hashes_match": true,
+  "human_annotation_origin_confirmed": true,
+  "source_workbook_unchanged": true,
+  "numeric_statistics_unchanged": true,
+  "fusion_queue_byte_identical_to_previous": true,
+  "evidence_sidecar_byte_identical": true,
+  "normalized_label_rows_byte_identical": true,
+  "graph_view_identical_except_run_name": true,
+  "presentation_and_graph_hashes_verified": true,
+  "code_hashes": {
+    "src/evaluation/run_fyp_evaluation.py": "f4cfebceaeb5c2b2f6e422d9b393b5b1f3b71b75f3375f9c4c815cbb481a574a",
+    "src/evaluation/build_fyp_report.py": "017d3fd19bbd5fd7616986edf9e51f88d93f4715597923360141df8ab313e5fa",
+    "src/evaluation/fyp_explorer_template.html": "9f4db2745e932a5dcc6f176d24ae5bcc2873ca70b59746bab1b58f5f19424c27",
+    "src/evaluation/build_fyp_graph_explorer.py": "e141bc48fbf46d6b6a62bbeca75d70f8a5e30deb8bf92cb94b8edcd7bed0c0c6",
+    "src/evaluation/fyp_graph_template.html": "c24b7c2ea30226018bedb8438c7e0790e946ddbcc5d6828061b58c821eaddf0e",
+    "src/evaluation/audit_fyp_completion.py": "c687eb3a806091b2dc5ff8d947e51e20f15b5d9876038857c94dea4aae36056b"
+  },
+  "code_path_keys_unique_and_normalized": true,
+  "no_external_automatic_html_resources": true,
+  "canonical_mutations": 0,
+  "database_check": {
+    "status": "connection_not_established",
+    "error_class": "ServiceUnavailable",
+    "database_mutations": 0
+  },
+  "browser_check": "Latest overview explicitly confirms 400 human labels and ChatGPT table assembly; source metadata preserved; no real mapping labels created.",
+  "browser_screenshot_sha256": "0de3b8745ef634b0f15d7eeb45fd4a8d57300dde04fdf5bb312b31749a180006",
+  "functional_checks_inherited": "10 graph tasks in previous run; exact same graph page except run name. Not an independent user study.",
+  "future_modules_not_claimed_complete": [
+    "GraphRAG",
+    "citation validation",
+    "claim-evidence semantic validation"
+  ]
+}

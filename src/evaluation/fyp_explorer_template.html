@@ -15,7 +15,7 @@ const spanNames={yes:'合格',no:'不合格',unclear:'无法判断'};
 function el(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;}
 function table(target,headers,rows){const t=el('table'),head=el('tr');headers.forEach(h=>head.append(el('th',h)));t.append(head);rows.forEach(row=>{const tr=el('tr');row.forEach(v=>tr.append(el('td',String(v))));t.append(tr)});$(target).replaceChildren(t);}
 const confirmed=DATA.review.provenance.mode==='human_confirmed_all';
-$('notice').textContent=confirmed?'用户已确认全部 400 条的人工核验范围；工作簿原始 AI 评审者记录仍保留。独立第二评审与融合语义质量仍未提供。':'工作簿标签注明 AI 辅助评审，实际人工确认范围尚待核实。以下质量数字是参考标签统计，不能作为独立人工金标准结果。';
+$('notice').textContent=confirmed?'用户已确认全部 400 条均为人工标记，ChatGPT 仅整理表格；原始表格元数据保留。独立第二评审与融合映射质量仍未提供。':'工作簿标签注明 AI 辅助评审，实际人工确认范围尚待核实。以下质量数字是参考标签统计，不能作为独立人工金标准结果。';
 const main=DATA.review.reference_statistics.primary_random;
 [['随机主集严格支持',pct(main.strict_support),'n = '+main.n+'，部分支持单列'],['文献融合关系边',DATA.fusion.conditions.semantic.unique_relation_edges,'18,288 条原始证据保留'],['已填写参考标签',DATA.rows.length,'第二评审一致性：未评价']].forEach(([name,value,note])=>{const c=el('div',undefined,'card');c.append(el('div',name,'muted'),el('strong',String(value)),el('div',note,'help'));$('cards').append(c)});
 ['目标与指标：已定义','审核材料：已核验；人工范围'+(confirmed?'已确认':'待确认'),'融合对照：已运行；语义判断待补','证据定位与筛查：已实现并评价','结果与讨论：草稿已生成'].forEach(x=>$('stages').append(el('span',x)));

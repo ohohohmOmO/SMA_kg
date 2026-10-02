@@ -2,22 +2,26 @@
 
 ## Scope and status
 
-The requested sequence is implemented through the automated evaluation and
-reporting package. The overall project is **not declared fully complete**:
-actual human-label provenance and mapping correctness still require user input.
-No human judgments, reviewer identities or agreement results were fabricated.
+The core construction, inspection, human-label evaluation and reporting package
+is delivered. The user confirmed all 400 labels are human-assigned and ChatGPT
+only assembled the workbook. The overall project is **not declared fully
+complete**: incompatible alignment, mapping correctness, current database
+validation and report-scope consistency remain open. No reviewer identities or
+independent agreement results were fabricated.
 
 | Step | Delivered | Remaining boundary |
 | --- | --- | --- |
 | Objectives and metrics | Three RQs, measures, acceptance evidence and limits in `FYP_EVALUATION_PROTOCOL_2026-10-02.md`. | Confirm course assessment brief when assembling the final submission. |
-| Human review | Supplied 400 labels validated against frozen candidates; normalized integrated labels; main/challenge separated; uncertainty computed. | Reviewer metadata says ChatGPT. User was asked whether all, some or none were personally source-verified. Independent second-review fields remain empty. |
+| Human review | All 400 human-assigned labels confirmed by the user; source identities checked; main/challenge and uncertainty reported. | Original formatter metadata retained. Independent second-review fields remain empty; no need to re-enter 400 labels. |
 | Fusion comparison | Identical aggregation across raw/dictionary/semantic conditions; graph/provenance checks; 30 fixed mapping units with contexts. | Thirty mapping judgments; compression is not semantic accuracy. |
-| Evidence improvement | Source offsets, normalized/ordered-fragment location, conservative flags; all 18,288 sidecars; PMID-disjoint retrospective internal comparison. | Semantic entailment is not implemented. Quality inference depends on actual reference-label provenance. |
+| Evidence improvement | Source offsets, normalized/ordered-fragment location, conservative flags; all 18,288 sidecars; PMID-disjoint retrospective internal comparison against human labels. | Semantic entailment is not implemented; the major sensitivity/retention cost remains explicit. |
 | Results and discussion | English chapter draft, Chinese summary, 3 PNG/SVG figures, offline evidence/review UI, reproducibility manifests. | Integrate with the full university report and actual project records. Future modules are explicitly unimplemented. |
 
 ## Primary deliverables
 
-Run directory: `artifacts/runs/fyp_evaluation_2026-10-02/`.
+Latest run directory: `artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/`.
+The earlier `fyp_evaluation_2026-10-02` is retained as a historical snapshot;
+its unconfirmed provenance wording is superseded by the user's statement.
 
 - `evidence_explorer.html`: offline source browsing, filters and 30-item review.
 - `graph_explorer.html`: complete frozen literature graph, bounded directed
@@ -37,7 +41,7 @@ Run directory: `artifacts/runs/fyp_evaluation_2026-10-02/`.
 
 ## Key measured outcomes
 
-- Random main reference labels: direct 79/300 (26.3%), partial 141/300,
+- Random main human labels: direct 79/300 (26.3%), partial 141/300,
   unsupported 80/300. Lenient support is 73.3%, not fully correct relations.
 - Fusion unique relation edges: 13,697 → 13,080 → 11,155. All 18,288 evidence
   record counts are preserved; semantic re-aggregation is byte-identical.
@@ -55,21 +59,20 @@ Run directory: `artifacts/runs/fyp_evaluation_2026-10-02/`.
 
 ## Minimal remaining human actions
 
-1. Provide the actual scope of source-based verification of the 400 labels.
-   No request to re-enter all records. If a subset was verified, identify its
-   candidate IDs or supply the actual confirmation log.
-2. In the offline explorer's fusion tab, judge the changed naming steps for
+The 400-label origin question is resolved. ChatGPT assembled the table only.
+
+1. In the offline explorer's fusion tab, judge the changed naming steps for
    the fixed 30 units, record an actual reviewer ID, and export JSON. Unchanged
    steps need no judgment. Different/unclear requires a brief reason.
    If the browser does not download the JSON, choose `显示导出内容` and copy
    the displayed text into a UTF-8 JSON file or return that text in chat.
-3. Independent review is only needed to claim inter-annotator agreement. Its
+2. Independent review is only needed to claim inter-annotator agreement. Its
    absence is an explicit limitation, not a fabricated zero or perfect score.
 
 Import actual fusion judgments with:
 
 ```powershell
-& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/summarize_fusion_review.py --queue 'artifacts/runs/fyp_evaluation_2026-10-02/fusion_review_30.jsonl' --reviews '<exported-json-path>' --output '<new-report-path>'
+& 'C:\Users\jon15\anaconda3\envs\KG_SMA_env\python.exe' src/evaluation/summarize_fusion_review.py --queue 'artifacts/runs/fyp_evaluation_human_confirmed_2026-10-02/fusion_review_30.jsonl' --reviews '<exported-json-path>' --output '<new-report-path>'
 ```
 
 The importer rejects queue/hash/identity mismatches, incomplete choices and
@@ -81,5 +84,7 @@ Specific supplied rubrics and the 2026–27 handbook conflict on weights and ora
 format. The latest Moodle/FYP brief determines submission requirements. The
 evaluation chapter does not replace a complete final report, genuine logbooks,
 required forms or oral presentation. Planned GraphRAG, citation validation and
-claim-evidence validation are not claimed complete. Source review and type-aware
-database identity are tracked as outstanding local issues.
+claim-evidence validation are not claimed complete. Incompatible alignment and
+type-aware database identity are outstanding. The current preliminary DOCX still
+promises the wider modules; see `FYP_READINESS_REVIEW_2026-10-02.md` for the
+concrete scope correction and quality gates.

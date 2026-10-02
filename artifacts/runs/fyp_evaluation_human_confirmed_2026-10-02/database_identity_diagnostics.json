@@ -1,0 +1,632 @@
+{
+  "literature_typed_nodes": 6684,
+  "literature_name_only_nodes": 6524,
+  "names_with_multiple_types": {
+    "AAV9": [
+      "Drug",
+      "Protein"
+    ],
+    "AAV9 antibodies": [
+      "Phenotype",
+      "Protein"
+    ],
+    "ASCC1": [
+      "Gene",
+      "Protein"
+    ],
+    "Agrin": [
+      "Gene",
+      "Protein"
+    ],
+    "BDNF": [
+      "Gene",
+      "Protein"
+    ],
+    "BICD2": [
+      "Gene",
+      "Protein"
+    ],
+    "Bax": [
+      "Gene",
+      "Protein"
+    ],
+    "CAPN1": [
+      "Gene",
+      "Protein"
+    ],
+    "CARM1": [
+      "Gene",
+      "Protein"
+    ],
+    "CHCHD10": [
+      "Gene",
+      "Protein"
+    ],
+    "CHP1": [
+      "Gene",
+      "Protein"
+    ],
+    "CMT2S": [
+      "Disease",
+      "Phenotype"
+    ],
+    "COL6A3": [
+      "Gene",
+      "Protein"
+    ],
+    "CORO1C": [
+      "Gene",
+      "Protein"
+    ],
+    "Cdk5": [
+      "Gene",
+      "Protein"
+    ],
+    "Charcot-Marie-Tooth disease type 2D": [
+      "Disease",
+      "Phenotype"
+    ],
+    "D-serine": [
+      "Drug",
+      "Phenotype"
+    ],
+    "DcpS": [
+      "Gene",
+      "Protein"
+    ],
+    "EXOSC9": [
+      "Gene",
+      "Protein"
+    ],
+    "Etv5b": [
+      "Gene",
+      "Protein"
+    ],
+    "FL-SMN": [
+      "Gene",
+      "Protein"
+    ],
+    "FUS": [
+      "Gene",
+      "Protein"
+    ],
+    "Farber disease": [
+      "Disease",
+      "Phenotype"
+    ],
+    "GARS": [
+      "Gene",
+      "Protein"
+    ],
+    "Gemin3": [
+      "Gene",
+      "Protein"
+    ],
+    "HB9": [
+      "Gene",
+      "Protein"
+    ],
+    "Hspa8": [
+      "Gene",
+      "Protein"
+    ],
+    "IGHMBP2": [
+      "Gene",
+      "Protein"
+    ],
+    "IL-6": [
+      "Gene",
+      "Protein"
+    ],
+    "ISS-N1": [
+      "Gene",
+      "Variant"
+    ],
+    "KIF26B": [
+      "Gene",
+      "Protein"
+    ],
+    "KIF5A": [
+      "Gene",
+      "Protein"
+    ],
+    "LMNA": [
+      "Gene",
+      "Protein"
+    ],
+    "MLPA": [
+      "Drug",
+      "Phenotype"
+    ],
+    "NAIP copy number": [
+      "Gene",
+      "Variant"
+    ],
+    "NCALD": [
+      "Gene",
+      "Protein"
+    ],
+    "NEFH": [
+      "Gene",
+      "Protein"
+    ],
+    "NIV": [
+      "Drug",
+      "Phenotype"
+    ],
+    "P21": [
+      "Gene",
+      "Protein"
+    ],
+    "PFN2": [
+      "Gene",
+      "Protein"
+    ],
+    "PLS3": [
+      "Gene",
+      "Protein"
+    ],
+    "PRMT5": [
+      "Gene",
+      "Protein"
+    ],
+    "PTEN": [
+      "Gene",
+      "Protein"
+    ],
+    "Pgk1": [
+      "Gene",
+      "Protein"
+    ],
+    "RhoA": [
+      "Gene",
+      "Protein"
+    ],
+    "SERPINF1": [
+      "Gene",
+      "Protein"
+    ],
+    "SETX": [
+      "Gene",
+      "Protein"
+    ],
+    "SMA 5q": [
+      "Disease",
+      "Gene"
+    ],
+    "SMA pathogenesis": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMA pathophysiology": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMA phenotype": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMA type 0": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMA type 2": [
+      "Disease",
+      "Phenotype",
+      "Variant"
+    ],
+    "SMA1": [
+      "Phenotype",
+      "Variant"
+    ],
+    "SMA3": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMAII": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMALED": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMALED2": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMARD1": [
+      "Disease",
+      "Phenotype"
+    ],
+    "SMN": [
+      "Gene",
+      "Protein"
+    ],
+    "SMN deficiency": [
+      "Phenotype",
+      "Protein"
+    ],
+    "SMN deficit": [
+      "Phenotype",
+      "Protein"
+    ],
+    "SMN expression": [
+      "Gene",
+      "Phenotype",
+      "Protein"
+    ],
+    "SMN levels": [
+      "Phenotype",
+      "Protein"
+    ],
+    "SMN production": [
+      "Phenotype",
+      "Protein"
+    ],
+    "SMN1": [
+      "Gene",
+      "Protein"
+    ],
+    "SMN1 2 + 0 carriers": [
+      "Phenotype",
+      "Variant"
+    ],
+    "SMN1 deletion": [
+      "Gene",
+      "Phenotype",
+      "Variant"
+    ],
+    "SMN2 copy number": [
+      "Gene",
+      "Phenotype",
+      "Variant"
+    ],
+    "SMN2 methylation": [
+      "Phenotype",
+      "Variant"
+    ],
+    "SMN2 splicing defect": [
+      "Phenotype",
+      "Variant"
+    ],
+    "SMN2-SMN1 hybrid": [
+      "Gene",
+      "Variant"
+    ],
+    "SMNDelta7": [
+      "Gene",
+      "Protein",
+      "Variant"
+    ],
+    "SOD1": [
+      "Gene",
+      "Protein"
+    ],
+    "SRSF3": [
+      "Gene",
+      "Protein"
+    ],
+    "SYT13": [
+      "Gene",
+      "Protein"
+    ],
+    "Sanger sequencing": [
+      "Drug",
+      "Phenotype"
+    ],
+    "Smn deficiency": [
+      "Phenotype",
+      "Variant"
+    ],
+    "Smn2B/-": [
+      "Gene",
+      "Variant"
+    ],
+    "Stasimon": [
+      "Gene",
+      "Protein"
+    ],
+    "TBCE": [
+      "Gene",
+      "Protein"
+    ],
+    "TDP-43": [
+      "Gene",
+      "Protein"
+    ],
+    "TIA1": [
+      "Gene",
+      "Protein"
+    ],
+    "TTC": [
+      "Drug",
+      "Protein"
+    ],
+    "UBA1": [
+      "Gene",
+      "Protein"
+    ],
+    "UPF1": [
+      "Gene",
+      "Protein"
+    ],
+    "VAPB": [
+      "Gene",
+      "Protein"
+    ],
+    "VRK1": [
+      "Gene",
+      "Protein"
+    ],
+    "ZPR1": [
+      "Gene",
+      "Protein"
+    ],
+    "aberrant splicing": [
+      "Phenotype",
+      "Variant"
+    ],
+    "alternative splicing": [
+      "Phenotype",
+      "Variant"
+    ],
+    "antisense therapy": [
+      "Drug",
+      "Phenotype"
+    ],
+    "arthrogryposis multiplex congenita": [
+      "Disease",
+      "Phenotype"
+    ],
+    "assisted ventilation": [
+      "Drug",
+      "Phenotype"
+    ],
+    "ataxia": [
+      "Disease",
+      "Phenotype"
+    ],
+    "best supportive care": [
+      "Drug",
+      "Phenotype"
+    ],
+    "beta-actin": [
+      "Gene",
+      "Protein"
+    ],
+    "carrier": [
+      "Phenotype",
+      "Variant"
+    ],
+    "choline acetyltransferase": [
+      "Gene",
+      "Protein"
+    ],
+    "congenital myopathy": [
+      "Disease",
+      "Phenotype"
+    ],
+    "copy number": [
+      "Phenotype",
+      "Variant"
+    ],
+    "creatine": [
+      "Drug",
+      "Phenotype"
+    ],
+    "creatine kinase": [
+      "Phenotype",
+      "Protein"
+    ],
+    "creatinine": [
+      "Phenotype",
+      "Protein"
+    ],
+    "dCas13d/gRNA": [
+      "Drug",
+      "Protein"
+    ],
+    "dTgs1": [
+      "Gene",
+      "Protein"
+    ],
+    "early intervention": [
+      "Drug",
+      "Phenotype"
+    ],
+    "early treatment": [
+      "Drug",
+      "Phenotype"
+    ],
+    "exercise training": [
+      "Drug",
+      "Phenotype"
+    ],
+    "exon 7 exclusion": [
+      "Phenotype",
+      "Variant"
+    ],
+    "exon 7 skipping": [
+      "Phenotype",
+      "Variant"
+    ],
+    "full-length SMN2 mRNA": [
+      "Gene",
+      "Phenotype"
+    ],
+    "gastrostomy": [
+      "Drug",
+      "Phenotype"
+    ],
+    "heart failure": [
+      "Disease",
+      "Phenotype"
+    ],
+    "hypertension": [
+      "Disease",
+      "Phenotype"
+    ],
+    "immunoglobulin mu-binding protein 2": [
+      "Gene",
+      "Protein"
+    ],
+    "infantile-onset SMA": [
+      "Disease",
+      "Phenotype"
+    ],
+    "intrathecal injection": [
+      "Drug",
+      "Phenotype"
+    ],
+    "late-onset spinal muscular atrophy": [
+      "Disease",
+      "Phenotype"
+    ],
+    "microglia": [
+      "Phenotype",
+      "Protein"
+    ],
+    "mild SMA": [
+      "Disease",
+      "Phenotype"
+    ],
+    "motor neuron degeneration": [
+      "Disease",
+      "Phenotype"
+    ],
+    "motor neurons": [
+      "Phenotype",
+      "Protein"
+    ],
+    "multidisciplinary care": [
+      "Drug",
+      "Phenotype"
+    ],
+    "muscle weakness": [
+      "Disease",
+      "Phenotype"
+    ],
+    "muscular dystrophies": [
+      "Disease",
+      "Phenotype"
+    ],
+    "myostatin inhibition": [
+      "Drug",
+      "Phenotype"
+    ],
+    "neural stem cells": [
+      "Drug",
+      "Phenotype"
+    ],
+    "neurodegenerative disorders": [
+      "Disease",
+      "Phenotype"
+    ],
+    "neuromuscular disorder": [
+      "Disease",
+      "Phenotype"
+    ],
+    "neuroprotection": [
+      "Drug",
+      "Phenotype"
+    ],
+    "neurotrophic factors": [
+      "Drug",
+      "Protein"
+    ],
+    "newborn screening": [
+      "Drug",
+      "Phenotype"
+    ],
+    "newborn screening programs": [
+      "Drug",
+      "Phenotype"
+    ],
+    "non-invasive ventilation": [
+      "Drug",
+      "Phenotype"
+    ],
+    "noninvasive ventilation": [
+      "Drug",
+      "Phenotype"
+    ],
+    "p53": [
+      "Gene",
+      "Protein"
+    ],
+    "p62": [
+      "Gene",
+      "Protein"
+    ],
+    "pICln": [
+      "Gene",
+      "Protein"
+    ],
+    "pontocerebellar hypoplasia": [
+      "Disease",
+      "Phenotype"
+    ],
+    "pyruvate": [
+      "Drug",
+      "Phenotype"
+    ],
+    "reduced SMN protein": [
+      "Phenotype",
+      "Protein"
+    ],
+    "scapuloperoneal spinal muscular atrophy": [
+      "Disease",
+      "Phenotype"
+    ],
+    "scoliosis surgery": [
+      "Drug",
+      "Phenotype"
+    ],
+    "severe SMA": [
+      "Disease",
+      "Phenotype"
+    ],
+    "spinal muscular atrophy with congenital bone fractures 2": [
+      "Disease",
+      "Phenotype"
+    ],
+    "spinal muscular atrophy with lower extremity predominance": [
+      "Disease",
+      "Phenotype"
+    ],
+    "spinal muscular atrophy with progressive myoclonic epilepsy": [
+      "Disease",
+      "Phenotype"
+    ],
+    "spinal surgery": [
+      "Drug",
+      "Phenotype"
+    ],
+    "splicing defect": [
+      "Phenotype",
+      "Variant"
+    ],
+    "tau": [
+      "Gene",
+      "Protein"
+    ],
+    "tracheostomy": [
+      "Drug",
+      "Phenotype"
+    ],
+    "ubiquitin-proteasome system": [
+      "Phenotype",
+      "Protein"
+    ],
+    "ventilation": [
+      "Drug",
+      "Phenotype"
+    ],
+    "ventilatory support": [
+      "Drug",
+      "Phenotype"
+    ]
+  },
+  "explanation": "Existing Neo4j importer merges Entity by name only. Typed literature graph counts differ; Open Targets contributes additional names. No live database query was performed."
+}

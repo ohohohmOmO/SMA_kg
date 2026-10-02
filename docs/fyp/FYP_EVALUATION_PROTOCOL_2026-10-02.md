@@ -19,7 +19,10 @@ does not add GraphRAG or claim-level semantic validation to the completed scope.
 2. Preserve and validate the supplied `SMA人工标注集_400条_最终全表复核版.xlsx`.
    Its protected candidate fields match the original 400-item manifest.
    The source records identify `ChatGPT-GPT-5.6-Sol` as reviewer and describe
-   AI-assisted review; human confirmation scope is requested separately.
+   AI-assisted review. In a subsequent 2026-10-02 clarification, the user stated
+   that all 400 labels are human-assigned and ChatGPT only assembled the table.
+   This clarification is recorded in the new human-confirmed run without
+   overwriting original workbook metadata.
    Blank per-component columns do not become automatically assigned labels.
 3. Compare saved raw/mapped/aligned snapshots with identical aggregation. Check
    row-level PMID, relation, evidence and type preservation before comparison.
@@ -53,10 +56,10 @@ does not add GraphRAG or claim-level semantic validation to the completed scope.
 ## Human work kept minimal
 
 The supplied 400 labels are reused; no request to re-annotate 400 records is made.
-If the user confirms all labels against their source, record that confirmation
-without changing the AI reviewer metadata. If only a subset was confirmed, use
-only a documented subset for human-attributed metrics. Second-review agreement
-stays unavailable without genuinely independent reviews.
+All 400 were confirmed as human-assigned by the user on 2026-10-02, with ChatGPT
+performing workbook assembly only. The new run records the actual statement
+without changing original metadata. Second-review agreement stays unavailable
+without genuinely independent reviews; the confirmation does not supply them.
 
 Prepare a fixed 30-unit fusion queue with source contexts, plus an offline
 two-choice/uncertain review interface. These judgments cannot be manufactured

@@ -1,0 +1,191 @@
+{
+  "created_utc": "2026-10-02T11:21:52.425627+00:00",
+  "human_annotation_status": {
+    "mode": "human_confirmed_all",
+    "statement": "用户在2026-10-02说明：这400条均为人工标记，最后给到ChatGPT完成表格的而已。",
+    "source_reviewer_ids_preserved": {
+      "ChatGPT-GPT-5.6-Sol": 400
+    },
+    "label_origin": "human_confirmed_by_user",
+    "source_metadata_overwritten": false,
+    "independent_human_agreement": null
+  },
+  "main_human_support": {
+    "n": 300,
+    "unique_pmids": 290,
+    "labels": {
+      "2": 79,
+      "1": 141,
+      "0": 80,
+      "U": 0
+    },
+    "span_labels": {
+      "no": 149,
+      "yes": 151
+    },
+    "strict_support": 0.2633333333333333,
+    "lenient_support": 0.7333333333333333,
+    "unknown_fraction": 0.0,
+    "strict_all_sample_bounds": [
+      0.2633333333333333,
+      0.2633333333333333
+    ],
+    "wilson_95_strict": [
+      0.21671150294236005,
+      0.3159395034372583
+    ],
+    "pmid_cluster_bootstrap_95_strict": [
+      0.21333333333333335,
+      0.31125827814569534
+    ],
+    "bootstrap_seed": 20261002,
+    "bootstrap_replications": 2000,
+    "errors": {
+      "证据片段问题": 22,
+      "部分支持/条件或强度问题": 62,
+      "部分支持 + 证据问题": 79,
+      "实体类型错误": 27,
+      "not_recorded": 57,
+      "实体类型错误 + 证据问题": 20,
+      "关系或实体不支持": 19,
+      "实体类型错误 + 关系主体泛化": 4,
+      "实体类型错误 + 关系/证据问题": 7,
+      "关系不支持 + 证据问题": 1,
+      "关系/方向错误 + 证据问题": 1,
+      "实体类型错误 + 关系过度概括": 1
+    }
+  },
+  "alignment": {
+    "input_names_assigned_multiple_types": 195,
+    "observed_mapping_examples": [
+      {
+        "type": "Disease",
+        "from": "SMA type 3",
+        "to": "SMA type 2",
+        "endpoint_occurrences": 31,
+        "affected_records": 31,
+        "unique_pmids": 16
+      },
+      {
+        "type": "Disease",
+        "from": "SMA type II",
+        "to": "SMA phenotype",
+        "endpoint_occurrences": 16,
+        "affected_records": 16,
+        "unique_pmids": 7
+      },
+      {
+        "type": "Disease",
+        "from": "SMA type III",
+        "to": "SMA type 2",
+        "endpoint_occurrences": 11,
+        "affected_records": 11,
+        "unique_pmids": 7
+      },
+      {
+        "type": "Gene",
+        "from": "SMN2",
+        "to": "SMN1",
+        "endpoint_occurrences": 982,
+        "affected_records": 982,
+        "unique_pmids": 618
+      },
+      {
+        "type": "Phenotype",
+        "from": "SMA type 3",
+        "to": "SMA type 2",
+        "endpoint_occurrences": 4,
+        "affected_records": 4,
+        "unique_pmids": 4
+      },
+      {
+        "type": "Phenotype",
+        "from": "SMA type II",
+        "to": "SMA phenotype",
+        "endpoint_occurrences": 4,
+        "affected_records": 4,
+        "unique_pmids": 4
+      },
+      {
+        "type": "Phenotype",
+        "from": "SMA type III",
+        "to": "SMA type 2",
+        "endpoint_occurrences": 5,
+        "affected_records": 5,
+        "unique_pmids": 4
+      },
+      {
+        "type": "Variant",
+        "from": "SMA type 3",
+        "to": "SMA type 2",
+        "endpoint_occurrences": 1,
+        "affected_records": 1,
+        "unique_pmids": 1
+      },
+      {
+        "type": "Variant",
+        "from": "SMA type III",
+        "to": "SMA type 2",
+        "endpoint_occurrences": 1,
+        "affected_records": 1,
+        "unique_pmids": 1
+      }
+    ],
+    "untyped_map_synthetic_reproduction": {
+      "synthetic_only": true,
+      "actual_key_expression": "entity",
+      "assignment_line": 131,
+      "lookup_line": 141,
+      "observed": {
+        "Gene": "ProteinAnchor",
+        "Protein": "ProteinAnchor"
+      },
+      "expected": {
+        "Gene": "GeneAnchor",
+        "Protein": "ProteinAnchor"
+      },
+      "type_overwrite_detected": true
+    },
+    "single_linkage_example": {
+      "threshold": 0.88,
+      "a_c_similarity": 0.6,
+      "components": [
+        [
+          "A",
+          "B",
+          "C"
+        ]
+      ],
+      "interpretation": "Connected paths do not ensure every member exceeds the threshold to its canonical representative."
+    },
+    "limits": "Occurrence counts describe observed transformations, not adjudicated fused-edge error rates."
+  },
+  "database": {
+    "status": "connection_not_established",
+    "error_class": "ServiceUnavailable",
+    "database_mutations": 0
+  },
+  "overall_status": "core_prototype_evaluated; final_quality_and_scope_gates_open",
+  "blocking_quality_work": [
+    "prevent incompatible entity merges and type-key overwrites",
+    "validate changed-mapping correctness and rerun controlled fusion",
+    "define database identity and verify a current read-only snapshot"
+  ],
+  "reporting_work": [
+    "align preliminary-report promises with actual core scope",
+    "integrate full report and critical literature/methods discussion",
+    "document failure analysis and the sensitivity/retention trade-off"
+  ],
+  "not_required_to_claim_current_results": [
+    "re-entering the 400 labels",
+    "invented independent agreement",
+    "unmeasured extraction recall/F1",
+    "all conflict pairs adjudicated"
+  ],
+  "read_only_inputs_verified": true,
+  "source_code_sha256": {
+    "src/evaluation/audit_fyp_completion.py": "c687eb3a806091b2dc5ff8d947e51e20f15b5d9876038857c94dea4aae36056b",
+    "src/fusion/semantic_aligner.py": "2fe543c55767b7df4db65b8beab18da8d750749f9b5c1c4391f98e0bf3398398",
+    "src/database/neo4j_importer.py": "b7ec7703989700f0c8072609403ad27e79cc0dbd77f82639d4d5ab37fe5ea907"
+  }
+}
