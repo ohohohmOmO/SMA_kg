@@ -17,6 +17,17 @@ verification.
 
 ## Resolved issues
 
+### 2026-10-02 - FYP document inspection used incompatible console encoding
+
+- Symptom: A read-only OOXML inspection printed garbled Chinese and stopped
+  with `UnicodeEncodeError` when it encountered a bullet character.
+- Cause: Python stdout defaulted to GBK while the PowerShell tool output
+  expected UTF-8; PowerShell pipeline input encoding was also implicit.
+- Fix: Set `PYTHONIOENCODING=utf-8` and PowerShell `$OutputEncoding` to UTF-8
+  for document-inspection commands using the required `KG_SMA_env` Python.
+- Verification: Repeated extraction of the FYP Roadmap and four submission
+  drafts completed with exit code 0 and readable Chinese, bullets and tables.
+
 ### 2026-10-01 - Legacy FYP form templates lacked built-in Word styles
 
 - Symptom: The FYP submission-pack generator stopped with `KeyError: no style
